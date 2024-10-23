@@ -1,33 +1,24 @@
 import {sectionItems} from "./grid.json"
 
-const Card = ({ title, description, logo }) => (
-    <a class="panel panel-default" href="#">
-      <div class="panel-body">
-        <div class="media">
-          <div class="text-center hidden-xs panel-frame-fix-icono">
-            <img src="../src/pages/images/test.svg"></img>
-          </div>
-          <div class="media-body">
-            <h3 class="text-center">
-            <span class="text-center visible-xs">
-            <i class="fa fa-fw fa fa-briefcase text-primary"></i>
-            </span>{title}</h3>
-            <div class="text-muted panel-frame-bajada text-center">
-            <p class="text-muted">{description}</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </a>
+const Card = ({ title, link, logo }) => (
+  <li className="link2 text-center"> 
+      <img src={logo} alt="" />
+      <a href={link} className="">{title}</a>
+  </li>
 );
 
 const CardContainer = () => {
 
   return (
-    <div className="container grid__container">
-      {sectionItems.map((card, index) => (
-        <Card key={index} title={card.title} description={card.description} />
-      ))}
+    <div className="pane-content m-t-2">
+      <div className="container home-new w-100 p-x-0">
+
+          <ul className="list-inline pull-left w-100 p-b-3">
+            {sectionItems.map((card, index) => (
+              <Card key={index} title={card.title} description={card.description} logo={card.image} />
+            ))}
+          </ul>
+      </div>
     </div>
   );
 };

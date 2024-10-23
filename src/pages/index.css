@@ -1,1 +1,17 @@
 @import url('./page.css');
+
+
+.link2{
+    cursor: pointer;
+}
+
+.footer__home{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+}
+
+.link2::before {
+    color: transparent !important;
+}
