@@ -1,0 +1,76 @@
+{
+    "sectionItems": [
+        {
+            "link": "/GuiaDeTramites",
+            "title": "Guía de Trámites",
+            "description": "Trámites y Servicios",
+            "image": "../src/images/test.svg"
+        },
+        {
+            "link": "https://recibos.catamarcaciudad.gob.ar/acceso.php",
+            "title": "Haberes Mensuales",
+            "description": "Consultas Online Haberes",
+            "image": "../src/images/test.svg",
+            "external": true
+        },
+        {
+            "link": "https://drive.google.com/drive/home?hl=es",
+            "title": "Digesto Municipal",
+            "description": "Digesto Municipal",
+            "image": "../src/images/test.svg",
+            "external": true
+        },
+        {
+            "link": "/GeoPortal",
+            "title": "Infraestructura de Datos Espaciales",
+            "description": "Geo Portal",
+            "image": "../src/images/test.svg"
+        },
+        {
+            "link": "https://www.cajadecreditocatamarca.com.ar/",
+            "title": "Caja de Credito Municipal",
+            "description": "Caja Credito Municipal.",
+            "image": "../src/images/test.svg",
+            "external": true
+        },
+        {
+            "link": "https://rentas.catamarcaciudad.gob.ar/ui/",
+            "title": "Gestion Documental Electronica",
+            "description": "Portal GDE",
+            "image": "../src/images/test.svg",
+            "external": true
+        },
+        {
+            "link": "https://correcciondeplanos.catamarcaciudad.gob.ar/",
+            "title": "Direccion General de Rentas",
+            "description": "Rentas Municipal",
+            "image": "../src/images/test.svg",
+            "external": true
+        },
+        {
+            "link": "/datosabiertos",
+            "title": "Datos Abiertos",
+            "description": "Datos abiertos",
+            "image": "../src/images/test.svg"
+        },
+        {
+            "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&pli=1",
+            "title": "App Ciudad Catamarca",
+            "description": "Aplicacion Catamarca Ciudad",
+            "image": "../src/images/test.svg",
+            "external": true
+        },
+        {
+            "link": "/muniservicios",
+            "title": "Servicios al Vecino",
+            "description": "Servicios al Vecino",
+            "image": "../src/images/test.svg"
+        },
+        {
+            "link": "/compra",
+            "title": "Compra",
+            "description": "Portal de Compra",
+            "image": "../src/images/test.svg"
+        }
+    ]
+}
