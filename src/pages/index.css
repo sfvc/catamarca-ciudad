@@ -1,4 +1,3 @@
-@import url('./page.css');
 
 
 .link2{
@@ -14,4 +13,34 @@
 
 .link2::before {
     color: transparent !important;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    margin: 0;
+    z-index: 5;
+    top:75px;
+    right:0px;
+}
+.dropdown-menu li {
+    width:100%;
+}
+
+ul.dropdown-menu li a {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+}
+.dropdown-menu li:hover {
+    background: #f0f0f0;
 }

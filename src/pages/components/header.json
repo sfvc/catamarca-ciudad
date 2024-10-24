@@ -1,0 +1,52 @@
+{
+    "dropdowns": [
+        {
+            "name": "contacto",
+            "options": [
+                "dq 1", 
+                "Option 2",
+                "dq 1", 
+                "Option 2",
+                "dq 1", 
+                "Option 2",
+                "dq 1", 
+                "Option 2"
+            ]
+        },
+        {
+            "name": "Municipio Abierto",
+            "options": ["Optiasdon 1", "Option 2"]
+        },
+        {
+            "name": "servicios",
+            "options": [],
+            "link": "/prueba"
+        },
+        {
+            "name": "tramites",
+            "options": ["af 1", "Option 2"]
+        },
+        {
+            "name": "turismo",
+            "options": [],
+            "link": "https://sfvc.travel/"
+        },
+        {
+            "name": "municipalidad",
+            "options": [
+                "Intendente",
+                 "Estructura Orgánica",
+                 "Valores",
+                 "Intendentes",
+                 "Reseña Histórica",
+                 "Simbología",
+                 "Artistas Notables",
+                 "Option 2"
+            ]
+        },
+        {
+            "name": "mi-argentina",
+            "options": ["qwd 1", "Option 2"]
+        }
+    ]
+}

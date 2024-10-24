@@ -5,7 +5,7 @@ export const PortalARG = () => {
                 <div id="block-system-main" className="block block-system clearfix">
                     <div className="panel-pane pane-texto">
                         <div className="pane-content">
-                            <div className="container-fluid bg-primary text-white p-b-2">
+                            <div className="container-fluid bg-info text-white p-b-2">
                                 <header className="home-new row">
                                     <h1 className="text-center m-t-4 h1 tit-buscador">Portal oficial del Estado argentino</h1>
                                     <div className="col-xs-12 col-md-8 m-t-2 col-md-offset-2 m-b-2">
@@ -51,7 +51,7 @@ export const PortalARG = () => {
 
                     <div className="panel-pane pane-atajos">
                         <div className="pane-content">
-                            <div className="bg-primary">
+                            <div className="bg-info">
                                 <div className="container home-new w-100">
                                     <h2 className="h4 m-t-5 m-b-2">Te puede interesar</h2>
                                     <ul className="list-inline pull-left w-100 p-b-3">
