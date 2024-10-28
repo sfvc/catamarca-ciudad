@@ -1,8 +1,9 @@
-import FaqCard from "../components/faq";
-import CardContainer from "../components/grid";
-import Header from "../components/header";
-import MapComponent from "../components/map";
-import { PortalARG } from "../components/portalarg";
+
+import FaqCard from '../components/home/faq';
+import CardContainer from '../components/home/grid';
+import Header from '../components/home/header';
+import MapComponent from '../components/home/map';
+import { PortalARG } from '../components/home/portalarg';
 import '../index.css'
 
 export const Home = () => {
@@ -11,7 +12,7 @@ export const Home = () => {
       <Header/>
       <main>
         <PortalARG/>
-        <CardContainer />
+        <CardContainer/>
         <FaqCard/>
         <MapComponent/>
       </main>

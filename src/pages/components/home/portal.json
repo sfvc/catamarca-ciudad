@@ -1,0 +1,34 @@
+{
+    "socialButtons": [
+        {
+            "name": "Youtube",
+            "image": "../src/pages/images/youtube2.svg",
+            "color": "btn-red"
+        },
+        {
+            "name": "Instagram",
+            "image": "../src/pages/images/instagram2.svg",
+            "color": "btn-instagram"
+        },
+        {
+            "name": "Youtube",
+            "image": "../src/pages/images/youtube2.svg",
+            "color": "btn-red"
+        },
+        {
+            "name": "Instagram",
+            "image": "../src/pages/images/instagram2.svg",
+            "color": "btn-purple"
+        },
+        {
+            "name": "Youtube",
+            "image": "../src/pages/images/youtube2.svg",
+            "color": "btn-red"
+        },
+        {
+            "name": "Instagram",
+            "image": "../src/pages/images/instagram2.svg",
+            "color": "btn-purple"
+        }
+    ]
+}

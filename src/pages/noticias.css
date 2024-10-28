@@ -1,0 +1,155 @@
+
+.main {
+    display: flex;
+    margin: 20px;
+    height: auto;
+}
+
+.noticias {
+    flex: 5;
+    margin-right: 20px;
+    overflow-y: auto;
+}
+
+.noticias__item {
+    margin-bottom: 20px;
+}
+
+.noticias__image {
+    width: 100%;
+    height: auto;
+}
+
+.noticias__title {
+    font-size: 1.5em;
+}
+
+.noticias__excerpt {
+    color: #666;
+}
+
+.aside {
+    flex: 1;
+    background: rgb(250, 248, 248);
+    padding: 15px;
+    border: 1px solid rgb(250, 248, 248);
+    box-shadow: inset 0px 0px 10px 0px rgb(250, 248, 248);
+    border-radius: 10px;
+    position: sticky; /* Make the aside sticky */
+    top: 15px; /* Adjust the top position as needed */
+    z-index: 10; /* Optional: ensure it stays above other content */
+    height: 85vh;
+}
+
+
+.aside__div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.aside__title {
+    margin-top: 0;
+}
+
+.aside__list {
+    list-style: none;
+    padding: 0;
+    gap: 15px; /* Space between the items */
+}
+.aside__item {
+    /* Optional: you can remove margin from aside__item if using gap */
+    margin: 0; 
+    height: auto;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.aside__image {
+    width: 75px; /* Adjust as needed */
+    margin-right: 10px; /* Space between image and text */
+    vertical-align: middle; /* Align image with text */
+    border-radius: 4px;
+}
+
+.aside__itemfooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.aside__link {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Example link color */
+}
+
+.aside__link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.aside__div1{
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+.aside__div2{
+  height: auto;
+}
+
+.aside__div2title{
+    text-align: center;
+}
+
+.aside__div2input{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 4px;
+    text-align: center;
+    background-color: white;
+
+}
+
+
+
+.noticias__imagegrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 10px; /* Space between images */
+    height: auto; /* Set a height for the grid */
+}
+
+.noticias__imagegrid .noticias__image--large {
+    grid-column: span 2; /* Make this image span two columns */
+    grid-row: span 2; /* Make this image span two rows */
+}
+
+.noticias__image {
+    width: 100%; /* Full width of the grid item */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for images */
+    
+}
+
+.noticias__itemcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.noticias__itemcontainerbutton{
+    text-align: center;
+}
+
+.noticias__itemcontainersection{
+    flex:5;
+}
+
+.noticias__itemcontainera{
+    flex: 1;
+    text-align: center;
+}

@@ -1,0 +1,35 @@
+{
+    "dropdowns": [
+        {
+            "name": "Municipio Abierto",
+            "options": [
+                "Acceso a Clave Fiscal",
+                "Consulta de Expedientes",
+                "Mail Municipal(Outlook)",
+                "Tramites Municipales Internos",
+                "Sistema de Almacenes",
+                "GAE-Expedientes",
+                "Sistema de Juzgado de Falta",
+                "Sistema de Recursos Humanos",
+                "Recursos Humanos",
+                "Sistema de Fiscalizacion de Obras",
+                "Administracion de Compras y Licitaciones",
+                "Sistema de Inspecciones",
+                "Sistema de Insumos de Educacion",
+                "GeoExplorer Terrenos"
+            ]
+        },
+        {
+            "name": "municipalidad",
+            "options": [
+                "Intendente",
+                 "Estructura Orgánica",
+                 "Valores",
+                 "Intendentes",
+                 "Reseña Histórica",
+                 "Simbología",
+                 "Artistas Notables"
+            ]
+        }
+    ]
+}
