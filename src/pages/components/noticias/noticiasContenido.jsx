@@ -18,7 +18,9 @@ export const NoticiasContenido = () => {
                             <p className="noticias__excerpt">{article.excerpt}</p>
                         </section>
                         <div className="noticias__itemcontainera">
-                            <a className="noticias__itemcontainera">ver</a>
+                            <a className="noticias__itemcontainera">
+                                <img className="noticias__itemcontaineraimg" src="./src/pages/images/eye.svg" alt="" />
+                            </a>
                         </div>
                     </div>
                 </article>
