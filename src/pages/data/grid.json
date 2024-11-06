@@ -1,0 +1,179 @@
+{
+    "grid":
+    [
+        {
+            "id":1,
+            "titulo": "Guia de Tramites",
+            "guiaDeTramites":[
+                {
+                    "link": "/gridConModal/1",
+                    "title": "Trámites Catastrales",
+                    "description": "Trámites y Servicios",
+                    "image": "guia.svg"
+                },
+                {
+                    "link": "https://recibos.catamarcaciudad.gob.ar/acceso.php",
+                    "title": "Fiscalización de Obras",
+                    "description": "Consultas Online Haberes",
+                    "image": "haberes.svg",
+                    "external": true
+                },
+                {
+                    "link": "https://drive.google.com/drive/home?hl=es",
+                    "title": "Ambiente y Espacios Públicos",
+                    "description": "Digesto Municipal",
+                    "image": "digesto.svg",
+                    "external": true
+                },
+                {
+                    "link": "/GeoPortal",
+                    "title": "Trámites Cementerio",
+                    "description": "Geo Portal",
+                    "image": "infraestructuradatos.svg"
+                },
+                {
+                    "link": "https://www.cajadecreditocatamarca.com.ar/",
+                    "title": "Inspección General",
+                    "description": "Caja Credito Municipal.",
+                    "image": "test.svg",
+                    "external": true
+                },
+                {
+                    "link": "https://rentas.catamarcaciudad.gob.ar/ui/",
+                    "title": "Bromatologia",
+                    "description": "Portal GDE",
+                    "image": "test.svg",
+                    "external": true
+                },
+                {
+                    "link": "https://correcciondeplanos.catamarcaciudad.gob.ar/",
+                    "title": "Habilitación Comercial",
+                    "description": "Rentas Municipal",
+                    "image": "rentas.svg",
+                    "external": true
+                },
+                {
+                    "link": "/datosabiertos",
+                    "title": "Cultura y Deporte",
+                    "description": "Sistema de Planos",
+                    "image": "planos.svg"
+                },
+                {
+                    "link": "/datosabiertos",
+                    "title": "Carnet de Conducir",
+                    "description": "Datos abiertos",
+                    "image": "datosabiertos.svg"
+                },
+                {
+                    "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&pli=1",
+                    "title": "Tránsito Municipal",
+                    "description": "Aplicacion Catamarca Ciudad",
+                    "image": "appcatamarca.svg",
+                    "external": true
+                },
+                {
+                    "link": "/muniservicios",
+                    "title": "Planeamiento Urbano",
+                    "description": "Servicios al Vecino",
+                    "image": "serviciosmunicipales.svg"
+                },
+                {
+                    "link": "/compra",
+                    "title": "Empleo y Capacitación",
+                    "description": "Portal de Compra",
+                    "image": "compra.svg"
+                },
+                {
+                    "link": "/muniservicios",
+                    "title": "Turismo",
+                    "description": "Servicios al Vecino",
+                    "image": "serviciosmunicipales.svg"
+                },
+                {
+                    "link": "/compra",
+                    "title": "Salud",
+                    "description": "Portal de Compra",
+                    "image": "compra.svg"
+                },
+                {
+                    "link": "/muniservicios",
+                    "title": "Decretos y Boletines Municipales",
+                    "description": "Servicios al Vecino",
+                    "image": "serviciosmunicipales.svg"
+                },
+                {
+                    "link": "/compra",
+                    "title": "Trámites Online Juzgado de Falta",
+                    "description": "Portal de Compra",
+                    "image": "compra.svg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Estructura Organica",
+            "guiaDeTramites":[
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Intendentes",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Caja de Crédito Municipal",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Gobierno y Coordinación",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Hacienda",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Urbanismo e Insfraestructura",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Gabinete y Modernización",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Salud Desarrollo Humano y Políticas Sociales",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Servicios Ciudadanos",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Turismo y Desarrollo Económico",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Educación Cultura y Deporte",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Protección Ciudadana",
+                    "link": "solicitud-juzgado-falta"
+                },
+                {
+                    "img": "path/to/image1.jpg",
+                    "title": "Secretaría de Ambiente y Espacios Públicos",
+                    "link": "solicitud-juzgado-falta"
+                }
+            ]
+        }
+    ]
+}

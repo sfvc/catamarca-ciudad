@@ -37,7 +37,7 @@
     border-radius: 10px;
     position: sticky; /* Make the aside sticky */
     top: 15px; /* Adjust the top position as needed */
-    z-index: 10; /* Optional: ensure it stays above other content */
+    z-index: 2; /* Optional: ensure it stays above other content */
     height: 85vh;
 }
 
@@ -146,12 +146,14 @@
     
 }
 
-.noticias__itemcontainer{
+.noticias__itemcontainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 75%;
+    border-bottom: 1px solid lightgray;
 }
+
 
 .noticias__itemcontainerbutton{
     text-align: center;
@@ -164,4 +166,22 @@
 .noticias__itemcontainera{
     flex: 1;
     text-align: end;
+}
+
+@media (max-width: 768px) {
+    .aside{
+        display: none;
+    }
+
+    .noticias{
+        margin-right: 0px;
+    }
+
+    .noticias__imagegrid {
+        width: 100%;
+    }
+
+    .noticias__itemcontainer {
+        width: 100%;
+    }
 }

@@ -1,0 +1,27 @@
+---
+// Import the necessary components and data
+import Layout from '../layout/Layout.astro';
+import {gridConModal} from '../data/gridConModal.json';
+import GridConModal from '../components/grid/gridconModal';
+
+const { id } = Astro.params; // Get the ID from the URL parameters
+
+// Find the corresponding tramite by ID
+const gridData = gridConModal.find((t) => t.id === parseInt(id, 10));
+
+if (!gridData) {
+    throw new Error('Trámite no encontrado');
+}
+
+// Function to get static paths for pre-rendering
+export function getStaticPaths() {
+    return gridConModal.map((t) => ({
+        params: { id: t.id.toString() }, // Convert ID to string
+    }));
+}
+
+---
+
+<Layout title={gridData.title}>
+    <GridConModal client:only="react" gridConModal={gridData} />
+</Layout>

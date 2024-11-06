@@ -1,0 +1,95 @@
+/* src/styles.css */
+.Tramites__container{
+  height: auto;
+  padding: 2rem;
+}
+
+.TramistedGrid__grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: auto;    /* 4 rows */
+  gap: 16px;                              /* Space between cards */
+  padding: 2rem 16px;
+  margin: 0 auto;
+}
+
+.TramistedGrid__card {
+  background-color: #f8f8f8; /* Card background */
+  border: 1px solid #ddd;    /* Card border */
+  border-radius: 8px;        /* Rounded corners */
+  padding: 10px;    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;           /* Pointer cursor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  height: 100%;
+  text-align: center;
+}
+
+.TramistedGrid__card:hover {
+  transform: translateY(-2px); /* Elevate the card by 2px on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.TramistedGrid__card-title {
+  font-size: 1.2em;          /* Card title size */
+  margin-bottom: 8px;       /* Space below title */
+}
+
+.TramistedGrid__card-content {
+  font-size: 1em;            /* Card content size */
+}
+
+
+.TramistedGrid__btnContainer{
+  height: auto;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TramistedGrid__btnVolver{
+  all:unset;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #666;
+  text-align: center !important;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.TramistedGrid__btnVolver:hover{
+  text-decoration: none;
+  color: #666;
+}
+
+/* Media query for screens up to 1024px */
+@media (max-width: 1024px) {
+  .TramistedGrid__grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+  .TramistedGrid__grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+/* Media query for screens up to 480px */
+@media (max-width: 480px) {
+  .TramistedGrid__grid-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}

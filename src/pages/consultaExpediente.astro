@@ -1,0 +1,9 @@
+---
+// Import your React component
+import ConsultaExpedientes from '../pages/components/consultaExpediente/consultaExpedientes';
+import Layout from './layout/Layout.astro';
+---
+
+<Layout title="Consulta de Expedientes">
+    <ConsultaExpedientes client:only="react" />
+</Layout>

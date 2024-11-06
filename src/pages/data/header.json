@@ -1,0 +1,94 @@
+{
+    "dropdowns": [
+        {
+            "name": "Municipio Abierto",
+            "options": [
+                {
+                    "label": "Acceso a Clave Fiscal",
+                    "link": "https://rentas.catamarcaciudad.gob.ar/rentas/index-2.html"
+                },
+                {
+                    "label": "Consulta de Expedientes",
+                    "link": "https://mi.argentina.gob.ar/consulta-expedientes"
+                },
+                {
+                    "label": "Tramites Municipales Internos",
+                    "link": "/"
+                },
+                {
+                    "label": "Sistema de Almacenes",
+                    "link": "https://almacen.catamarcaciudad.gob.ar/form_login.php"
+                },
+                {
+                    "label": "GAE-Expedientes",
+                    "link": "http://190.228.16.215/expedientes/defaultsinIE.asp"
+                },
+                {
+                    "label": "Sistema de Juzgado de Falta",
+                    "link": "https://mi.argentina.gob.ar/juzgado-falta"
+                },
+                {
+                    "label": "Sistema de Recursos Humanos",
+                    "link": "https://mi.argentina.gob.ar/recursos-humanos"
+                },
+                {
+                    "label": "Recursos Humanos",
+                    "link": "https://mi.argentina.gob.ar/recursos-humanos-info"
+                },
+                {
+                    "label": "Sistema de Fiscalizacion de Obras",
+                    "link": "http://190.228.16.215:90/fiscalizacion/form_login.php"
+                },
+                {
+                    "label": "Administracion de Compras y Licitaciones",
+                    "link": "https://compras.catamarcaciudad.gob.ar:8443/admin/login/?next=/"
+                },
+                {
+                    "label": "Sistema de Inspecciones",
+                    "link": "https://inspecciones.catamarcaciudad.gob.ar/login"
+                },
+                {
+                    "label": "Sistema de Insumos de Educacion",
+                    "link": "https://educacion.catamarcaciudad.gob.ar/educacion/form_login.php"
+                },
+                {
+                    "label": "GeoExplorer Terrenos",
+                    "link": "https://capaterrenos.catamarcaciudad.gob.ar/login"
+                }
+            ]
+        },
+        {
+            "name": "municipalidad",
+            "options": [
+                {
+                    "label": "Intendente",
+                    "link": "/blog/1"
+                },
+                {
+                    "label": "Estructura Orgánica",
+                    "link": "/grid/2"
+                },
+                {
+                    "label": "Valores",
+                    "link": "/blog/1"
+                },
+                {
+                    "label": "Intendentes",
+                    "link": "/intendentes"
+                },
+                {
+                    "label": "Reseña Histórica",
+                    "link": "/blog/1"
+                },
+                {
+                    "label": "Simbología",
+                    "link": "/blog/1"
+                },
+                {
+                    "label": "Artistas Notables",
+                    "link": "/tramites"
+                }
+            ]
+        }
+    ]
+}

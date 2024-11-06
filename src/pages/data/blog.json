@@ -1,0 +1,89 @@
+{
+    "Blog": [
+      {
+        "id": 1,
+        "link": "1",
+        "title": "Intendente",
+        "description": "Ver",
+        "image": "../src/pages/images/grid/guia.svg",
+        "facebook":"../src/pages/images/grid/guia.svg",
+        "twitter":"",
+        "youtube":"",
+        "tiktok":"",
+        "instagram":"",
+        "paginaBlog": [
+          {
+            "pagina": {
+              "tituloPagina": "Gustavo Saadi",
+              "Articulo": [
+                {
+                  "img": "path/to/image1.jpg",
+                  "title": "Solicitud de Certificado de Línea Municipal",
+                  "seccion": ""
+                },
+                {
+                  "img": "path/to/image2.jpg",
+                  "title": "Solicitud de Visación de Plano para Prescripción Adquisitiva",
+                  "link": "otra-opcion"
+                }
+              ]
+            },
+            "paginaModal": {
+              "tituloModal": "Trámites Catastrales - Modal",
+              "opciones": [
+                {
+                  "img": "path/to/image1.jpg",
+                  "title": "Solicitud de Certificado de Línea Municipal",
+                  "description": "Descripción de la solicitud de certificado de línea municipal.",
+                  "link": "certificado-linea-municipal"
+                }
+              ]
+            }
+          }
+        ]
+      },
+
+      {
+        "id": 2,
+        "link": "2",
+        "title": "Secretario",
+        "description": "Ver",
+        "image": "../src/pages/images/grid/guia.svg",
+        "facebook":"../src/pages/images/grid/guia.svg",
+        "twitter":"",
+        "youtube":"",
+        "tiktok":"",
+        "instagram":"",
+        "paginaBlog": [
+          {
+            "pagina": {
+              "tituloPagina": "Gustavo Saadi",
+              "Articulo": [
+                {
+                  "img": "path/to/image1.jpg",
+                  "title": "Solicitud de Certificado de Línea Municipal",
+                  "seccion": ""
+                },
+                {
+                  "img": "path/to/image2.jpg",
+                  "title": "Solicitud de Visación de Plano para Prescripción Adquisitiva",
+                  "link": "otra-opcion"
+                }
+              ]
+            },
+            "paginaModal": {
+              "tituloModal": "Trámites Catastrales - Modal",
+              "opciones": [
+                {
+                  "img": "path/to/image1.jpg",
+                  "title": "Solicitud de Certificado de Línea Municipal",
+                  "description": "Descripción de la solicitud de certificado de línea municipal.",
+                  "link": "certificado-linea-municipal"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }

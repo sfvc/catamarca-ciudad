@@ -1,5 +1,5 @@
 import React from 'react';
-import { faqtexto } from './faq.json';
+import { faqtexto } from '../../data/faq.json';
 
 // export const Faq = () => {
 //     return ( 

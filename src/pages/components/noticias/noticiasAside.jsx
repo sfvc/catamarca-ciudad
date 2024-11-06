@@ -1,5 +1,5 @@
 import React from 'react';
-import asideData from './noticiasAside.json'; // Adjust the path as necessary
+import asideData from '../../data/noticiasAside.json'; // Adjust the path as necessary
 
 export const NoticiasAside = () => {
     return (

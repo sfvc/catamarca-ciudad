@@ -1,0 +1,58 @@
+.consulta-container {
+    min-height: 55vh;
+}
+
+.consulta-container__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.consulta-container__description {
+    margin-bottom: 15px;
+}
+
+.consulta-container__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.consulta-container__form-group {
+    margin-bottom: 15px;
+}
+
+.consulta-container__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.consulta-container__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.consulta-container__button {
+    width: 25%;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: gray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid whitesmoke;
+}
+
+.consulta-container__button:hover {
+   cursor: pointer;
+   color: #102655;
+   border: 1px solid #102655;
+}
+
+.consulta-container__note {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+}

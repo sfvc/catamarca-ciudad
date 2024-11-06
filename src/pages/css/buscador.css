@@ -1,0 +1,139 @@
+.search-container {
+    height: auto;
+    min-height: 60vh;
+    margin: 20px auto;
+}
+
+.search-container__input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-container__results {
+    list-style: none;
+    padding: 0;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    height: 50vh; /* Adjust as needed */
+    position: absolute; /* Use absolute positioning */
+    top: 54%; /* Move down to the center vertically */
+    left: 50%; /* Move to the center horizontally */
+    transform: translate(-50%, -50%); /* Offset the element to truly center it */
+    z-index: 4; /* Ensure it is above other elements */
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.search-container__result-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+}
+
+.search-container__result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.search-container__result-item:nth-last-child{
+    border-bottom:none;
+}
+
+
+.search-container___resultados{
+    height: auto;
+    margin-block: 10px;
+}
+
+.search-container___resultados-article{
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+
+.search-container___resultados-div-article{
+    width: 75%;
+    height: 100%;
+    text-align: start;
+    padding: 1rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.search-container___resultados-div {
+    position: relative; /* Make this div the positioning context */
+    height: 100%; /* Set a specific height */
+    border-right: 1px solid lightgray;
+    width: 25%;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.search-container___resultados-img {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire div */
+    border-radius: 10px 0px 0px 10px;
+}
+
+.search-container___resultados-p {
+    font-size: smaller;
+    overflow: hidden; /* Hide the overflow */
+    text-overflow: ellipsis; /* Show ellipsis when text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 90%; /* Ensure it takes full width of its parent */
+}
+
+.search-container___resultados-a {
+    position: absolute; /* Position absolutely */
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+}
+
+.search-container___resultados-a-img {
+    width: 24px; /* Set width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.search-container-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.search-container-divimg{
+    display: contents;
+    padding: 10px;
+}
+
+.search-container-divimg img {
+    width: 48px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .search-container___resultados-div {
+        width: 35%;
+    }
+
+    .search-container___resultados-div-article{
+        width: 50%;
+    }
+}

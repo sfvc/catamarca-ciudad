@@ -1,4 +1,4 @@
-import { socialButtons } from './portal.json';
+import { socialButtons } from '../../data/portal.json';
 
 export const PortalARG = () => {
     return (

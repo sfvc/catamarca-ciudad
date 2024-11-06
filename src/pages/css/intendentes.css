@@ -1,0 +1,63 @@
+.intendentes__main{
+    min-height: 80vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.intendentes__div{
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 10px;
+}
+
+.intendentes__table{
+    border-collapse: collapse; /* Ensures borders are collapsed together */
+    border-radius: 10px; /* Adjust the radius as needed */
+    overflow: hidden; /* Ensures the corners are rounded */
+    width: 100%; /* Optional: full width of the container */
+}
+
+/* Optional: style for the table header and cells */
+.intendentes__header, .intendentes__data {
+    padding: 10px; /* Adds padding to table cells */
+    text-align: start; /* Aligns text to the left */
+}
+
+.intendentes__header:not(:first-child), .intendentes__data {
+    border-left: 1px solid lightgray;
+}
+
+.intendentes__thead {
+    background-color: #f0f0f0; /* Optional: background color for the header */
+}
+
+.intendentes__divinput{
+    height: 32px;
+    width: 50%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.intendentes__rowdiv{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-inline: 10px;
+    gap: 10px;
+}
+
+.intendentes__rowdiv-img{
+    border-radius: 4px;
+}
+
+table{
+    box-shadow: 0px 0px 5px 0px lightgray;
+}

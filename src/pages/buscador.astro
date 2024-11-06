@@ -1,0 +1,12 @@
+---
+import Layout from './layout/Layout.astro';
+import BuscadorComponent from './components/buscador/buscador';
+
+---
+
+<Layout title='Busca las ultimas novedades'>
+    <div>
+        <BuscadorComponent client:only="react"/>
+    </div>
+
+</Layout>

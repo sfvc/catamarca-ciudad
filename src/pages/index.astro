@@ -1,6 +1,8 @@
 ---
-import { Home } from "./pages/home";
- 
+import Footer from "./components/common/footer";
+import Header from "./components/common/header";
+import { Home } from "./components/home/home";
+ import '../pages/index.css'
 ---
 
 <!DOCTYPE html>
@@ -31,8 +33,6 @@ import { Home } from "./pages/home";
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../pages/index.css">
-
         <link rel="stylesheet" href="../../node_modules/ar-poncho/dist/css/argentina.css"> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> 
@@ -43,73 +43,8 @@ import { Home } from "./pages/home";
     </head>
 
     <body role="document" class="html front not-logged-in no-sidebars page-node i18n-es jquery-once-1-processed">
-        <Home client:only = "react"/>
-        
-        <footer class="main-footer">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="region region-footer1">
-                <section id="block-menu-menu-footer-1" class="block block-menu clearfix">
-                    <h2 class="block-title h3 section-title h3 section-title">Trámites</h2>
-                    <ul class="menu nav">
-                    <li class="first leaf"><a href="/turnos">Turnos</a></li>
-                    <li class="leaf"><a href="#">Trámites a distancia</a></li>
-                    <li class="last leaf"><a href="#">Atención al ciudadano</a></li>
-                    </ul>
-                </section>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="region region-footer2">
-                <section id="block-menu-menu-footer-2" class="block block-menu clearfix">
-                    <h2 class="block-title h3 section-title h3 section-title">Acerca de la República Argentina</h2>
-                    <ul class="menu nav">
-                    <li class="first leaf"><a href="#">Leyes argentinas</a></li>
-                    <li class="leaf"><a href="#">Organismos</a></li>
-                    <li class="last leaf"><a href="#">Mapa del Estado</a></li>
-                    </ul>
-                </section>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="region region-footer3">
-                <section id="block-menu-menu-footer-3" class="block block-menu clearfix">
-                    <h2 class="block-title h3 section-title h3 section-title">Acerca de Argentina.gob.ar</h2>
-                    <ul class="menu nav">
-                    <li class="first leaf"><a href="#">Acerca de este sitio</a></li>
-                    <li class="leaf"><a href="#">Términos y condiciones</a></li>
-                    <li class="last leaf"><a href="#">Contacto</a></li>
-                    </ul>
-                </section>
-                </div>
-            </div>
-            </div>
-        </div>
-
-
-            <div class="container-fluid">
-                <div class="row sub-footer">
-                    <div class="container">
-                        <div style="display:flex; align-items:center; justify-content:space-between">
-                            <a href="https://twitter.com/x/migrate?tok=7b2265223a222f4d756e6953465643222c2274223a313732393639383731397d67c3d556c3c3da4b63fc7c5e3e8713dd">
-                                <img src="../src/pages/images/twitter.svg" alt="">
-                            </a>
-                            <a href="https://www.facebook.com/catamarcatucapital">
-                                <img src="../src/pages/images/facebook.svg" alt="">
-                            </a>
-
-                            <a href="https://www.youtube.com/CatamarcaCapital">
-                                <img src="../src/pages/images/youtube.svg" alt="">
-                            </a>
-
-                            <a href="https://www.instagram.com/catamarcacapital/">
-                                <img src="../src/pages/images/instagram.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <Header client:only = "react"/>
+            <Home client:only = "react"/>
+        <Footer client:only = "react"/>
     </body>
 </html>

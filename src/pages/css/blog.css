@@ -1,0 +1,51 @@
+.blog-container {
+    min-height: 55vh;
+    margin: 20px auto;
+}
+
+.blog-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.blog-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.blog-content-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.blog-content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 1024px) {
+    .blog-image {
+        width: 75%;
+        border-radius: 10px;
+        border: 1px solid lightblue;
+        box-shadow: 0px 0px 10px 0px lightblue;
+    }
+
+    .blog-content {
+        width: 75%;
+    }
+}

@@ -1,5 +1,37 @@
 {
-    "sectionItems": [
+    "socialButtons": [
+        {
+            "name": "Youtube",
+            "image": "../src/pages/images/iconos-btn/youtube2.svg",
+            "color": "btn-youtube"
+        },
+        {
+            "name": "Twitter",
+            "image": "../src/pages/images/iconos-btn/twitter2.svg",
+            "color": "btn-twitter"
+        },
+        {
+            "name": "Instagram",
+            "image": "../src/pages/images/iconos-btn/instagram2.svg",
+            "color": "btn-instagram"
+        },
+        {
+            "name": "Facebook",
+            "image": "../src/pages/images/iconos-btn/facebook2.svg",
+            "color": "btn-facebook"
+        },
+        {
+            "name": "Whatsapp",
+            "image": "../src/pages/images/iconos-btn/wsp2.svg",
+            "color": "btn-whatsapp"
+        },
+        {
+            "name": "Tiktok",
+            "image": "../src/pages/images/iconos-btn/tiktok2.svg",
+            "color": "btn-tiktok"
+        }
+    ],
+    "HomePageGrid":[
         {
             "link": "/GuiaDeTramites",
             "title": "Guía de Trámites",

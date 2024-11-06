@@ -1,5 +1,5 @@
 import React from 'react';
-import noticiasData from './noticiasContenido.json'; // Adjust the path as necessary
+import noticiasData from '../../data/noticiasContenido.json'; // Adjust the path as necessary
 
 export const NoticiasContenido = () => {
     return ( 
@@ -18,7 +18,7 @@ export const NoticiasContenido = () => {
                             <p className="noticias__excerpt">{article.excerpt}</p>
                         </section>
                         <div className="noticias__itemcontainera">
-                            <a className="noticias__itemcontainera">
+                            <a className="noticias__itemcontainera" href='/blog/1'>
                                 <img className="noticias__itemcontaineraimg" src="./src/pages/images/eye.svg" alt="" />
                             </a>
                         </div>
