@@ -7,7 +7,7 @@ const BlogPage = ({ blog }) => {
             <div key={blog.id} className="blog-post">
                 <h1 className="blog-title">{blog.title}</h1>
                 <p className="blog-description">{blog.description}</p>
-                <img src='../src/pages/images/Saadi-Plaza.webp' alt="Blog Post" className="blog-image" />
+                <img src='/images/Saadi-Plaza.webp' alt="Blog Post" className="blog-image" />
                 
                 {/* Iterating over paginaBlog inside the selected blog */}
                 {blog.paginaBlog.map((pagina, idx) => (

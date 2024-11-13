@@ -69,7 +69,7 @@ const Header = () => {
                             aria-label="Argentina.gob.ar Presidencia de la Nación"
                         >
                             <img
-                                src="../src/pages/images/logo-new-2020.png"
+                                src="/images/logo-new-2020.png"
                                 alt="Argentina.gob.ar"
                                 height="50"
                                 width="254"

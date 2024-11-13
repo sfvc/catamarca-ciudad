@@ -9,98 +9,98 @@
                     "link": "/grid/15",
                     "title": "Trámites Catastrales",
                     "description": "Trámites y Servicios",
-                    "img": "../src/pages/images/grid/catrastal.svg"
+                    "img": "/images/grid/catrastal.svg"
                 },
                 {
                     "link": "/grid/29",
                     "title": "Fiscalización de Obras",
                     "description": "Consultas Online Haberes",
-                    "img": "../src/pages/images/grid/fiscalizacionObra.svg"
+                    "img": "/images/grid/fiscalizacionObra.svg"
                 },
                 {
                     "link": "/grid/16",
                     "title": "Ambiente y Espacios Públicos",
                     "description": "Digesto Municipal",
-                    "img": "../src/pages/images/grid/park.svg"
+                    "img": "/images/grid/park.svg"
                 },
                 {
                     "link": "/grid/17",
                     "title": "Trámites Cementerio",
                     "description": "Geo Portal",
-                    "img": "../src/pages/images/grid/cementerio.svg"
+                    "img": "/images/grid/cementerio.svg"
                 },
                 {
                     "link": "/grid/18",
                     "title": "Inspección General",
                     "description": "Caja Credito Municipal.",
-                    "img": "../src/pages/images/grid/inspeccionGeneral.svg"
+                    "img": "/images/grid/inspeccionGeneral.svg"
                 },
                 {
                     "link": "/grid/19",
                     "title": "Bromatologia",
                     "description": "Portal GDE",
-                    "img": "../src/pages/images/grid/bromatologia.svg"
+                    "img": "/images/grid/bromatologia.svg"
                 },
                 {
                     "link": "/grid/20",
                     "title": "Habilitación Comercial",
                     "description": "Rentas Municipal",
-                    "img": "../src/pages/images/grid/habilitacionComercial.svg"
+                    "img": "/images/grid/habilitacionComercial.svg"
                 },
                 {
                     "link": "/grid/21",
                     "title": "Cultura y Deporte",
                     "description": "Sistema de Planos",
-                    "img": "../src/pages/images/grid/culturaDeporte.svg"
+                    "img": "/images/grid/culturaDeporte.svg"
                 },
                 {
                     "link": "/grid/22",
                     "title": "Carnet de Conducir",
                     "description": "Datos abiertos",
-                    "img": "../src/pages/images/grid/carnetConducir.svg"
+                    "img": "/images/grid/carnetConducir.svg"
                 },
                 {
                     "link": "/grid/23",
                     "title": "Tránsito Municipal",
                     "description": "Aplicacion Catamarca Ciudad",
-                    "img": "../src/pages/images/grid/transitoMunicipal.svg"
+                    "img": "/images/grid/transitoMunicipal.svg"
                 },
                 {
                     "link": "/grid/24",
                     "title": "Planeamiento Urbano",
                     "description": "Servicios al Vecino",
-                    "img": "../src/pages/images/grid/planeamientoUrbano.svg"
+                    "img": "/images/grid/planeamientoUrbano.svg"
                 },
                 {
                     "link": "/grid/25",
                     "title": "Empleo y Capacitación",
                     "description": "Portal de Compra",
-                    "img": "../src/pages/images/grid/empleoCapacitacion.svg"
+                    "img": "/images/grid/empleoCapacitacion.svg"
                 },
                 {
                     "link": "https://sfvc.travel/",
                     "title": "Turismo",
                     "description": "Servicios al Vecino",
-                    "img": "../src/pages/images/grid/turismo.svg",
+                    "img": "/images/grid/turismo.svg",
                     "external":true
                 },
                 {
                     "link": "/grid/26",
                     "title": "Salud",
                     "description": "Portal de Compra",
-                    "img": "../src/pages/images/grid/salud.svg"
+                    "img": "/images/grid/salud.svg"
                 },
                 {
                     "link": "/grid/27",
                     "title": "Decretos y Boletines Municipales",
                     "description": "Servicios al Vecino",
-                    "img": "../src/pages/images/grid/decretosBoletines.svg"
+                    "img": "/images/grid/decretosBoletines.svg"
                 },
                 {
                     "link": "/grid/28",
                     "title": "Trámites Online Juzgado de Falta",
                     "description": "Portal de Compra",
-                    "img": "../src/pages/images/grid/juzgadoFalta.svg"
+                    "img": "/images/grid/juzgadoFalta.svg"
                 }
             ]
         },
@@ -109,63 +109,63 @@
             "titulo": "Estructura Organica",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/palacioMuni.jpg",
+                    "img": "/images/palacioMuni.jpg",
                     "title": "Intendencia",
                     "link": "/grid/3"
 
                 },
                 {
-                    "img": "../src/pages/images/cajaCredit.png",
+                    "img": "/images/cajaCredit.png",
                     "title": "Caja de Crédito Municipal",
                     "link": "/grid/4"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Gobierno y Coordinación",
                     "link": "/grid/5"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Hacienda",
                     "link": "/grid/6"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Urbanismo e Insfraestructura",
                     "link": "/grid/7"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Gabinete y Modernización",
                     "link": "/grid/8"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Salud Desarrollo Humano y Políticas Sociales",
                     "link": "/grid/9"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Servicios Ciudadanos",
                     "link": "/grid/10"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Turismo y Desarrollo Económico",
                     "link": "/grid/11"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Educación Cultura y Deporte",
                     "link": "/grid/12"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Protección Ciudadana",
                     "link": "/grid/13"
                 },
                 {
-                    "img": "../src/pages/images/avatar.svg",
+                    "img": "/images/avatar.svg",
                     "title": "Secretaría de Ambiente y Espacios Públicos",
                     "link": "/grid/14"
                 }
@@ -176,61 +176,61 @@
             "titulo": "Intendencia",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretaría de Gabinete y Modernización"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretaría de Gabinete y Modernización"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretaría de Gabinete y Modernización"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretaría de Gabinete y Modernización"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretaría de Gabinete y Modernización"
@@ -242,61 +242,61 @@
             "titulo": "Caja de Credito",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -308,61 +308,61 @@
             "titulo": "Secretaría de Gobierno y Coordinación",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -374,61 +374,61 @@
             "titulo": "Secretaría de Hacienda",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -440,61 +440,61 @@
             "titulo": "Secretaría de Urbanismo e Insfraestructura",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -506,61 +506,61 @@
             "titulo": "Secretaría de Gabinete y Modernización",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -572,61 +572,61 @@
             "titulo": "Secretaria de Salud Desarrollo Humano y Póliticas Sociales",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -638,61 +638,61 @@
             "titulo": "Secretaria de Servicios Ciudadanos",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -704,61 +704,61 @@
             "titulo": "Secretaría de Turismo y Desarrollo Económico",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -770,61 +770,61 @@
             "titulo": "Secretaría de Educación Cultura y Deporte",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -836,61 +836,61 @@
             "titulo": "Secretaría de Protección Ciudadana",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -902,61 +902,61 @@
             "titulo": "Secretaría de Ambiente y Espacios Públicos",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
                 },
                 {
-                    "img": "../src/pages/images/gustavo.jpg",
+                    "img": "/images/gustavo.jpg",
                     "title": "Gustavo Saadi",
                     "link": "/perfil",
                     "descripcion":"Intendente"
                 },
                 {
-                    "img": "../src/pages/images/mariano.jpeg",
+                    "img": "/images/mariano.jpeg",
                     "title": "Mariano Rosales",
                     "link": "/perfil",
                     "descripcion":"Secretario"
@@ -968,32 +968,32 @@
             "titulo": "Tramites Catrastales",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Solicitud de Certificado de Linea Municipal",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/visado.svg",
+                    "img": "/images/grid/visado.svg",
                     "title": "Solicitud de visación de plano para prescripción adquisitiva",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/visado.svg",
+                    "img": "/images/grid/visado.svg",
                     "title": "Solicitud de visación de planos de mensura y subdivisión",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/visado.svg",
+                    "img": "/images/grid/visado.svg",
                     "title": "Solicitud de visación de planos de loteos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/visado.svg",
+                    "img": "/images/grid/visado.svg",
                     "title": "Solicitud de visación previa de anteproyectos de loteos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Certificado de numeración domiciliaria",
                     "link": "/info"
                 }
@@ -1004,27 +1004,27 @@
             "titulo": "Trámites de Ambiente y Espacios Públicos",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/limpieza.svg",
+                    "img": "/images/grid/limpieza.svg",
                     "title": "Mantenimiento de Espacios Verdes",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/arbol.svg",
+                    "img": "/images/grid/arbol.svg",
                     "title": "Nuevo Espacio Verde",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/poda.svg",
+                    "img": "/images/grid/poda.svg",
                     "title": "Poda",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/poda.svg",
+                    "img": "/images/grid/poda.svg",
                     "title": "Extraccion de Arboles",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Inscripción en el Registro de Generadores, Operadores y Transportistas de RSUA",
                     "link": "/info"
                 }
@@ -1035,7 +1035,7 @@
             "titulo": "Trámites de Cementerio",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Solicitud de Concesión de terreno para Mausoleo en el Cementerio Municipal Fray Mamerto Esquiú",
                     "link": "/info"
                 }
@@ -1046,52 +1046,52 @@
             "titulo": "Trámites de Inspección General",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por Aguas Servidas",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por el Derroche de Agua",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por la falta de Cesto de Residuos Domiciliarios",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por Ruidos Molestos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por arrojar residuos domiciliarios en lugares y horarios prohibidos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por sitios baldíos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por la pode de árboles del espacio de utilidad Pública-Veredas/Plazas/Parques-Sin Autorización",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización para realizar espectáculos públicos eventuales",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización para realizar espectáculos públicos permanentes",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Denuncia por talleres mecánicos/mal estacionamiento de tranporte de carga/ pasajeros",
                     "link": "/info"
                 }
@@ -1102,22 +1102,22 @@
             "titulo": "Trámites Habilitación Bromatológica",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Habilitación Bromatológica de un Local Comercial: Rubro Alimentos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Baja de Solicitud o Certificado de Habilitación Bromatológica - Local Comercial: Rubro Alimentos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Certificado Habilitante de medio de transporte",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Renovación Anual/Baja del certificado habilitante del Medio de Transporte",
                     "link": "/info"
                 }
@@ -1128,12 +1128,12 @@
             "titulo": "Tramites Habilitación Comercial",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Habilitación Comercial",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización para la venta de Artículos de Pirotecnia",
                     "link": "/info"
                 }
@@ -1144,27 +1144,27 @@
             "titulo": "Trámites Cultura y Deporte",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización para utilizar el velódromo municipal",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización para utilizar Instalaciones del Polideportivo Sur",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/arte.svg",
+                    "img": "/images/grid/arte.svg",
                     "title": "S/Teatro del Sur - Espacio no Convencional",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/arte.svg",
+                    "img": "/images/grid/arte.svg",
                     "title": "S/Salon Calchaqui - Complejo Cultural Esquiu",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/arte.svg",
+                    "img": "/images/grid/arte.svg",
                     "title": "S/Complejo Cultural Urbano Girardi",
                     "link": "/info"
                 }
@@ -1175,12 +1175,12 @@
             "titulo": "Trámites Centro de Emisión de Licencias",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/vial.svg",
+                    "img": "/images/grid/vial.svg",
                     "title": "Seguridad Vial",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/carnetConducir.svg",
+                    "img": "/images/grid/carnetConducir.svg",
                     "title": "Emisión Licencia Nacional de Conducir",
                     "link": "/info"
                 }
@@ -1191,42 +1191,42 @@
             "titulo": "Trámites Tránsito Municipal",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/discapacitado.svg",
+                    "img": "/images/grid/discapacitado.svg",
                     "title": "Libre Estacionamiento para Discapacitado",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Renovación Licencia de Taxi o Remis",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Solicitud de Constancia de no ser Permsionario de Licencia de Taxi - Remis",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/desistimiento.svg",
+                    "img": "/images/grid/desistimiento.svg",
                     "title": "Solicitud de baja de Chofer Taxi - Remis",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Solicitud de Constancia de no pertenecer al personal de Planta Permanente del Municipio de SFVC",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/vial.svg",
+                    "img": "/images/grid/vial.svg",
                     "title": "Espacio reservado de Estacionamiento",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/cambio.svg",
+                    "img": "/images/grid/cambio.svg",
                     "title": "Cambio de Unidad Taxi - Remis",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/vial.svg",
+                    "img": "/images/grid/vial.svg",
                     "title": "Servicio de Corte de la Vía Pública",
                     "link": "/info"
                 }
@@ -1237,12 +1237,12 @@
             "titulo": "Planeamiento Urbano",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización de ocupación del Espacio Público - Mesas y Sillas",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Autorización de ocupación del Espacio Público - Estructura para Puesta de venta",
                     "link": "/info"
                 }
@@ -1253,37 +1253,37 @@
             "titulo": "Trámites Empleo y Capacitación",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Micro-Emprendimientos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Inscripción cursos de formación",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Programa de Inserción Laboral",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Programa Jóvenes con mas y mejor trabajo",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Programa promover la igual de oportunidades para el empleo",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Entrenamiento para el trabajo",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Micro-Créditos",
                     "link": "/info"
                 }
@@ -1294,7 +1294,7 @@
             "titulo": "Trámites Salud",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Solicitud de Ortodoncia - Prótesis",
                     "link": "/info"
                 }
@@ -1305,7 +1305,7 @@
             "titulo": "Trámites Solicitud de Decretos y Boletines Municipales",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Solicitud de Decreto Y/O Boletines Municipales",
                     "link": "/info"
                 }
@@ -1352,57 +1352,57 @@
             "titulo": "Trámites Fiscalización de Obras Públicas y Privadas",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Solicitud de Certificado de uso conforme del suelo",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/visado.svg",
+                    "img": "/images/grid/visado.svg",
                     "title": "Solicitud de visación de previa del plano de obra nueva o relevamiento de obra existente.",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Obtención de Certificado final de obra y certificado de habitabilidad",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/desistimiento.svg",
+                    "img": "/images/grid/desistimiento.svg",
                     "title": "Desistimiento de la Obra",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Solicitud de aprobación de plano de servicio contra incendio",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/construccion.svg",
+                    "img": "/images/grid/construccion.svg",
                     "title": "Zanjeos y Rotura de pavimento y vereda",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Permiso de Demolición",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/construccion.svg",
+                    "img": "/images/grid/construccion.svg",
                     "title": "Ocupación de Vía Pública",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aviso.svg",
+                    "img": "/images/grid/aviso.svg",
                     "title": "Solicitud de anuncio en la vía pública",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/cambio.svg",
+                    "img": "/images/grid/cambio.svg",
                     "title": "Cambio de Profesional",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aviso.svg",
+                    "img": "/images/grid/aviso.svg",
                     "title": "Aviso de Obra",
                     "link": "/info"
                 }
@@ -1413,57 +1413,57 @@
             "titulo": "Geo Portal",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/mapa.svg",
+                    "img": "/images/grid/mapa.svg",
                     "title": "IDE SFVC Visualizador Cartográfico",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/datosAlfanumericos.svg",
+                    "img": "/images/grid/datosAlfanumericos.svg",
                     "title": "Datos Alfanumericos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/descarga.svg",
+                    "img": "/images/grid/descarga.svg",
                     "title": "Descarga Plano Catastrales Digitalizados",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/descarga.svg",
+                    "img": "/images/grid/descarga.svg",
                     "title": "Descarga de planos de Obra Digitalizados",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Certificacion Domiciliaria",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/link.svg",
+                    "img": "/images/grid/link.svg",
                     "title": "Metadatos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/video.svg",
+                    "img": "/images/grid/video.svg",
                     "title": "Videos Tutoriales",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/descarga.svg",
+                    "img": "/images/grid/descarga.svg",
                     "title": "Descarga de Geoservicios y Planos Varios",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Legislación",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/cementerio.svg",
+                    "img": "/images/grid/cementerio.svg",
                     "title": "Cementerio",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Rubi Registro Único de Beneficiarios de Inmuebles",
                     "link": "/info"
                 }
@@ -1474,17 +1474,17 @@
             "titulo": "Portal GDE",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Acceso GDE",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/video.svg",
+                    "img": "/images/grid/video.svg",
                     "title": "Portal de Videos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/mapa.svg",
+                    "img": "/images/grid/mapa.svg",
                     "title": "Mapas de Procesos",
                     "link": "/info"
                 }
@@ -1495,27 +1495,27 @@
             "titulo": "Datos Abiertos",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/datosAlfanumericos.svg",
+                    "img": "/images/grid/datosAlfanumericos.svg",
                     "title": "Portal de Datos Abiertos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Transparencia Fiscal",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/juzgadoFalta.svg",
+                    "img": "/images/grid/juzgadoFalta.svg",
                     "title": "Digesto Jurídico Municipal",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/compraColor.svg",
+                    "img": "/images/grid/compraColor.svg",
                     "title": "Catamarca Ciudad Compra",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/gobierno.svg",
+                    "img": "/images/grid/gobierno.svg",
                     "title": "Gobierno",
                     "link": "/info"
                 }
@@ -1526,42 +1526,42 @@
             "titulo": "Servicios al Vecino",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/juzgadoFalta.svg",
+                    "img": "/images/grid/juzgadoFalta.svg",
                     "title": "Juzgado de Falta",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/denuncia.svg",
+                    "img": "/images/grid/denuncia.svg",
                     "title": "Seguridad",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/salud.svg",
+                    "img": "/images/grid/salud.svg",
                     "title": "Salud",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/construccion.svg",
+                    "img": "/images/grid/construccion.svg",
                     "title": "Servicios Públicos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Educación",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/culturaDeporte.svg",
+                    "img": "/images/grid/culturaDeporte.svg",
                     "title": "Deportes",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Rentas",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/info.svg",
+                    "img": "/images/grid/info.svg",
                     "title": "Información Útil",
                     "link": "/info"
                 }
@@ -1572,22 +1572,22 @@
             "titulo": "Compras",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/compraColor.svg",
+                    "img": "/images/grid/compraColor.svg",
                     "title": "Que Compramos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/calendar.svg",
+                    "img": "/images/grid/calendar.svg",
                     "title": "Cuando Compramos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/tickets.svg",
+                    "img": "/images/grid/tickets.svg",
                     "title": "A Quienes Compramos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/provedor.svg",
+                    "img": "/images/grid/provedor.svg",
                     "title": "Proveedores",
                     "link": "/info"
                 }
@@ -1598,47 +1598,47 @@
             "titulo": "Tramites Municipales Internos",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/compraColor.svg",
+                    "img": "/images/grid/compraColor.svg",
                     "title": "Comisión de Servicios",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/aprobacion.svg",
+                    "img": "/images/grid/aprobacion.svg",
                     "title": "Solicitud de Insumos",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Instructivos Correo Institucional",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Instructivos Plataforma Gestión Documental (GDE)",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/compraColor.svg",
+                    "img": "/images/grid/compraColor.svg",
                     "title": "Compras",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/haberes.svg",
+                    "img": "/images/grid/haberes.svg",
                     "title": "Fondo Permanente",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/certificado.svg",
+                    "img": "/images/grid/certificado.svg",
                     "title": "Formulación Presupuesto 2019",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/programa.svg",
+                    "img": "/images/grid/programa.svg",
                     "title": "Programación Anual de Compras 2018",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/digesto.svg",
+                    "img": "/images/grid/digesto.svg",
                     "title": "Archivo Municipal",
                     "link": "/info"
                 }
@@ -1649,12 +1649,12 @@
             "titulo": "Recursos Humanos - Formularios",
             "guiaDeTramites":[
                 {
-                    "img": "../src/pages/images/grid/construccion.svg",
+                    "img": "/images/grid/construccion.svg",
                     "title": "Empleados y Obreros Municipales",
                     "link": "/info"
                 },
                 {
-                    "img": "../src/pages/images/grid/docente.svg",
+                    "img": "/images/grid/docente.svg",
                     "title": "Docente Municipales",
                     "link": "/info"
                 }

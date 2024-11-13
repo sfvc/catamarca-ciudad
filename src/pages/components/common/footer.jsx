@@ -50,19 +50,19 @@ const Footer = () => {
           <div className="container">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <a href="https://twitter.com/x/migrate?tok=7b2265223a222f4d756e6953465643222c2274223a313732393639383731397d67c3d556c3c3da4b63fc7c5e3e8713dd">
-                <img src="../src/pages/images/twitter.svg" alt="Twitter" target="blank"/>
+                <img src="/images/twitter.svg" alt="Twitter" target="blank"/>
               </a>
               <a href="https://www.facebook.com/catamarcatucapital" target="blank">
-                <img src="../src/pages/images/facebook.svg" alt="Facebook"/>
+                <img src="/images/facebook.svg" alt="Facebook"/>
               </a>
               <a href="https://www.youtube.com/CatamarcaCapital" target="blank">
-                <img src="../src/pages/images/youtube.svg" alt="YouTube" />
+                <img src="/images/youtube.svg" alt="YouTube" />
               </a>
               <a href="https://www.instagram.com/catamarcacapital/" target="blank">
-                <img src="../src/pages/images/instagram.svg" alt="Instagram" />
+                <img src="/images/instagram.svg" alt="Instagram" />
               </a>
               <a href="https://wa.me/3333344444" target="blank">
-                <img src="../src/pages/images/wsp.svg" alt="Whatsapp" />
+                <img src="/images/wsp.svg" alt="Whatsapp" />
               </a>
             </div>
           </div>

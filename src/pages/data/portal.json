@@ -2,32 +2,32 @@
     "socialButtons": [
         {
             "name": "",
-            "image": "../src/pages/images/iconos-btn/youtube2.svg",
+            "image": "/images/iconos-btn/youtube2.svg",
             "color": "btn-youtube"
         },
         {
             "name": "",
-            "image": "../src/pages/images/iconos-btn/twitter2.svg",
+            "image": "/images/iconos-btn/twitter2.svg",
             "color": "btn-twitter"
         },
         {
             "name": "",
-            "image": "../src/pages/images/iconos-btn/instagram2.svg",
+            "image": "/images/iconos-btn/instagram2.svg",
             "color": "btn-instagram"
         },
         {
             "name": "",
-            "image": "../src/pages/images/iconos-btn/facebook2.svg",
+            "image": "/images/iconos-btn/facebook2.svg",
             "color": "btn-facebook"
         },
         {
             "name": "",
-            "image": "../src/pages/images/iconos-btn/wsp2.svg",
+            "image": "/images/iconos-btn/wsp2.svg",
             "color": "btn-whatsapp"
         },
         {
             "name": "",
-            "image": "../src/pages/images/iconos-btn/tiktok2.svg",
+            "image": "/images/iconos-btn/tiktok2.svg",
             "color": "btn-tiktok"
         }
     ],
@@ -36,79 +36,79 @@
             "link": "/grid/1",
             "title": "Guía de Trámites",
             "description": "Trámites y Servicios",
-            "image": "../src/pages/images/grid/guia.svg"
+            "image": "/images/grid/guia.svg"
         },
         {
             "link": "https://recibos.catamarcaciudad.gob.ar/acceso.php",
             "title": "Haberes Mensuales",
             "description": "Consultas Online Haberes",
-            "image": "../src/pages/images/grid/haberes.svg",
+            "image": "/images/grid/haberes.svg",
             "external": true
         },
         {
             "link": "/digesto",
             "title": "Digesto Municipal",
             "description": "Digesto Municipal",
-            "image": "../src/pages/images/grid/digesto.svg",
+            "image": "/images/grid/digesto.svg",
             "external": true
         },
         {
             "link": "/grid/30",
             "title": "Infraestructura de Datos Espaciales",
             "description": "Geo Portal",
-            "image": "../src/pages/images/grid/infraestructuradatos.svg"
+            "image": "/images/grid/infraestructuradatos.svg"
         },
         {
             "link": "https://www.cajadecreditocatamarca.com.ar/",
             "title": "Caja de Credito Municipal",
             "description": "Caja Credito Municipal.",
-            "image": "../src/pages/images/grid/test.svg",
+            "image": "/images/grid/test.svg",
             "external": true
         },
         {
             "link": "/grid/31",
             "title": "Gestion Documental Electronica",
             "description": "Portal GDE",
-            "image": "../src/pages/images/grid/test.svg",
+            "image": "/images/grid/test.svg",
             "external": true
         },
         {
             "link": "https://rentas.catamarcaciudad.gob.ar/ui/",
             "title": "Direccion General de Rentas",
             "description": "Rentas Municipal",
-            "image": "../src/pages/images/grid/rentas.svg",
+            "image": "/images/grid/rentas.svg",
             "external": true
         },
         {
             "link": "https://correcciondeplanos.catamarcaciudad.gob.ar/",
             "title": "Sistema Online de Correccion de Planos",
             "description": "Sistema de Planos",
-            "image": "../src/pages/images/grid/planos.svg"
+            "image": "/images/grid/planos.svg"
         },
         {
             "link": "/grid/32",
             "title": "Datos Abiertos",
             "description": "Datos abiertos",
-            "image": "../src/pages/images/grid/datosabiertos.svg"
+            "image": "/images/grid/datosabiertos.svg"
         },
         {
             "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&pli=1",
             "title": "App Ciudad Catamarca",
             "description": "Aplicacion Catamarca Ciudad",
-            "image": "../src/pages/images/grid/appcatamarca.svg",
+            "image": "/images/grid/appcatamarca.svg",
             "external": true
         },
         {
             "link": "/grid/33",
             "title": "Servicios al Vecino",
             "description": "Servicios al Vecino",
-            "image": "../src/pages/images/grid/serviciosmunicipales.svg"
+            "image": "/images/grid/serviciosmunicipales.svg"
         },
         {
             "link": "/grid/34",
             "title": "Compra",
             "description": "Portal de Compra",
-            "image": "../src/pages/images/grid/compraColor.svg"
+            "image": "/images/grid/compraColor.svg"
         }
     ]
 }

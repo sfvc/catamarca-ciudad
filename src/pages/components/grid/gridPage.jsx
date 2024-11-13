@@ -26,7 +26,7 @@ const GridPage = ({ grid }) => {
         </div>
         <div className="TramistedGrid__btnContainer">
           <a className="TramistedGrid__btnVolver" href="/">
-            <img src="../src/pages/images/arrowback.svg" alt="back" />
+            <img src="/images/arrowback.svg" alt="back" />
             Volver
           </a>
         </div>

@@ -3,7 +3,7 @@ import GridPage from "../grid/gridPage";
 const PerfilPage = () => {
     return ( 
         <main role="main">
-            <section className="jumbotron" style={{ backgroundImage: "url('../src/pages/images/Saadi-Plaza.webp')" }}>
+            <section className="jumbotron" style={{ backgroundImage: "url('/images/Saadi-Plaza.webp')" }}>
                 <div className="jumbotron_body">
                     <div className="container">
                     <div className="row">
@@ -44,7 +44,7 @@ const PerfilPage = () => {
                     <div className="row panels-row">
                     <div className="col-xs-12 col-sm-6">
                         <a className="panel panel-default panel-lg" href="#">
-                        <div style={{ backgroundImage: "url('../src/pages/images/parquejumeal.webp')" }} className="panel-heading img"></div>
+                        <div style={{ backgroundImage: "url('/images/parquejumeal.webp')" }} className="panel-heading img"></div>
                         <div className="panel-body">
                             <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
                             <p className="h3_title">Inauguracion de EcoParque</p>
@@ -54,7 +54,7 @@ const PerfilPage = () => {
                     
                     <div className="col-xs-12 col-sm-6">
                         <a className="panel panel-default panel-lg" href="#">
-                        <div style={{ backgroundImage: "url('../src/pages/images/palacioMuni.jpg')" }} className="panel-heading img"></div>
+                        <div style={{ backgroundImage: "url('/images/palacioMuni.jpg')" }} className="panel-heading img"></div>
                         <div className="panel-body">
                             <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
                             <p className="h3_title">Municipalidad de Catamarca se renueva.
@@ -65,7 +65,7 @@ const PerfilPage = () => {
                     <div className="row panels-row">
                     <div className="col-xs-12 col-sm-6 col-md-3">
                         <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('../src/pages/images/gustavo.jpg')" }} className="panel-heading img"></div>
+                        <div style={{ backgroundImage: "url('/images/gustavo.jpg')" }} className="panel-heading img"></div>
                         <div className="panel-body">
                             <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
                             <p className="h3_title">Gustavo etc.
@@ -74,7 +74,7 @@ const PerfilPage = () => {
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-3">
                         <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('../src/pages/images/Saadi-Plaza.webp')" }} className="panel-heading img"></div>
+                        <div style={{ backgroundImage: "url('/images/Saadi-Plaza.webp')" }} className="panel-heading img"></div>
                         <div className="panel-body">
                             <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
                             <p className="h3_title">Nueva Plaza.
@@ -86,7 +86,7 @@ const PerfilPage = () => {
                     <div className="page-break"></div>
                     <div className="col-xs-12 col-sm-6 col-md-3">
                         <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('../src/pages/images/cajaCredit.png')" }} className="panel-heading img"></div>
+                        <div style={{ backgroundImage: "url('/images/cajaCredit.png')" }} className="panel-heading img"></div>
                         <div className="panel-body">
                             <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
                             <p className="h3_title">Caja credito etc.
@@ -95,7 +95,7 @@ const PerfilPage = () => {
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-3">
                         <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('../src/pages/images/mariano.jpeg')" }} className="panel-heading img"></div>
+                        <div style={{ backgroundImage: "url('/images/mariano.jpeg')" }} className="panel-heading img"></div>
                         <div className="panel-body">
                             <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
                             <p className="h3_title">Mariano etc.</p>

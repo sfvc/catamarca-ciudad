@@ -38,21 +38,21 @@ const Modal = ({ isOpen, onClose }) => {
                         <tr className="modal__descargar-tablerow">
                             <td className="modal__descargar-tabletd">
                                 <figure class="modal__descargar-figure">
-                                    <img src="../src/pages/images/pdf.svg" alt="" />
+                                    <img src="/images/pdf.svg" alt="" />
                                     <figcaption>Ficha del Tramite</figcaption>
                                     <button>Descargar</button>
                                 </figure>
                             </td>
                             <td className="modal__descargar-tabletd">
                                 <figure class="modal__descargar-figure">
-                                    <img src="../src/pages/images/pdf.svg" alt="" />
+                                    <img src="/images/pdf.svg" alt="" />
                                     <figcaption>Ficha del Tramite</figcaption>
                                     <button>Descargar</button>
                                 </figure>
                             </td>
                             <td className="modal__descargar-tabletd">
                                 <figure class="modal__descargar-figure">
-                                    <img src="../src/pages/images/pdf.svg" alt="" />
+                                    <img src="/images/pdf.svg" alt="" />
                                     <figcaption>Ficha del Tramite</figcaption>
                                     <button>Descargar</button>
                                 </figure>
