@@ -1,27 +1,28 @@
-import {HomePageGrid} from "../../data/portal.json"
-
+import {HomePageGrid} from '../../data/portal.json'
 
 const HomeGrid = () => {
-  
-  return (
-    <div className="pane-content cardcontainer m-t-2">
-      <div className="container home-new p-x-0">
 
-          <ul className="list-inline p-b-3">
-            {HomePageGrid.map((card, index) => (
-              <Card key={index} title={card.title} description={card.description} logo={card.image} />
-            ))}
-          </ul>
+  return (
+    <>
+      <div className='Tramites__container'>
+        <div className="TramistedGrid__grid-container container">
+          {HomePageGrid.map((card, index) => (
+            <a
+              key={index}
+              href={card.link}
+              style={{ all: 'unset' }}
+            >
+              <div className="TramistedGrid__card">
+                <img className="TramistedGrid__cardimg" src={card.image} alt={card.title} />
+                <h3 className="TramistedGrid__card-title">{card.title}</h3>
+                <small className="TramistedGrid__card-small">{card.descrition}</small>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
-
-const Card = ({ title, link, logo }) => (
-  <li className="link2 text-center"> 
-      <img  src={logo} alt="" />
-      <a href={link} className="texto-colorgrid">{title}</a>
-  </li>
-);
 
 export default HomeGrid;

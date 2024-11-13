@@ -1,16 +1,16 @@
 import React from 'react';
-import asideData from '../../data/noticiasAside.json'; // Adjust the path as necessary
+import digestoAside from '../../data/digestoAside.json'; // Adjust the path as necessary
 
-export const NoticiasAside = () => {
+export const DigestoAside = () => {
     return (
         <aside className="aside">
             <div className="aside__div">
 
-                <h3 className="aside__title">Novedades</h3>
+                <h3 className="aside__title">Decretos</h3>
 
                 <div className="aside__div1">
                     <ul className="aside__list">
-                        {asideData.trendingTopics.map((topic, index) => (
+                        {digestoAside.trendingTopics.map((topic, index) => (
                             <li className="aside__item" key={index}>
                                 <img className="aside__image" src={topic.image} alt={topic.text} />
                                 {topic.text}
@@ -19,8 +19,7 @@ export const NoticiasAside = () => {
                     </ul>
                 </div>
                 <div className="aside__div2">
-                    <h3 className="aside__div2title">Buscar</h3>
-                    <input className="aside__div2input" type="text" name="" id="" />
+                    <input className="aside__div2input" type="text" name="" id="" placeholder='Buscá el decreto..'/>
                     <ul className="aside__list">
                         <li className="aside__itemfooter">
                             <button className="aside__link">

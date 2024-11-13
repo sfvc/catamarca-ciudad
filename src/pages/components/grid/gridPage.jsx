@@ -17,16 +17,16 @@ const GridPage = ({ grid }) => {
               target={card.external ? '_blank' : '_self'} // Open external links in a new tab
             >
               <div className="TramistedGrid__card">
-                <img src={card.image} alt={card.title} />
+                <img className="TramistedGrid__cardimg" src={card.img} alt={card.title} />
                 <h3 className="TramistedGrid__card-title">{card.title}</h3>
-                <p className="TramistedGrid__card-content">{card.description}</p>
+                <small className="TramistedGrid__card-small">{card.descripcion}</small>
               </div>
             </a>
           ))}
         </div>
         <div className="TramistedGrid__btnContainer">
           <a className="TramistedGrid__btnVolver" href="/">
-            <img src="./src/pages/images/arrowback.svg" alt="back" />
+            <img src="../src/pages/images/arrowback.svg" alt="back" />
             Volver
           </a>
         </div>

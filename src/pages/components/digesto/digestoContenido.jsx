@@ -1,10 +1,10 @@
 import React from 'react';
-import noticiasData from '../../data/noticiasContenido.json'; // Adjust the path as necessary
+import digestoContenido from '../../data/digestoContenido.json'; // Adjust the path as necessary
 
-export const NoticiasContenido = () => {
+export const DigestoContenido = () => {
     return ( 
         <section className="noticias">
-            {noticiasData.articles.map((article, index) => (
+            {digestoContenido.articles.map((article, index) => (
                 <article className="noticias__item" key={index}>
                     <div className="noticias__imagegrid">
                         <img className="noticias__image noticias__image--large" src={article.images[0]} alt={article.title} />

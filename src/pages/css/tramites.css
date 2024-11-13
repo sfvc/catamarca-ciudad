@@ -1,41 +1,37 @@
 /* src/styles.css */
 .Tramites__container{
+  min-height: 60vh;
   height: auto;
-  padding: 2rem;
 }
 
 .TramistedGrid__grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(5, 1fr); /* 4 columns */
   grid-template-rows: auto;    /* 4 rows */
-  gap: 16px;                              /* Space between cards */
-  padding: 2rem 16px;
-  margin: 0 auto;
+  padding: 0;
 }
 
 .TramistedGrid__card {
-  background-color: #f8f8f8; /* Card background */
-  border: 1px solid #ddd;    /* Card border */
+  background-color: transparent; /* Card background */
   border-radius: 8px;        /* Rounded corners */
-  padding: 10px;    
+  padding: 16px;    
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   cursor: pointer;           /* Pointer cursor */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  height: 100%;
+  height: auto;
   text-align: center;
 }
 
 .TramistedGrid__card:hover {
   transform: translateY(-2px); /* Elevate the card by 2px on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .TramistedGrid__card-title {
   font-size: 1.2em;          /* Card title size */
-  margin-bottom: 8px;       /* Space below title */
+  margin-bottom: 8px;
 }
 
 .TramistedGrid__card-content {
@@ -70,6 +66,19 @@
 
 .TramistedGrid__btnVolver:hover{
   text-decoration: none;
+  color: black;
+}
+
+.TramistedGrid__cardimg {
+  height: 250px; /* Fixed height for the image */
+  width: 200px; /* Fixed width for the image */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  object-position: center; /* Centers the image */
+  border-radius: 10px; /* Rounded corners for the image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.TramistedGrid__card-small{
   color: #666;
 }
 

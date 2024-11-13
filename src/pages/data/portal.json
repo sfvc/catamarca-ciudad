@@ -1,39 +1,39 @@
 {
     "socialButtons": [
         {
-            "name": "Youtube",
+            "name": "",
             "image": "../src/pages/images/iconos-btn/youtube2.svg",
             "color": "btn-youtube"
         },
         {
-            "name": "Twitter",
+            "name": "",
             "image": "../src/pages/images/iconos-btn/twitter2.svg",
             "color": "btn-twitter"
         },
         {
-            "name": "Instagram",
+            "name": "",
             "image": "../src/pages/images/iconos-btn/instagram2.svg",
             "color": "btn-instagram"
         },
         {
-            "name": "Facebook",
+            "name": "",
             "image": "../src/pages/images/iconos-btn/facebook2.svg",
             "color": "btn-facebook"
         },
         {
-            "name": "Whatsapp",
+            "name": "",
             "image": "../src/pages/images/iconos-btn/wsp2.svg",
             "color": "btn-whatsapp"
         },
         {
-            "name": "Tiktok",
+            "name": "",
             "image": "../src/pages/images/iconos-btn/tiktok2.svg",
             "color": "btn-tiktok"
         }
     ],
     "HomePageGrid":[
         {
-            "link": "/GuiaDeTramites",
+            "link": "/grid/1",
             "title": "Guía de Trámites",
             "description": "Trámites y Servicios",
             "image": "../src/pages/images/grid/guia.svg"
@@ -46,14 +46,14 @@
             "external": true
         },
         {
-            "link": "https://drive.google.com/drive/home?hl=es",
+            "link": "/digesto",
             "title": "Digesto Municipal",
             "description": "Digesto Municipal",
             "image": "../src/pages/images/grid/digesto.svg",
             "external": true
         },
         {
-            "link": "/GeoPortal",
+            "link": "/grid/30",
             "title": "Infraestructura de Datos Espaciales",
             "description": "Geo Portal",
             "image": "../src/pages/images/grid/infraestructuradatos.svg"
@@ -66,27 +66,27 @@
             "external": true
         },
         {
-            "link": "https://rentas.catamarcaciudad.gob.ar/ui/",
+            "link": "/grid/31",
             "title": "Gestion Documental Electronica",
             "description": "Portal GDE",
             "image": "../src/pages/images/grid/test.svg",
             "external": true
         },
         {
-            "link": "https://correcciondeplanos.catamarcaciudad.gob.ar/",
+            "link": "https://rentas.catamarcaciudad.gob.ar/ui/",
             "title": "Direccion General de Rentas",
             "description": "Rentas Municipal",
             "image": "../src/pages/images/grid/rentas.svg",
             "external": true
         },
         {
-            "link": "/datosabiertos",
+            "link": "https://correcciondeplanos.catamarcaciudad.gob.ar/",
             "title": "Sistema Online de Correccion de Planos",
             "description": "Sistema de Planos",
             "image": "../src/pages/images/grid/planos.svg"
         },
         {
-            "link": "/datosabiertos",
+            "link": "/grid/32",
             "title": "Datos Abiertos",
             "description": "Datos abiertos",
             "image": "../src/pages/images/grid/datosabiertos.svg"
@@ -99,16 +99,16 @@
             "external": true
         },
         {
-            "link": "/muniservicios",
+            "link": "/grid/33",
             "title": "Servicios al Vecino",
             "description": "Servicios al Vecino",
             "image": "../src/pages/images/grid/serviciosmunicipales.svg"
         },
         {
-            "link": "/compra",
+            "link": "/grid/34",
             "title": "Compra",
             "description": "Portal de Compra",
-            "image": "../src/pages/images/grid/compra.svg"
+            "image": "../src/pages/images/grid/compraColor.svg"
         }
     ]
 }

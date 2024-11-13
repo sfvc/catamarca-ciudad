@@ -76,3 +76,22 @@ body.no-scroll {
     overflow: hidden; /* Disable scrolling */
     height: 100%; /* Ensure the height is full to prevent body scrolling */
 }
+
+.container-width{
+    width: 90%;
+}
+
+.jumbotron {
+    position: relative;
+    background-position: center;  /* Centers the image */
+    background-size: cover;  /* Ensures the image covers the area without stretching */
+    object-fit: cover;  /* Ensures any content (like videos or images) inside the jumbotron fits */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    color: #fff;
+    margin-bottom: 0;
+    padding: 0;
+    height: 60vh;  /* Height is set to 50% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

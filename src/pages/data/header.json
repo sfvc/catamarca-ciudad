@@ -5,55 +5,65 @@
             "options": [
                 {
                     "label": "Acceso a Clave Fiscal",
-                    "link": "https://rentas.catamarcaciudad.gob.ar/rentas/index-2.html"
+                    "link": "https://rentas.catamarcaciudad.gob.ar/rentas/index-2.html",
+                    "external": true
                 },
                 {
                     "label": "Consulta de Expedientes",
-                    "link": "https://mi.argentina.gob.ar/consulta-expedientes"
+                    "link": "/consultaExpediente"
                 },
                 {
                     "label": "Tramites Municipales Internos",
-                    "link": "/"
+                    "link": "/grid/35"
                 },
                 {
                     "label": "Sistema de Almacenes",
-                    "link": "https://almacen.catamarcaciudad.gob.ar/form_login.php"
+                    "link": "https://almacen.catamarcaciudad.gob.ar/form_login.php",
+                    "external": true
                 },
                 {
                     "label": "GAE-Expedientes",
-                    "link": "http://190.228.16.215/expedientes/defaultsinIE.asp"
+                    "link": "http://190.228.16.215/expedientes/defaultsinIE.asp",
+                    "external": true
                 },
                 {
                     "label": "Sistema de Juzgado de Falta",
-                    "link": "https://mi.argentina.gob.ar/juzgado-falta"
+                    "link": "https://mi.argentina.gob.ar/juzgado-falta",
+                    "external": true
                 },
                 {
                     "label": "Sistema de Recursos Humanos",
-                    "link": "https://mi.argentina.gob.ar/recursos-humanos"
+                    "link": "https://mi.argentina.gob.ar/recursos-humanos",
+                    "external": true
                 },
                 {
                     "label": "Recursos Humanos",
-                    "link": "https://mi.argentina.gob.ar/recursos-humanos-info"
+                    "link": "/grid/36"
                 },
                 {
                     "label": "Sistema de Fiscalizacion de Obras",
-                    "link": "http://190.228.16.215:90/fiscalizacion/form_login.php"
+                    "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
+                    "external": true
                 },
                 {
                     "label": "Administracion de Compras y Licitaciones",
-                    "link": "https://compras.catamarcaciudad.gob.ar:8443/admin/login/?next=/"
+                    "link": "https://compras.catamarcaciudad.gob.ar:8443/admin/login/?next=/",
+                    "external": true
                 },
                 {
                     "label": "Sistema de Inspecciones",
-                    "link": "https://inspecciones.catamarcaciudad.gob.ar/login"
+                    "link": "https://inspecciones.catamarcaciudad.gob.ar/login",
+                    "external": true
                 },
                 {
                     "label": "Sistema de Insumos de Educacion",
-                    "link": "https://educacion.catamarcaciudad.gob.ar/educacion/form_login.php"
+                    "link": "https://educacion.catamarcaciudad.gob.ar/educacion/form_login.php",
+                    "external": true
                 },
                 {
                     "label": "GeoExplorer Terrenos",
-                    "link": "https://capaterrenos.catamarcaciudad.gob.ar/login"
+                    "link": "https://capaterrenos.catamarcaciudad.gob.ar/login",
+                    "external": true
                 }
             ]
         },
@@ -86,7 +96,7 @@
                 },
                 {
                     "label": "Artistas Notables",
-                    "link": "/tramites"
+                    "link": "/blog/1"
                 }
             ]
         }

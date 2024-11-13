@@ -78,10 +78,8 @@ const Header = () => {
                     </div>
 
                     <div className="header__displaynone">
-                        <a className="btn btn-login boton__default" href="/buscador">Buscar</a>
                         <a className="btn btn-login boton__default" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@catamarcaciudad.gob.ar" target="_blank">Contacto</a>
                         <a className="btn btn-login boton__default" href="/grid/1">Tramites</a>
-                        <a className="btn btn-login boton__default" href="/noticias">Noticias</a>
                         <a className="btn btn-login boton__default" href="https://sfvc.travel/" target="_blank">Turismo</a>
                         
                         {/* Mobile menu dropdowns */}
@@ -95,15 +93,18 @@ const Header = () => {
                                 </button>
                                 {dropdownOpen[name] && (
                                     <ul className="dropdown-menu">
-                                        {options.map(({ label, link }, index) => (
-                                            
-                                                <li key={index}>
-                                                    <a href={link} rel="noopener noreferrer">
-                                                        {label}
-                                                    </a>
-                                                </li>
+                                        {options.map(({ label, link, external }, index) => (
+                                            <li key={index}>
+                                                <a
+                                                    href={link}
+                                                    rel="noopener noreferrer"
+                                                    target={external ? "_blank" : "_self"}  // Add target="_blank" if external is true
+                                                >
+                                                    {label}
+                                                </a>
+                                            </li>
                                         ))}
-                                        <button className="btn btn-danger" onClick={closeMobileMenu}>Cerrar</button>
+                                        <button className="btn btn-danger m-b-2" onClick={closeMobileMenu}>Cerrar</button>
                                     </ul>
                                 )}
                             </div>
