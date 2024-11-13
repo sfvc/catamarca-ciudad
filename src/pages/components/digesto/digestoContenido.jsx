@@ -19,7 +19,7 @@ export const DigestoContenido = () => {
                         </section>
                         <div className="noticias__itemcontainera">
                             <a className="noticias__itemcontainera" href='/blog/1'>
-                                <img className="noticias__itemcontaineraimg" src="./src/pages/images/eye.svg" alt="" />
+                                <img className="noticias__itemcontaineraimg" src="/images/eye.svg" alt="" />
                             </a>
                         </div>
                     </div>

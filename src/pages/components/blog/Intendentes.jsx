@@ -41,7 +41,7 @@ export const IntendentesPage = () => {
                     {tbDatas.map((tbData, index) => (
                         <tr className="intendentes__row">
                             <div className="intendentes__rowdiv">
-                                <img className="intendentes__rowdiv-img" src="./src/pages/images/avatar.svg" alt="" />
+                                <img className="intendentes__rowdiv-img" src="/images/avatar.svg" alt="" />
                                 <td className="intendentes__data">{tbData.nombre}</td>
                             </div>
                             <td className="intendentes__data">{tbData.desde}</td>

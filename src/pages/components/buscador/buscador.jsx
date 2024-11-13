@@ -72,7 +72,7 @@ const BuscadorComponent = () => { // Removed "export default const"
                 { noticias.map((noticia, index) =>(
                     <article className="search-container___resultados-article">
                         <div className="search-container___resultados-div">
-                            <img className="search-container___resultados-img" src="./src/pages/images/parquejumeal.webp" alt="" />
+                            <img className="search-container___resultados-img" src="/images/parquejumeal.webp" alt="" />
                         </div>
                         <div className='search-container___resultados-div-article'>
                             <h4>{noticia.titulo}</h4>
@@ -82,7 +82,7 @@ const BuscadorComponent = () => { // Removed "export default const"
                             </p>
                         </div>
                         <span className="search-container___resultados-a">
-                            <img className="search-container___resultados-a-img" src="./src/pages/images/eye.svg" alt="" />
+                            <img className="search-container___resultados-a-img" src="/images/eye.svg" alt="" />
                         </span>
                     </article>
                 ))}

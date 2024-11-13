@@ -23,13 +23,13 @@ export const DigestoAside = () => {
                     <ul className="aside__list">
                         <li className="aside__itemfooter">
                             <button className="aside__link">
-                                <img className="aside__linkimg" src="./src/pages/images/calendar.svg" alt="" />
+                                <img className="aside__linkimg" src="/images/calendar.svg" alt="" />
                             </button>
                             <button className="aside__link">
-                                <img className="aside__linkimg" src="./src/pages/images/calendar.svg" alt="" />
+                                <img className="aside__linkimg" src="/images/calendar.svg" alt="" />
                             </button>
                             <button className="aside__link">
-                                <img className="aside__linkimg" src="./src/pages/images/calendar.svg" alt="" />
+                                <img className="aside__linkimg" src="/images/calendar.svg" alt="" />
                             </button>
                         </li>
                     </ul>

@@ -2,45 +2,45 @@
     "articles": [
         {
             "images": [
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp"
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp"
             ],
             "title": "Breaking News: Major Event Unfolds",
             "excerpt": "A brief summary of the news item. This should provide a quick overview and entice readers to click for more."
         },
         {
             "images": [
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp"
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp"
             ],
             "title": "Tech Innovations: What's Next?",
             "excerpt": "Exploring the latest innovations in technology and their implications for the future."
         },
         {
             "images": [
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp"
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp"
             ],
             "title": "Sports Update: Championship Highlights",
             "excerpt": "Recap of the latest championship games and standout performances."
         },
         {
             "images": [
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp"
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp"
             ],
             "title": "Travel Destinations: Top Picks for 2024",
             "excerpt": "Discover the must-visit travel destinations for your next adventure."
         },
         {
             "images": [
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp",
-                "./src/pages/images/parquejumeal.webp"
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp",
+                "/images/parquejumeal.webp"
             ],
             "title": "Health and Wellness: Tips for a Better Life",
             "excerpt": "Simple yet effective strategies for improving your overall health and well-being."

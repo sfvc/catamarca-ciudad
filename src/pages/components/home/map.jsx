@@ -7,7 +7,7 @@ const MapComponent = () => {
   const position = [-28.477233, -65.77752]; // Example coordinates
 
   // URL of the car image (you can replace this with your own image URL)
-  const carImageUrl = './src/pages/images/palacioMuni.jpg'; // Replace with your image URL
+  const carImageUrl = '/images/palacioMuni.jpg'; // Replace with your image URL
 
   return (
     <MapContainer
