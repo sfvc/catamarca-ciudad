@@ -49,8 +49,7 @@
             "link": "/digesto",
             "title": "Digesto Municipal",
             "description": "Digesto Municipal",
-            "image": "/images/grid/digesto.svg",
-            "external": true
+            "image": "/images/grid/digesto.svg"
         },
         {
             "link": "/grid/30",
@@ -69,8 +68,7 @@
             "link": "/grid/31",
             "title": "Gestion Documental Electronica",
             "description": "Portal GDE",
-            "image": "/images/grid/test.svg",
-            "external": true
+            "image": "/images/grid/test.svg"
         },
         {
             "link": "https://rentas.catamarcaciudad.gob.ar/ui/",
@@ -83,7 +81,8 @@
             "link": "https://correcciondeplanos.catamarcaciudad.gob.ar/",
             "title": "Sistema Online de Correccion de Planos",
             "description": "Sistema de Planos",
-            "image": "/images/grid/planos.svg"
+            "image": "/images/grid/planos.svg",
+            "external": true
         },
         {
             "link": "/grid/32",
@@ -108,7 +107,7 @@
             "link": "/grid/34",
             "title": "Compra",
             "description": "Portal de Compra",
-            "image": "/images/grid/compraColor.svg"
+            "image": "/images/grid/compra.svg"
         }
     ]
 }

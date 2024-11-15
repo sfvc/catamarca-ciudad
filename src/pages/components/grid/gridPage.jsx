@@ -17,7 +17,7 @@ const GridPage = ({ grid }) => {
               target={card.external ? '_blank' : '_self'} // Open external links in a new tab
             >
               <div className="TramistedGrid__card">
-                <img className="TramistedGrid__cardimg" src={card.img} alt={card.title} />
+                <img className={`TramistedGrid__cardimg ${card.padding0 ? 'padding-0' : ''}`} src={card.img} alt={card.title} />
                 <h3 className="TramistedGrid__card-title">{card.title}</h3>
                 <small className="TramistedGrid__card-small">{card.descripcion}</small>
               </div>

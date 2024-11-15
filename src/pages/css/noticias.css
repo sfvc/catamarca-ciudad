@@ -11,7 +11,7 @@
 }
 
 .noticias {
-    flex: 1;
+    flex: 2;
     overflow-y: auto;
     padding: 0 !important;
 }
@@ -43,6 +43,7 @@
     top: 15px; /* Adjust the top position as needed */
     z-index: 2; /* Optional: ensure it stays above other content */
     height: 85vh;
+    flex: 1;
 }
 
 
@@ -67,12 +68,12 @@
     /* Optional: you can remove margin from aside__item if using gap */
     margin: 0; 
     height: auto;
-    border-bottom: 1px solid lightgray;
-    padding: 10px;
+    border-block: 3px solid white;
+    padding: 16px;
 }
 
 .aside__image {
-    width: 75px; /* Adjust as needed */
+    width: 42px; /* Adjust as needed */
     margin-right: 10px; /* Space between image and text */
     vertical-align: middle; /* Align image with text */
     border-radius: 4px;
@@ -92,11 +93,8 @@
 }
 
 .aside__linkimg, .noticias__itemcontaineraimg{
-    width: 48px;
+    width: 56px;
     padding: 10px;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -128,32 +126,12 @@
 }
 
 
-
-.noticias__imagegrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    grid-template-rows: repeat(2, 1fr); /* Two rows */
-    gap: 10px; /* Space between images */
-    height: auto; /* Set a height for the grid */
-}
-
-.noticias__imagegrid .noticias__image--large {
-    grid-column: span 2; /* Make this image span two columns */
-    grid-row: span 2; /* Make this image span two rows */
-}
-
-.noticias__image {
-    width: 100%; /* Full width of the grid item */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: rounded corners for images */
-    
-}
-
 .noticias__itemcontainer {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
-    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    gap: 10px;
 }
 
 
@@ -161,13 +139,14 @@
     text-align: center;
 }
 
-.noticias__itemcontainersection{
-    flex:5;
-}
 
 .noticias__itemcontainera{
     flex: 1;
     text-align: end;
+}
+
+.noticias__itemcontainerafigure{
+    all: unset;
 }
 
 @media (max-width: 768px) {
@@ -219,10 +198,6 @@
 
     .noticias{
         margin-right: 0px;
-    }
-
-    .noticias__imagegrid {
-        width: 100%;
     }
 
     .noticias__itemcontainer {

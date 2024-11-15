@@ -3,6 +3,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+
 const MapComponent = () => {
   const position = [-28.477233, -65.77752]; // Example coordinates
 
@@ -27,17 +28,19 @@ const MapComponent = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={position}>
+      <Marker 
+        position={position}
+      >
         <Popup>
           <div>
+            <small>Accede al link para guiarte desde maps</small>
             <h3>Palacio Municipal</h3>
-            <p>Accede al link para guiarte desde maps</p>
-            <a href="https://maps.app.goo.gl/GmhiqdGD4riRadqB7" target='_blank'>Ver en Maps</a>
             <img
               src={carImageUrl}
               alt="Car"
               style={{ width: '100%', height: 'auto', borderRadius: '8px', marginBlock:'10px' }} // Adjust the image size
             />
+            <a href="https://maps.app.goo.gl/GmhiqdGD4riRadqB7" target='_blank'>Ver en Google Maps</a>
           </div>
         </Popup>
       </Marker>

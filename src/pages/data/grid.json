@@ -109,7 +109,7 @@
             "titulo": "Estructura Organica",
             "guiaDeTramites":[
                 {
-                    "img": "/images/palacioMuni.jpg",
+                    "img": "/images/grid/gobierno.svg",
                     "title": "Intendencia",
                     "link": "/grid/3"
 
@@ -174,69 +174,79 @@
         {
             "id": 3,
             "titulo": "Intendencia",
-            "guiaDeTramites":[
-                {
-                    "img": "/images/gustavo.jpg",
-                    "title": "Gustavo Saadi",
-                    "link": "/perfil",
-                    "descripcion":"Intendente"
-                },
-                {
-                    "img": "/images/mariano.jpeg",
-                    "title": "Mariano Rosales",
-                    "link": "/perfil",
-                    "descripcion":"Secretaría de Gabinete y Modernización"
-                },
-                {
-                    "img": "/images/gustavo.jpg",
-                    "title": "Gustavo Saadi",
-                    "link": "/perfil",
-                    "descripcion":"Intendente"
-                },
-                {
-                    "img": "/images/mariano.jpeg",
-                    "title": "Mariano Rosales",
-                    "link": "/perfil",
-                    "descripcion":"Secretaría de Gabinete y Modernización"
-                },
-                {
-                    "img": "/images/gustavo.jpg",
-                    "title": "Gustavo Saadi",
-                    "link": "/perfil",
-                    "descripcion":"Intendente"
-                },
-                {
-                    "img": "/images/mariano.jpeg",
-                    "title": "Mariano Rosales",
-                    "link": "/perfil",
-                    "descripcion":"Secretaría de Gabinete y Modernización"
-                },
-                {
-                    "img": "/images/gustavo.jpg",
-                    "title": "Gustavo Saadi",
-                    "link": "/perfil",
-                    "descripcion":"Intendente"
-                },
-                {
-                    "img": "/images/mariano.jpeg",
-                    "title": "Mariano Rosales",
-                    "link": "/perfil",
-                    "descripcion":"Secretaría de Gabinete y Modernización"
-                },
-                {
-                    "img": "/images/gustavo.jpg",
-                    "title": "Gustavo Saadi",
-                    "link": "/perfil",
-                    "descripcion":"Intendente"
-                },
-                {
-                    "img": "/images/mariano.jpeg",
-                    "title": "Mariano Rosales",
-                    "link": "/perfil",
-                    "descripcion":"Secretaría de Gabinete y Modernización"
-                }
+            "guiaDeTramites": [
+              {
+                "img": "/images/gustavo.jpg",
+                "title": "Gustavo Saadi",
+                "link": "/perfil",
+                "descripcion": "Intendente",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/mariano.jpeg",
+                "title": "Mariano Rosales",
+                "link": "/perfil",
+                "descripcion": "Secretaría de Gabinete y Modernización",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/gustavo.jpg",
+                "title": "Gustavo Saadi",
+                "link": "/perfil",
+                "descripcion": "Intendente",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/mariano.jpeg",
+                "title": "Mariano Rosales",
+                "link": "/perfil",
+                "descripcion": "Secretaría de Gabinete y Modernización",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/gustavo.jpg",
+                "title": "Gustavo Saadi",
+                "link": "/perfil",
+                "descripcion": "Intendente",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/mariano.jpeg",
+                "title": "Mariano Rosales",
+                "link": "/perfil",
+                "descripcion": "Secretaría de Gabinete y Modernización",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/gustavo.jpg",
+                "title": "Gustavo Saadi",
+                "link": "/perfil",
+                "descripcion": "Intendente",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/mariano.jpeg",
+                "title": "Mariano Rosales",
+                "link": "/perfil",
+                "descripcion": "Secretaría de Gabinete y Modernización",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/gustavo.jpg",
+                "title": "Gustavo Saadi",
+                "link": "/perfil",
+                "descripcion": "Intendente",
+                "padding0": "padding-0"
+              },
+              {
+                "img": "/images/mariano.jpeg",
+                "title": "Mariano Rosales",
+                "link": "/perfil",
+                "descripcion": "Secretaría de Gabinete y Modernización",
+                "padding0": "padding-0"
+              }
             ]
-        },
+          },
         {
             "id": 4,
             "titulo": "Caja de Credito",

@@ -37,6 +37,16 @@
     line-height: 1.6;
 }
 
+.article{
+    padding-block: 1rem;
+    margin-block: 1rem;
+}
+
+.article__blogimg{
+    width: 350px;
+    border-radius: 4px;
+}
+
 @media screen and (min-width: 1024px) {
     .blog-image {
         width: 75%;

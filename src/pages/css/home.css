@@ -238,6 +238,12 @@ button, input{all: unset;}
 .header__displaymobile {
     display: none;     /* Prevent content from overflowing */
 }
+.gridPortal__card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: auto;    /* 4 rows */
+    padding: 0;
+}
 
 @media (max-width: 768px) {
 
@@ -324,3 +330,23 @@ button, input{all: unset;}
 
 
 
+@media (max-width: 1024px) {
+    .gridPortal__card {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+  }
+  
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+     .gridPortal__card {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+  }
+  
+  /* Media query for screens up to 480px */
+  @media (max-width: 480px) {
+    .gridPortal__card {
+      grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+  }
+  

@@ -76,6 +76,7 @@
   object-position: center; /* Centers the image */
   border-radius: 10px; /* Rounded corners for the image */
   margin-bottom: 10px; /* Space between image and text */
+  padding: 15%;
 }
 
 .TramistedGrid__card-small{

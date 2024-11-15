@@ -30,10 +30,9 @@
     text-align: start; /* Aligns text to the left */
 }
 
-.intendentes__header:not(:first-child), .intendentes__data {
+.intendentes__header:not(:first-child):not(:nth-child(2)), .intendentes__data {
     border-left: 1px solid lightgray;
 }
-
 .intendentes__thead {
     background-color: #f0f0f0; /* Optional: background color for the header */
 }
@@ -55,9 +54,18 @@
 }
 
 .intendentes__rowdiv-img{
-    border-radius: 4px;
+    border-radius: 10px;
+    max-width: 48px;
+    padding: 4px;
 }
 
 table{
-    box-shadow: 0px 0px 5px 0px lightgray;
+    box-shadow: 0px 0px 4px 0px lightgray;
+}
+
+.intendentes__no-data {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    padding: 10px;
 }
