@@ -106,7 +106,6 @@ ul.dropdown-menu li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(1px);
     background-color: rgba(0, 0, 0, 0.200); /* Adjust color and opacity */
 }
 

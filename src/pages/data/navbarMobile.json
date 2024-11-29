@@ -31,6 +31,10 @@
         {
             "titulo": "Simbología",
             "link": "/perfil/5"
+        },
+        {
+            "titulo": "Volver",
+            "link": "/perfil/5"
         }
       ],
       "navThird": [
@@ -105,6 +109,10 @@
             "link": "https://capaterrenos.catamarcaciudad.gob.ar/login",
             "external": true,
             "externalIcon":"/images/externalLink.svg"
+        },
+        {
+            "titulo": "Volver",
+            "link": "/perfil/5"
         }
       ]
     }

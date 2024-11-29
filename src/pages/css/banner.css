@@ -17,6 +17,7 @@
     background-color: #f4f4f4; /* Light background color for the items */
     border-radius: 8px; /* Optional: Rounded corners for items */
     overflow: hidden; /* Ensure the image doesn't overflow */
+    position: relative;
 }
 
 /* Styling for the image */
@@ -30,5 +31,5 @@
 
 /* Hover effect for images */
 .banner__image:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    cursor: pointer;
 }

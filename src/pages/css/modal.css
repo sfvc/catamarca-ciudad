@@ -14,24 +14,21 @@
     justify-content: center;
 }
 
-body .modal {
-    overflow: hidden;
-}
-
 /* Header for mobile modal */
 .modalHeaderMobile {
     position: relative;
-    width: 97.5vw; /* Ensure it takes up full width */
+    width: 100%; /* Ensure it takes up full width */
     max-height: 97.5vh; /* 90% of viewport height */
     background-color: white;
-    border-radius: 3rem 3rem 0px 0px; /* Optional: rounded corners */
+    border-radius: 1rem 1rem 0px 0px; /* Optional: rounded corners */
     box-sizing: border-box; /* Ensure padding and borders are accounted for in dimensions */
     overflow: auto; /* Ensure content doesn't overflow */
     z-index: 11;
     display: flex;
     flex-direction: column;
-    border-radius: 1rem 1rem 0px 0px;
     overflow: hidden;
+    min-height: 35vh;
+    padding-bottom: 2rem;
 }
 
 

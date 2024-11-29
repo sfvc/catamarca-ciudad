@@ -5,6 +5,8 @@ import HomeSliderPage from './homeSlider';
 import MapComponent from './map';
 import { PortalARG } from './portalarg';
 import ProgramasComponent from './programas';
+import VideoBanner from './videoBanner';
+
 
 export const Home = () => {
   return (
@@ -14,6 +16,7 @@ export const Home = () => {
           <HomeSliderPage/>
           <FaqCard/>
           <ProgramasComponent/>
+          <VideoBanner/>
           <BannerComponent/>
           <MapComponent/>
         </main>

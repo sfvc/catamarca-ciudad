@@ -10,14 +10,14 @@ const BannerComponent = () => {
         },
         {
             id: 3,
-            img: 'https://www.catamarcaciudad.gob.ar/wp-content/uploads/boton-USINA-DE-DATOS.png'
-        }
+            img: 'https://www.catamarcaciudad.gob.ar/wp-content/uploads/IMG-20220322-WA0098.jpg'
+        },
     ];
 
     return (
         <section className="banner container">
             {bannerFotos.map((banner) => (
-                <div key={banner.id} className="banner__item">
+                <div key={banner.id} className="">
                     <img src={banner.img} alt={`Banner ${banner.id}`} className="banner__image" />
                 </div>
             ))}
