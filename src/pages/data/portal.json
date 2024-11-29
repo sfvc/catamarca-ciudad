@@ -2,33 +2,28 @@
     "socialButtons": [
         {
             "name": "",
-            "image": "/images/iconos-btn/youtube2.svg",
+            "image": "/images/youtube.svg",
             "color": "btn-youtube"
         },
         {
             "name": "",
-            "image": "/images/iconos-btn/twitter2.svg",
+            "image": "/images/twitter.svg",
             "color": "btn-twitter"
         },
         {
             "name": "",
-            "image": "/images/iconos-btn/instagram2.svg",
+            "image": "/images/instagram.svg",
             "color": "btn-instagram"
         },
         {
             "name": "",
-            "image": "/images/iconos-btn/facebook2.svg",
+            "image": "/images/facebook.svg",
             "color": "btn-facebook"
         },
         {
             "name": "",
-            "image": "/images/iconos-btn/wsp2.svg",
+            "image": "/images/wsp.svg",
             "color": "btn-whatsapp"
-        },
-        {
-            "name": "",
-            "image": "/images/iconos-btn/tiktok2.svg",
-            "color": "btn-tiktok"
         }
     ],
     "HomePageGrid":[

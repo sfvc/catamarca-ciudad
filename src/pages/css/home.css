@@ -101,13 +101,15 @@ ul.dropdown-menu li a {
     height: 100%;
 }
 
-.portal_container3{
+.portal_container3 {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* backdrop-filter: blur(2px); */
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.200); /* Adjust color and opacity */
 }
+
 
 .portalInput{ 
     width: 100%;
@@ -194,44 +196,25 @@ button, input{all: unset;}
 .btn-facebook,
 .btn-instagram,
 .btn-whatsapp{
-    color: white;
     padding: 6px 12px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #232d4f;
 }
 
-.btn-youtube {
-    background-color: red;
+.btn-youtube:hover,
+.btn-twitter:hover, 
+.btn-tiktok:hover,
+.btn-facebook:hover,
+.btn-instagram:hover,
+.btn-whatsapp:hover {
+    background-color: #1d243b; /* Change to a lighter shade or any color you like */
 }
-
-.btn-facebook {
-    background-color: #0866ff;
-    border: 1px solid #004bb5;
-}
-
-.btn-lightblue {
-    background-color: lightblue;
-}
-
-.btn-instagram {
-    background-color: #ff0095;
-    border: 1px solid #cc0073;
-}
-
-.btn-whatsapp{
-    background-color: #90EE90;
-    border: 1px solid #006400;
-}
-
 
 .navbar-header__button{
     display: none;
 }
 
-.btn-twitter, .btn-tiktok{
-    background-color: #2e2e2e;
-    border: 1px solid black;
-}
 
 .header__displaymobile {
     display: none;     /* Prevent content from overflowing */
