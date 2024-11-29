@@ -7,7 +7,15 @@ const GridPage = ({ grid }) => {
   return (
     <>
       <div className='Tramites__container'>
-        <h1 style={{ textAlign: "center" }}>{grid.titulo}</h1>
+        <div className='container m-y-2'style={{ textAlign: "center", maxWidth: "750px", minWidth:"350px" }}>
+          <h1>{grid.titulo}</h1>
+        {grid && grid.descripcion && grid.autor ? (
+          <>
+            <q style={{color:"#666"}}>{grid.descripcion}</q>
+            <small>- {grid.autor}</small>
+          </>
+        ) : null}
+        </div>
         <div className="TramistedGrid__grid-container container">
           {guiaDeTramites.map((card, index) => (
             <a
@@ -24,8 +32,19 @@ const GridPage = ({ grid }) => {
             </a>
           ))}
         </div>
+        <div className={`TramistedGrid__btnGroup ${grid.gridBtnGroup ? 'gridBtnGroup': ''}`}>
+          <button>
+            Descargar Horarios
+          </button>
+          <button>
+            Descargar Tramites Generales
+          </button>
+          <button>
+            Descargar Todo
+          </button>
+        </div>
         <div className="TramistedGrid__btnContainer">
-          <a className="TramistedGrid__btnVolver" href="/">
+          <a className={`TramistedGrid__btnVolver ${grid.gridBtn ? 'gridBtn' : ''}`} href="/">
             <img src="/images/arrowback.svg" alt="back" />
             Volver
           </a>

@@ -4,7 +4,6 @@
 
 .consulta-container__title {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .consulta-container__description {
@@ -14,6 +13,7 @@
 .consulta-container__form {
     display: flex;
     flex-direction: column;
+    padding-block: 1rem;
 }
 
 .consulta-container__form-group {
@@ -34,22 +34,16 @@
 }
 
 .consulta-container__button {
-    width: 25%;
+    width: 50%;
     padding: 10px;
-    background-color: whitesmoke;
-    color: gray;
+    background-color: lightblue;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
-    border: 1px solid whitesmoke;
 }
 
-.consulta-container__button:hover {
-   cursor: pointer;
-   color: #102655;
-   border: 1px solid #102655;
-}
 
 .consulta-container__note {
     margin-top: 15px;

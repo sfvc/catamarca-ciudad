@@ -1,5 +1,23 @@
-{
+[
+  {
+    "id": 1,
+    "titulo": "Intendentes",
+    "placeHolder": "Busca el Intendente",
     "totalPages": 5,
+    "buttons": [
+      {
+        "label": "Button 1",
+        "className": "intendentes__button"
+      },
+      {
+        "label": "Button 2",
+        "className": "intendentes__button"
+      },
+      {
+        "label": "Button 3",
+        "className": "intendentes__button"
+      }
+    ],
     "tbDatas": [
       {
         "nombre": "prueba 1",
@@ -79,5 +97,68 @@
         "titulo": "Año Hasta"
       }
     ]
+  },
+  {
+    "id": 2,
+    "titulo": "Compra",
+    "placeHolder": "Busca el Producto",
+    "totalPages": 3,
+    "buttons": [
+      {
+        "label": "Añadir al Carrito",
+        "className": "compra__button"
+      },
+      {
+        "label": "Comprar Ahora",
+        "className": "compra__button"
+      },
+      {
+        "label": "Ver Carrito",
+        "className": "compra__button"
+      }
+    ],
+    "tbDatas": [
+      {
+        "nombre": "Producto 1",
+        "descripcion": "Descripción del producto 1",
+        "precio": "$10.99",
+        "imagen": "/images/producto1.jpg"
+      },
+      {
+        "nombre": "Producto 2",
+        "descripcion": "Descripción del producto 2",
+        "precio": "$15.49",
+        "imagen": "/images/producto2.jpg"
+      },
+      {
+        "nombre": "Producto 3",
+        "descripcion": "Descripción del producto 3",
+        "precio": "$20.99",
+        "imagen": "/images/producto3.jpg"
+      },
+      {
+        "nombre": "Producto 4",
+        "descripcion": "Descripción del producto 4",
+        "precio": "$9.99",
+        "imagen": "/images/producto4.jpg"
+      },
+      {
+        "nombre": "Producto 5",
+        "descripcion": "Descripción del producto 5",
+        "precio": "$30.99",
+        "imagen": "/images/producto5.jpg"
+      }
+    ],
+    "thDatas": [
+      {
+        "titulo": "Nombre"
+      },
+      {
+        "titulo": "Descripción"
+      },
+      {
+        "titulo": "Precio"
+      }
+    ]
   }
-  
+]

@@ -1,0 +1,24 @@
+---
+import perfil from '../data/perfiles.json'; // Importing the whole perfiles data
+import PerfilPage from '../components/perfil/perfil';
+import Layout from '../layout/Layout.astro';
+
+const { id } = Astro.params; // Get the ID from the URL parameters
+const perfilesData = perfil.perfiles.find((item) => item.id === parseInt(id, 10)); // Find the specific data by ID
+
+if (!perfilesData) {
+    throw new Error('Perfil no encontrada');
+}
+
+export function getStaticPaths() {
+    return perfil.perfiles.map((t) => ({
+        params: { id: t.id.toString() }, // Convert ID to string
+    }));
+}
+---
+
+<Layout title={perfilesData.nombre}>
+    <div>
+        <PerfilPage client:only="react" perfiles={perfilesData} />
+    </div>
+</Layout>

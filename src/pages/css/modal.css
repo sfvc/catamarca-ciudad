@@ -1,94 +1,94 @@
-/* src/components/Modal.css */
-.modal__background {
+/* General modal styles */
+.modal {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 9;
+    display: flex;
+    align-items: end; /* Centers the modal content */
+    justify-content: center;
 }
 
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    height: 95%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    z-index: 11;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    transform: translate(-50%, -50%);
+body .modal {
     overflow: hidden;
 }
 
-.modal__title {
-    margin-bottom: 20px;
+/* Header for mobile modal */
+.modalHeaderMobile {
+    position: relative;
+    width: 97.5vw; /* Ensure it takes up full width */
+    max-height: 97.5vh; /* 90% of viewport height */
+    background-color: white;
+    border-radius: 3rem 3rem 0px 0px; /* Optional: rounded corners */
+    box-sizing: border-box; /* Ensure padding and borders are accounted for in dimensions */
+    overflow: auto; /* Ensure content doesn't overflow */
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem 1rem 0px 0px;
+    overflow: hidden;
 }
 
-.modal__table {
+
+.modal__cerrarbarra {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 12px;
+    background-color: white;
+}
+
+.modal__cerrarbarra-icon{
+    width: 75%;
+    height: 6px;
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+
+.modalHeaderMobile__container{
+    width: 100%;
     flex: 1;
+    padding-top: 1rem;
+}
+
+.header-mobile-nav__content{
+    height: 100%;
     width: 100%;
-    border-collapse: collapse; /* Ensure borders are combined */
-    text-align: center;
-    border-radius: 10px;
-}
-
-.modal__header {
-    background-color: #f2f2f2; /* Light gray background */
-    padding: 10px;
-    text-align: center; /* Align text to the left */
-    border-bottom: 2px solid #ddd; /* Bottom border */
-}
-
-.modal__row {
-    border-bottom: 1px solid #ddd; /* Bottom border for rows */
-}
-
-.modal__cell {
-    padding: 10px;
-}
-
-.modal__close-button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: white; /* Bootstrap primary color */
-    color: #666;
-    border: 1px solid #666;
-    border-radius: 4px;
-    cursor: pointer;
-    align-self: self-end;
-}
-
-.modal__button-container{
-    width: 100%;
-    padding: 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.modal__descargar-figure{
-    display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     flex-direction: column;
-    height: auto;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 10px;
 }
 
-.modal__descargar-table{
-    width: 50%;
+.header-mobile-nav__list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure it takes full width */
 }
 
-.modal__descargar-tabletd{
-    padding: 0px 10px 0px 0px;
+.header-mobile-nav__item {
+    width: 100%; /* Each item takes full width */
+}
+
+.header-mobile-nav__link {
+    display: flex; /* Make the anchor tags behave like block-level elements */
+    width: 100%; /* Ensure the link fills the entire item */
+    padding: 12px; /* Add padding for clickability */
+    text-decoration: none; /* Remove underline */
+    background-color: white; /* Optional background color */
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height calculations */
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.header-mobile-nav__link:hover {
+    text-decoration: none;
+    color: #001529;
 }

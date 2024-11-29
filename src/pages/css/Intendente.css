@@ -1,0 +1,75 @@
+.PerfilIntendente{ 
+    min-height: 65vh;
+    padding-block: 1rem;
+}
+
+.PerfilIntendente__contenedor{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    padding-block: 1rem;
+}
+
+.PerfilIntendente__redes{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    flex-direction: column;
+    width: 100%;
+    padding-block: 10px;
+}
+
+.PerfilIntendente__informacion{
+    align-self: start;
+}
+.PerfilIntendente__cargo{
+    color: #999;
+    font-weight: 400;
+}
+
+.PerfilIntendente__contenedor-imagen{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.PerfilIntendente__contenedor-botones{
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.PerfilIntendente__imagen{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.PerfilIntendente__descripcion{
+    border-top: 1px solid lightgray;
+    padding-block: 1rem;
+}
+
+@media (max-width: 1023.98px){
+    .PerfilIntendente__contenedor-imagen{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    .PerfilIntendente__informacion{
+        text-align: center;
+    }
+
+    .PerfilIntendente__redes{
+        align-items: center;
+    }
+    
+}

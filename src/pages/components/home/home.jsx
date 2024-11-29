@@ -1,16 +1,20 @@
 
+import BannerComponent from './banners';
 import FaqCard from './faq';
-import HomeGrid from './homeGrid';
+import HomeSliderPage from './homeSlider';
 import MapComponent from './map';
 import { PortalARG } from './portalarg';
+import ProgramasComponent from './programas';
 
 export const Home = () => {
   return (
     <>  
         <main>
           <PortalARG/>
-          <HomeGrid/>
+          <HomeSliderPage/>
           <FaqCard/>
+          <ProgramasComponent/>
+          <BannerComponent/>
           <MapComponent/>
         </main>
     </>

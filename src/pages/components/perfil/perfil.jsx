@@ -1,117 +1,46 @@
-import GridPage from "../grid/gridPage";
+import React from "react";
+import JumbotronPerfil from "./jumbotronPerfil";
+import SeccionPerfil from "./seccionPerfil";
+import NewsListPerfil from "./newsListPerfil";
+import Miembros from "./miembros";
 
-const PerfilPage = () => {
-    return ( 
-        <main role="main">
-            <section className="jumbotron" style={{ backgroundImage: "url('/images/Saadi-Plaza.webp')" }}>
-                <div className="jumbotron_body">
-                    <div className="container">
-                    <div className="row">
-                        <div className="col-xs-12 col-md-8 col-md-offset-2 text-center">
-                        <h1>Gustavo Saadi</h1>
-                        <p>Mejora los sistemas y procesos internos del Estado, capacita permanentemente a sus empleados e incorpora Nuevas Tecnologías a la administración pública para alcanzar una gestión eficiente, inclusiva y transparente que brinde más y mejores servicios a los ciudadanos.</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div className="overlay"></div>
-            </section>
+const PerfilPage = ({ perfiles }) => {
+  // Destructure the necessary parts from the `perfiles` prop
+  const { imagenDeFondo, nombre, descripcion, secciones } = perfiles;
 
-            <section>
-                <article className="container container-width">
-                    <div className="row">
-                        <div className="col-md-8 col-md-offset-2">
-                            <h2>El Estado al servicio de la gente</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <blockquote>
-                                <p>Todas las áreas del Gobierno tendrán un plan de comunicación e información que será publicado y actualizado en forma permanente</p>
-                                <small>Juan Pérez</small>
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  return (
+    <main role="main">
+      <JumbotronPerfil
+        imagenDeFondo={imagenDeFondo}
+        nombre={nombre}
+        descripcion={descripcion}
+      />
 
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <article className="container ">
-                    <div className="row ">
-                    <div className="col-md-12">
-                        <h2 className="h3 section-title">Noticias Destacadas</h2>
-                    </div>
-                    </div>
+      <Miembros perfiles={perfiles} />
 
-                    <div className="row panels-row">
-                    <div className="col-xs-12 col-sm-6">
-                        <a className="panel panel-default panel-lg" href="#">
-                        <div style={{ backgroundImage: "url('/images/parquejumeal.webp')" }} className="panel-heading img"></div>
-                        <div className="panel-body">
-                            <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
-                            <p className="h3_title">Inauguracion de EcoParque</p>
-                        </div>
-                        </a>
-                    </div>
-                    
-                    <div className="col-xs-12 col-sm-6">
-                        <a className="panel panel-default panel-lg" href="#">
-                        <div style={{ backgroundImage: "url('/images/palacioMuni.jpg')" }} className="panel-heading img"></div>
-                        <div className="panel-body">
-                            <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
-                            <p className="h3_title">Municipalidad de Catamarca se renueva.
-                        </p></div>
-                        </a>
-                    </div>
-                    </div>
-                    <div className="row panels-row">
-                    <div className="col-xs-12 col-sm-6 col-md-3">
-                        <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('/images/gustavo.jpg')" }} className="panel-heading img"></div>
-                        <div className="panel-body">
-                            <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
-                            <p className="h3_title">Gustavo etc.
-                        </p></div>
-                        </a>
-                    </div>
-                    <div className="col-xs-12 col-sm-6 col-md-3">
-                        <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('/images/Saadi-Plaza.webp')" }} className="panel-heading img"></div>
-                        <div className="panel-body">
-                            <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
-                            <p className="h3_title">Nueva Plaza.
-                        </p></div>
-                        </a>
-                    </div>
-                    <div className="page-break"></div>
-                    <div className="page-break"></div>
-                    <div className="page-break"></div>
-                    <div className="col-xs-12 col-sm-6 col-md-3">
-                        <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('/images/cajaCredit.png')" }} className="panel-heading img"></div>
-                        <div className="panel-body">
-                            <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
-                            <p className="h3_title">Caja credito etc.
-                        </p></div>
-                        </a>
-                    </div>
-                    <div className="col-xs-12 col-sm-6 col-md-3">
-                        <a className="panel panel-default panel-md" href="#">
-                        <div style={{ backgroundImage: "url('/images/mariano.jpeg')" }} className="panel-heading img"></div>
-                        <div className="panel-body">
-                            <time aria-hidden="true">Jueves 14 de Enero del 2016</time>
-                            <p className="h3_title">Mariano etc.</p>
-                        </div>
-                        </a>
-                    </div>
-                    </div>
-                    <div className="row">
-                    <div className="col-xs-12">
-                        <a className="btn btn-primary">Ver todas las noticias</a>
-                    </div>
-                    </div>
-                </article>
-            </section>
+
+      <div className="m-t-2">
+        {secciones?.map((seccion, index) => (
+          <SeccionPerfil
+            key={index}
+            titulo={seccion.primerTitulo}
+            contenido={seccion.contenido}
+            cita={seccion.cita}
+          />
+        ))}
+      </div>
+
+      {/* News List Section */}
+      {secciones?.some((seccion) => seccion.noticias) && (
+        <section>
+          <NewsListPerfil
+            titulo="Noticias Destacadas"
+            noticias={secciones.flatMap((seccion) => seccion.noticias || [])}
+          />
+        </section>
+      )}
     </main>
-     );
-}
+  );
+};
 
 export default PerfilPage;

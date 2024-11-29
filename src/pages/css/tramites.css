@@ -14,7 +14,9 @@
 .TramistedGrid__card {
   background-color: transparent; /* Card background */
   border-radius: 8px;        /* Rounded corners */
-  padding: 16px;    
+  padding-inline: 16px;
+  padding-top: 16px;
+  padding-bottom: 4rem;  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,17 +72,39 @@
 }
 
 .TramistedGrid__cardimg {
-  height: 250px; /* Fixed height for the image */
   width: 200px; /* Fixed width for the image */
   object-fit: cover; /* Ensures the image covers the entire area */
   object-position: center; /* Centers the image */
-  border-radius: 10px; /* Rounded corners for the image */
+  border-radius: 1rem !important; /* Rounded corners for the image */
   margin-bottom: 10px; /* Space between image and text */
   padding: 15%;
 }
 
 .TramistedGrid__card-small{
   color: #666;
+}
+
+.TramistedGrid__btnGroup{
+  display: none;
+}
+
+.gridBtnGroup{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 750px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.TramistedGrid__btnGroup button{
+  padding: 8px 12px;
+  border: 1px solid lightgrey ;
+  border-radius: 10px;
+  cursor: pointer;
+  color: gray;
 }
 
 /* Media query for screens up to 1024px */
@@ -94,6 +118,9 @@
 @media (max-width: 768px) {
   .TramistedGrid__grid-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+  .TramistedGrid__btnGroup{
+    width: 100%;
   }
 }
 

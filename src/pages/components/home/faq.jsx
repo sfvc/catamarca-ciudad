@@ -30,13 +30,13 @@ const FaqCard = () => {
                     <div>
                         <div className="panel-pane pane-titulo col-md-12 m-l-m15">
                             <div className="pane-content">
-                                <h2 className="activities-sidbar">Noticias Municipales</h2>
+                                <h2 className="activities-sidbar" style={{textAlign:"center"}}>Noticias Municipales</h2>
                             </div>
                         </div>
                         <div className="panel-separator"></div>
                         <div className="panel-pane pane-texto">
                             <div className="pane-content">
-                                <p>Ponete al dia con lo que pasa en nuestra Municipalidad</p>
+                                <p style={{textAlign:"center"}}>Ponete al dia con lo que pasa en nuestra Municipalidad</p>
                             </div>
                         </div>
                         <div className="panel-separator"></div>

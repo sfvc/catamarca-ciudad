@@ -30,7 +30,7 @@
     text-align: start; /* Aligns text to the left */
 }
 
-.intendentes__header:not(:first-child):not(:nth-child(2)), .intendentes__data {
+.intendentes__header:not(:first-child), .intendentes__data {
     border-left: 1px solid lightgray;
 }
 .intendentes__thead {
@@ -66,6 +66,58 @@ table{
 .intendentes__no-data {
     text-align: center;
     font-size: 1.2rem;
-    color: #888;
+    color: #ADD8E6;
     padding: 10px;
+}
+
+.intendentes__buttons{
+    width: 100%;
+    margin-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.intendentes__button{
+    padding: 12px 24px;
+    border: 1px solid lightgray;
+    color: gray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.intendentes__button:hover{
+    border: 1px solid #ADD8E6;
+    color: #ADD8E6;
+}
+
+@media (max-width: 768px){
+    .intendentes__buttons{
+        align-items: start;
+    }
+    
+    .intendentes__button{
+        padding: 4px 8px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+    }
+
+    .intendentes__divinput{
+        height: 32px;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 767.98px){
+
+    .intendentes__divinput{
+        height: 32px;
+        width: 90%;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        padding: 10px;
+    }
 }

@@ -9,11 +9,11 @@ export const PortalARG = () => {
                         <div className="pane-content portal_container2">
                             <div className="portal_container3 text-white p-b-2">
                                 <header className="home-new input__div">
-                                    <h1 className="text-center h1 tit-buscador unset-font-size">
+                                    <h1 className="home_titulo">
                                         Portal oficial de la Municipalidad de Catamarca
                                     </h1>
                                     <br />
-                                    <h2 className="text-center h2 tit-buscador unset-font-size">Seguinos en</h2>
+                                    <h2 className="home_titulo">Seguinos en</h2>
                                     <br />
                                     <div className="btn-seguinos-container">
                                         {socialButtons.map((button, index) => (

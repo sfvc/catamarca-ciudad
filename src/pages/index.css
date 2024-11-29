@@ -6,6 +6,8 @@
 @import url('./css/modal.css');
 @import url('./css/tramites.css');
 @import url('./css/consultaExpediente.css');
+@import url('./css/Intendente.css');
+@import url('./css/banner.css');
 
 body {
     overflow-x: hidden !important;
@@ -96,6 +98,11 @@ body.no-scroll {
     justify-content: center;
 }
 
+.gridBtn{
+    display: none;
+}
+
 .padding-0{
     padding: 0;
+    height: 250px !important;
 }

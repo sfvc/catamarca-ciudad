@@ -72,7 +72,7 @@
             "options": [
                 {
                     "label": "Intendente",
-                    "link": "/blog/1"
+                    "link": "/Intendente"
                 },
                 {
                     "label": "Estructura Orgánica",
@@ -80,23 +80,15 @@
                 },
                 {
                     "label": "Valores",
-                    "link": "/blog/1"
-                },
-                {
-                    "label": "Intendentes",
-                    "link": "/intendentes"
+                    "link": "/perfil/3"
                 },
                 {
                     "label": "Reseña Histórica",
-                    "link": "/blog/1"
+                    "link": "/perfil/4"
                 },
                 {
                     "label": "Simbología",
-                    "link": "/blog/1"
-                },
-                {
-                    "label": "Artistas Notables",
-                    "link": "/blog/1"
+                    "link": "/perfil/5"
                 }
             ]
         }

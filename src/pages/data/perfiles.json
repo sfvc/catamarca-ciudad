@@ -1,0 +1,356 @@
+{
+  "perfiles": [
+    {
+      "id": 1,
+      "nombre": "Gustavo Saadi",
+      "descripcion": "El intendente se dedica a optimizar los sistemas y procesos del municipio, impulsando la capacitación continua de su equipo y la incorporación de nuevas tecnologías. Su gestión busca ofrecer servicios más eficientes, inclusivos y transparentes, mejorando la calidad de vida de todos los ciudadanos.",
+      "imagenDeFondo": "/images/Saadi-Plaza.webp",
+      "secciones": [
+        {
+          "primerTitulo": "Un Gobierno Cercano, Transparente y Comprometido con la Comunidad",
+          "contenido": "Nuestro objetivo es poner al municipio al servicio de todos los ciudadanos, mejorando cada día los procesos internos y trabajando con transparencia y eficiencia. Apostamos por la innovación, la capacitación constante de nuestro equipo y el uso de nuevas tecnologías para ofrecer servicios públicos de calidad, inclusivos y accesibles para todos. Juntos, construimos una gestión que prioriza el bienestar y la participación activa de la gente, transformando nuestro municipio en un lugar mejor para vivir."
+        },
+        {
+          "cita": {
+            "texto": "Todas las áreas del Gobierno tendrán un plan de comunicación e información que será publicado y actualizado en forma permanente",
+            "autor": "Juan Pérez"
+          }
+        },
+        {
+          "titulo": "Noticias Destacadas",
+          "noticias": [
+            {
+              "imagen": "/images/parquejumeal.webp",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Inauguración de EcoParque",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/palacioMuni.jpg",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Municipalidad de Catamarca se renueva.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/gustavo.jpg",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Gustavo etc.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/Saadi-Plaza.webp",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Nueva Plaza.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/cajaCredit.png",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Caja crédito etc.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/mariano.jpeg",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Mariano etc.",
+              "enlace": "#"
+            }
+          ]
+        }
+      ],
+      "gridGabinete": [
+        {
+          "titulo": "Gabinete",
+          "descripcion": "Transformar el municipio con eficiencia, innovación y compromiso para un futuro mejor para todos.",
+          "autor": "Gustavo Saadi",
+          "guiaDeTramites": [
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            }
+          ],
+          "gridBtn": "gridBtn"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Secretaria de Gabinete y Modernización",
+      "descripcion": "La Secreatatía de Gabinete y Modernización trabaja para transformar nuestro municipio con soluciones innovadoras y tecnológicas, mejorando la eficiencia y cercanía del gobierno. Juntos, buscamos un futuro más ágil, transparente y conectado para todos.",
+      "imagenDeFondo": "https://www.catamarcaciudad.gob.ar/wp-content/uploads/nodo-tecnologico.jpeg",
+      "secciones": [
+        {
+          "primerTitulo": "Innovación y Eficiencia para una Gestión Moderna y Transparente",
+          "contenido": "La Secretaría de Gabinete y Modernización trabaja para transformar la administración pública con soluciones innovadoras y tecnológicas. Nuestro compromiso es optimizar los procesos internos, mejorar la comunicación entre las áreas del gobierno y ofrecer servicios más rápidos, eficientes y accesibles para todos los ciudadanos. Con un equipo capacitado y un enfoque transparente, buscamos modernizar la gestión pública, fortaleciendo la confianza y participación de la comunidad en cada decisión que tomamos."
+        },
+        {
+          "cita": {
+            "texto": "Todas las áreas del Gobierno tendrán un plan de comunicación e información que será publicado y actualizado en forma permanente",
+            "autor": "Juan Pérez"
+          }
+        },
+        {
+          "titulo": "Noticias Destacadas",
+          "noticias": [
+            {
+              "imagen": "/images/parquejumeal.webp",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Inauguración de EcoParque",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/palacioMuni.jpg",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Municipalidad de Catamarca se renueva.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/gustavo.jpg",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Gustavo etc.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/Saadi-Plaza.webp",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Nueva Plaza.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/cajaCredit.png",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Caja crédito etc.",
+              "enlace": "#"
+            },
+            {
+              "imagen": "/images/mariano.jpeg",
+              "fecha": "Jueves 14 de Enero del 2016",
+              "titulo": "Mariano etc.",
+              "enlace": "#"
+            }
+          ]
+        }
+      ],
+      "gridGabinete": [
+        {
+          "titulo": "Funcionarios",
+          "descripcion": "El Área de Gabinete y Modernización impulsa la innovación y la eficiencia en el gobierno local, creando soluciones tecnológicas que mejoren los servicios y acerquen más al municipio a sus ciudadanos",
+          "autor": "Mariano Rosales",
+          "guiaDeTramites": [
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/gustavo.jpg",
+              "title": "Gustavo Saadi",
+              "link": "/perfil/1",
+              "descripcion": "Intendente",
+              "padding0": "padding-0"
+            },
+            {
+              "img": "/images/mariano.jpeg",
+              "title": "Mariano Rosales",
+              "link": "/perfil/2",
+              "descripcion": "Secretaría de Gabinete y Modernización",
+              "padding0": "padding-0"
+            }
+          ],
+          "gridBtn": "gridBtn"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Valores",
+      "descripcion": "La Secreatatía de Gabinete y Modernización trabaja para transformar nuestro municipio con soluciones innovadoras y tecnológicas, mejorando la eficiencia y cercanía del gobierno. Juntos, buscamos un futuro más ágil, transparente y conectado para todos.",
+      "imagenDeFondo": "https://www.catamarcactual.com.ar/u/fotografias/fotosnoticias/2023/6/1/268960.jpg",
+      "secciones": [
+        {
+          "primerTitulo": "Dignidad:",
+          "contenido": "Queremos brindarle a todos los vecinos las herramientas para que construyan su perfil como ciudadano digno que es protagonista de las transformaciones que llevamos adelante. Concebimos al vecino como un ciudadano con derechos y responsabilidades en el cuidado de los bienes públicos de la ciudad, y no como un sujeto pasivo depositario de políticas. Un vecino – ciudadano activo, que se apropia de las obras y de las políticas de gestión."
+        },
+        {
+          "primerTitulo": "Equidad:",
+          "contenido": "Para que todos nuestros vecinos accedan a los servicios de nuestro Gobierno Municipal, y que de este modo puedan ejercer una ciudadanía plena. Para ello es necesario reivindicar en forma permanente y en todo el ejercicio de gobierno, la garantía de los derechos. Privilegiando aquellos sectores que se encuentran más desprotegidos y vulnerados."
+        },
+        {
+          "primerTitulo": "Honestidad:",
+          "contenido": "Nuestra conducta y nuestras acciones están tuteladas por una administración transparente en todos nuestros actos y de esta forma, intervenimos con ética y lealtad hacia nuestra ciudad, haciendo buen uso de los recursos públicos y recuperando la confianza vecinal en el Gobierno Municipal."
+        },
+        {
+          "primerTitulo": "Transparencia:",
+          "contenido": "Reconocemos el valor de ser Transparentes en nuestra gestión. Por eso promovemos la rendición de cuentas y proporcionamos información de los gastos públicos y actos de la Administración ante la ciudadanía a través de los diferentes medios de comunicación masiva y los medios de comunicación externa del municipio. De este modo, los ciudadanos pueden realizar un control de la acción de gobierno, así como crear valor económico a partir de los datos públicos ofrecidos libremente por la Administración. Sabemos que la sociedad reclama su derecho de acceso a la información referente a la gestión municipal, y la ponemos a disposición."
+        },
+        {
+          "primerTitulo": "Comunicación:",
+          "contenido": "Queremos y proponemos un nuevo modo de estar en contacto con nuestros vecinos por lo que presentamos la comunicación permanente y transparente entre la Administración y los ciudadanos. La nuestra es una comunicación bidireccional, a través de la cual intentamos la participación efectiva de los vecinos en los procesos de decisión, colaboración y control de la Administración."
+        },
+        {
+          "primerTitulo": "Comunicación:",
+          "contenido": "Queremos y proponemos un nuevo modo de estar en contacto con nuestros vecinos por lo que presentamos la comunicación permanente y transparente entre la Administración y los ciudadanos. La nuestra es una comunicación bidireccional, a través de la cual intentamos la participación efectiva de los vecinos en los procesos de decisión, colaboración y control de la Administración."
+        },
+        {
+          "primerTitulo": "Comunicación Pública:",
+          "contenido": "Tenemos la misión de informar con claridad y veracidad sobre la gestión de nuestro gobierno. Todo esto, para rendir cuentas a nuestros vecinos sobre las acciones de la administración municipal, sobre los impactos conseguidos, sobre nuestros aciertos, pero también, para dar a conocer las dificultades y restricciones que padecemos, haciendo un seguimiento de todas las inquietudes de la comunidad."
+        },
+        {
+          "primerTitulo": "Solidaridad:",
+          "contenido": "Debemos crear conciencia y conocimiento colectivo, sensibilizar a todos nuestros vecinos del valor de contar con un tejido social fortalecido a través de relaciones mutuas de asistencia y apoyo frente a las adversidades y problemas, de modo tal que se sientan protegidos y amparados tanto por el entorno social que las rodea, como por un gobierno municipal que actúa como garante de sus derechos."
+        },
+        {
+          "primerTitulo": "Participación ciudadana:",
+          "contenido": "Promovemos el diálogo de saberes y la inclusión de todos los actores sociales en las fases de la planeación y gestión pública: todos somos ciudad. El nuestro es un municipio plural."
+        },
+        {
+          "primerTitulo": "Tolerancia:",
+          "contenido": "Promovemos la consideración y apertura con aquellos sectores, grupos o personas que desacuerden de nuestras actuaciones públicas, accediendo al debate de ideas en escenarios públicos, donde prevalezca la buena comunicación, el bien común, la tolerancia y el respeto. Lo hacemos con la participación de los vecinos en nuestros canales abiertos de redes sociales, audiencias públicas, y otras instancias de debate."
+        },
+        {
+          "primerTitulo": "Identidad:",
+          "contenido": "Proponemos que nuestra gestión sea el instrumento con el cual el vecino pueda rescatar, salvaguardar y defender la identidad ciudadana y el sentido de pertenencia de los vecinos – ciudadanos de SFVC con su territorio y su entorno social."
+        },
+        {
+          "primerTitulo": "Calidad:",
+          "contenido": "Entendemos que llevar a cabo una administración pública, debe hacerse con estándares de calidad óptimos y de grado elevado, donde todos los funcionarios y funcionarias gestionen bajo criterios de la autoevaluación y de mejoramiento continuo la honestidad, la transparencia y la comunicación, a fin de dar respuesta eficaz y eficiente a las demandas de la ciudadanía, contribuyendo a mejorar su calidad de vida."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Reseña Historica",
+      "descripcion": "Reseña Histórica de la Fundación de la Ciudad",
+      "imagenDeFondo": "https://www.catamarcaciudad.gob.ar/wp-content/uploads/2017/08/fundacion.jpg",
+      "secciones": [
+        {
+          "primerTitulo": "",
+          "contenido": "En 1679, el Consejo de Indias expidió la Cédula Real que creaba la provincia de Catamarca, en respuesta a la solicitud de los vecinos de la Población del Valle y los informes que sugerían el traslado de la ciudad de Londres de Pomán al Valle de Catamarca. Sin embargo, como dicho valle no pertenecía a la jurisdicción de Londres, sino a San Miguel de Tucumán, la petición implicaba la creación de una nueva provincia."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "Esta cédula real tardó dos años en llegar a Tucumán y su gobernador, Don Fernando de Mendoza Mate de Luna, demoró otros dos para dar cumplimiento a la misma."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "Mate de Luna llegó al Valle de Catamarca el 30 de Mayo de 1683, junto a Tomás de Salas, su secretario y escribano de su Majestad. Dispuso el traslado del Estandarte Real y los Libros Capitulares, desde Londres de Pomán."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "El 16 de Junio reunió a 22 de los principales vecinos de la Población del Valle (Las Chacras), para pedirles opinión con respecto al sitio más conveniente para la ubicación de la nueva ciudad. Todos estuvieron de acuerdo en que se debía establecer una misma Población del Valle, pero no coincidían en el lugar preciso."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "Mendoza Mate de Luna no se decidió por los lugares elegidos por los vallistas y seleccionó un lugar en la otra banda del río (actual asiento de ciudad), por considerarlo un «paraje capaz, hermoso y seguro de toda inundación». Le dio el nombre de Ciudad de San Fernando del Valle de Catamarca. El 22 de Junio eligió a los cabildantes de la nueva ciudad."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "Eligió el solar el 5 de Julio de 1683. Mate de Luna, acompañado por el maestro, Don Nicolás de Herrera, por Fray Jacinto de Valladares, todos los cabildantes y numerosos vecinos, plantó el Palo de Justicia, símbolo de la jurisdicción de la ciudad."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "El gobernador dispuso que la ciudad tuviese nueve cuadras de ancho y nueve de largo, con dos cuadras para la ronda de la ciudad y cuatro de leguas para los ejidos. Dispuso también una Sala de Cabildos, archivo, cárcel y calabozo. Se preocupó también para que los indios de Londres, al ser trasladada la ciudad, no quedaran abandonados, proporcionándoles un lugar y dictando algunas ordenanzas para el buen tratamiento de los mismos."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "Pero los vecinos de Las Chacras no se trasladaron a los solares de la nueva ciudad, y hasta muchos años después no se realizó la población efectiva de la ciudad."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Simbologia",
+      "descripcion": "Reseña Histórica de la Simbología de la Ciudad",
+      "imagenDeFondo": "https://www.catamarcaciudad.gob.ar/wp-content/uploads/2017/08/Escudo.jpg",
+      "secciones": [
+        {
+          "primerTitulo": "",
+          "contenido": "El Escudo de la Municipalidad de San Fernando del Valle de Catamarca fue adoptado como símbolo oficial mediante el Artículo 5 del Capítulo 1, Sección Primera, de la Carta Orgánica Municipal promulgada en 1993. Este escudo es el mismo diseñado por Fernando de Mendoza Mate de Luna al fundar la ciudad en 1683, y su dibujo se encuentra registrado en el primer Libro Capitular de Catamarca."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "El significado del antiguo escudo, según lo explica Adán Quiroga en su obra Calchaquí (1897), es el siguiente: Las dos letras, S y F, unidas, representan el nombre de la ciudad, San Fernando. A la izquierda de estas letras se encuentra una espada, y a la derecha, una media luna. Estos elementos simbolizan, respectivamente, al fundador de la ciudad, Fernando de Mendoza Mate de Luna. La corona real de España remata la parte superior del escudo, y en la parte inferior se observan dos cerros altos que enmarcan un valle central, con otro a la izquierda. En uno de los valles se ve una planta de algodón y en el otro, una viña con hojas y un racimo de uvas. Estos valles y sus plantas representan los valles Oeste y Este de Catamarca, donde se cultivaban, respectivamente, el algodón y la vid, dos de sus principales producciones."
+        },
+        {
+          "primerTitulo": "",
+          "contenido": "Este escudo, con ligeras variaciones en sus ornamentos, sigue siendo el emblema de la ciudad de San Fernando del Valle de Catamarca hasta la fecha."
+        }
+      ]
+    }
+  ]
+}
