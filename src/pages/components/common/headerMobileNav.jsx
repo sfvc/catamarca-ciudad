@@ -51,7 +51,6 @@ const SecondModalMobile = () => {
                     <li className="header-mobile-nav__item" key={index}>
                         <a className="header-mobile-nav__link" href={list.link}>
                             <small>{list.titulo}</small>
-                            <img src={list.externalIcon} alt="External link" width={16} />
                         </a>
                     </li>
                 ))}
