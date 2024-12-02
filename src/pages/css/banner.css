@@ -1,7 +1,7 @@
 /* General layout for the banner section */
 .banner {
     display: grid; /* Enable grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
+    grid-template-columns: repeat(4, 1fr); /* Responsive grid with flexible columns */
     gap: 20px; /* Space between grid items */
     padding: 20px;
     max-width: 1200px; /* Maximum width for the container */
@@ -14,8 +14,9 @@
     justify-content: center;
     align-items: center;
     height: 200px; /* Fixed height for consistency */
+    max-height: 200px;
     background-color: #f4f4f4; /* Light background color for the items */
-    border-radius: 8px; /* Optional: Rounded corners for items */
+    border-radius: 8px !important; /* Optional: Rounded corners for items */
     overflow: hidden; /* Ensure the image doesn't overflow */
     position: relative;
 }
@@ -23,13 +24,27 @@
 /* Styling for the image */
 .banner__image {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area */
+    height: 200px !important;
+    object-fit: contain; /* Ensures the image covers the entire area */
     border-radius: 8px; /* Optional: Rounded corners for the image */
     transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
+
+
 /* Hover effect for images */
 .banner__image:hover {
     cursor: pointer;
+}
+
+@media (max-width:767px){
+    /* General layout for the banner section */
+    .banner {
+        grid-template-columns: repeat(2, 1fr); /* Responsive grid with flexible columns */
+    }
+
+    .banner__image {
+        height: 100px !important;
+    }
+
 }

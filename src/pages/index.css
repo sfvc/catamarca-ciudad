@@ -106,8 +106,8 @@ html {
 
 .padding-0{
     padding: 0;
-    height: 250px !important;
-    width: 150px;
+    height: 200px !important;
+    width: 150px !important;
 }
 
 .swiper-pagination-bullet-active {
