@@ -8,6 +8,13 @@
 @import url('./css/consultaExpediente.css');
 @import url('./css/Intendente.css');
 @import url('./css/banner.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+*{
+    font-family: 'Roboto', sans-serif !important;
+    font-optical-sizing: auto !important;
+}
 
 body {
     overflow-x: hidden !important;

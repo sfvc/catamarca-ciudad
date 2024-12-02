@@ -48,10 +48,15 @@ const HeaderMobile = () => {
     useEffect(() => {
         if (isModalOpen) {
             animateModal(); // Animate modal in when it's opened
+            document.body.classList.add('modal-open')
         } else {
             animateModalUp(); // Animate modal out when it's closed
+            document.body.classList.remove('modal-open'); 
         }
-    }, [isModalOpen]); // Trigger this effect when isModalOpen changes
+        return () => {
+            document.body.classList.remove('modal-open');
+        };
+    }, [isModalOpen]);// Trigger this effect when isModalOpen changes
 
     return (
         <nav className="HeaderMobile border-bottom-amarillo">
