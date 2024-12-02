@@ -74,11 +74,6 @@ html {
     display: none;
 }
 
-body.no-scroll {
-    overflow: hidden; /* Disable scrolling */
-    height: 100%; /* Ensure the height is full to prevent body scrolling */
-}
-
 .container-width{
     width: 90%;
 }

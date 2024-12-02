@@ -72,6 +72,7 @@ const HeaderMobile = () => {
 
             {/* Modal component with GSAP animation */}
             <Modal isOpen={isModalOpen}>
+                <div className='modal' onClick={closeModal}></div>
                 <div className="modalHeaderMobile" ref={modalRef}>
                     <button
                         className="modal__cerrarbarra"

@@ -1,56 +1,75 @@
 import { useState } from 'react';
-import {navMobile} from '../../data/navbarMobile.json'
-import {dropdowns} from '../../data/header.json'
+import { navMobile } from '../../data/navbarMobile.json';
 
-// First Modal Component (HeaderMobileNav)
+// HeaderMobileNav Component
 const HeaderMobileNav = () => {
     const [selectedId, setSelectedId] = useState(null); // Track selected ID
 
+    // Function to render modals based on the selected ID
     const renderModal = () => {
-        // Conditionally render modal based on selectedId
-        if (selectedId === 1) {
-            return <SecondModalMobile />;
-        } else if (selectedId === 2) {
-            return <ThirdModalMobile />;
+        if (selectedId === 2) {
+            return <SecondModalMobile setSelectedId={setSelectedId} />;
+        } else if (selectedId === 3) {
+            return <ThirdModalMobile setSelectedId={setSelectedId} />;
         }
-        return null; // Return nothing if no modal is selected
+        return <FirstModalMobile setSelectedId={setSelectedId} />;
     };
 
-    // Return null to hide the nav when modal is selected
     return (
         <div className="header-mobile-nav__content">
-            {selectedId === null ? (
-                // Render the navigation when no modal is selected
-                <ul className="header-mobile-nav__list">
-                    {navMobile.navDefault.map((list, index) => (
-                        <li className="header-mobile-nav__item" key={index}>
-                            <a
-                                className="header-mobile-nav__link"
-                                href="#"
-                                onClick={() => setSelectedId(list.id)} // Set the selected ID on click
-                            >
-                                <small>{list.titulo}</small>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            ) : (
-                // When a modal is selected, display the corresponding modal
-                renderModal()
-            )}
+            {renderModal()}
         </div>
     );
 };
 
+// First Modal Component
+const FirstModalMobile = ({ setSelectedId }) => {
+    // Render navigation items from navDefault
+    const renderNavItems = (navItems) => {
+        return navItems.map((item, index) => (
+            <li className="header-mobile-nav__item" key={index}>
+                <a
+                    className="header-mobile-nav__link"
+                    target={item.external ? "_blank" : null}
+                    href={item.link}
+                    onClick={() => {
+                        if (item.id) {
+                            setSelectedId(item.id); // Open modal with id
+                        }
+                    }}
+                >
+                    <small>{item.titulo}</small>
+                    {item.icon && <img src={item.icon} alt="" width={16} />}
+                </a>
+            </li>
+        ));
+    };
+
+    return (
+        <ul className="header-mobile-nav__list">
+            {renderNavItems(navMobile.navDefault[0].items)}
+        </ul>
+    );
+};
+
 // Second Modal Component
-const SecondModalMobile = () => {
+const SecondModalMobile = ({ setSelectedId }) => {
+    const handleVolverClick = () => {
+        setSelectedId(null); // Go back to the first modal
+    };
+
     return (
         <div className="header-mobile-nav__content">
             <ul className="header-mobile-nav__list">
-                {navMobile.navSecond.map((list, index) => (
+                {navMobile.navSecond.map((item, index) => (
                     <li className="header-mobile-nav__item" key={index}>
-                        <a className="header-mobile-nav__link" href={list.link}>
-                            <small>{list.titulo}</small>
+                        <a
+                            className="header-mobile-nav__link"
+                            href={item.link}
+                            onClick={item.volver ? handleVolverClick : null} // Handle "Volver"
+                        >
+                            <small>{item.titulo}</small>
+                            {item.icon && <img src={item.icon} alt="" width={16} />}
                         </a>
                     </li>
                 ))}
@@ -60,15 +79,23 @@ const SecondModalMobile = () => {
 };
 
 // Third Modal Component
-const ThirdModalMobile = () => {
+const ThirdModalMobile = ({ setSelectedId }) => {
+    const handleVolverClick = () => {
+        setSelectedId(null); // Go back to the first modal
+    };
+
     return (
         <div className="header-mobile-nav__content">
             <ul className="header-mobile-nav__list">
-                {navMobile.navThird.map((list, index) => (
+                {navMobile.navThird.map((item, index) => (
                     <li className="header-mobile-nav__item" key={index}>
-                        <a className="header-mobile-nav__link" href={list.link}>
-                            <small>{list.titulo}</small>
-                            <img src="/images/externalLink.svg" alt="External link" width={16} />
+                        <a
+                            className="header-mobile-nav__link"
+                            href={item.link}
+                            onClick={item.volver ? handleVolverClick : null} // Handle "Volver"
+                        >
+                            <small>{item.titulo}</small>
+                            {item.icon && <img src={item.icon} alt="" width={16} />}
                         </a>
                     </li>
                 ))}

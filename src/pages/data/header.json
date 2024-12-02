@@ -79,6 +79,11 @@
                     "link": "/grid/2"
                 },
                 {
+                    "label": "Noticias Municipales",
+                    "link": "https://catamarca-ciudad-noticias.netlify.app/",
+                    "external": true
+                },
+                {
                     "label": "Valores",
                     "link": "/perfil/3"
                 },
