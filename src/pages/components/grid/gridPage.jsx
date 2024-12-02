@@ -7,7 +7,7 @@ const GridPage = ({ grid }) => {
   return (
     <>
       <div className='Tramites__container'>
-        <div className='container m-y-2'style={{ textAlign: "center", maxWidth: "750px", minWidth:"350px" }}>
+        <div className='container m-y-2'style={{ textAlign: "center", maxWidth: "750px", minWidth:"auto" }}>
           <h1>{grid.titulo}</h1>
         {grid && grid.descripcion && grid.autor ? (
           <>

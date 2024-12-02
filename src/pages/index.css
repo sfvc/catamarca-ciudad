@@ -107,4 +107,10 @@ html {
 .padding-0{
     padding: 0;
     height: 250px !important;
+    width: 175px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--swiper-pagination-color, #f2a037)!important;
 }

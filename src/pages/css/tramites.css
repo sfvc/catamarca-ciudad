@@ -122,11 +122,22 @@
   .TramistedGrid__btnGroup{
     width: 100%;
   }
+  .TramistedGrid__cardimg {
+    padding: 10%;
+  }
 }
 
 /* Media query for screens up to 480px */
 @media (max-width: 480px) {
   .TramistedGrid__grid-container {
-    grid-template-columns: 1fr; /* 1 column for mobile */
+    grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
   }
+
+  .TramistedGrid__card {
+    width: auto;
+  }
+
+  .TramistedGrid__cardimg {
+    width: auto;
+}
 }
