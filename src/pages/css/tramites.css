@@ -6,7 +6,7 @@
 
 .TramistedGrid__grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 4 columns */
+  grid-template-columns: repeat(5, 1fr); /* 4 columns */
   grid-template-rows: auto;    /* 4 rows */
   padding: 0;
 }
@@ -15,8 +15,7 @@
   background-color: transparent; /* Card background */
   border-radius: 8px;        /* Rounded corners */
   padding-inline: 16px;
-  padding-top: 16px;
-  padding-bottom: 4rem;  
+  padding-block: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 0.5rem;
+  margin-block: 1rem;
 }
 
 .TramistedGrid__btnVolver:hover{
@@ -110,14 +109,14 @@
 /* Media query for screens up to 1024px */
 @media (max-width: 1024px) {
   .TramistedGrid__grid-container {
-    grid-template-columns: repeat(4, 1fr); /* 3 columns for medium screens */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
   }
 }
 
 /* Media query for screens up to 768px */
 @media (max-width: 768px) {
   .TramistedGrid__grid-container {
-    grid-template-columns: repeat(4, 1fr); /* 2 columns for tablets */
+    grid-template-columns: repeat(3, 1fr); /* 2 columns for tablets */
   }
   .TramistedGrid__btnGroup{
     width: 100%;

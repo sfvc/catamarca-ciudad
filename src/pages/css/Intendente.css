@@ -24,7 +24,6 @@
 }
 
 .PerfilIntendente__informacion{
-    align-self: start;
 }
 .PerfilIntendente__cargo{
     color: #999;
@@ -48,9 +47,11 @@
 }
 
 .PerfilIntendente__imagen{
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .PerfilIntendente__descripcion{
