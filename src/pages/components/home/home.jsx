@@ -16,7 +16,6 @@ export const Home = () => {
           <BannerComponent/>
           <ProgramasComponent/>
           <FaqCard/>
-          <MapComponent/>
         </main>
     </>
   );

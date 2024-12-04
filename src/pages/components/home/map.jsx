@@ -5,24 +5,25 @@ import 'leaflet/dist/leaflet.css';
 
 
 const MapComponent = () => {
-  const position = [-28.477233, -65.77752]; // Example coordinates
+  const position = [-28.4685, -65.7793]; // Example coordinates
 
   // URL of the car image (you can replace this with your own image URL)
   const carImageUrl = '/images/palacioMuni.jpg'; // Replace with your image URL
 
   return (
     <MapContainer
-      className="container"
+      className=""
       center={position}
-      zoom={16}
+      zoom={13}
       style={{
-        height: '400px',
-        margin: '0 auto 24px',
+        height: '600px',
         borderRadius: '10px',
+        width:'100%',
+        zIndex:1,
       }}
-      scrollWheelZoom={false}    // Disable zooming with the mouse wheel
-      zoomControl={false}        // Disable the zoom control buttons
-      doubleClickZoom={false}    // Disable zooming on double click
+      scrollWheelZoom={true}    // Disable zooming with the mouse wheel
+      zoomControl={true}        // Disable the zoom control buttons
+      doubleClickZoom={true}    // Disable zooming on double click
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -1,56 +1,56 @@
 const programas = [
     {
-        title: "COMPR.AR",
-        link: "https://comprar.catamarca.gob.ar/",
+        title: "Compras",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-carrito",
         bgClass: "bg-cereza",
         description: "Sistema electrónico de gestión de las compras y contrataciones de la Administración Pública Provincial"
     },
     {
         title: "Trámites a Distancia",
-        link: "https://tad.catamarca.gob.ar",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-tramite-electronico",
         bgClass: "bg-escarapela",
         description: "Hacé trámites estés donde estés"
     },
     {
         title: "Turnos Catamarca",
-        link: "http://turnos.catamarca.gob.ar",
+        link: "/grid/grid/34r",
         iconClass: "icono-arg-turno",
         bgClass: "bg-uva",
         description: "Solicitud de turnos para diferentes organismos de la administración pública"
     },
     {
         title: "Consulta de Haberes",
-        link: "https://recibos.catamarca.gob.ar/",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-mis-cobros",
         bgClass: "bg-palta",
         description: "Mirá tus liquidaciones mensuales"
     },
     {
         title: "Expedientes",
-        link: "https://portal.catamarca.gob.ar/expedientes",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-archivo-consulta",
         bgClass: "bg-maiz",
         description: "Consultá tu expediente de forma simple y rápida"
     },
     {
         title: "Repositorio Digital",
-        link: "http://repositoriodigital.catamarca.gob.ar/",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-database",
         bgClass: "bg-info",
         description: "Servicio de recopilación, conservación y distribución de material digital"
     },
     {
         title: "Coronavirus y Dengue",
-        link: "https://coronavirus-dengue.catamarca.gob.ar/",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-coronavirus",
         bgClass: "bg-verde-azulado",
         description: "Información actualizada sobre casos de COVID-19 y dengue"
     },
     {
         title: "Estadísticas",
-        link: "https://www.estadistica.gob.ar/",
+        link: "/grid/grid/34",
         iconClass: "icono-arg-informes-y-estadisticas",
         bgClass: "bg-naranja",
         description: "Accede a los datos estadísticos Provinciales y Nacionales"
