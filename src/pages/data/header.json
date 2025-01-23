@@ -9,10 +9,6 @@
                     "external": true
                 },
                 {
-                    "label": "Consulta de Expedientes",
-                    "link": "/consultaExpediente"
-                },
-                {
                     "label": "Tramites Municipales Internos",
                     "link": "/grid/35"
                 },
@@ -76,7 +72,7 @@
                 },
                 {
                     "label": "Estructura Orgánica",
-                    "link": "/grid/2"
+                    "link": "/estructura"
                 },
                 {
                     "label": "Noticias Municipales",

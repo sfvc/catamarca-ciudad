@@ -13,7 +13,6 @@ export const Home = () => {
         <main>
           <PortalARG/>
           <HomeSliderPage/>
-          <BannerComponent/>
           <ProgramasComponent/>
           <FaqCard/>
         </main>

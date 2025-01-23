@@ -78,13 +78,6 @@
                     "img": "/images/grid/empleoCapacitacion.svg"
                 },
                 {
-                    "link": "https://sfvc.travel/",
-                    "title": "Turismo",
-                    "description": "Servicios al Vecino",
-                    "img": "/images/grid/turismo.svg",
-                    "external":true
-                },
-                {
                     "link": "/grid/26",
                     "title": "Salud",
                     "description": "Portal de Compra",

@@ -9,7 +9,7 @@ const Header = () => {
             <header>
                 <div style={{backgroundColor:"#001529"}}>
 
-                <MarqueeHeader/>
+                    <MarqueeHeader/>
 
                 </div>
                 <HeaderLg/>

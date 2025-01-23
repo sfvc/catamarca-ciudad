@@ -1,4 +1,5 @@
 import { socialButtons } from '../../data/portal.json';
+import SearchBarPortal from './searchBarPortal';
 
 export const PortalARG = () => {
     return (
@@ -12,6 +13,8 @@ export const PortalARG = () => {
                                     <h1 className="home_titulo">
                                         Portal oficial de la Municipalidad de Catamarca
                                     </h1>
+                                    <br />
+                                        <SearchBarPortal/>
                                     <br />
                                     <h2 className="home_titulo">Seguinos en</h2>
                                     <br />
