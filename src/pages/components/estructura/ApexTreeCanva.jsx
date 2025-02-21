@@ -9,7 +9,7 @@ const ApexTreeCanva = ({ renderTreeData }) => {
     if (treeRef.current && containerRef.current) {
       const options = {
         contentKey: "data",
-        width: 500,
+        width: 2000,
         height: 1000,
         nodeWidth: 800,
         nodeHeight: 350,
