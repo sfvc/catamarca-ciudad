@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules'; // Import the Autoplay module
 import 'swiper/css';  
 import 'swiper/css/pagination';  // Import pagination styles
-import {HomePageGrid} from '../../data/portal.json'
+import { HomePageGrid } from '../../data/portal.json';
+
 // Assuming HomePageGrid is passed as a prop or imported
 const HomeSliderPage = () => {
   const handleLinkClick = (e, card) => {
@@ -17,7 +18,7 @@ const HomeSliderPage = () => {
 
   return (
     <div className="homeSlider container">
-      <h2 style={{textAlign:"center"}}>Accesos Rápidos</h2>
+      <h2 style={{ textAlign: "center" }}>Accesos Rápidos</h2>
       {/* Swiper component for cards */}
       <Swiper
         spaceBetween={50}
@@ -25,7 +26,11 @@ const HomeSliderPage = () => {
         pagination={{
           clickable: true, // Enables clickable pagination
         }}
-        modules={[Pagination]} // Ensure Pagination module is imported
+        modules={[Pagination, Autoplay]} // Add Autoplay module here
+        autoplay={{
+          delay: 1000, // Set autoplay to change slide every 1.5 seconds
+          disableOnInteraction: false, // Continue autoplay even if user interacts
+        }}
         breakpoints={{
           768: {
             slidesPerView: 4,
@@ -38,7 +43,7 @@ const HomeSliderPage = () => {
         }}
         onSlideChange={() => console.log('Slide change')}
         onSwiper={(swiper) => console.log(swiper)}
-        className='mySwiper'
+        className="mySwiper"
       >
         {HomePageGrid.map((card, index) => (
           <SwiperSlide key={index}>
