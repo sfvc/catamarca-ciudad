@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules'; 
 import 'swiper/css';  
 import 'swiper/css/pagination';  // Import pagination styles
 import {HomePageGrid} from '../../data/portal.json'
@@ -25,7 +25,12 @@ const HomeSliderPage = () => {
         pagination={{
           clickable: true, // Enables clickable pagination
         }}
-        modules={[Pagination]} // Ensure Pagination module is imported
+        autoplay={{
+          delay: 1500,  // Auto-slide every 2 seconds
+          disableOnInteraction: false,  // Keep autoplay running even when interacting with slides
+        }}
+        loop={true} // Allow the swiper to loop back to the first slide
+        modules={[Pagination, Autoplay]} // Ensure Autoplay module is imported
         breakpoints={{
           768: {
             slidesPerView: 4,
@@ -36,9 +41,9 @@ const HomeSliderPage = () => {
             spaceBetween: 50,
           },
         }}
-        onSlideChange={() => console.log('Slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-        className='mySwiper'
+        className="mySwiper"
+        onMouseEnter={() => swiper.autoplay.stop()} // Stop autoplay on mouse enter
+        onMouseLeave={() => swiper.autoplay.start()} // Restart autoplay on mouse leave
       >
         {HomePageGrid.map((card, index) => (
           <SwiperSlide key={index}>

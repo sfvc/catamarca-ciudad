@@ -31,7 +31,7 @@
 }
 
 .TramistedGrid__card-title {
-  font-size: 1.2em;          /* Card title size */
+  font-size: 1em;          /* Card title size */
   margin-bottom: 8px;
 }
 
@@ -139,5 +139,13 @@
 
   .TramistedGrid__cardimg {
     width: auto;
+}
+
+.TramistedGrid__card-title{
+  font-size: 0.9em;
+}
+
+.TramistedGrid__card-small{
+  font-size: 0.7em;
 }
 }
