@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules'; 
 import 'swiper/css';  
 import 'swiper/css/pagination';  // Import pagination styles
-import {HomePageGrid} from '../../data/portal.json'
+import { HomePageGrid } from '../../data/portal.json';
+
 // Assuming HomePageGrid is passed as a prop or imported
 const HomeSliderPage = () => {
   const handleLinkClick = (e, card) => {
@@ -17,7 +18,7 @@ const HomeSliderPage = () => {
 
   return (
     <div className="homeSlider container">
-      <h2 style={{textAlign:"center"}}>Accesos Rápidos</h2>
+      <h2 style={{ textAlign: "center" }}>Accesos Rápidos</h2>
       {/* Swiper component for cards */}
       <Swiper
         spaceBetween={50}

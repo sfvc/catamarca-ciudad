@@ -10,6 +10,7 @@ const ApexTreeCanva = ({ renderTreeData }) => {
       const options = {
         contentKey: "data",
         width: 1000,
+        width: 2000,
         height: 1000,
         nodeWidth: 800,
         nodeHeight: 500,
