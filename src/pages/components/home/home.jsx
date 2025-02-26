@@ -7,7 +7,7 @@ import { PortalARG } from './portalarg';
 import ProgramasComponent from './programas';
 
 
-export const Home = () => {
+const Home = () => {
   return (
     <>  
         <main>
@@ -19,3 +19,6 @@ export const Home = () => {
     </>
   );
 };
+
+
+export default Home;

@@ -1,0 +1,77 @@
+
+.loading-screen_container {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.loading-screen {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  height: 75%;
+  width: 50%;
+}
+
+.loading-screen__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loading-screen__logo-img {
+  width: 300px;
+  height: auto;
+}
+
+.loading-screen__loading-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-screen__progress-bar {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border: 0;
+  border-radius: 10px;
+  appearance: none;
+}
+
+.loading-screen__progress-bar::-webkit-progress-bar {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.loading-screen__progress-bar::-webkit-progress-value {
+  background: linear-gradient(90deg, #eea449 0%,#02b0d7 50%,#0f2554 100%);
+  border-radius: 10px;
+}
+
+.loading-screen__progress-bar::-moz-progress-bar {
+  background: linear-gradient(90deg, #eea449 0%,#02b0d7 50%,#0f2554 100%);
+  border-radius: 10px;
+}
+
+.loading-screen__loading-counter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f2554;
+}
+
+.loading-screen__motivational-text {
+  margin-top: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0f2554;
+}

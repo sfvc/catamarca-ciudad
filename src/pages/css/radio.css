@@ -1,0 +1,14 @@
+.radio-player{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    flex-direction: column;
+    min-height: 60dvh;
+    gap: 2rem;
+}
+
+.radio-player__audio{
+    width: 75%;
+    margin: 0 auto;
+}

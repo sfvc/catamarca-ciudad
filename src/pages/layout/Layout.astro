@@ -6,6 +6,7 @@ interface Props {
 }
 const { title } = Astro.props;
 import '../../pages/index.css'
+import App from './app';
 
 
 ---
@@ -16,9 +17,11 @@ import '../../pages/index.css'
                 <meta charset="utf-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Catamarca Capital - Municipalidad SFVC</title>
                 <meta name="description" content="Pagina Oficial de la Municipalidad de San Fernando del Valle de Catamarca">
-                <meta name="author" content="Secretaría de Gabinete y Modernización">
+                <meta name="author" content="Presidencia de la Nación">
                 <link rel="shortcut icon" href="/images/muni-logo-removebg.png">
+        
                 <meta name="theme-color" content="#242C4F" />
                 <meta name="msapplication-navbutton-color" content="#242C4F" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="#242C4F" />
@@ -43,12 +46,14 @@ import '../../pages/index.css'
                 <link href="https://cdn.jsdelivr.net/gh/argob/poncho@master/dist/css/documentacion.css" rel="stylesheet">
                 <link href="https://cdn.jsdelivr.net/gh/argob/poncho@master/dist/css/icono-arg.css" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-                <meta name="generator" content={Astro.generator} />
                 <title>{title}</title>
         </head>
-        <body>
+        <App client:only="react">
+
+                <body role="document" class="html front not-logged-in no-sidebars page-node i18n-es jquery-once-1-processed">
                         <Header client:only="react"/>
-                                <slot />
+                        <slot />
                         <Footer client:only="react"/>
                 </body>
-        </html>
+        </App>
+</html>

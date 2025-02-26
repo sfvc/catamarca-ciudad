@@ -2,7 +2,7 @@ import React from 'react';
 
 export const DigestoAside = () => {
     return (
-        <aside className="aside">
+        <aside className="aside displaymobilenone">
             <div className="aside__div">
 
                 <div className="aside__div2">

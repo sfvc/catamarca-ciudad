@@ -80,6 +80,10 @@
                     "external": true
                 },
                 {
+                    "label": "Radio Municipal",
+                    "link": "/radio"
+                },
+                {
                     "label": "Edificios Publicos",
                     "link": "/edificiospublicos"
                 },
