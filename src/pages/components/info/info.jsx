@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Info = () => {
+  // State to track if the reading is in progress
+  const [isReading, setIsReading] = useState(false);
+
   // Function to handle the text-to-speech functionality
   const handleReadAloud = () => {
     const content = document.querySelector('main').innerText; // Get the text content of the entire <main> tag
 
-    const utterance = new SpeechSynthesisUtterance(content); // Create a new SpeechSynthesisUtterance
-    utterance.lang = 'es-ES'; // Set the language (Spanish in this case)
-    speechSynthesis.speak(utterance); // Speak the content
+    // If it's already reading, stop it
+    if (isReading) {
+      speechSynthesis.cancel(); // Stops the current speech
+      setIsReading(false);
+    } else {
+      const utterance = new SpeechSynthesisUtterance(content); // Create a new SpeechSynthesisUtterance
+      utterance.lang = 'es-ES'; // Set the language (Spanish in this case)
+      speechSynthesis.speak(utterance); // Speak the content
+      setIsReading(true); // Set the state to reading
+    }
   };
 
   return (
     <main role="main">
       <button className="btn btn-warning" onClick={handleReadAloud}>
-        Leer automático
+        {isReading ? 'Pausar lectura' : 'Leer automatico'}
       </button>
       <div className="container">
         <section>
