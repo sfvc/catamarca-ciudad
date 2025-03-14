@@ -1,0 +1,127 @@
+/* BuscadorMain.css */
+.buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 1rem;
+    min-height: 60vh;
+    gap: 0.50rem;
+}
+
+.buscador section{
+    padding: 0 !important;
+}
+
+.buscador__search,
+.buscador__categories,
+.buscador__filter,
+.buscador__content,
+.buscador__pagination,
+.buscador__footer {
+    width: 100%;
+}
+
+.buscador__content{
+    min-height: 60dvh;
+}
+
+.buscador__filter{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 4px 0px;
+    width: 100%;
+}
+
+.buscador__search__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.buscador__categories__content,
+.buscador__content__items {
+    font-size: 18px;
+    color: #333;
+}
+
+.buscador__pagination__controls,
+.buscador__filter__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.buscador__footer__info {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+/* BuscadorMain.css */
+
+
+.buscador__content__table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.buscador__content__table-header,
+.buscador__content__table-data {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.buscador__content__table-header {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    color: #333;
+}
+
+.buscador__content__table-data {
+    color: #555;
+}
+
+.tablemain{
+    width: 75%;
+}
+
+.buscador__filter__button{
+    padding: 6px 24px;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.buscador__filter__button:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .buscador__search__input {
+        font-size: 14px;
+    }
+
+    .buscador__content__table {
+        font-size: 14px;
+    }
+
+    .buscador__content__table-header,
+    .buscador__content__table-data {
+        padding: 8px;
+    }
+
+    .buscador {
+        padding: 4px 0.25rem;
+    }
+}
