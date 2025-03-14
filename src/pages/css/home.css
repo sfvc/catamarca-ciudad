@@ -395,8 +395,94 @@ button, input{all: unset;}
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
+.searchModalDeskopt{
+    position:absolute;
+    top: 100%;
+    /* left: 50%; */
+    width: 100%;
+    min-height: 25dvh;
+    background-color: black;
+    margin-top: 4px;
+    border-radius: 10px;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+    /* transform: translate(-50%, 0%);  */
+}
+
+.searchModalDeskopt--active {
+    opacity: 1;
+}
+
+/* Style for the List inside the Modal */
+.searchModalDeskopt__list {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none; /* Removes default list styling */
+    list-style-position: outside;
+    padding: 0;
+}
+
+/* Style for each list item */
+.searchModalDeskopt__list-item {
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-size: 700;
+    padding: 16px 6px;
+
+}
+
+.searchModalDeskopt__list-item-div{
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.searchModalDeskopt__list-item-img{
+    width: 36px;
+    border-radius: 4px;
+    /* object-fit: cover; */
+    /* object-position: center; */
+}
+
+.searchModalDeskopt__list-item-p{
+    font-weight: 500 !important;
+}
+
+.searchModalDeskopt__list-item-small{
+    color: gray;
+}
+
+.searchModalDeskopt__list-item p {
+    all: unset;
+}
+
+
+.searchModalDeskopt__list-item:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    border-radius: 8px;
+}
+
+.searchModalDeskopt__list-item:last-child {
+    border-bottom: none;
+}
+
+
+@media (max-width: 1023.98px) {
+    .searchModalDeskopt{
+        display: none;
+    }
+}
 .input-search{
     flex: 1;
 }

@@ -55,10 +55,8 @@ const ModalMobile = ({ isOpen, onClose, children }) => {
       <div className="modal-overlay" ref={overlayRef}>
         <div className="modalHeaderMobile" ref={modalRef}>
           <button className="modal__cerrarbarra" onClick={closeModal}>
-            <img
+            <span
               className="modal__cerrarbarra-icon"
-              src="/path-to-close-icon.png"
-              alt="close"
             />
           </button>
           {children}
