@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import Modal from "../common/modal";
+import React, { useEffect, useState, useRef } from "react";
+import { catamarcaApi } from "../../../api/catamarcaApi";
 import ModalMobile from "../common/modalMobile";
 
 const SearchBarPortal = () => {
@@ -8,15 +8,47 @@ const SearchBarPortal = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobile, setIsMobile] = useState(false);  // Track if window is mobile-sized
 
+
+  const [tramites, setTramites] = useState([]);
+  const [filteredTramites, setFilteredTramites] = useState([]);
+
+  useEffect(() => {
+    const fetchTramites = async () => {
+      try {
+        const response = await catamarcaApi.get("/items/tramites");
+        setTramites(response.data.data);
+      } catch (error) {
+        console.error("Error obteniendo trámites:", error);
+      }
+    };
+
+    fetchTramites();
+  }, []);
+
   // Handle search query change
   const handleChange = (event) => {
-    setSearchQuery(event.target.value);
+    const query = event.target.value;
+    setSearchQuery(query);
+
+    if (query.length > 0) {
+      const resultados = tramites.filter((tramite) =>
+        tramite.titulo.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredTramites(resultados);
+    } else {
+      setFilteredTramites([]);
+    }
+  };
+
+  const handleSelect = (titulo) => {
+    setSearchQuery(titulo);
+    setFilteredTramites([]);
   };
 
   // Handle search form submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Searching for:", searchQuery);
+    console.log("Buscando trámite:", searchQuery);
   };
 
   // Detect window resize and set mobile state accordingly
@@ -66,13 +98,18 @@ const SearchBarPortal = () => {
           onChange={handleChange}
           name="keys"
         />
+        {filteredTramites.length > 0 && (
+          <ul className="search-results">
+            {filteredTramites.map((tramite) => (
+              <li key={tramite.id} onClick={() => handleSelect(tramite.titulo)}>
+                {tramite.titulo}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <span className="input-group-btn">
-        <button
-          type="submit"
-          onClick={handleSubmit}
-          aria-label="Buscar"
-        >
+        <button type="submit" onClick={handleSubmit} aria-label="Buscar">
           <img className="input-group-btn-img" src="/images/lupa.svg" alt="Buscar" />
           <span className="sr-only">Buscar en el sitio</span>
         </button>
