@@ -107,8 +107,32 @@ const SearchModalDeskopt = () => {
           </div>
           <small className="searchModalDeskopt__list-item-small">Noticias</small>
         </li>
-        <li className="searchModalDeskopt__list-item">Item 3</li>
-        <li className="searchModalDeskopt__list-item">Item 4</li>
+        <li className="searchModalDeskopt__list-item">
+          <div className="searchModalDeskopt__list-item-div">
+            <img className="searchModalDeskopt__list-item-img" src="/images/link.svg" alt="" style={{ width: '36px' }} />
+            <p className="searchModalDeskopt__list-item-p">
+              Se Lanzo mi aplicacion catamarca ciudad en el municipio parque el jumeal parque
+            </p>
+          </div>
+          <small className="searchModalDeskopt__list-item-small">Link</small>
+        </li>
+        <li className="searchModalDeskopt__list-item">
+          <div className="searchModalDeskopt__list-item-div">
+            <img className="searchModalDeskopt__list-item-img" src="/images/mariano.jpeg" alt="" style={{ width: '36px' }} />
+            <p className="searchModalDeskopt__list-item-p">
+              Funcionarios lanza nuevo proyecto en la municipalidad
+            </p>
+          </div>
+          <small className="searchModalDeskopt__list-item-small">Noticias</small>
+        </li>
+
+
+        <li className="searchModalDeskopt__list-item-vermas">
+          <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
+            <span>Ver mas</span>
+            <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
+          </a>
+        </li>
       </ul>
     </div>
   );
@@ -118,7 +142,6 @@ const SearchModalMobile = ({ onClose }) => {
   return (
     <ModalMobile isOpen={true} onClose={onClose}>
       <div>
-        <input type="text" placeholder="buscar" style={{width:'75%',border:'1px solid gray', padding:'10px'}}/>
         <ul className="searchModalDeskopt__list">
           <li className="searchModalDeskopt__list-item">
             <div className="searchModalDeskopt__list-item-div">
@@ -140,8 +163,16 @@ const SearchModalMobile = ({ onClose }) => {
           </li>
           <li className="searchModalDeskopt__list-item">Item 3</li>
           <li className="searchModalDeskopt__list-item">Item 4</li>
+          <li className="searchModalDeskopt__list-item-vermas">
+            <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
+              <span>Ver mas</span>
+              <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
+            </a>
+          </li>
         </ul>
-        <input type="text" placeholder="buscar" style={{width:'75%',border:'1px solid gray', padding:'10px'}}/>
+        <span className="searchModalDeskopt__list-item-span-mobile">
+          <input className="searchModalDeskopt__list-item-input-mobile" type="text" placeholder="buscar"/>
+        </span>
       </div>
     </ModalMobile>
   );

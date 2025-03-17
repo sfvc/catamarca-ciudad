@@ -402,9 +402,9 @@ button, input{all: unset;}
     position:absolute;
     top: 100%;
     /* left: 50%; */
-    width: 100%;
-    min-height: 25dvh;
     background-color: black;
+    width: 100%;
+    height: 40dvh;
     margin-top: 4px;
     border-radius: 10px;
     z-index: 3;
@@ -421,7 +421,6 @@ button, input{all: unset;}
     background-color: #fff;
     border-radius: 8px;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     list-style: none; /* Removes default list styling */
     list-style-position: outside;
     padding: 0;
@@ -477,10 +476,45 @@ button, input{all: unset;}
     border-bottom: none;
 }
 
+.searchModalDeskopt__list-item-vermas{
+    background-color: #001529;
+    padding: 16px 6px;
+    font-weight: 500;
+}
+
+.searchModalDeskopt__list-item-vermas-a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-decoration: none;
+
+}
+
+.searchModalDeskopt__list-item-vermas-a:hover{
+    text-decoration: none !important;
+    color: white !important;
+}
+
 
 @media (max-width: 1023.98px) {
     .searchModalDeskopt{
         display: none;
+    }
+
+    .searchModalDeskopt__list-item-input-mobile{
+        width: 75%;
+        border: 1px solid lightgray;
+        padding: 10px;
+        border-radius: 6px;
+        margin-block: 10px;
+    }
+    
+    .searchModalDeskopt__list-item-span-mobile{
+        width: 100%;
+        display: grid;
+        place-items: center;
     }
 }
 .input-search{
