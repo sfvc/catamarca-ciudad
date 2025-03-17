@@ -67,7 +67,7 @@ const HomeSliderPage = () => {
                 {item.imagen ? (
                   imagenes[item.imagen] ? (
                     <img
-                      className="TramistedGrid__cardimg padding-15"
+                      style={{ width: "100%", height: "150px", objectFit: "cover" }}
                       src={imagenes[item.imagen]}
                       alt={item.titulo}
                     />

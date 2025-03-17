@@ -48,6 +48,7 @@ const ProgramasComponent = () => {
                     src={imagenes[items.imagen]} 
                     alt={items.titulo} 
                     className="panel-icon-image"
+                    style={{ width: "100%", height: "150px", objectFit: "cover" }}
                   />
                 ) : (
                   <i className={`atajo_faIcon__3OjA_ ${items.imagen}`} />
