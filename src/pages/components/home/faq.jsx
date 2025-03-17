@@ -62,10 +62,10 @@ const FaqCard = () => {
                       <a href={`/noticia/${noticia.id}`} className="panel panel-default">
                         {noticia.imagen && imagenes[noticia.imagen] ? (
                           <img
-                            src={imagenes[noticia.imagen]}
-                            alt={noticia.titulo}
-                            style={{ width: "100%" }}
-                          />
+                              src={imagenes[noticia.imagen]}
+                              alt={noticia.titulo}
+                              style={{ width: "100%", height: "400px", objectFit: "cover" }}
+                            />
                         ) : (
                           <div>No hay imagen disponible</div>
                         )}
