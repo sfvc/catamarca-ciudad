@@ -1,27 +1,16 @@
 ---
 // Import the necessary components and data
 import Layout from '../layout/Layout.astro';
-import {grid} from '../data/grid.json';
+
 import GridPage from '../components/grid/gridPage';
 
 const { id } = Astro.params; // Get the ID from the URL parameters
-
 // Find the corresponding tramite by ID
-const gridData = grid.find((t) => t.id === parseInt(id, 10));
 
-if (!gridData) {
-    throw new Error('Trámite no encontrado');
-}
 
-// Function to get static paths for pre-rendering
-export function getStaticPaths() {
-    return grid.map((t) => ({
-        params: { id: t.id.toString() }, // Convert ID to string
-    }));
-}
+
 
 ---
-
-<Layout title={gridData.titulo}>
-    <GridPage client:only="react" grid={gridData} />
+<Layout title={"titulo"}>
+    <GridPage client:only="react" grid={""} />
 </Layout>

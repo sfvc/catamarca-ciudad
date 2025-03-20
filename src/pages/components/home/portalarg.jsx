@@ -6,7 +6,9 @@ export const PortalARG = () => {
         <div>
             <div className="region region-content">
                 <div id="block-system-main" className="block block-system clearfix">
+                        {/* PROBLEMA */}
                     <div className="panel-pane bg-img portal__container pane-texto">
+                        {/* PROBLEMA */}
                         <div className="pane-content portal_container2">
                             <div className="portal_container3 text-white p-b-2">
                                 <header className="home-new input__div">

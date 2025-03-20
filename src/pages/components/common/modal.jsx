@@ -1,16 +1,14 @@
-import { useEffect } from 'react';
+import React, { forwardRef } from 'react';
 
 // Modal Component
-const Modal = ({ isOpen, onClose, children }) => {
-    // If modal is not open, return null
+const Modal = ({ isOpen, onClose, children, clase }, ref) => {
     if (!isOpen) return null;
 
     return (
-        <div className="modal">
-
-                {children}
+        <div className={`${clase}`} onClick={onClose} ref={ref} >
+            {children}
         </div>
     );
 };
 
-export default Modal;
+export default forwardRef(Modal);

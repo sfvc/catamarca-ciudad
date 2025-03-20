@@ -125,3 +125,15 @@
         padding: 4px 0.25rem;
     }
 }
+
+
+.buscador__content__table-data-logo {
+    text-align: center; /* Centers the content horizontally */
+    vertical-align: middle; /* Centers the content vertically */
+    border-bottom: 1px solid lightgray;
+}
+
+.buscador__content__table-data-logo img {
+    max-width: 100%; /* Optional: ensures the image doesn't overflow */
+    height: auto; /* Optional: maintains the aspect ratio */
+}

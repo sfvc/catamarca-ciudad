@@ -33,12 +33,12 @@ const BuscadorContent = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td className="buscador__content__table-data"><img src="/images/wsp.svg" alt="Image" /></td>
+                    <td className="buscador__content__table-data-logo"><img src="/images/solPatrio.svg" alt="Image" /></td>
                     <td className="buscador__content__table-data">Content Item 3</td>
                     <td className="buscador__content__table-data"><small>Category Name</small></td>
                 </tr>
                 <tr>
-                    <td className="buscador__content__table-data"><img src="/images/wsp.svg" alt="Image"/></td>
+                    <td className="buscador__content__table-data-logo"><img src="/images/solPatrio.svg" alt="Image"/></td>
                     <td className="buscador__content__table-data">Content Item 4</td>
                     <td className="buscador__content__table-data"><small>Another Category</small></td>
                 </tr>

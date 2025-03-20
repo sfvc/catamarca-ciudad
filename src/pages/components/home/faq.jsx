@@ -58,13 +58,18 @@ const FaqCard = () => {
               <div className="pane-content">
                 <div className="row panels-row m-t-2">
                   {noticias.map(noticia => (
-                    <div key={noticia.id} className="col-xs-12 col-sm-6 col-md-4">
-                      <a href={`/noticia/${noticia.id}`} className="panel panel-default">
+                    <div key={noticia.id} 
+                        className="col-xs-12 col-sm-6 col-md-4"
+                        style={{border:'none'}}
+                    >
+                      <a href={`/noticia/${noticia.id}`}
+                         className="panel panel-default"
+                      >
                         {noticia.imagen && imagenes[noticia.imagen] ? (
                           <img
                               src={imagenes[noticia.imagen]}
                               alt={noticia.titulo}
-                              style={{ width: "100%", height: "400px", objectFit: "cover" }}
+                              style={{ width: "100%", maxHeight: "300px", objectFit: "cover" }}
                             />
                         ) : (
                           <div>No hay imagen disponible</div>

@@ -26,17 +26,20 @@ export default function RadioPlayer() {
       </audio>
 
       <div className="btn-seguinos-container">
-            {socialButtons.map((button, index) => (
-                <button 
-                    key={index} 
-                    className={`${button.color}`} 
-                >
-                    {button.name}
-                    <img src={button.image} alt={button.name} />
-                </button>
-            ))}
-        </div>
+          {socialButtons.map((button, index) => (
+              <button 
+                  key={index} 
+                  className={`${button.color}`} 
+              >
+                  {button.name}
+                  <img src={button.image} alt={button.name} />
+              </button>
+          ))}
+      </div>
 
+      <div className="iframediv">
+      <iframe src="https://www.catamarcaciudad.gob.ar/digesto/digestoMunicipal-PruebaResol.php" width="100%" height="1000" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+      </div>
     </div>
   );
 }

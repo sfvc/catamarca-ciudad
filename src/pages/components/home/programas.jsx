@@ -42,18 +42,16 @@ const ProgramasComponent = () => {
               target="_blank"
               href={items.url}
             >
-              <div className={`panel-heading`}>
                 {items.imagen && imagenes[items.imagen] ? (
                   <img 
                     src={imagenes[items.imagen]} 
                     alt={items.titulo} 
                     className="panel-icon-image"
-                    style={{ width: "100%", height: "150px", objectFit: "cover" }}
+                    style={{ width: "100%", height:'auto', objectFit: "cover" }}
                   />
                 ) : (
                   <i className={`atajo_faIcon__3OjA_ ${items.imagen}`} />
                 )}
-              </div>
               <div className="panel-body text-center">
                 <h3>{items.titulo}</h3>
                 <p className="text-muted" aria-hidden="true">

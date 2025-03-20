@@ -1,0 +1,23 @@
+---
+// Import the necessary components and data
+import Layout from '../layout/Layout.astro';
+import GridCategorias from '../components/grid/gridCategorias';
+
+const { id } = Astro.params; // Get the ID from the URL parameters
+console.log('Variable x:',id);
+// Find the corresponding tramite by ID
+
+
+
+// Function to get static paths for pre-rendering
+// export function getStaticPaths() {
+//     return grid.map((t) => ({
+//         params: { id: t.id.toString() }, // Convert ID to string
+//     }));
+// }
+
+---
+
+<Layout title={"Tramites catastrales"}>
+    <GridCategorias client:only="react" id={id} />
+</Layout>

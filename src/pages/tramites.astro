@@ -1,0 +1,10 @@
+---
+// Import the necessary components and data
+import Layout from './layout/Layout.astro';
+import GridPage from './components/grid/gridPage'; // Assuming it's an Astro component
+
+---
+
+<Layout title={"Tramites catastrales"}>
+  <GridPage client:only="react" />
+</Layout>

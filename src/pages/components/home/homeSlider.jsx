@@ -47,7 +47,7 @@ const HomeSliderPage = () => {
         spaceBetween={50}
         slidesPerView={2}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 1500, disableOnInteraction: false }}
+        // autoplay={{ delay: 1500, disableOnInteraction: false }}
         loop={true}
         modules={[Pagination, Autoplay]}
         breakpoints={{

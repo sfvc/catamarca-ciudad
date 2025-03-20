@@ -8,12 +8,6 @@ const DigestoContainer = () => {
 
   return (
     <> 
-      <div className="digestobtn main container displaymobilenone">
-        <button>Boletines Municipales</button>
-        <button>Ordenanzas</button>
-        <button>Resoluciones</button>
-        <button>Decretos Municipales</button>
-      </div>
 
       <main className="main container">
         <DigestoContenido />
