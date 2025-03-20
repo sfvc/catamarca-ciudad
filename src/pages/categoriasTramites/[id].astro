@@ -1,0 +1,15 @@
+---
+import Layout from "../layout/Layout.astro";
+import CategoriasTramites from "../components/categoriasTramites/CategoriasTramites"
+const { id } = Astro.params;
+
+// const { data } = await catamarcaApi.get("items/tramites");
+
+---
+
+<Layout title="Trámites">
+    <div>
+      <h1>Lista de Trámites</h1>
+      <CategoriasTramites id={id}  client:only="react"/>
+    </div>
+  </Layout> 

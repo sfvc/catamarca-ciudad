@@ -53,9 +53,11 @@ const GridPage = () => {
           {categorias.map((card, index) => (
             <a
               key={index}
-              href={card.url}
+              href={`/categoriasTramites/${card.id}`}
               style={{ all: "unset" }}
-              target={card.external ? "_blank" : "_self"} // Open external links in a new tab
+              target={card.external ? "_blank" : "_self"}
+          
+              // Open external links in a new tab
             >
               <div className="TramistedGrid__card">
                 <img
