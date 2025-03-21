@@ -36,10 +36,6 @@ export default function RadioPlayer() {
               </button>
           ))}
       </div>
-
-      <div className="iframediv">
-      <iframe src="https://www.catamarcaciudad.gob.ar/digesto/digestoMunicipal-PruebaResol.php" width="100%" height="1000" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-      </div>
     </div>
   );
 }

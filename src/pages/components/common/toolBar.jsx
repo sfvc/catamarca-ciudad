@@ -139,31 +139,17 @@ const ToolBar = () => {
     }
   };
 
-  const isParqueElJumealPage = window.location.href === 'https://catamarca-ciudad-noticias.netlify.app/noticiasmunicipales/parque-el-jumeal/';
+  const paginaLeer = window.location.href === 'http://localhost:4321/info/5';
 
   return (
     <>
       <div className="toolbar">
         <div className="toolbar__item" ref={toolbarRef} onClick={sideAnimationOut}>
-          {isParqueElJumealPage && (
+          {paginaLeer && (
             <BtnLectura/>
           )}
 
-          <button className="toolbar__btn">
-            <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            </svg>
-          </button>
 
-            <button className="toolbar__btn">
-              <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              </svg>
-            </button>
-
-          <button className="toolbar__btn">
-              <svg fill="#000000" width="36px" height="36px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              {/* Your SVG Icon */}
-            </svg>
-          </button>
 
           <button className="toolbar__btn" onClick={scrollToTop}>
             <img src="/images/adaptabilidad/arrowup.svg" alt="" width={36} />
