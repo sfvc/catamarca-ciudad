@@ -1,78 +1,132 @@
+import { useEffect, useState } from "react";
+import { api } from "../../../service/httpService";
 
 const BuscadorMain = () => {
     return (
-        <main className="container buscador">
-            <section className="buscador__search">
-                <BuscadorSearch />
-            </section>
-            <section className="buscador__filter">
-                <BuscadorFilter />
-            </section>
-            <section className="buscador__content">
-                <BuscadorContent />
-            </section>
-            <section className="buscador__pagination">
-                <BuscadorPaginated />
-            </section>
-            <footer className="buscador__footer">
-                <BuscadorFooter />
-            </footer>
-        </main>
+      <main className="container buscador">
+          <section className="buscador__content">
+              <BuscadorContent />
+          </section>
+          <footer className="buscador__footer">
+              <BuscadorFooter />
+          </footer>
+      </main>
     );
 };
 
 const BuscadorContent = () => {
-    return (
+  const [tramites, setTramites] = useState([])
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [page, setPage] = useState(1)
+
+  // Fetching from data
+  const fetchTramites = async (query) => {
+    setIsLoading(true)
+    let params = {
+      sort: '-titulo',
+      limit: '5'
+    }
+
+    if(query) {
+      params['filter[titulo][_icontains]='] = query
+    }
+    
+    try {
+      const response = await api.get(`/tramites`, { params })
+      const { data } = response.data
+      setTramites(data)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const previusPage = () => {
+    setPage((prevPage) => prevPage - 1)
+  }
+
+  const nextPage = () => {
+    setPage((prevPage) => prevPage + 1)
+  }
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(searchQuery)
+    }, 500)
+
+    return () => {
+      clearTimeout(handler)
+    };
+  }, [searchQuery]);
+
+  useEffect(() => {
+    fetchTramites(debouncedQuery)
+  }, [debouncedQuery]);
+
+  return (
+      <>
+        <section className="buscador__search">
+          <div className="buscador__search__container">
+            <input
+              id="search-input"
+              className="buscador__search__input"
+              type="text"
+              placeholder="Busca en la Municipalidad Tramites"
+              aria-label="Search input"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </section>
         <table className="buscador__content__table">
-            <thead>
-                <tr>
-                    <th className="buscador__content__table-header"></th>
-                    <th className="buscador__content__table-header tablemain ">Titulo</th>
-                    <th className="buscador__content__table-header">Categoria</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
+          <thead>
+            <tr>
+              <th className="buscador__content__table-header"></th>
+              <th className="buscador__content__table-header tablemain ">Titulo</th>
+              <th className="buscador__content__table-header">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              tramites.length > 0
+              ?
+                tramites.map((tramite) => (
+                  <tr key={tramite.id}>
                     <td className="buscador__content__table-data-logo"><img src="/images/solPatrio.svg" alt="Image" /></td>
-                    <td className="buscador__content__table-data">Content Item 3</td>
-                    <td className="buscador__content__table-data"><small>Category Name</small></td>
-                </tr>
-                <tr>
-                    <td className="buscador__content__table-data-logo"><img src="/images/solPatrio.svg" alt="Image"/></td>
-                    <td className="buscador__content__table-data">Content Item 4</td>
-                    <td className="buscador__content__table-data"><small>Another Category</small></td>
-                </tr>
-            </tbody>
+                    <td className="buscador__content__table-data">{tramite.titulo}</td>
+                    <td className="buscador__content__table-data"><small>{tramite.descripcion}</small></td>
+                  </tr>
+                ))
+              : <tr>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</tr>
+            }
+          </tbody>
         </table>
 
-    );
+        <section className="buscador__pagination">
+          <BuscadorPaginated 
+            page={page}
+            previusPage={previusPage}
+            nextPage={nextPage}
+          />
+        </section>
+      </>
+  );
 };
 
-const BuscadorSearch = () => {
-    return (
-        <div className="buscador__search__container">
-            <input
-                id="search-input"
-                className="buscador__search__input"
-                type="text"
-                placeholder="Busca en la Municipalidad Tramites, Noticias y Links"
-                aria-label="Search input"
-            />
-        </div>
-    );
-};
-
-const BuscadorPaginated = () => {
-    return (
-        <div className="buscador__pagination__controls">
-            <button className="buscador__pagination__button" aria-label="Previous page">
-                &lt;
-            </button>
-            <button className="buscador__pagination__button" aria-label="Next page">
-                &gt;
-            </button>
-        </div>
-    );
+const BuscadorPaginated = ({ page, previusPage, nextPage }) => {
+  return (
+    <div className="buscador__pagination__controls">
+      <button className="buscador__pagination__button" aria-label="Previous page" onClick={previusPage}>
+        &lt;
+      </button>
+      <button className="buscador__pagination__button" aria-label="Next page" onClick={nextPage}>
+        &gt;
+      </button>
+    </div>
+  );
 };
 
 const BuscadorFilter = () => {
