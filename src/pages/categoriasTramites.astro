@@ -1,0 +1,10 @@
+---
+// Import the necessary components and data
+import Layout from './layout/Layout.astro';
+import GridPage from './components/grid/gridPage'; // Assuming it's an Astro component
+const { id } = Astro.params;
+---
+
+<Layout title={"Categorias"}>
+  <GridPage client:only="react" href="/tramites" endpoint="items/categoria_tramites" titulo="Categorias" />
+</Layout>

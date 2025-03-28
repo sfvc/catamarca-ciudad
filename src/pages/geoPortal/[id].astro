@@ -1,0 +1,14 @@
+---
+import Layout from "../layout/Layout.astro";
+import CategoriasTramites from "../components/categoriasTramites/CategoriasTramites"
+import GridCategorias from "../components/grid/gridCategorias";
+const { id } = Astro.params;
+
+
+---
+
+<Layout title="Trámites">
+    <div>
+      <GridCategorias id={id} info="infoGeoPortal" client:only="react" url={'items/infraestructura_datos_espaciales_categoria?filter[categorias_geoportal][_eq]='}/>
+    </div>
+  </Layout> 

@@ -36,7 +36,7 @@ const HomeSliderPage = () => {
   const handleLinkClick = (e, item) => {
     if (item.url) {
       e.preventDefault();
-      window.open(item.url, '_blank', 'noopener noreferrer');
+      window.open(item.url, 'noopener noreferrer');
     }
   };
 
@@ -67,7 +67,7 @@ const HomeSliderPage = () => {
                 {item.imagen ? (
                   imagenes[item.imagen] ? (
                     <img
-                      style={{ width: "100%", height: "150px", objectFit: "cover" }}
+                      style={{ width: "100%", height: "150px", padding:"2rem"}}
                       src={imagenes[item.imagen]}
                       alt={item.titulo}
                     />

@@ -7,6 +7,6 @@ const { id } = Astro.params;
 
 <Layout title='Tramites1'>
     <div>
-        <Info id={id} client:only="react" />  {/* Using the client:only directive */}
+        <Info id={id} url="items/tramites?filter[categorias_tramites][_eq]=" client:only="react" /> 
     </div>
 </Layout>

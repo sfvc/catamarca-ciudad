@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { catamarcaApi } from "../../../api/catamarcaApi";
 
-const Info = ({id}) => {
+const Info = ({id, url}) => {
   // State to store the fetched data and the reading status
   const [info, setInfo] = useState([]);
   const [isReading, setIsReading] = useState(false);
 
   // Function to fetch info
   const cargarInfo = async (idInfo) => {
+    const test = `${url}${idInfo}`;
+    console.log(test);
     try {
       const response = await catamarcaApi.get(
-        `items/tramites/${idInfo}`
+        `${url}${idInfo}`
       );
       setInfo(response.data.data);
       console.log("Data fetched:", response); // Logs when data is successfully fetched

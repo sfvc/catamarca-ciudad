@@ -1,0 +1,11 @@
+---
+import GridPage from "../components/grid/gridPage";
+import Layout from "../layout/Layout.astro";
+
+// Import the necessary components and data
+
+---
+
+<Layout title={"Servicios al Vecino"}>
+    <GridPage client:only="react" href="/serviciosVecino" endpoint="items/servicio_vecino?filter[categoria_serviciosVecino][_eq]=" titulo="Servicios al Vecino" />
+</Layout>

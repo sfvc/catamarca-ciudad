@@ -1,6 +1,7 @@
 ---
 import Layout from "../layout/Layout.astro";
 import CategoriasTramites from "../components/categoriasTramites/CategoriasTramites"
+import GridCategorias from "../components/grid/gridCategorias";
 const { id } = Astro.params;
 
 
@@ -8,6 +9,6 @@ const { id } = Astro.params;
 
 <Layout title="Trámites">
     <div>
-      <CategoriasTramites id={id}  client:only="react"/>
+      <GridCategorias id={id} info="infoTramites" client:only="react" url={'items/tramites?filter[categorias_tramites][_eq]='}/>
     </div>
   </Layout> 

@@ -1,0 +1,13 @@
+---
+import Layout from "../layout/Layout.astro";
+import GridCategorias from "../components/grid/gridCategorias";
+const { id } = Astro.params;
+
+
+---
+
+<Layout title="Trámites">
+    <div>
+      <GridCategorias id={id} client:only="react" url={'items/compra?filter[categoria_compra][_eq]='}/>
+    </div>
+  </Layout> 

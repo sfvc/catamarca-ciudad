@@ -168,7 +168,7 @@ const ToolBar = () => {
 
         </div>
         <div className="toolbar__item">
-          <button className="toolbar__btn">f</button>
+          {/* <button className="toolbar__btn">f</button> */}
           <button className="toolbar__btn" onClick={toggleToolbar}>
             <svg
               ref={spiner}

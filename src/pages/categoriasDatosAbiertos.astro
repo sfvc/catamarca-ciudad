@@ -5,6 +5,6 @@ import GridPage from './components/grid/gridPage'; // Assuming it's an Astro com
 
 ---
 
-<Layout title={"Tramites catastrales"}>
-  <GridPage client:only="react" />
+<Layout title={"Datos Abiertos"}>
+    <GridPage client:only="react" href="/datosAbiertos" endpoint="items/datos_abiertos_categoria" titulo="Datos Abiertos" />
 </Layout>

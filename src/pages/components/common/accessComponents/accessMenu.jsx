@@ -129,7 +129,7 @@ const AccessMenu = ({ toggleMenu, clase, ul, showHeader, closeModal, modalRef })
           )}
           <div className="container">
             <ul className={`${ul}`}>
-              <AccessItems
+              {/* <AccessItems
                 itemDesk={'accessItemDesk'}
                 itemMobile={'accessItem'}
                 img={'./images/adaptabilidad/textHeight.svg'}
@@ -146,7 +146,7 @@ const AccessMenu = ({ toggleMenu, clase, ul, showHeader, closeModal, modalRef })
                 icon="fa-text-height"
                 label="-16px"
                 onClick={decreaseFontSize}
-              />
+              /> */}
               
               {/* Button for cycling through themes (default, high contrast, dark mode) */}
               <AccessItems
@@ -165,7 +165,7 @@ const AccessMenu = ({ toggleMenu, clase, ul, showHeader, closeModal, modalRef })
                 onClick={handleCycleTheme}
               />
 
-              <AccessItems
+              {/* <AccessItems
                 itemDesk={'accessItemDesk'}
                 itemMobile={'accessItem'}
                 img={'./images/adaptabilidad/dislesxia.svg'}
@@ -173,7 +173,7 @@ const AccessMenu = ({ toggleMenu, clase, ul, showHeader, closeModal, modalRef })
                 icon="fa-font"
                 label={dyslexiaFont ? "Desactivar Fuente Dislexia" : "Activar Fuente Dislexia"}
                 onClick={toggleDyslexiaFont}
-              />
+              /> */}
 
               <AccessItems
                 itemDesk={'accessItemDesk'}
@@ -193,7 +193,7 @@ const AccessMenu = ({ toggleMenu, clase, ul, showHeader, closeModal, modalRef })
               label={lineaGuiaVisible ? 'Desactivar Linea Guia' : 'Activar Linea Guia'}
               onClick={toggleLineaGuia}  // Toggle LineaGuia
             />
-
+{/* 
             <AccessItems
               itemDesk={'accessItemDesk'}
               itemMobile={'accessItem'}
@@ -222,7 +222,7 @@ const AccessMenu = ({ toggleMenu, clase, ul, showHeader, closeModal, modalRef })
                 icon="fa-adjust"
                 label={colorFuente ? 'Cambiar color' : 'desactivar'}
                 onClick={cycleColorFuente}
-              />
+              /> */}
             
             </ul>
           </div>
