@@ -39,7 +39,7 @@ const ProgramasComponent = () => {
             <a
               className="panel panel-default panel-icon"
               title={items.titulo}
-              target="_blank"
+              // target="_blank"
               href={items.url}
             >
                 {items.imagen && imagenes[items.imagen] ? (

@@ -8,6 +8,6 @@ const { id } = Astro.params;
 
 <Layout title="Trámites">
     <div>
-      <GridCategorias id={id} client:only="react" url={'items/compra?filter[categoria_compra][_eq]='}/>
+      <GridCategorias id={id} info="infoCompra" client:only="react" url={'items/compra?filter[categoria_compra][_eq]='}/>
     </div>
   </Layout> 

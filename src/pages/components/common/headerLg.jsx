@@ -79,7 +79,7 @@ const HeaderLg = () => {
 
                 <div className="header__displaynone">
                     <a className="btn btn-login boton__default" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@catamarcaciudad.gob.ar" target="_blank">Contacto</a>
-                    <a className="btn btn-login boton__default" href="/tramites">Tramites</a>
+                    <a className="btn btn-login boton__default" href="/categoriasTramites">Tramites</a>
                     
                     {/* Mobile menu dropdowns */}
                     {dropdowns.map(({ name, options }) => (
@@ -103,7 +103,9 @@ const HeaderLg = () => {
                                             </a>
                                         </li>
                                     ))}
-                                    <button className="btn btn-danger m-b-2" onClick={closeMobileMenu}>Cerrar</button>
+                                    <div className='btn-cerrar'>
+                                        <button className="btn btn-danger m-b-2" onClick={closeMobileMenu}>Cerrar</button>
+                                    </div>
                                 </ul>
                             )}
                         </div>

@@ -34,9 +34,10 @@ const HomeSliderPage = () => {
   }, []);
 
   const handleLinkClick = (e, item) => {
+    // If the URL exists, allow the normal behavior, do not prevent the default.
     if (item.url) {
-      e.preventDefault();
-      window.open(item.url, 'noopener noreferrer');
+      // No need to call preventDefault, as the target='_self' will handle it.
+      window.open(item.url, '_self'); // Ensure it opens in the same window
     }
   };
 
@@ -60,6 +61,7 @@ const HomeSliderPage = () => {
           <SwiperSlide key={item.id}>
             <a
               href={item.url || "#"}
+              target='_self'
               style={{ all: 'unset' }}
               onClick={(e) => item.url && handleLinkClick(e, item)}
             >

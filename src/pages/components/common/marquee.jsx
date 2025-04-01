@@ -18,7 +18,7 @@ const MarqueeHeader = () => {
     }, []);
 
     const activeMarquees = marquee.filter(item => item.activo);
-    const lastText = activeMarquees.length > 0 ? activeMarquees[activeMarquees.length - 1].texto : "No hay mensajes activos";
+    const lastText = activeMarquees.length > 0 ? activeMarquees[activeMarquees.length - 1].titulo : "No hay mensajes activos";
 
     return (
         <div className="marquee__container container">

@@ -71,10 +71,6 @@
                     "link": "/Intendente"
                 },
                 {
-                    "label": "Estructura Orgánica",
-                    "link": "/estructura"
-                },
-                {
                     "label": "Noticias Municipales",
                     "link": "https://catamarca-ciudad-noticias.netlify.app/",
                     "external": true
@@ -82,10 +78,6 @@
                 {
                     "label": "Radio Municipal",
                     "link": "/radio"
-                },
-                {
-                    "label": "Edificios Publicos",
-                    "link": "/edificiospublicos"
                 },
                 {
                     "label": "Valores",
@@ -103,3 +95,6 @@
         }
     ]
 }
+
+
+
