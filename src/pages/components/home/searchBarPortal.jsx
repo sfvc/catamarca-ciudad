@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ModalMobile from "../common/modalMobile";
-import { api } from "../../../service/httpService";
+import { catamarcaApi } from "../../../api/catamarcaApi";
 
 const SearchBarPortal = () => {
   const searchRef = useRef();
@@ -57,7 +57,7 @@ const SearchBarPortal = () => {
   const fetchTramites = async (query) => {
     setIsLoading(true)
     try {
-      const response = await api.get(`/tramites?filter[titulo][_contains]=${query}&sort=-titulo&limit=5`)
+      const response = await catamarcaApi.get(`/items/tramites?filter[titulo][_contains]=${query}&sort=-titulo&limit=5`)
       const { data } = response.data
       setTramites(data)
     } catch (error) {

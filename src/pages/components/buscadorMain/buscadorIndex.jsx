@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { api } from "../../../service/httpService";
+import { catamarcaApi } from "../../../api/catamarcaApi";
 
 const BuscadorMain = () => {
     return (
@@ -34,7 +34,7 @@ const BuscadorContent = () => {
     }
     
     try {
-      const response = await api.get(`/tramites`, { params })
+      const response = await catamarcaApi.get(`items/tramites`, { params })
       const { data } = response.data
       setTramites(data)
     } catch (error) {
