@@ -16,12 +16,6 @@ const SearchBarPortal = () => {
     setSearchQuery(event.target.value);
   };
 
-  // Handle search form submit
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   fetchTramites()
-  // };
-
   // Detect window resize and set mobile state accordingly
   useEffect(() => {
     const handleResize = () => {
