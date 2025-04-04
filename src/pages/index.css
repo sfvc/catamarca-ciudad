@@ -131,3 +131,7 @@ html {
     border-radius: 10px !important;
 }
 
+.active {
+    color: blueviolet;
+    text-decoration: underline;
+}
