@@ -74,7 +74,6 @@ const AccessBtnMobile = ({isMenuMobileOpen, closeMenuMobile}) => {
             hueRotatePi={hueRotatePi}
             lineaGuiaVisible={lineaGuiaVisible}
           />
-          {console.log('Mobile Modal Opened')}
         </ModalMobile>
       )}
     </div>

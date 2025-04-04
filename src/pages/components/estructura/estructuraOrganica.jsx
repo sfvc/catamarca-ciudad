@@ -12,9 +12,6 @@ const EstructuraOrganica = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("departamentosData :>> ", departamentosData);
-  console.log("intendenciaData :>> ", intendenciaData);
-
   useEffect(() => {
     const fetchData = async () => {
       try {

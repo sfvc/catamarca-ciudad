@@ -8,14 +8,11 @@ const Info = ({id, url}) => {
 
   // Function to fetch info
   const cargarInfo = async (idInfo) => {
-    const test = `${url}${idInfo}`;
-    console.log(test);
     try {
       const response = await catamarcaApi.get(
         `${url}${idInfo}`
       );
       setInfo(response.data.data);
-      console.log("Data fetched:", response); // Logs when data is successfully fetched
     } catch (error) {
       console.error("Error cargando info", error);
     }
@@ -26,11 +23,6 @@ const Info = ({id, url}) => {
   useEffect(() => {
     cargarInfo(id);
   }, [id]);
-
-  // Log the 'info' state whenever it changes
-  useEffect(() => {
-    console.log("Updated info:", info);
-  }, [info]);
 
   // Function to handle text-to-speech functionality
   const handleReadAloud = () => {

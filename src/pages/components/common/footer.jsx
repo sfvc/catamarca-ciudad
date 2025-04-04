@@ -11,7 +11,7 @@ const Footer = () => {
               <section id="block-menu-menu-footer-1" className="block block-menu clearfix">
                 <h2 className="block-title h3 section-title">Trámites</h2>
                 <ul className="menu nav">
-                  <li className="first leaf"><a href="/turnos">Turnos</a></li>
+                  <li className="first leaf"><a href="#">Turnos</a></li>
                   <li className="leaf"><a href="#">Trámites a distancia</a></li>
                   <li className="last leaf"><a href="#">Atención al ciudadano</a></li>
                 </ul>
@@ -61,9 +61,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/catamarcacapital/" target="blank">
                 <img src="/images/instagram.svg" alt="Instagram" />
               </a>
-              <a href="https://wa.me/3333344444" target="blank">
+              {/* <a href="https://wa.me/3333344444" target="blank">
                 <img src="/images/wsp.svg" alt="Whatsapp" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

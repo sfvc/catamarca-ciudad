@@ -2,10 +2,6 @@ import { useEffect } from "react";
 import ModalMobile from "../common/modalMobile";
 
 const DisgestoMobile = ({ isOpen, onClose }) => {
-  useEffect(() => {
-    console.log(isOpen ? "Modal is open" : "Modal is closed");
-  }, [isOpen]);
-
   if (!isOpen) return null; // Ensure modal only renders when needed
 
   return (

@@ -2,12 +2,6 @@ import React, { useEffect } from "react";
 
 const LineaGuia = ({ isVisible }) => {
   useEffect(() => {
-    if (isVisible) {
-      console.log("Linea guia working"); // Log when LineaGuia is visible
-    }
-  }, [isVisible]); // This will run whenever isVisible changes
-
-  useEffect(() => {
     const updateLineadeguiaPosition = (event) => {
       if (!isVisible) return; // Only track mouse position if the line is visible
 

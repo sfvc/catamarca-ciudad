@@ -6,17 +6,15 @@ const CategoriasTramites = ({ id, url, info }) => {
   const [imagenes, setImagenes] = useState({});
 
   const cargarTramites = async (idCategoria) => {
-    const test = `${url}${idCategoria}`;
-    console.log(test);
+    // const test = `${url}${idCategoria}`;
+
     try {
       const response = await catamarcaApi.get(
         `${url}${idCategoria}`
       );
-      console.log(response);
       setTramites(response.data.data);
       returnIcon(response.data.data);
 
-      console.log(response);
     } catch (error) {
       console.error("Error cargando tramites:", error);
     }
@@ -35,14 +33,10 @@ const CategoriasTramites = ({ id, url, info }) => {
       setImagenes(nuevasImagenes);
     };
   
-
   useEffect(() => {
     cargarTramites(id);
   }, [id]);
 
-
-
-  console.log(tramites);
   return (
     <>
       {tramites.length === 0 ? (
@@ -76,7 +70,7 @@ const CategoriasTramites = ({ id, url, info }) => {
                     className={`TramistedGrid__cardimg ${
                       card.padding0 ? "padding-0" : ""
                     }`}
-                    src={imagenes[card.icono]}
+                    src={imagenes[card.icono] || '/images/tramiteDefault.svg'}
                     alt={card.titulo || "sin titulo"}
                   />
                   <h3 className="TramistedGrid__card-title">{card.titulo}</h3>

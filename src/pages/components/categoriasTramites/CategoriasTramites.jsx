@@ -30,14 +30,10 @@ const CategoriasTramites = ({ id }) => {
       setImagenes(nuevasImagenes);
     };
   
-
   useEffect(() => {
     cargarTramites(id);
   }, [id]);
 
-
-
-  console.log(tramites);
   return (
     <>
       {tramites.length === 0 ? (
@@ -71,7 +67,7 @@ const CategoriasTramites = ({ id }) => {
                     className={`TramistedGrid__cardimg ${
                       card.padding0 ? "padding-0" : ""
                     }`}
-                    src={imagenes[card.icono]}
+                    src={imagenes[card.icono] || '/images/tramiteDefault.svg'}
                     alt={card.titulo || "sin titulo"}
                   />
                   <h3 className="TramistedGrid__card-title">{card.titulo}</h3>

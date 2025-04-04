@@ -8,8 +8,6 @@ const EstructuraApex = ({ name, id }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("departamentosData :>> ", departamentosData);
-
   function addIdToData(node) {
     // Agregar el id al objeto data
     node.data.id = node.id;

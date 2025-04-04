@@ -8,7 +8,6 @@ const GridPage = ({ endpoint, titulo, href }) => {  // Recibe el endpoint como p
   const cargarCategoriasTramite = async () => {
     try {
       const { data } = await catamarcaApi.get(endpoint);  // Usa el endpoint pasado como prop
-      console.log(data);
       setCategorias(data.data);
       returnIcon(data.data);
     } catch (error) {

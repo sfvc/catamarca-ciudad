@@ -17,7 +17,6 @@ const DigestoContainer = () => {
       <button
         className="disgesto-btn__btnmobile"
         onClick={() => {
-          console.log("Opening modal...");
           setIsModalOpen(true);
         }}
       >
@@ -27,7 +26,6 @@ const DigestoContainer = () => {
       <DisgestoMobile
         isOpen={isModalOpen}
         onClose={() => {
-          console.log("Closing modal...");
           setIsModalOpen(false);
         }}
       /> */}
