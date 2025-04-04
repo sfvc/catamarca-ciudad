@@ -13,16 +13,11 @@
               "id": 3,
               "titulo": "Municipio Abierto"
             },
-            {
-                "titulo": "Noticias Municipales",
-                "icon": "/images/externalLink.svg",
-                "link": "https://catamarca-ciudad-noticias.netlify.app/",
-                "external": true
-            },
+
             {
               "titulo": "Tramites",
               "icon": "/images/documento.svg",
-              "link": "/grid/35"
+              "link": "/categoriasTramites"
             },
             {
               "titulo": "Contacto",
@@ -37,11 +32,6 @@
         {
           "titulo": "Intendente",
           "link": "/Intendente"
-        },
-        {
-          "titulo": "Noticias Municipales",
-          "link": "https://catamarca-ciudad-noticias.netlify.app/",
-          "external": true
         },
         {
           "titulo": "Radio Municipal",
@@ -67,73 +57,51 @@
       ],
       "navThird": [
         {
-          "titulo": "Acceso a Clave Fiscal",
-          "link": "https://rentas.catamarcaciudad.gob.ar/rentas/index-2.html",
-          "external": true,
-          "externalIcon": "/images/externalLink.svg"
+            "titulo": "Sistema de Fiscalizacion de Obras",
+            "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
+            "external": true
         },
         {
-          "titulo": "Tramites Municipales Internos",
-          "link": "/grid/35"
+            "titulo": "Turnos Online",
+            "link": "https://turnos.catamarcacapital.gob.ar/",
+            "external": true
         },
         {
-          "titulo": "Sistema de Almacenes",
-          "link": "https://almacen.catamarcaciudad.gob.ar/form_login.php",
-          "external": true,
-          "icon": "/images/externalLink.svg"
+            "titulo": "Metas",
+            "link": "https://metas.catamarcacapital.gob.ar/",
+            "external": true
         },
         {
-          "titulo": "GAE-Expedientes",
-          "link": "http://190.228.16.215/expedientes/defaultsinIE.asp",
-          "external": true,
-          "externalIcon": "/images/externalLink.svg"
+            "titulo": "Punto Giro",
+            "link": "https://giro.catamarcacapital.gob.ar/",
+            "external": true
         },
         {
-          "titulo": "Sistema de Juzgado de Falta",
-          "link": "https://mi.argentina.gob.ar/juzgado-falta",
-          "external": true,
-          "icon": "/images/externalLink.svg"
+            "titulo": "Nodo Tecnologico",
+            "link": "https://nodotecnologico.com.ar/",
+            "external": true
         },
         {
-          "titulo": "Sistema de Recursos Humanos",
-          "link": "https://mi.argentina.gob.ar/recursos-humanos",
-          "external": true,
-          "icon": "/images/externalLink.svg"
+            "titulo": "Sfvc Turismo",
+            "link": "https://sfvc.tur.ar/",
+            "external": true
         },
         {
-          "titulo": "Recursos Humanos",
-          "link": "/grid/36"
+            "titulo": "Vamos en Bici",
+            "link": "https://vamosenbici.smod.io/",
+            "external": true
         },
         {
-          "titulo": "Sistema de Fiscalizacion de Obras",
-          "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
-          "external": true,
-          "externalIcon": "/images/externalLink.svg"
+            "titulo": "Qmx - QuienxMi",
+            "link": "https://catamarca.qxm.com.ar/",
+            "external": true
         },
         {
-          "titulo": "Administracion de Compras y Licitaciones",
-          "link": "https://compras.catamarcaciudad.gob.ar:8443/admin/login/?next=/",
-          "external": true,
-          "icon": "/images/externalLink.svg"
+            "titulo": "Cerca",
+            "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&hl=es_AR",
+            "external": true
         },
-        {
-          "titulo": "Sistema de Inspecciones",
-          "link": "https://inspecciones.catamarcaciudad.gob.ar/login",
-          "external": true,
-          "icon": "/images/externalLink.svg"
-        },
-        {
-          "titulo": "Sistema de Insumos de Educacion",
-          "link": "https://educacion.catamarcaciudad.gob.ar/educacion/form_login.php",
-          "external": true,
-          "externalIcon": "/images/externalLink.svg"
-        },
-        {
-          "titulo": "GeoExplorer Terrenos",
-          "link": "https://capaterrenos.catamarcaciudad.gob.ar/login",
-          "external": true,
-          "externalIcon": "/images/externalLink.svg"
-        },
+      
         {
           "volver": 1,
           "titulo": "Volver",

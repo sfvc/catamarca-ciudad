@@ -69,7 +69,7 @@ const HomeSliderPage = () => {
                 {item.imagen ? (
                   imagenes[item.imagen] ? (
                     <img
-                      style={{ width: "100%", height: "150px", padding:"2rem"}}
+                      style={{ width: "100%", height: "150px", padding:"1rem"}}
                       src={imagenes[item.imagen]}
                       alt={item.titulo}
                     />

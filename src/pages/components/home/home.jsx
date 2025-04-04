@@ -14,7 +14,7 @@ const Home = () => {
           <PortalARG/>
           <HomeSliderPage/>
           <ProgramasComponent/>
-          <FaqCard/>
+          {/* <FaqCard/> */}
         </main>
     </>
   );

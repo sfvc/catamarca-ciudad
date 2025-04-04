@@ -1,0 +1,27 @@
+.info__tags-container{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ribbon{
+    padding: 0 !important;
+}
+
+.info__tags{
+    border: 1px solid lightblue;
+    background-color: rgb(243, 251, 253);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.info__tags p{
+    all: unset;
+    padding: 6px 12px;
+
+}
