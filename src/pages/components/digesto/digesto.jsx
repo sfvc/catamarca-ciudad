@@ -8,14 +8,8 @@ const DigestoContainer = () => {
 
   return (
     <> 
-      <div className="digestobtn main container displaymobilenone">
-        <button>Boletines Municipales</button>
-        <button>Ordenanzas</button>
-        <button>Resoluciones</button>
-        <button>Decretos Municipales</button>
-      </div>
 
-      <main className="main container">
+      {/* <main className="main container">
         <DigestoContenido />
         <DigestoAside />
       </main>
@@ -36,7 +30,11 @@ const DigestoContainer = () => {
           console.log("Closing modal...");
           setIsModalOpen(false);
         }}
-      />
+      /> */}
+
+      <div className="iframediv container">
+        <iframe src="https://www.catamarcaciudad.gob.ar/digesto/digestoMunicipal-PruebaResol.php" width="100%" height="1000" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+      </div>
     </>
   );
 };

@@ -51,7 +51,7 @@ const ModalMobile = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <Modal isOpen={isOpen} onClose={closeModal}>
+    <Modal clase={'modal'} isOpen={isOpen} onClose={closeModal}>
       <div className="modal-overlay" ref={overlayRef}>
         <div className="modalHeaderMobile" ref={modalRef}>
           <button className="modal__cerrarbarra" onClick={closeModal}>

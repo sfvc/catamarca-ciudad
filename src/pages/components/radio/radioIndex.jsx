@@ -26,17 +26,16 @@ export default function RadioPlayer() {
       </audio>
 
       <div className="btn-seguinos-container">
-            {socialButtons.map((button, index) => (
-                <button 
-                    key={index} 
-                    className={`${button.color}`} 
-                >
-                    {button.name}
-                    <img src={button.image} alt={button.name} />
-                </button>
-            ))}
-        </div>
-
+          {socialButtons.map((button, index) => (
+              <button 
+                  key={index} 
+                  className={`${button.color}`} 
+              >
+                  {button.name}
+                  <img src={button.image} alt={button.name} />
+              </button>
+          ))}
+      </div>
     </div>
   );
 }

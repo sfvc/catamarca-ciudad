@@ -1,0 +1,12 @@
+---
+import Info from "../components/info/info";
+import Layout from "../layout/Layout.astro";
+const { id } = Astro.params;
+
+---
+
+<Layout title='Tramites1'>
+    <div>
+        <Info id={id} url="items/portal_GDE/" client:only="react" />  {/* Using the client:only directive */}
+    </div>
+</Layout>

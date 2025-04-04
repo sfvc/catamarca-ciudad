@@ -12,6 +12,9 @@
 @import url('./css/buscadorMain.css');
 @import url('./css/loadingScreen.css');
 @import url('./css/apextree.css');
+@import url('./css/adaptabilidad.css');
+@import url('./css/toolbar.css');
+@import url('./css/info.css');
 @import url('./css/estructuraOrganica.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
@@ -122,4 +125,13 @@ html {
 .swiper {
     padding-bottom: 2rem !important;
     margin-bottom: 1rem;
+}
+
+.panel-default{
+    border-radius: 10px !important;
+}
+
+.active {
+    color: blueviolet;
+    text-decoration: underline;
 }

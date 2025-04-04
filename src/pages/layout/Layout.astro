@@ -49,10 +49,9 @@ import App from './app';
                 <title>{title}</title>
         </head>
         <App client:only="react">
-
                 <body role="document" class="html front not-logged-in no-sidebars page-node i18n-es jquery-once-1-processed">
                         <Header client:only="react"/>
-                        <slot />
+                                <slot />
                         <Footer client:only="react"/>
                 </body>
         </App>

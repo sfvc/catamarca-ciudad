@@ -4,6 +4,12 @@ import digestoContenido from '../../data/digestoContenido.json'; // Adjust the p
 export const DigestoContenido = () => {
     return ( 
         <section className="noticias">
+            <div className="digestobtn displaymobilenone">
+                <button>Boletines Municipales</button>
+                <button>Ordenanzas</button>
+                <button>Resoluciones</button>
+                <button>Decretos Municipales</button>
+            </div>
             {digestoContenido.articles.map((article, index) => (
                 <article className="noticias__item" key={index}>
                     <div className="noticias__itemcontainer">

@@ -56,6 +56,14 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    padding: 1rem 0px;
+}
+
+.buscador__pagination__button{
+    padding: 3px 9px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+
 }
 
 .buscador__footer__info {
@@ -70,6 +78,7 @@
     width: 100%;
     border-collapse: collapse;
     background-color: white;
+    margin-top: 10px;
 }
 
 .buscador__content__table-header,
@@ -124,4 +133,16 @@
     .buscador {
         padding: 4px 0.25rem;
     }
+}
+
+
+.buscador__content__table-data-logo {
+    text-align: center; /* Centers the content horizontally */
+    vertical-align: middle; /* Centers the content vertically */
+    border-bottom: 1px solid lightgray;
+}
+
+.buscador__content__table-data-logo img {
+    max-width: 100%; /* Optional: ensures the image doesn't overflow */
+    height: auto; /* Optional: maintains the aspect ratio */
 }
