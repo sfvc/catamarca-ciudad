@@ -1,0 +1,13 @@
+---
+import Layout from "../layout/Layout.astro";
+import GridCategorias from "../components/grid/gridCategorias";
+const { id } = Astro.params;
+
+
+---
+
+<Layout title="Trámites">
+    <div>
+      <GridCategorias id={id} info="infoPortalGDE" client:only="react" url={'items/portal_GDE?filter[categoria_PortalGde][_eq]='}/>
+    </div>
+  </Layout> 
