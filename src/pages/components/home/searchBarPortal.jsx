@@ -122,14 +122,16 @@ const SearchModalDeskopt = ({tramites, debouncedQuery, isLoading}) => {
             {
               tramites.length > 0
               ? tramites.map((tramite) => (
-                <li className="searchModalDeskopt__list-item">
-                  <div className="searchModalDeskopt__list-item-div">
-                    <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
-                    <p className="searchModalDeskopt__list-item-p">
-                      {tramite.titulo} - {tramite.descripcion}
-                    </p>
-                  </div>
-                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
+                <li key={tramite.id}>
+                  <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
+                    <div className="searchModalDeskopt__list-item-div">
+                      <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
+                      <p className="searchModalDeskopt__list-item-p">
+                        {tramite.titulo} - {tramite.descripcion}
+                      </p>
+                    </div>
+                    <small className="searchModalDeskopt__list-item-small">Tramite</small>
+                  </a>
                 </li>
               ))
               : 
@@ -161,14 +163,16 @@ const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading }) => 
           {
             tramites.length > 0
             ? tramites.map((tramite) => (
-              <li className="searchModalDeskopt__list-item">
-                <div className="searchModalDeskopt__list-item-div">
-                  <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
-                  <p className="searchModalDeskopt__list-item-p">
-                    {tramite.titulo} - {tramite.descripcion}
-                  </p>
-                </div>
-                <small className="searchModalDeskopt__list-item-small">Tramite</small>
+              <li key={tramite.id}>
+                <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
+                  <div className="searchModalDeskopt__list-item-div">
+                    <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
+                    <p className="searchModalDeskopt__list-item-p">
+                      {tramite.titulo} - {tramite.descripcion}
+                    </p>
+                  </div>
+                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
+                </a>
               </li>
             ))
             : 
@@ -188,7 +192,6 @@ const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading }) => 
         </ul>
 
         <span className="searchModalDeskopt__list-item-span-mobile">
-          {/* <input className="searchModalDeskopt__list-item-input-mobile" type="text" placeholder="buscar"/> */}
           <InputSearch className='searchModalDeskopt__list-item-input-mobile' />
         </span>
       </div>

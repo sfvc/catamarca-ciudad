@@ -12,8 +12,6 @@ const CategoriasTramites = ({ id }) => {
       );
       setTramites(response.data.data);
       returnIcon(response.data.data);
-
-      console.log(response);
     } catch (error) {
       console.error("Error cargando tramites:", error);
     }
