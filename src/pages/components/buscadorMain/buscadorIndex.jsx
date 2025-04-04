@@ -7,12 +7,6 @@ const BuscadorMain = () => {
           <section className="buscador__content">
               <BuscadorContent />
           </section>
-
-          <footer className="buscador__footer">
-            <div className="buscador__footer__info">
-              <p>&copy; 2025 Your Company. All rights reserved.</p>
-            </div>
-          </footer>
       </main>
     );
 };
@@ -118,7 +112,7 @@ const BuscadorContent = () => {
               ?
                 tramites.map((tramite) => (
                   <tr key={tramite.id}>
-                    <td className="buscador__content__table-data-logo"><img src="/images/solPatrio.svg" alt="Image" /></td>
+                    <td className="buscador__content__table-data-logo"><img src="/images/tramiteDefault.svg" alt="Image" /></td>
                     <td className="buscador__content__table-data"><a href={`/infoTramites/${tramite.id}`}>{tramite.titulo}</a></td>
                     <td className="buscador__content__table-data"><small>{tramite.descripcion}</small></td>
                   </tr>
@@ -179,7 +173,7 @@ const BuscadorPaginated = ({ currentPage, totalPages, previusPage, nextPage, sel
       {generatePageNumbers(currentPage, totalPages).map((page, index) => (
         <button
           key={index}
-          className={page === currentPage ? "active" : ""}
+          className={page === currentPage ? "active buscador__pagination__button" : " buscador__pagination__button"}
           onClick={() => typeof page === "number" && selectPage(page)}
           disabled={page === "..."}
         >

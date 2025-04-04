@@ -125,7 +125,7 @@ const SearchModalDeskopt = ({tramites, debouncedQuery, isLoading}) => {
                 <li key={tramite.id}>
                   <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
                     <div className="searchModalDeskopt__list-item-div">
-                      <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
+                      <img className="searchModalDeskopt__list-item-img" src="/images/tramiteDefault.svg" alt="" style={{ width: '36px', height: '24px' }} />
                       <p className="searchModalDeskopt__list-item-p">
                         {tramite.titulo} - {tramite.descripcion}
                       </p>
