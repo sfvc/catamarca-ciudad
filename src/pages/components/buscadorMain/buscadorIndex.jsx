@@ -98,29 +98,27 @@ const BuscadorContent = () => {
           </div>
         </section>
 
-        <table className="buscador__content__table">
-          <thead>
-            <tr>
-              <th className="buscador__content__table-header"></th>
-              <th className="buscador__content__table-header tablemain ">Titulo</th>
-              <th className="buscador__content__table-header">Descripción</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              tramites.length > 0
-              ?
-                tramites.map((tramite) => (
-                  <tr key={tramite.id}>
-                    <td className="buscador__content__table-data-logo"><img src="/images/tramiteDefault.svg" alt="Image" /></td>
-                    <td className="buscador__content__table-data"><a href={`/infoTramites/${tramite.id}`}>{tramite.titulo}</a></td>
-                    <td className="buscador__content__table-data"><small>{tramite.descripcion}</small></td>
-                  </tr>
-                ))
-              : <tr>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</tr>
-            }
-          </tbody>
-        </table>
+        <div>
+          {
+            tramites.length > 0
+            ? tramites.map((tramite) => (
+                <a className="panel panel-default panel-icon panel-secondary" key={tramite.id} href="#">
+                  <div className="tramite-container">
+                    <div className="panel-body">
+                      <h3>{tramite.titulo}</h3>
+                      <p className="text-muted tramite-description">{tramite.descripcion}</p>
+
+                      <div className="tramite-footer">
+                        <button type="button" class="btn btn-primary">Ver más</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </a>
+              ))
+            : <span>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</span>
+          }
+        </div>
 
         <section className="buscador__pagination">
           <BuscadorPaginated 
@@ -187,15 +185,5 @@ const BuscadorPaginated = ({ currentPage, totalPages, previusPage, nextPage, sel
     </div>
   );
 };
-
-/* const BuscadorFilter = () => {
-    return (
-      <>
-        <button className="buscador__filter__button">Tramites</button>
-        <button className="buscador__filter__button">Noticias</button>
-        <button className="buscador__filter__button">Links</button>
-      </>
-    );
-}; */
 
 export default BuscadorMain;
