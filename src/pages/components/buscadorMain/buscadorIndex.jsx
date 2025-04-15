@@ -26,13 +26,13 @@ const BuscadorContent = () => {
     setIsLoading(true)
     let params = {
       meta: 'total_count,filter_count',
-      sort: '-titulo',
+      sort: '-nombre',
       limit: LIMIT,
       page
     }
 
     if(query) {
-      params['filter[titulo][_icontains]='] = query
+      params['filter[nombre][_icontains]='] = query
     }
     
     try {
@@ -102,19 +102,18 @@ const BuscadorContent = () => {
           {
             tramites.length > 0
             ? tramites.map((tramite) => (
-                <a className="panel panel-default panel-icon panel-secondary" key={tramite.id} href="#">
+                <div className="panel panel-default panel-icon panel-secondary" key={tramite.id} href="#">
                   <div className="tramite-container">
                     <div className="panel-body">
-                      <h3>{tramite.titulo}</h3>
-                      <p className="text-muted tramite-description">{tramite.descripcion}</p>
+                      <h3>{tramite.nombre}</h3>
+                      <p className="text-muted tramite-description">{tramite.objeto}</p>
 
                       <div className="tramite-footer">
-                        <button type="button" class="btn btn-primary">Ver más</button>
+                        <a href={`/infoTramites/${tramite.id}`} className="btn btn-primary">Ver más</a>
                       </div>
                     </div>
                   </div>
-
-                </a>
+                </div>
               ))
             : <span>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</span>
           }

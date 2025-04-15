@@ -1,0 +1,252 @@
+---
+import { catamarcaApi } from "../../../api/catamarcaApi";
+
+const { id, url } = Astro.props;
+
+// const response = await catamarcaApi.get(`${url}${id}`);
+// const { data: tramite } = response.data;
+
+const tramite = {
+  id: 15,
+  nombre: "\tDenuncia por ruidos molestos",
+  objeto:
+    "Vecino/Institución que denuncie a Personas/Locales Comerciales/Bailables, etc. Por generar «Ruidos Molestos»en zonas urbanas no permitidas.",
+  requisitos:
+    '<ul>\n<li>Solicitar v&iacute;a Telef&oacute;nica (0800-444-7382-atenci&oacute;n al vecino); &oacute;</li>\n<li>Solicitar completando el Formulario: &laquo;Ruidos Molestos&raquo;. <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/07Formulario.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a>&nbsp;</li>\n</ul>',
+  tiempo_estimado:
+    "<p>Tiempo M&iacute;nimo Estimado-Inicio-fin del tr&aacute;mite:<br>MINIMO 2 D&Iacute;AS<br>M&Aacute;XIMO 7 D&Iacute;AS</p>",
+  costo:
+    "<p>Para el Vecino/Instituci&oacute;n/Local Infractor:<br>Con Acta de Comprobaci&oacute;n labrada por el Inspector Municipal, el Juzgado de Faltas Municipal impone las Multas respectivas. Respetar los plazos establecidos.</p>",
+  normativa_aplicable:
+    '<p>ORDENANZA N&deg; 2533/1993 <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/2533-93.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a> C/Modif.Ord.&deg; 2933/95<strong> <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/2933-95.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a></strong></p>',
+  circuito_tramite:
+    "<p>Inicio del tr&aacute;mite: V&iacute;a Telef&oacute;nica &oacute; Mediante Formulario En Oficinas de Mesa General de Entradas &ndash; Maip&uacute; 611</p>",
+  sanciones_previstas: null,
+  observaciones:
+    "<p><strong>Direcci&oacute;n de Inspecci&oacute;n General</strong></p>\n<p>Caseros 415 (Esquina Calle Prado) .<br>Atenci&oacute;n al P&uacute;blico: Lunes a Viernes de 7 a 13 Hs.<br>0800-444-7382<br>inspecciongeneral@catamarcaciudad.gob.ar</p>",
+  documentos:
+    '<ul>\n<li>Ficha del Tr&aacute;mite. <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/ft07.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a></li>\n<li>Formulario Ruidos Molestos. <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/07Formulario.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a> <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/07Formulario.doc" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/39228bdf-ca45-4e1e-8f86-d7372a7aba8e.png?width=25&amp;height=25" alt="Logo Word Opt"></a></li>\n<li>Ord. N&deg; 2533/93. <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/2533-93.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a></li>\n<li>Ord. N&deg; 2933/95. <a href="https://www.catamarcaciudad.gob.ar/archivos/Tramites/Inspeccion/2933-95.pdf" target="_blank" rel="noopener"><img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=25&amp;height=25" alt="Logo PDF Opt"></a></li>\n</ul>',
+  area: 1,
+  categoria: 2,
+};
+---
+
+<main role="main">
+  <div class="container">
+    <section>
+      <div class="row">
+        <div class="col-md-12 m-b-2">
+          <h1>{tramite.nombre}</h1>
+          <p>{tramite.objeto}</p>
+          <div>
+            <span class="ribbon"
+              ><i class="fa fa-desktop text-arandano"></i> 100% digital</span
+            >
+            <span class="ribbon"
+              ><i class="fa fa-map-marker text-arandano"></i> Ministerio de Salud</span
+            >
+          </div>
+          <hr />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <article>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="media">
+                  <div class="media-left hidden-xs">
+                    <i
+                      class="text-secondary fa fa-list-ul fa-fw fa-2x"
+                      aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-list-ul fa-fw fa-2x visible-xs-inline pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="h4">Requisitos y condiciones</h2>
+                    <div class="media-body" set:html={tramite.requisitos} />
+                  </div>
+                </div>
+
+                <div class="page-break"></div>
+
+                <div class="media">
+                  <div class="media-left hidden-xs">
+                    <i
+                      class="text-secondary fa fa-list-ol fa-fw fa-2x"
+                      aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-list-ol fa-fw fa-2x visible-xs-inline pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="h4 m-t-0 m-b-3">Tiempo estimado</h2>
+                    <div
+                      class="media-body"
+                      set:html={tramite.tiempo_estimado}
+                    />
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="media-left hidden-xs">
+                    <i
+                      class="text-secondary fa fa-dollar fa-fw fa-2x"
+                      aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-dollar fa-fw fa-2x visible-xs-inline pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="h4 m-t-0 m-b-2">
+                      ¿Cuál es el costo del trámite?
+                    </h2>
+                    <div class="media-body" set:html={tramite.costo} />
+                  </div>
+                </div>
+
+                <div class="page-break"></div>
+
+                <div class="media">
+                  <div class="media-left hidden-xs">
+                    <i
+                      class="text-secondary fa fa-list-ol fa-fw fa-2x"
+                      aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-list-ol fa-fw fa-2x visible-xs-inline pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="h4 m-t-0 m-b-3">Normativa aplicable</h2>
+                    <div
+                      class="media-body"
+                      set:html={tramite.normativa_aplicable}
+                    />
+                  </div>
+                </div>
+
+                <div class="page-break"></div>
+
+                <div class="media">
+                  <div class="media-left hidden-xs">
+                    <i
+                      class="text-secondary fa fa-list-ol fa-fw fa-2x"
+                      aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-list-ol fa-fw fa-2x visible-xs-inline pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="h4 m-t-0 m-b-3">Normativa aplicable</h2>
+                    <div
+                      class="media-body"
+                      set:html={tramite.circuito_tramite}
+                    />
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="media-left hidden-xs">
+                    <i
+                      class="text-secondary fa fa-balance-scale fa-fw fa-2x"
+                      aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-balance-scale fa-fw fa-2x visible-xs-inline pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="h4 m-t-0 m-b-2">Información complementaria</h2>
+                    <div class="media-body" set:html={tramite.observaciones} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-xs-12 col-md-11 col-md-offset-1">
+              <div class="row hidden-xs hidden-sm">
+                <div class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-12">
+                  <div class="panel panel-default panel-disabled">
+                    <div class="panel-body text-center">
+                      <p>
+                        <a class="btn btn-success btn-block" href="#">
+                          0btener turno en línea</a
+                        >
+                      </p>
+                      <p><a href="#"> Consultar el estado del trámite</a></p>
+                      <p><a href="#"> Consultas al 0800-333-8547</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <hr />
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class="h4">Trámites relacionados</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <h3 class="h5">
+                        <a href="">Seguir el estado de trámite del DNI </a>
+                      </h3>
+                      <p>
+                        Si ya iniciaste el trámite para renovar, reemplazar o
+                        actualizar tu DNI, podés hacer el seguimiento en línea,
+                        con el número de tu documento o el de la constancia que
+                        te entregaron en ese momento (boleta prenumerada de 26
+                        dígitos).
+                      </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <h3 class="h5">
+                        <a href="">Certificación negativa de ANSES </a>
+                      </h3>
+                      <p>
+                        Si para obtener una beca o subsidio, te pidieron un
+                        comprobante de que no estás recibiendo ningún aporte o
+                        beneﬁcio de ANSES (jubilación, pensión, plan, programa,
+                        etc.), podés tramitar esta certiﬁcación desde aquí.
+                      </p>
+                    </div>
+                  </div>
+
+                  <hr />
+                  <div class="page-break"></div>
+                  <div class="page-break"></div>
+                  <div class="page-break"></div>
+                  <h2 class="h4">Descargas</h2>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <p>Descripción del archivo</p>
+                      <p>
+                        <a class="btn btn-primary btn-sm"
+                          ><i class="fa fa-download"></i>&nbsp; Descargar</a
+                        >
+                      </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <p>Descripción del archivo</p>
+                      <p>
+                        <a class="btn btn-primary btn-sm"
+                          ><i class="fa fa-download"></i>&nbsp; Descargar</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

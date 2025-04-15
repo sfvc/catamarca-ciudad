@@ -63,9 +63,6 @@ const Info = ({id, url}) => {
         <p>cargando info</p>
       ) : (
       <div className="container">
-      {/* <button className="btn btn-warning" onClick={handleReadAloud}>
-        {isReading ? 'Pausar lectura' : 'Leer automatico'}
-      </button> */}
         <section>
           <div className="row">
             <div className="col-md-12 m-b-2">
@@ -81,19 +78,6 @@ const Info = ({id, url}) => {
                     </span>
                 ))}
               </div>
-                {/* <span className="ribbon">
-                  <img src="" alt="" />
-                  3 horas apróximadamente
-                </span>
-                <span className="ribbon">
-                  <i className="fa fa-usd text-arandano"></i> Gratuito
-                </span>
-                <span className="ribbon">
-                  <i className="fa fa-desktop text-arandano"></i> 100% digital
-                </span>
-                <span className="ribbon">
-                  <i className="fa fa-map-marker text-arandano"></i> Ministerio de Salud
-                </span> */}
               <hr />
             </div>
           </div>
@@ -166,16 +150,6 @@ const Info = ({id, url}) => {
                         </p>
                       </div>
                     </div>
-
-                    {/* <a  className="btn btn-warning" >
-                      {info.descargar}
-                    </a> */}
-
-                    {/* <div>
-                      <button class="btn btn-warning">Warning Button</button>
-                      <button class="btn btn-warning">Warning Button</button>
-                    </div> */}
-
                   </div>
                 </div>
               </article>

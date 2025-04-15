@@ -1,0 +1,89 @@
+---
+import { catamarcaApi } from "../../../api/catamarcaApi";
+
+const { id, url } = Astro.props;
+
+// Estado inicial
+const response = await catamarcaApi.get(`${url}${id}`);
+const { data: tramite } = response.data;
+---
+
+<main role="main">
+  <div class="container">
+    <section>
+      <div class="row">
+        <div class="col-md-12 m-b-2">
+          <h1>{tramite.nombre}</h1>
+          <p class="lead">{tramite.objeto}</p>
+          <hr />
+        </div>
+      </div>
+
+      <div class="row" style="width: 100% !important;">
+        <div class="col-md-8" style="width: 100% !important;">
+          <article>
+            <div class="row">
+              <div class="col-md-12">
+                <p>{tramite.objeto}</p>
+
+                <div class="media m-y-4">
+                  <div class="media-left">
+                    <img src="/images/requisitos.svg" alt="hola" width={24} />
+                  </div>
+                  <div class="media-body">
+                    <h2 class="h4 m-t-0 clearfix">Requisitos y condiciones</h2>
+                    <div set:html={tramite.requisitos} />
+                  </div>
+                </div>
+
+                <div class="media m-y-4">
+                  <div class="media-left">
+                    <img src="/images/reloj.svg" alt="" width={24} />
+                  </div>
+                  <div class="media-body">
+                    <h2 class="h4 m-t-0 clearfix">Tiempo estimado</h2>
+                    <div set:html={tramite.tiempo_estimado} />
+                  </div>
+                </div>
+
+                <div class="media m-y-4">
+                  <div class="media-left">
+                    <img src="/images/costos.svg" alt="" width={24} />
+                  </div>
+                  <div class="media-body">
+                    <h2 class="h4 m-t-0 clearfix">Costos</h2>
+                    <div set:html={tramite.costos} />
+                  </div>
+                </div>
+
+                <div class="media m-y-4">
+                  <div class="media-left">
+                    <img src="/images/grafico-circular.svg" alt="" width={24} />
+                  </div>
+                  <div class="media-body">
+                    <h2 class="h4 m-t-0 clearfix">Circuito del tramite</h2>
+                    <div set:html={tramite.circuito_tramite} />
+                  </div>
+                </div>
+
+                <div class="media m-y-4">
+                  <div class="media-left">
+                    <img src="/images/chequeado.svg" alt="" width={24} />
+                  </div>
+                  <div class="media-body">
+                    <h2 class="h4 m-t-0 clearfix">Observaciones</h2>
+                    <div set:html={tramite.observaciones} />
+                  </div>
+                </div>
+
+                <!-- <button type="button" onClick={handleReadAloud}>
+                  Leer en voz alta
+                </button> -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
