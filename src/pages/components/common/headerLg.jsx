@@ -54,7 +54,7 @@ const HeaderLg = () => {
                             src="/images/logo_CATACAPI.png"
                             alt="Catamarca Capital"
                             height="50"
-                            width="254"
+                            width="auto"
                         />
                     </a>
                 </div>
