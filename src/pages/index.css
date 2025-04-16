@@ -146,8 +146,15 @@ main a[href^="https://"][target^=_blank]:after {
 }
 
 /* Listado de Tramites */
-.tramite-container {
+/* .tramite-container {
     display: flex;
+} */
+
+.tramite-container:hover {
+    transform: scale(1.01);
+    border-color: #0aa9e2;
+    transition: all .4s ease;
+    cursor: pointer;
 }
 
 .tramite-container h3 {
@@ -167,7 +174,7 @@ main a[href^="https://"][target^=_blank]:after {
 
 .tramite-footer {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
 
 /* Tramite */

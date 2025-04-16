@@ -3,7 +3,9 @@ import { catamarcaApi } from "../../../api/catamarcaApi";
 
 const { id, url } = Astro.props;
 
-const response = await catamarcaApi.get(`${url}${id}`);
+const response = await catamarcaApi.get(
+  `${url}${id}?fields=*,area.*,categoria.*`
+);
 const { data: tramite } = response.data;
 ---
 
@@ -16,10 +18,18 @@ const { data: tramite } = response.data;
           <p>{tramite.objeto}</p>
           <div>
             <span class="ribbon"
-              ><i class="fa fa-desktop text-arandano"></i> 100% digital</span
+              ><i class="fa fa-desktop text-arandano"></i>
+              {tramite.modalidad}</span
             >
+
             <span class="ribbon"
-              ><i class="fa fa-map-marker text-arandano"></i> Ministerio de Salud</span
+              ><i class="fa fa-tag text-arandano"></i>
+              {tramite.categoria.nombre}</span
+            >
+
+            <span class="ribbon"
+              ><i class="fa fa-map-marker text-arandano"></i>
+              {tramite.area.nombre}</span
             >
           </div>
           <hr />
@@ -27,7 +37,7 @@ const { data: tramite } = response.data;
       </div>
 
       <div class="row">
-         <!-- Columna izquierda -->
+        <!-- Columna izquierda -->
         <div class="col-md-8">
           <article>
             <div class="row">
@@ -50,7 +60,10 @@ const { data: tramite } = response.data;
                       class="text-secondary fa fa-clock-o fa-fw fa-2x pull-left"
                       aria-hidden="true"></i>
                     <h2 class="m-y-0">Tiempo estimado</h2>
-                    <div class="media-body" set:html={tramite.tiempo_estimado} />
+                    <div
+                      class="media-body"
+                      set:html={tramite.tiempo_estimado}
+                    />
                   </div>
                 </div>
 
@@ -72,7 +85,10 @@ const { data: tramite } = response.data;
                       class="text-secondary fa fa-check-circle-o fa-fw fa-2x pull-left"
                       aria-hidden="true"></i>
                     <h2 class="m-y-0">Normativa aplicable</h2>
-                    <div class="media-body" set:html={tramite.normativa_aplicable} />
+                    <div
+                      class="media-body"
+                      set:html={tramite.normativa_aplicable}
+                    />
                   </div>
                 </div>
 
@@ -84,7 +100,10 @@ const { data: tramite } = response.data;
                       class="text-secondary fa fa-info fa-fw fa-2x pull-left"
                       aria-hidden="true"></i>
                     <h2 class="m-y-0">Circuito del Tramite</h2>
-                    <div class="media-body" set:html={tramite.circuito_tramite} />
+                    <div
+                      class="media-body"
+                      set:html={tramite.circuito_tramite}
+                    />
                   </div>
                 </div>
 
@@ -157,7 +176,6 @@ const { data: tramite } = response.data;
                     </div>
                   </div>
 
-
                   <!-- Descargas -->
                   <hr />
                   <div class="page-break"></div>
@@ -166,7 +184,10 @@ const { data: tramite } = response.data;
                   <h2 class="h4">Descargas</h2>
 
                   <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-12 p-x-0" set:html={tramite.documentos} />
+                    <div
+                      class="col-xs-12 col-sm-6 col-md-12 p-x-0"
+                      set:html={tramite.documentos}
+                    />
                   </div>
                 </div>
               </div>
