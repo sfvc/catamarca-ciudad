@@ -1,61 +1,44 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { dropdowns } from '../../data/header.json'; // Adjust the path as needed
+import { useState, useEffect, useRef } from 'react';
+import { dropdowns } from '../../data/header.json';
 
 const HeaderLg = () => {
     const [dropdownOpen, setDropdownOpen] = useState({});
-    const [mobileMenuVisible, setMobileMenuVisible] = useState(false); // State to control mobile menu visibility
     const dropdownRefs = useRef({});
 
-    // Toggle dropdown visibility
     const toggleDropdown = (menu) => {
         setDropdownOpen((prev) => ({
             ...Object.keys(prev).reduce((acc, key) => {
-                if (key !== menu) acc[key] = false; // Close other dropdowns
+                if (key !== menu) acc[key] = false;
                 return acc;
             }, {}),
-            [menu]: !prev[menu], // Toggle the clicked dropdown
+            [menu]: !prev[menu],
         }));
     };
 
-    // Close dropdowns when clicked outside
     const handleClickOutside = (event) => {
-        const isOutsideClick = Object.keys(dropdownRefs.current).some((key) => {
-            return dropdownRefs.current[key]?.contains(event.target);
-        });
-
-        if (!isOutsideClick) {
-            setDropdownOpen({}); // Close all dropdowns if clicked outside
-        }
+        const isOutsideClick = Object.keys(dropdownRefs.current).some((key) =>
+            dropdownRefs.current[key]?.contains(event.target)
+        );
+        if (!isOutsideClick) setDropdownOpen({});
     };
 
-    // Toggle mobile menu visibility
-    const toggleMobileMenu = () => {
-        setMobileMenuVisible((prev) => {
-            const newState = !prev;
-            // If the mobile menu is open, prevent body scroll by adding 'no-scroll' class
-            if (newState) {
-                document.body.classList.add('no-scroll');
-            } else {
-                document.body.classList.remove('no-scroll');
-            }
-            return newState;
-        });
-    };
-
-    // Close mobile menu when clicking "Cerrar" button
-    const closeMobileMenu = () => {
-        setMobileMenuVisible(false);
-        setDropdownOpen({}); // Close all dropdowns when closing the mobile menu
-        document.body.classList.remove('no-scroll'); // Ensure scrolling is re-enabled
-    };
-
-    // Close dropdowns on click outside
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setDropdownOpen({});
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);    
 
     return (
         <nav className="navbar navbar-top navbar-default header__displaynone" style={{borderBottom:"3px solid #e7e7e7", backgroundColor:"#001529"}}>
@@ -76,43 +59,108 @@ const HeaderLg = () => {
                     </a>
                 </div>
 
+                <div style={{ flex: 1, display: 'flex', justifyContent: 'end', marginRight: '10px' }}>
+                    <div className="header__displaynone" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
 
-                <div className="header__displaynone">
-                    <a className="btn btn-login boton__default" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@catamarcaciudad.gob.ar" target="_blank">Contacto</a>
-                    <a className="btn btn-login boton__default" href="/categoriasTramites">Tramites</a>
-                    
-                    {/* Mobile menu dropdowns */}
-                    {dropdowns.map(({ name, options }) => (
-                        <div className="dropdown" key={name} ref={(el) => (dropdownRefs.current[name] = el)}>
-                            <button
-                                onClick={() => toggleDropdown(name)}
-                                className="btn btn-login boton__default"
+                        {dropdowns.map(({ name, options }) => (
+                            <div
+                                key={name}
+                                ref={(el) => (dropdownRefs.current[name] = el)}
+                                style={{ position: 'relative', display: 'inline-block' }}
                             >
-                                {name.charAt(0).toUpperCase() + name.slice(1).replace(/_/g, ' ')}
-                            </button>
-                            {dropdownOpen[name] && (
-                                <ul className="dropdown-menu">
-                                    {options.map(({ label, link, external }, index) => (
-                                        <li key={index}>
+                                <button
+                                    onClick={() => toggleDropdown(name)}
+                                    className='dropdown-items'
+                                    onMouseEnter={(e) => (e.currentTarget.style.background = '#3E5A7E')}
+                                    onMouseLeave={(e) => (e.currentTarget.style.background = '#232D4F')}
+                                >
+                                    {name}
+                                    {options.length > 0 && (
+                                        <span style={{ fontSize: '1rem' }}>▿</span>
+                                    )}
+                                </button>
+
+                                {dropdownOpen[name] && (
+                                    <div
+                                        style={{
+                                            position: 'fixed',
+                                            top: '76px',
+                                            left: '50%',
+                                            transform: 'translateX(-50%)',
+                                            zIndex: 999,
+                                            width: '90vw',
+                                            maxWidth: '1140px',
+                                            marginTop: '1.2rem',
+                                            backgroundColor: 'white',
+                                            boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+                                            borderRadius: '0.5rem',
+                                            padding: '1.5rem',
+                                            display: 'grid',
+                                            gridTemplateColumns: 'repeat(3, 1fr)',
+                                            gap: '1rem',
+                                        }}
+                                    >
+                                        {options.map(({ label, link, description, external }, index) => (
                                             <a
+                                                key={index}
                                                 href={link}
+                                                target={external ? '_blank' : '_self'}
                                                 rel="noopener noreferrer"
-                                                target={external ? "_blank" : "_self"}  // Add target="_blank" if external is true
+                                                style={{
+                                                    display: 'block',
+                                                    gap: '0.25rem',
+                                                    padding: '1rem',
+                                                    borderRadius: '4px',
+                                                    textDecoration: 'none',
+                                                    color: '#333',
+                                                    fontSize: '1rem',
+                                                    backgroundColor: '#f9f9f9',
+                                                    borderLeft: '4px solid transparent',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                                onMouseEnter={(e) => {
+                                                    e.currentTarget.style.backgroundColor = '#e6f0ff';
+                                                    e.currentTarget.style.borderLeft = '4px solid #232D4F';
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.currentTarget.style.backgroundColor = '#f9f9f9';
+                                                    e.currentTarget.style.borderLeft = '4px solid transparent';
+                                                }}
                                             >
-                                                {label}
+                                                <div style={{ fontWeight: 'bold' }}>{label}</div>
+                                                {description && (
+                                                    <div style={{ fontSize: '1rem', color: '#666' }}>
+                                                        {description}
+                                                    </div>
+                                                )}
                                             </a>
-                                        </li>
-                                    ))}
-                                    <div className='btn-cerrar'>
-                                        <button className="btn btn-danger m-b-2" onClick={closeMobileMenu}>Cerrar</button>
+                                        ))}
                                     </div>
-                                </ul>
-                            )}
-                        </div>
-                    ))}
+                                )}
+                            </div>
+                        ))}
 
+                        <a
+                            className='dropdown-items'
+                            onMouseEnter={(e) => (e.currentTarget.style.background = '#3E5A7E')}
+                            onMouseLeave={(e) => (e.currentTarget.style.background = '#232D4F')}
+                            href="/categoriasTramites"
+                        >
+                            Trámites
+                        </a>
+
+                        <a
+                            className='dropdown-items'
+                            onMouseEnter={(e) => (e.currentTarget.style.background = '#3E5A7E')}
+                            onMouseLeave={(e) => (e.currentTarget.style.background = '#232D4F')}
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@catamarcaciudad.gob.ar"
+                            target="_blank"
+                        >
+                            Contacto
+                        </a>
+
+                    </div>
                 </div>
-
             </div>
         </nav>
     );

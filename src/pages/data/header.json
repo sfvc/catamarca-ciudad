@@ -1,86 +1,99 @@
 {
     "dropdowns": [
-        {
-            "name": "Municipio Abierto",
-            "options": [
-                {
-                    "label": "Sistema de Fiscalizacion de Obras",
-                    "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
-                    "external": true
-                },
-                {
-                    "label": "Turnos Online",
-                    "link": "https://turnos.catamarcacapital.gob.ar/",
-                    "external": true
-                },
-                {
-                    "label": "Metas",
-                    "link": "https://metas.catamarcacapital.gob.ar/",
-                    "external": true
-                },
-                {
-                    "label": "Punto Giro",
-                    "link": "https://giro.catamarcacapital.gob.ar/",
-                    "external": true
-                },
-                {
-                    "label": "Nodo Tecnologico",
-                    "link": "https://nodotecnologico.com.ar/",
-                    "external": true
-                },
-                {
-                    "label": "Sfvc Turismo",
-                    "link": "https://sfvc.tur.ar/",
-                    "external": true
-                },
-                {
-                    "label": "Vamos en Bici",
-                    "link": "https://vamosenbici.smod.io/",
-                    "external": true
-                },
-                {
-                    "label": "Qmx - QuienxMi",
-                    "link": "https://catamarca.qxm.com.ar/",
-                    "external": true
-                },
-                {
-                    "label": "Cerca",
-                    "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&hl=es_AR",
-                    "external": true
-                }
-            ]
-        },
-        {
-            "name": "municipalidad",
-            "options": [
-                {
-                    "label": "Intendente",
-                    "link": "/Intendente"
-                },
-                {
-                    "label": "Equipos de Gestion",
-                    "link": "/EquipoDeGestion"
-                },
-                {
-                    "label": "Radio Municipal",
-                    "link": "/radio"
-                },
-                {
-                    "label": "Valores",
-                    "link": "/perfil/3"
-                },
-                {
-                    "label": "Reseña Histórica",
-                    "link": "/perfil/4"
-                },
-                {
-                    "label": "Simbología",
-                    "link": "/perfil/5"
-                }
-            ]
-        }
+      {
+        "name": "Municipio Abierto",
+        "options": [
+          {
+            "label": "Sistema de Fiscalizacion de Obras",
+            "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
+            "external": true,
+            "description": "Accedé al sistema para verificar y fiscalizar obras en ejecución."
+          },
+          {
+            "label": "Turnos Online",
+            "link": "https://turnos.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Solicitá turnos para trámites municipales de forma sencilla."
+          },
+          {
+            "label": "Metas",
+            "link": "https://metas.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Conocé las metas de gestión del municipio y su progreso."
+          },
+          {
+            "label": "Punto Giro",
+            "link": "https://giro.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Plataforma de economía circular y gestión de residuos."
+          },
+          {
+            "label": "Nodo Tecnologico",
+            "link": "https://nodotecnologico.com.ar/",
+            "external": true,
+            "description": "Ecosistema de innovación, tecnología y formación profesional."
+          },
+          {
+            "label": "Sfvc Turismo",
+            "link": "https://sfvc.tur.ar/",
+            "external": true,
+            "description": "Descubrí los atractivos turísticos de San Fernando del Valle."
+          },
+          {
+            "label": "Vamos en Bici",
+            "link": "https://vamosenbici.smod.io/",
+            "external": true,
+            "description": "Sistema de bicicletas públicas para una ciudad más verde."
+          },
+          {
+            "label": "QxM - QuienxMi",
+            "link": "https://catamarca.qxm.com.ar/",
+            "external": true,
+            "description": "Plataforma de participación ciudadana y votación digital."
+          },
+          {
+            "label": "Cerca",
+            "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&hl=es_AR",
+            "external": true,
+            "description": "App oficial para trámites y reclamos municipales."
+          }
+        ]
+      },
+      {
+        "name": "Municipalidad",
+        "options": [
+          {
+            "label": "Intendente",
+            "link": "/Intendente",
+            "description": "Información sobre el Intendente y su gestión actual."
+          },
+          {
+            "label": "Radio Municipal",
+            "link": "/radio",
+            "description": "Escuchá en vivo la programación de la Radio Municipal."
+          },
+          {
+            "label": "Valores",
+            "link": "/perfil/3",
+            "description": "Principios y valores que guían la gestión municipal."
+          },
+          {
+            "label": "Reseña Histórica",
+            "link": "/perfil/4",
+            "description": "Breve historia de la ciudad y su evolución a lo largo del tiempo."
+          },
+          {
+            "label": "Reseña Histórica",
+            "link": "/perfil/4",
+            "description": "Breve historia de la ciudad y su evolución a lo largo del tiempo."
+          },
+          {
+            "label": "Simbología",
+            "link": "/perfil/5",
+            "description": "Significado de los símbolos oficiales del municipio."
+          }
+        ]
+      }
     ]
-}
-
-
-
+  }
+  
