@@ -59,10 +59,6 @@ html {
     background: rgb(158, 158, 158); /* Thumb color on hover */
 }
 
-/* img::after {
-    content: "" !important;
-} */
-
 main a[href^="http://"][target^=_blank]:after, 
 main a[href^="https://"][target^=_blank]:after {
     content: "" !important;
@@ -149,7 +145,7 @@ main a[href^="https://"][target^=_blank]:after {
     text-decoration: underline;
 }
 
-/* Tramites */
+/* Listado de Tramites */
 .tramite-container {
     display: flex;
 }
@@ -172,4 +168,9 @@ main a[href^="https://"][target^=_blank]:after {
 .tramite-footer {
     display: flex;
     justify-content: end;
+}
+
+/* Tramite */
+.media-body > p:first-of-type {
+    margin-top: 20px;
 }
