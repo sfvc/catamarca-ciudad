@@ -1,6 +1,8 @@
 import React from "react";
 
+
 const JumbotronPerfil = ({ imagenDeFondo, nombre, descripcion }) => {
+
   return (
     <section
       className="jumbotron"

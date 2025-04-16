@@ -58,7 +58,7 @@ const HeaderLg = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-top navbar-default border-bottom-amarillo header__displaynone">
+        <nav className="navbar navbar-top navbar-default header__displaynone" style={{borderBottom:"3px solid #e7e7e7", backgroundColor:"#001529"}}>
             <div className="container">
                 <div className="navbar-header">
                     <a
@@ -68,8 +68,8 @@ const HeaderLg = () => {
                         aria-label="Argentina.gob.ar Presidencia de la Nación"
                     >
                         <img
-                            src="/images/logo-new-2020.png"
-                            alt="Argentina.gob.ar"
+                            src="/images/logo_CATACAPI.png"
+                            alt="Catamarca Capital"
                             height="50"
                             width="254"
                         />

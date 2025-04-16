@@ -13,7 +13,11 @@
               "id": 3,
               "titulo": "Municipio Abierto"
             },
-
+            {
+              "titulo": "Equipo de Gestion",
+              "icon": "",
+              "link": "/EquipoDeGestion"
+            },
             {
               "titulo": "Tramites",
               "icon": "/images/documento.svg",

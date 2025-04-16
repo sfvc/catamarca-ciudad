@@ -1,0 +1,14 @@
+---
+import Layout from "./layout/Layout.astro";
+import equipoGestion from './data/equipoGestion.json';
+import EquipoDeGestion from "./components/grid/equipoDeGestion.jsx";
+---
+
+<Layout title={'Equipo de Gestión'}>
+  <EquipoDeGestion 
+    client:only="react" 
+    equipo={equipoGestion.guiaDeTramites} 
+    titulo={equipoGestion.titulo}
+    href=""
+  />
+</Layout>

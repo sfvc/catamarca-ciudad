@@ -1,0 +1,25 @@
+---
+// Importa datos y componentes
+import secretariasData from '../data/secretarias.json';
+import PerfilPage from '../components/perfiles/gabineteymodernizacion/perfil';
+import Layout from '../layout/Layout.astro';
+
+// Exporta paths para generación estática
+export async function getStaticPaths() {
+  return secretariasData.secretarias.map((secretaria) => ({
+    params: { id: secretaria.id },
+  }));
+}
+
+// Obtener parámetro de ruta
+const { id } = Astro.params;
+
+// Buscar secretaria
+const secretaria = secretariasData.secretarias.find((sec) => sec.id === id);
+---
+
+<Layout title={secretaria?.nombre || "Perfil"}>
+  <div>
+    <PerfilPage client:only="react" perfiles={secretaria} />
+  </div>
+</Layout>
