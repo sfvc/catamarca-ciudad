@@ -27,9 +27,53 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: 'background 0.3s ease';
     text-decoration: none;
+}
+
+.dropdown-items:hover {
+    background-color: #3E5A7E;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mega-menu {
+    position: fixed;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 90vw;
+    max-width: 1140px;
+    margin-top: 1.2rem;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.menu-link {
+    display: block;
+    gap: 0.25rem;
+    padding: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #e6f0ff;
+    color: #000000;
+    text-decoration: none;
+    border-left: 4px solid #232D4F;
 }
 
 .dropdown-menu {
@@ -93,10 +137,14 @@ ul.dropdown-menu li a {
 
 .bg-img {
     background-image: url('/public/images/parquejumeal.webp');
-    background-size: cover;  /* Ensures the image covers the entire element */
-    background-position: center;  /* Centers the image */
-    width: 100%;  /* Sets width to 100% */
-    height: 100%;  /* Sets height to 100% */
+    background-size: cover;
+    /* Ensures the image covers the entire element */
+    background-position: center;
+    /* Centers the image */
+    width: 100%;
+    /* Sets width to 100% */
+    height: 100%;
+    /* Sets height to 100% */
 }
 
 .padding__portal {
@@ -614,13 +662,13 @@ input {
     padding-inline: 10px;
 }
 
-.footer-radio{
+.footer-radio {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 
-.footer-radio__container{
+.footer-radio__container {
     margin: 1rem 0;
 }

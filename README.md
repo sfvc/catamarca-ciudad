@@ -1,25 +1,38 @@
-# Página Principal del Gobierno de la Municipalidad de Catamarca
+# 🌆 Página Principal – Gobierno de la Municipalidad de Catamarca
 
-Este proyecto tiene como objetivo principal proporcionar visibilidad al municipio, mejorando la accesibilidad y la transparencia de la información pública. La página está desarrollada con **Astro** para el front-end, lo que garantiza un rendimiento rápido y una experiencia de usuario fluida.
+Este proyecto tiene como objetivo central mejorar la **visibilidad institucional** del municipio, ofreciendo un sitio web moderno, accesible y eficiente para los ciudadanos de Catamarca.
 
-## 🧞 Comandos
+## ⚙️ Tecnologías y herramientas
 
-Todos los comandos se ejecutan desde la raíz del proyecto, en una terminal:
+- **Astro**: Framework moderno para generar sitios estáticos rápidos y optimizados.
+- **React**: Usado junto a Astro para crear componentes interactivos reutilizables.
+- **Poncho-ar**: Librería de estilos del Gobierno Argentino, utilizada para asegurar coherencia visual y accesibilidad.
+- **Directus**: CMS headless utilizado como backend, conectado mediante su SDK para consumir y administrar contenido dinámico.
 
-| Comando                   | Acción                                             |
-| :------------------------ | :-------------------------------------------------- |
-| `npm install`             | Instala las dependencias                           |
-| `npm run dev`             | Inicia el servidor de desarrollo local en `localhost:4321` |
-| `npm run build`           | Construye el sitio para producción en `./dist/`     |
-| `npm run preview`         | Previsualiza tu construcción localmente antes de desplegar |
-| `npm run astro ...`       | Ejecuta comandos de CLI como `astro add`, `astro check` |
-| `npm run astro -- --help` | Obtén ayuda sobre cómo usar la CLI de Astro        |
+## 🚀 Scripts disponibles
 
-## 🌐 Más información
+Desde la raíz del proyecto:
 
-Este sistema no solo tiene la función de mostrar la información de manera accesible, sino que también está orientado a ser intuitivo y fácil de navegar para los ciudadanos de Catamarca. Gracias a la velocidad de Astro y su enfoque en optimización, los usuarios podrán acceder a la información del municipio de manera rápida y eficiente.
+| Comando                   | Descripción                                             |
+|--------------------------|---------------------------------------------------------|
+| `npm install`            | Instala las dependencias del proyecto                   |
+| `npm run dev`            | Inicia el servidor de desarrollo (`localhost:4321`)     |
+| `npm run build`          | Genera la versión de producción en la carpeta `dist/`   |
+| `npm run preview`        | Previsualiza localmente la versión de producción        |
+| `npm run astro ...`      | Ejecuta comandos CLI de Astro (e.g. `astro check`)      |
 
-**Tecnologías Utilizadas:**
-- **Astro**: Framework de frontend optimizado para la creación de sitios web rápidos y eficientes.
-- **JavaScript/React**: Para la implementación de componentes interactivos y dinámicos.
-- **Node.js**: Para la gestión de dependencias y tareas de desarrollo.
+## 🎯 Objetivos del sitio
+
+La página está pensada como el **portal principal del Gobierno de la Municipalidad de Catamarca**, con foco en el ciudadano.
+
+Sus objetivos principales son:
+
+- 🧭 **Orientar al vecino**: Brindar un acceso claro y directo a la información más relevante del municipio y de la provincia.
+- 📢 **Informar con transparencia**: Facilitar el acceso a noticias, programas, servicios y acciones del gobierno municipal.
+- 🧩 **Organización accesible**: Ofrecer una estructura de navegación intuitiva, que permita al usuario encontrar fácilmente lo que necesita.
+- ⚡ **Optimización y velocidad**: Gracias a la tecnología de Astro, el sitio es ágil y de carga rápida, incluso en conexiones lentas.
+- 📱 **Multidispositivo**: La interfaz es totalmente responsive, adaptándose correctamente a dispositivos móviles, tablets y computadoras.
+
+En resumen, este sitio busca ser la **puerta de entrada digital al municipio**, fortaleciendo el vínculo entre la gestión pública y la comunidad.
+
+---

@@ -14,7 +14,7 @@ const Footer = () => {
                   <div className='footer-radio__container'>
                       <h2 className="block-title h3 section-title">Radio Municipal</h2>
                       <div className='footer-radio'>
-                        <i class="icono-arg-comunicacion"></i>  
+                        <i className="icono-arg-comunicacion"></i>  
                         <small>Escucha nuestra Radio Municipal</small>
                       </div>
                   </div>
