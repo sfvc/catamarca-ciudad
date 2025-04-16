@@ -52,6 +52,7 @@ const HeaderLg = () => {
                     >
                         <img
                             src="/images/logo_CATACAPI.png"
+                            className='navbar-header'
                             alt="Catamarca Capital"
                             height="50"
                             width="auto"

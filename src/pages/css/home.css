@@ -54,6 +54,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    text-decoration: none;
 }
 
 .menu-link {
@@ -283,6 +284,10 @@ input {
     /* Change to a lighter shade or any color you like */
 }
 
+.navbar-header {
+    margin-left: 1rem;
+}
+
 .navbar-header__button {
     display: none;
 }
@@ -329,6 +334,8 @@ input {
 }
 
 .marquee__phone {
+    color: #ffffff;
+    text-decoration: none;
     font-size: 12px;
     padding: 0;
     margin: 0;
