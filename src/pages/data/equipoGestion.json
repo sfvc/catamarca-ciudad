@@ -1,0 +1,91 @@
+{
+    "id": "Intendencia",
+    "titulo": "",
+    "guiaDeTramites": [
+      {
+        "img": "/images/gustavo.jpg",
+        "title": "Gustavo Saadi",
+        "link": "/Intendente",
+        "descripcion": "Intendente",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/mariano.jpeg",
+        "title": "Dr. Mariano Rosales",
+        "link": "/perfilDeLSecretari@/secretariadegabineteymodernizacion",
+        "descripcion": "Secretaría de Gabinete y Modernización",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Gobierno-y-Coordinacion-Fernando-Monguillot-682x1024.jpeg",
+        "title": "Dr. Monguillot Fernando Edgardo",
+        "link": "/perfilDeLSecretari@/secretariadegobiernoycoordinacion",
+        "descripcion": "Secretario de Gobierno y Coordinación",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Salud-Desarrollo-Humano-y-Politicas-Sociales-Alberto-Natella-682x1024.jpeg",
+        "title": "Dr. Natella, Alberto Adolfo",
+        "link": "/perfilDeLSecretari@/secretariadesaludydesarrollohumano",
+        "descripcion": "Secretario de Salud, Desarrollo Humano y Políticas Sociales",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Turismo-y-Desarrollo-Economico-Ines-Galindez-682x1024.jpeg",
+        "title": "C.P.N Galindez, Inés Beatrizi",
+        "link": "/perfilDeLSecretari@/secretariadeturismoydesarrolloeconomico",
+        "descripcion": "Secretaria de Turismo y Desarrollo Económico",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Educacion-y-Cultura-Marquesa-Blanco-Azurmendi-682x1024.jpeg",
+        "title": "Blanco Arzumendi, Marqueza Nora",
+        "link": "/perfilDeLSecretari@/secretariadeeducacionycultura",
+        "descripcion": "Secretaria de Educación y Cultura",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Mujeres-Genero-y-Diversidad-Gabriela-Molina-682x1024.jpeg",
+        "title": "Sra. Molina, Gabriela Andrea",
+        "link": "/perfilDeLSecretari@/secretariadelasmujeresgenerosydiversidad",
+        "descripcion": "Secretaria de las Mujeres, Géneros y Diversidad",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Proteccion-Ciudadana-Mariela-Romero-682x1024.jpeg",
+        "title": "Sra. Romero, Mariela del Valle",
+        "link": "/perfilDeLSecretari@/secretariadeproteccionciudadana",
+        "descripcion": "Secretaria de Protección Ciudadana",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Urbanismo-y-Arquitectura-Javier-Varela-682x1024.jpeg",
+        "title": "Arq. Varela, Javier Adolfo",
+        "link": "/perfilDeLSecretari@/secretariadeurbanismoeinfraestructura",
+        "descripcion": "Secretario de Urbanismo e Infraestructura",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Ambiente-y-Espacio-Publico-Fernando-Castillo--682x1024.jpeg",
+        "title": "Acuña, Nicolas",
+        "link": "/perfilDeLSecretari@/secretariadeambienteyespaciopublico",
+        "descripcion": "Secretario de Ambiente y Espacio Público",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Hacienda-Giselle-Monjes-682x1024.jpeg",
+        "title": "C.P.N. Monjes, Giselle del Valle",
+        "link": "/perfilDeLSecretari@/secretariadehacienda",
+        "descripcion": "Secretaria de Hacienda",
+        "padding0": "padding-0"
+      },
+      {
+        "img": "/images/secretarios/Servicios-Ciudadanos-Martin-Barrionuevo-682x1024.jpeg",
+        "title": "Sr. Barrionuevo, Guido Martín",
+        "link": "/perfilDeLSecretari@/secretariadeserviciosciudadanos",
+        "descripcion": "Secretario de Servicios Ciudadanos",
+        "padding0": "padding-0"
+      }
+
+    ]
+}

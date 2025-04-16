@@ -46,14 +46,17 @@ const HomeSliderPage = () => {
       <h2 style={{ textAlign: "center" }}>Accesos Rápidos</h2>
       <Swiper
         spaceBetween={50}
-        slidesPerView={2}
+        slidesPerView={1}
         pagination={{ clickable: true }}
-        // autoplay={{ delay: 1500, disableOnInteraction: false }}
         loop={true}
+        autoplay={{
+          delay: 2000,        // 1 segundo de delay entre cada slide
+          disableOnInteraction: false,  // No desactivar el autoplay al interactuar
+        }}
         modules={[Pagination, Autoplay]}
         breakpoints={{
-          768: { slidesPerView: 4, spaceBetween: 40 },
-          1024: { slidesPerView: 5, spaceBetween: 50 },
+          768: { slidesPerView: 1, spaceBetween: 40 },
+          1024: { slidesPerView: 3, spaceBetween: 50 },
         }}
         className="mySwiper"
       >
@@ -61,26 +64,45 @@ const HomeSliderPage = () => {
           <SwiperSlide key={item.id}>
             <a
               href={item.url || "#"}
-              target='_self'
-              style={{ all: 'unset' }}
+              target="_self"
+              style={{ all: "unset", cursor: "pointer" }}
               onClick={(e) => item.url && handleLinkClick(e, item)}
             >
-              <div className="TramistedGrid__card">
-                {item.imagen ? (
-                  imagenes[item.imagen] ? (
-                    <img
-                      style={{ width: "100%", height: "150px", padding:"1rem"}}
-                      src={imagenes[item.imagen]}
-                      alt={item.titulo}
-                    />
-                  ) : (
-                    <div>Cargando imagen...</div>
-                  )
-                ) : (
-                  <div>No hay imagen</div>
-                )}
-                <h3 className="TramistedGrid__card-title">{item.titulo}</h3>
-                <small className="TramistedGrid__card-small">{item.descripcion}</small>
+              <div className="homeSlider-item-card">
+                <div
+                  className="homeSlider-item-image"
+                  style={{
+                    backgroundImage: `url('/images/parquejumeal.webp')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    width: '100%',
+                    height: '200px',
+                  }}
+                  title={item.titulo}
+                >
+                  <div className="homeSlider-item-overlay"></div>
+                  <div className="homeSlider-item-content">
+                      <img
+                        src={imagenes[item.imagen] || ""}
+                        alt={item.titulo}
+                        className="homeSlider-item-img"
+                        width={75}
+                      />
+                    <div className="homeSlider-item-body">
+                      <div className="homeSlider-item-title">{item.titulo}</div>
+                      <p className="homeSlider-item-text">{item.descripcion}</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="homeSlider-item-info">
+                      <img src="/images/info2.svg" alt="" width={24} />
+                      <small>Obtene mas información haciendo click para ver la pagina</small>
+                  </div>
+                  <div>
+                      <img src="" alt="" />
+                  </div>
+                </div>
               </div>
             </a>
           </SwiperSlide>

@@ -5,6 +5,7 @@
 @import url('./css/intendentes.css');
 @import url('./css/modal.css');
 @import url('./css/tramites.css');
+@import url('./css/homeSlider.css');
 @import url('./css/consultaExpediente.css');
 @import url('./css/Intendente.css');
 @import url('./css/banner.css');
@@ -14,13 +15,14 @@
 @import url('./css/apextree.css');
 @import url('./css/adaptabilidad.css');
 @import url('./css/toolbar.css');
+@import url('./css/noticiasGNRAL.css');
 @import url('./css/info.css');
 @import url('./css/estructuraOrganica.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 *{
-    font-family: 'Roboto', sans-serif !important;
     font-optical-sizing: auto !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 body {

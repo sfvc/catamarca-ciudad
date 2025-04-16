@@ -1,44 +1,84 @@
-import React from "react";
+import React, { useEffect } from "react";
 import JumbotronPerfil from "./jumbotronPerfil";
-import SeccionPerfil from "./seccionPerfil";
+// import SeccionPerfil from "./seccionPerfil";
 import NewsListPerfil from "./newsListPerfil";
 import Miembros from "./miembros";
+import Secretario from "./secretario";
+import { Descripcion } from "./descripcion";
+import { NoticiasSecretaria } from "./noticiasSecretarias";
+import { TramitesSecretarias } from "./tramitesSecretaria";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PerfilPage = ({ perfiles }) => {
-  // Destructure the necessary parts from the `perfiles` prop
-  const { imagenDeFondo, nombre, descripcion, secciones } = perfiles;
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
+  console.log(perfiles);
   return (
     <main role="main">
       <JumbotronPerfil
-        imagenDeFondo={imagenDeFondo}
-        nombre={nombre}
-        descripcion={descripcion}
+        imagenDeFondo={perfiles?.imagenDeFondo}
+        nombre={perfiles?.nombre}
+        descripcion={perfiles?.descripcion}
       />
 
-      <Miembros perfiles={perfiles} />
+      <section className="bg-gray section-sm">
+        <div data-aos="fade-up">
+          <div className="panel-pane pane-atajos">
+            <div className="pane-content">
+              <ul className="nav nav-icons nav-icons-selected">
+                <li className="active">
+                  <a href="/aaip/accesoalainformacion">
+                    <i className="icono-arg-casa-rosada bg-success"></i>
+                    <span>Intendente</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/aaip/tramites">
+                    <i className="icono-arg-tramite bg-fucsia"></i>
+                    <span>Valores</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.google.com/maps?q=-28.47729712475078,-65.77732108814989"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="icono-arg-provincia-catamarca"></i>
+                    <span>Localiza el Municipio en el Mapa</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-      <div className="m-t-2">
-        {secciones?.map((seccion, index) => (
-          <SeccionPerfil
-            key={index}
-            titulo={seccion.primerTitulo}
-            contenido={seccion.contenido}
-            cita={seccion.cita}
-          />
-        ))}
+      <div data-aos="fade-up">
+        <Secretario
+          urlPerfil={perfiles.link}
+          secretaria={perfiles.nombre}
+          nombre={perfiles.nombreSecretario}
+          cargo={perfiles.cargo}
+          breveDescripcion={perfiles.breveDescripcion}
+          avatarSecretario={perfiles.avatarSecretario}
+        />
       </div>
 
-      {/* News List Section */}
-      {secciones?.some((seccion) => seccion.noticias) && (
-        <section>
-          <NewsListPerfil
-            titulo="Noticias Destacadas"
-            noticias={secciones.flatMap((seccion) => seccion.noticias || [])}
-          />
-        </section>
-      )}
+      <div data-aos="fade-up">
+        <Descripcion />
+      </div>
+
+      <div data-aos="fade-up">
+        <TramitesSecretarias />
+      </div>
+
+      <div data-aos="fade-up">
+        <NoticiasSecretaria />
+      </div>
     </main>
   );
 };

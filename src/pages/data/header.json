@@ -58,6 +58,10 @@
                     "link": "/Intendente"
                 },
                 {
+                    "label": "Equipos de Gestion",
+                    "link": "/EquipoDeGestion"
+                },
+                {
                     "label": "Radio Municipal",
                     "link": "/radio"
                 },

@@ -1,0 +1,24 @@
+---
+import secretarioData from '../data/secretario.json';
+import Layout from '../layout/Layout.astro';
+import PerfilSecretario from '../components/perfiles/secretario.jsx';
+
+export async function getStaticPaths() {
+  return secretarioData.map((secretaria) => ({
+    params: { id: secretaria.id },
+  }));
+}
+
+console.log("PARAMS:", Astro.params); // 👈 Debug clave
+
+const { id } = Astro.params;
+
+const secretaria = secretarioData.find((sec) => sec.id === id);
+
+---
+
+<Layout title={secretaria.nombre}>
+  <div>
+    <PerfilSecretario client:only="react" perfiles={secretaria} />
+  </div>
+</Layout>

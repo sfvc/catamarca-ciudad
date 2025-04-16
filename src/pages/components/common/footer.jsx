@@ -3,29 +3,34 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="main-footer">
+    <footer className="main-footer" style={{backgroundColor:"#e7e7e7"}}>
       <div className="container">
         <div className="row">
           <div className="col-md-4 col-sm-6">
             <div className="region region-footer1">
               <section id="block-menu-menu-footer-1" className="block block-menu clearfix">
-                <h2 className="block-title h3 section-title">Trámites</h2>
-                <ul className="menu nav">
-                  <li className="first leaf"><a href="/turnos">Turnos</a></li>
-                  <li className="leaf"><a href="#">Trámites a distancia</a></li>
-                  <li className="last leaf"><a href="#">Atención al ciudadano</a></li>
-                </ul>
+                <img src="/images/logo-capital-sfvc.svg" alt="catamarca capital logo" width="auto" height={40}/>
+                <a href="/radio" style={{all: "unset", cursor: "pointer"}}>
+                  <div className='footer-radio__container'>
+                      <h2 className="block-title h3 section-title">Radio Municipal</h2>
+                      <div className='footer-radio'>
+                        <i class="icono-arg-comunicacion"></i>  
+                        <small>Escucha nuestra Radio Municipal</small>
+                      </div>
+                  </div>
+                </a>
               </section>
             </div>
           </div>
           <div className="col-md-4 col-sm-6">
             <div className="region region-footer2">
               <section id="block-menu-menu-footer-2" className="block block-menu clearfix">
-                <h2 className="block-title h3 section-title">Acerca de la República Argentina</h2>
+                <h2 className="block-title h3 section-title">DIRECCIÓN</h2>
                 <ul className="menu nav">
-                  <li className="first leaf"><a href="#">Leyes argentinas</a></li>
-                  <li className="leaf"><a href="#">Organismos</a></li>
-                  <li className="last leaf"><a href="#">Mapa del Estado</a></li>
+                  <li className="first leaf">Güemes 650 P.A.</li>
+                  <li className="leaf">San Fernando del Valle de Catamarca</li>
+                  <li className="last leaf">Catamarca
+                  República Argentina</li>
                 </ul>
               </section>
             </div>
@@ -33,11 +38,12 @@ const Footer = () => {
           <div className="col-md-4 col-sm-6">
             <div className="region region-footer3">
               <section id="block-menu-menu-footer-3" className="block block-menu clearfix">
-                <h2 className="block-title h3 section-title">Acerca de Argentina.gob.ar</h2>
+                <h2 className="block-title h3 section-title">Palacio Municipal</h2>
                 <ul className="menu nav">
-                  <li className="first leaf"><a href="#">Acerca de este sitio</a></li>
-                  <li className="leaf"><a href="#">Términos y condiciones</a></li>
-                  <li className="last leaf"><a href="#">Contacto</a></li>
+                  <li className="first leaf"> La Rioja 631
+                  San Fernando del Valle de Catamarca</li>
+                  <li className="leaf">Catamarca</li>
+                  <li className="last leaf">República Argentina – CP: K4700EMV</li>
                 </ul>
               </section>
             </div>
