@@ -26,18 +26,20 @@ const BuscadorContent = () => {
     setIsLoading(true)
     let params = {
       meta: 'total_count,filter_count',
-      sort: '-titulo',
+      sort: '-nombre',
+      fields: '*,area.*,categoria.*',
       limit: LIMIT,
       page
     }
 
     if(query) {
-      params['filter[titulo][_icontains]='] = query
+      params['filter[nombre][_icontains]='] = query
     }
     
     try {
       const response = await catamarcaApi.get(`items/tramites`, { params })
       const { data, meta } = response.data
+      console.log(data)
       setTramites(data)
 
       const totalPages = calculateTotalPages(meta.filter_count)
@@ -102,19 +104,28 @@ const BuscadorContent = () => {
           {
             tramites.length > 0
             ? tramites.map((tramite) => (
-                <a className="panel panel-default panel-icon panel-secondary" key={tramite.id} href="#">
-                  <div className="tramite-container">
+                <div className="panel panel-default panel-icon panel-secondary tramite-container" key={tramite.id} href="#">
+                  {/* <div className="tramite-container"> */}
                     <div className="panel-body">
-                      <h3>{tramite.titulo}</h3>
-                      <p className="text-muted tramite-description">{tramite.descripcion}</p>
+                      <h3>{tramite.nombre}</h3>
+                      <p className="text-muted tramite-description">{tramite.objeto}</p>
 
                       <div className="tramite-footer">
-                        <button type="button" class="btn btn-primary">Ver más</button>
+                        <div>
+                          <span class="ribbon"
+                            ><i class="fa fa-desktop text-arandano"></i> {tramite.modalidad}</span
+                          >
+
+                          <span class="ribbon"
+                            ><i class="fa fa-tag text-arandano"></i>
+                            {tramite.categoria.nombre}</span
+                          >
+                        </div>
+                        <a href={`/infoTramites/${tramite.id}`} className="btn btn-primary">Ver más</a>
                       </div>
                     </div>
-                  </div>
-
-                </a>
+                  {/* </div> */}
+                </div>
               ))
             : <span>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</span>
           }

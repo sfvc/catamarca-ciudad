@@ -1,12 +1,10 @@
 ---
-import Layout from './layout/Layout.astro';
-import BlogPage from './components/blog/blog';
-
+import Layout from "./layout/Layout.astro";
+import BlogPage from "./components/blog/blog";
 ---
 
-<Layout title='Busca las ultimas novedades'>
-    <div>
-        <BlogPage client:only="react"/>
-    </div>
-
+<Layout title="Busca las ultimas novedades">
+  <div>
+    <BlogPage client:only="react" />
+  </div>
 </Layout>

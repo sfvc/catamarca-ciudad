@@ -92,15 +92,11 @@ ul.dropdown-menu li a {
 }
 
 .bg-img {
-    background-image: url('../images/parquejumeal.webp');
-    background-size: cover;
-    /* Ensures the image covers the entire element */
-    background-position: center;
-    /* Centers the image */
-    width: 100%;
-    /* Sets width to 100% */
-    height: 100%;
-    /* Sets height to 100% */
+    background-image: url('/public/images/parquejumeal.webp');
+    background-size: cover;  /* Ensures the image covers the entire element */
+    background-position: center;  /* Centers the image */
+    width: 100%;  /* Sets width to 100% */
+    height: 100%;  /* Sets height to 100% */
 }
 
 .padding__portal {

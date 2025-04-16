@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import AccessProvider from '../components/common/accessProvider';
 import ToolBar from '../components/common/toolBar';
 
