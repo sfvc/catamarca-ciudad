@@ -13,5 +13,8 @@ export default defineConfig({
     enabled: false
   },
 
+  experimental:{
+    session: true,
+  },
   adapter: netlify()
 });
