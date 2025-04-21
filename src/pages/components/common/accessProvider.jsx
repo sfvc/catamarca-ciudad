@@ -273,7 +273,6 @@ const AccessProvider = ({ children }) => {
         toggleLineaGuia,  // Provide function to toggle LineaGuia
         toggleHighlighted,
         highlighted,
-        toggleHighlighted,
         toggleTextToSpeech, // Provide function to toggle text-to-speech
         textToSpeechEnabled,
         colorFuente,
