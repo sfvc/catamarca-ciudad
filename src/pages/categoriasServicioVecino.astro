@@ -1,10 +1,14 @@
 ---
 // Import the necessary components and data
-import Layout from './layout/Layout.astro';
-import GridPage from './components/grid/gridPage'; // Assuming it's an Astro component
-
+import Layout from "@layout/Layout.astro";
+import GridPage from "@components/grid/gridPage"; // Assuming it's an Astro component
 ---
 
 <Layout title={"Servicios al Vecino"}>
-    <GridPage client:only="react" href="/serviciosVecino" endpoint="items/servicioVecino_categoria" titulo="Guía de Servicios al Vecino" />
+  <GridPage
+    client:only="react"
+    href="/serviciosVecino"
+    endpoint="items/servicioVecino_categoria"
+    titulo="Guía de Servicios al Vecino"
+  />
 </Layout>

@@ -1,16 +1,13 @@
 ---
 // Import the necessary components and data
-import Layout from '../layout/Layout.astro';
+import Layout from "@layout/Layout.astro";
 
-import GridPage from '../components/grid/gridPage';
+import GridPage from "@components/grid/gridPage";
 
 const { id } = Astro.params; // Get the ID from the URL parameters
 // Find the corresponding tramite by ID
-
-
-
-
 ---
+
 <Layout title={"titulo"}>
-    <GridPage client:only="react" grid={""} />
+  <GridPage client:only="react" endpoint="" , titulo="" , href="" />
 </Layout>

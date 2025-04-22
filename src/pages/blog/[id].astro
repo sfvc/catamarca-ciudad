@@ -1,8 +1,8 @@
 ---
 // Import the necessary components and data
-import BlogPage from '../components/blog/blog';
-import { Blog } from '../data/blog.json'; // Adjust the path as needed
-import Layout from '../layout/Layout.astro';
+import BlogPage from "@components/blog/blog";
+import { Blog } from "@data/blog.json"; // Adjust the path as needed
+import Layout from "@layout/Layout.astro";
 
 const { id } = Astro.params; // Get the ID from the URL parameters
 
@@ -11,18 +11,17 @@ const blog = Blog.find((t) => t.id === parseInt(id, 10));
 
 // If the blog is not found, throw an error
 if (!blog) {
-    throw new Error('Blog not found');
+  throw new Error("Blog not found");
 }
 
 // Function to get static paths for pre-rendering
 export function getStaticPaths() {
-    return Blog.map((t) => ({
-        params: { id: t.id.toString() }, // Convert ID to string
-    }));
+  return Blog.map((t) => ({
+    params: { id: t.id.toString() }, // Convert ID to string
+  }));
 }
-
 ---
 
 <Layout title={blog.title}>
-    <BlogPage client:only="react" blog={blog} />
+  <BlogPage client:only="react" blog={blog} />
 </Layout>

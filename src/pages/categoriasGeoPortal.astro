@@ -1,9 +1,13 @@
 ---
-import Layout from './layout/Layout.astro';
-import GridPage from './components/grid/gridPage'; // Assuming it's an Astro component
-
+import Layout from "@layout/Layout.astro";
+import GridPage from "@components/grid/gridPage"; // Assuming it's an Astro component
 ---
 
 <Layout title={"Geo Portal"}>
-    <GridPage client:only="react" href='/geoPortal' endpoint="items/infraestructura_datos_espaciales_categoria/" titulo="Guía de Geo Portal" />
+  <GridPage
+    client:only="react"
+    href="/geoPortal"
+    endpoint="items/infraestructura_datos_espaciales_categoria/"
+    titulo="Guía de Geo Portal"
+  />
 </Layout>

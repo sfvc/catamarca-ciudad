@@ -1,12 +1,11 @@
 ---
-import Info from "../components/info/info.astro";
-import Layout from "../layout/Layout.astro";
+import Info from "@components/info/info.astro";
+import Layout from "@layout/Layout.astro";
 const { id } = Astro.params;
-
 ---
 
-<Layout title='Tramites1'>
-    <div>
-        <Info id={id} url="items/compra/" client:only="react" />
-    </div>
+<Layout title="Tramites1">
+  <div>
+    <Info id={id} url="items/compra/" client:only="react" />
+  </div>
 </Layout>

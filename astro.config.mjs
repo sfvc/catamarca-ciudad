@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
+import path from 'path';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,5 +10,13 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  adapter: netlify()
+  adapter: netlify(),
+  alias: {
+    '@components': path.resolve('./src/components'),
+    '@layout': path.resolve('./src/layout'),
+    '@pages': path.resolve('./src/pages'),
+    '@css': path.resolve('./src/css'),
+    '@data': path.resolve('./src/data'),
+    '@api': path.resolve('./src/api'),
+  }
 });

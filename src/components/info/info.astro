@@ -1,0 +1,200 @@
+---
+import { catamarcaApi } from "@api/catamarcaApi";
+
+const { id, url } = Astro.props;
+
+const response = await catamarcaApi.get(
+  `${url}${id}?fields=*,area.*,categoria.*`
+);
+const { data: tramite } = response.data;
+---
+
+<main role="main">
+  <div class="container">
+    <section>
+      <div class="row">
+        <div class="col-md-12 m-b-2">
+          <h1>{tramite.nombre}</h1>
+          <p>{tramite.objeto}</p>
+          <div>
+            <span class="ribbon"
+              ><i class="fa fa-desktop text-arandano"></i>
+              {tramite.modalidad}</span
+            >
+
+            <span class="ribbon"
+              ><i class="fa fa-tag text-arandano"></i>
+              {tramite.categoria.nombre}</span
+            >
+
+            <span class="ribbon"
+              ><i class="fa fa-map-marker text-arandano"></i>
+              {tramite.area.nombre}</span
+            >
+          </div>
+          <hr />
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Columna izquierda -->
+        <div class="col-md-8">
+          <article>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="media">
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-list-ul fa-fw fa-2x pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="m-y-0">Requisitos y condiciones</h2>
+                    <div class="media-body" set:html={tramite.requisitos} />
+                  </div>
+                </div>
+
+                <div class="page-break"></div>
+
+                <div class="media">
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-clock-o fa-fw fa-2x pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="m-y-0">Tiempo estimado</h2>
+                    <div
+                      class="media-body"
+                      set:html={tramite.tiempo_estimado}
+                    />
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-dollar fa-fw fa-2x pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="m-y-0">¿Cuál es el costo del trámite?</h2>
+                    <div class="media-body" set:html={tramite.costo} />
+                  </div>
+                </div>
+
+                <div class="page-break"></div>
+
+                <div class="media">
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-check-circle-o fa-fw fa-2x pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="m-y-0">Normativa aplicable</h2>
+                    <div
+                      class="media-body"
+                      set:html={tramite.normativa_aplicable}
+                    />
+                  </div>
+                </div>
+
+                <div class="page-break"></div>
+
+                <div class="media">
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-info fa-fw fa-2x pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="m-y-0">Circuito del Tramite</h2>
+                    <div
+                      class="media-body"
+                      set:html={tramite.circuito_tramite}
+                    />
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="media-body">
+                    <i
+                      class="text-secondary fa fa-balance-scale fa-fw fa-2x pull-left"
+                      aria-hidden="true"></i>
+                    <h2 class="m-y-0">Información complementaria</h2>
+                    <div class="media-body" set:html={tramite.observaciones} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-xs-12 col-md-11 col-md-offset-1">
+              <!-- Obtener turno -->
+              <div class="row hidden-xs hidden-sm">
+                <div class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-12">
+                  <div class="panel panel-default panel-disabled">
+                    <div class="panel-body text-center">
+                      <p>
+                        <a class="btn btn-success btn-block" href="#">
+                          0btener turno en línea</a
+                        >
+                      </p>
+                      <p><a href="#"> Consultar el estado del trámite</a></p>
+                      <p><a href="#"> Consultas al 0800-333-8547</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <hr />
+
+                  <!-- Tramites Relacionados -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class="h4">Trámites relacionados</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <h3 class="h5">
+                        <a href="">Seguir el estado de trámite del DNI </a>
+                      </h3>
+                      <p>
+                        Si ya iniciaste el trámite para renovar, reemplazar o
+                        actualizar tu DNI, podés hacer el seguimiento en línea,
+                        con el número de tu documento o el de la constancia que
+                        te entregaron en ese momento (boleta prenumerada de 26
+                        dígitos).
+                      </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <h3 class="h5">
+                        <a href="">Certificación negativa de ANSES </a>
+                      </h3>
+                      <p>
+                        Si para obtener una beca o subsidio, te pidieron un
+                        comprobante de que no estás recibiendo ningún aporte o
+                        beneﬁcio de ANSES (jubilación, pensión, plan, programa,
+                        etc.), podés tramitar esta certiﬁcación desde aquí.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Descargas -->
+                  <hr />
+                  <div class="page-break"></div>
+                  <div class="page-break"></div>
+                  <div class="page-break"></div>
+                  <h2 class="h4">Descargas</h2>
+
+                  <div class="row">
+                    <div
+                      class="col-xs-12 col-sm-6 col-md-12 p-x-0"
+                      set:html={tramite.documentos}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
