@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import Paginado from "../common/paginado";
-import data from '@data/intendentes.json'; // Importing the JSON data
+import Paginado from "@components/common/paginado";
 
 export const IntendentesPage = () => {
 
