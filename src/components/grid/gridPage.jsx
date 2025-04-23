@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { catamarcaApi } from "@api/catamarcaApi";
 
-const GridPage = ({ endpoint, titulo, href }) => {  // Recibe el endpoint como prop
+const GridPage = ({ endpoint, titulo, href, tramite }) => {  // Recibe el endpoint como prop
   const [categorias, setCategorias] = useState([]);
   const [imagenes, setImagenes] = useState({});
 
@@ -48,7 +48,7 @@ const GridPage = ({ endpoint, titulo, href }) => {  // Recibe el endpoint como p
             style={{ all: "unset" }}
             target={card.external ? "_blank" : "_self"}
           >
-            <div className="TramistedGrid__card">
+            <div className={`TramistedGrid__card ${tramite}`}>
               <img
                 className={`TramistedGrid__cardimg ${card.padding0 ? "padding-0" : ""}`}
                 src={imagenes[card.icono]}

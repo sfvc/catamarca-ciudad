@@ -14,6 +14,7 @@
 @import url('./loadingScreen.css');
 @import url('./adaptabilidad.css');
 @import url('./toolbar.css');
+@import url('./contacto.css');
 @import url('./noticiasGNRAL.css');
 @import url('./info.css');
 @import url('./estructuraOrganica.css');
@@ -173,4 +174,24 @@ main a[href^="https://"][target^=_blank]:after {
 /* Tramite */
 .media-body > p:first-of-type {
     margin-top: 20px;
+}
+
+.video-banner {
+position: relative;
+height: 500px; /* o lo que necesites */
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+}
+
+.bg-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 0;
 }

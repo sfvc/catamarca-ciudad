@@ -1,0 +1,178 @@
+.contacto_cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+    margin: 20px 0;
+}
+.contacto_card{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    flex-direction: column;
+}
+
+.contacto_card-header{
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;    
+}
+
+.contacto_card-body{
+    flex: 1;
+    border-radius: 24px 24px 10px 10px;
+    background-color: white;
+    width: 100%;
+    position: relative;
+}
+
+.contacto_infonumero{
+    position: absolute;
+    bottom: -5%;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.contacto_infonumero-span{
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: larger;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: lightslategray;
+}
+
+
+/* NUMEROS NACIONALES */
+.contacto_subtitle{
+    margin: 4rem 0 0 0;
+    color: lightslategray;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.contacto_numbers-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    margin: 2rem 0;
+}
+
+.contacto_number{
+    position: relative;
+    transition: all 0.3s ease;
+    width: 300px;
+    height: 210px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra base */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: column;
+    max-width: 175px;
+    border-radius: 25px;
+    text-align:center;
+    cursor: pointer;
+}
+
+.contacto_number--amarillo{
+    background-color: #f2931a;
+    color: white;
+}
+.contacto_number--celeste{
+    background-color: #08b2dc;
+    color: white;
+}
+.contacto_number--azul{
+    background-color: #112559;
+    color: white;
+}
+
+
+
+.contacto_number:hover, .contacto_card:hover {
+    transform: translateY(-5px); /* se eleva 5px hacia arriba */
+}
+
+
+.contacto_number-span{
+    font-size: 50px;
+    font-weight: 1000;
+    color: white;
+}
+
+.contacto_icon i{
+    font-size: 50px;
+}
+
+.contacto_card-body-h2{
+    color: rgb(49, 49, 49);
+    font-weight: 800;
+}
+
+.contacto_number-p{
+    font-weight: 600;
+    font-size: large;
+    color: white;
+}
+
+/* ESTILLOS DETALLADO UNO POR UNO*/
+
+.contacto_card--amarillo{
+    background-color: #f2931a;
+    color: white;
+}
+
+.contacto_infonumero-span--amaraillo:hover,
+.contacto_infonumero-span--celeste:hover,
+.contacto_infonumero-span--azul:hover
+{
+    transform: translateY(-5px); /* se eleva 5px hacia arriba */
+}
+
+.contacto_infonumero-span--amaraillo:hover{
+    background-color: #f2931a;
+}
+
+.contacto_card--celeste{
+    background-color: #08b2dc;
+    color: white;
+}
+
+.contacto_infonumero-span--celeste:hover{
+    background-color: #08b2dc;
+}
+
+
+.contacto_card--azul{
+    background-color: #112559;
+    color: white;
+}
+
+.contacto_infonumero-span--azul:hover{
+    background-color: #112559;
+}
+
+@media(max-width: 1023.98px){
+    .contacto_cards-container{
+        justify-content: center;
+    }
+}

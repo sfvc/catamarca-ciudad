@@ -93,6 +93,36 @@
             "description": "Significado de los símbolos oficiales del municipio."
           }
         ]
+      },
+      {
+        "name": "Descubre Catamarca",
+        "options": [
+          {
+            "label": "Valores",
+            "link": "/valores",
+            "description": "Principios fundamentales que guían la gestión del gobierno municipal y la convivencia ciudadana en SFVC."
+          },
+          {
+            "label": "Simbología",
+            "link": "/simbologia",
+            "description": "Significado, historia y elementos que componen el escudo oficial de la ciudad de San Fernando del Valle de Catamarca."
+          },
+          {
+            "label": "Reseña Histórica",
+            "link": "/reseñaHistorica",
+            "description": "Relato de la fundación de la ciudad, los acontecimientos clave y su transformación a lo largo de los siglos."
+          },
+          {
+            "label": "Turismo",
+            "link": "https://sfvc.tur.ar/",
+            "description": "Información turística sobre SFVC: lugares destacados, cultura, actividades y atractivos naturales."
+          },
+          {
+            "label": "Museos",
+            "link": "https://sfvc.tur.ar/category/museos/",
+            "description": "Conocé los museos más importantes de SFVC: su patrimonio artístico, arqueológico e histórico."
+          }
+        ]
       }
     ]
   }

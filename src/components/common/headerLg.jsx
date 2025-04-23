@@ -41,7 +41,7 @@ const HeaderLg = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-top navbar-default header__displaynone" style={{ borderBottom: "3px solid #e7e7e7", backgroundColor: "#001529" }}>
+        <nav className="navbar navbar-top navbar-default header__displaynone" style={{ borderBottom: "3px solid #e7ba61", backgroundColor: "#001529" }}>
             <div className="container">
                 <div className="navbar-header">
                     <a
@@ -111,7 +111,10 @@ const HeaderLg = () => {
 
                         <a
                             className='dropdown-items'
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@catamarcaciudad.gob.ar"
+                            href="/contacto"
+                            style={{
+                                textDecoration: 'none',
+                            }}
                             target="_blank"
                         >
                             Contacto
