@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import JumbotronPerfil from "./jumbotronPerfil";
-import Secretario from "../secretario";
-import { Descripcion } from "./descripcion";
-import { NoticiasSecretaria } from "./noticiasSecretarias";
-import { TramitesSecretarias } from "./tramitesSecretaria";
+import JumbotronPerfil from "@components/perfiles/gabineteymodernizacion/jumbotronPerfil";
+import { Descripcion } from "@components/perfiles/gabineteymodernizacion/descripcion";
+import { NoticiasSecretaria } from "@components/perfiles/gabineteymodernizacion/noticiasSecretarias";
+import { TramitesSecretarias } from "@components/perfiles/gabineteymodernizacion/tramitesSecretaria";
+import Secretario from "@components/perfiles/gabineteymodernizacion/secretario";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
