@@ -82,7 +82,9 @@ const NoticiasGnral = () => {
         )}
       </div>
 
-      <a style={{padding:'6px 12px', backgroundColor:'#001529', color:'white', width:'150px', textAlign:'center', borderRadius:'8px', cursor:'pointer', textDecoration:'none'}}>Ver más</a>
+      <div className="container-fluid m-r-0 p-r-0">
+        <a href="#" className="btn btn-primary">Ver más</a>
+      </div>
     </div>
   );
 };

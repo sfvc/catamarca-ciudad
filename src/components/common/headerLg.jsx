@@ -41,7 +41,7 @@ const HeaderLg = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-top navbar-default header__displaynone" style={{ borderBottom: "3px solid #e7ba61", backgroundColor: "#001529" }}>
+        <nav className="navbar navbar-top navbar-default header__displaynone" style={{ borderBottom: "3px solid #f2931a", backgroundColor: "#001529" }}>
             <div className="container">
                 <div className="navbar-header">
                     <a

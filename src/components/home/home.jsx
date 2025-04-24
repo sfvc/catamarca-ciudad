@@ -52,7 +52,6 @@ const Home = () => {
           <PortalARG/>
           <HomeSliderPage/>
           <ProgramasComponent/>
-          {/* <FaqCard/> */}
           <NoticiasGnral/>
         </main>
     </>

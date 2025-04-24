@@ -39,7 +39,6 @@ const BuscadorContent = () => {
     try {
       const response = await catamarcaApi.get(`items/tramites`, { params })
       const { data, meta } = response.data
-      console.log(data)
       setTramites(data)
 
       const totalPages = calculateTotalPages(meta.filter_count)
@@ -105,7 +104,6 @@ const BuscadorContent = () => {
             tramites.length > 0
             ? tramites.map((tramite) => (
                 <div className="panel panel-default panel-icon panel-secondary tramite-container" key={tramite.id} href="#">
-                  {/* <div className="tramite-container"> */}
                     <div className="panel-body">
                       <h3>{tramite.nombre}</h3>
                       <p className="text-muted tramite-description">{tramite.objeto}</p>
@@ -124,7 +122,6 @@ const BuscadorContent = () => {
                         <a href={`/infoTramites/${tramite.id}`} className="btn btn-primary">Ver más</a>
                       </div>
                     </div>
-                  {/* </div> */}
                 </div>
               ))
             : <span>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</span>

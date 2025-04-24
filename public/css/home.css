@@ -15,7 +15,7 @@
 }
 
 .dropdown-items {
-    background-color: #232D4F;
+    /* background-color: #232D4F; */
     color: #fff;
     padding: 0.6rem 1.2rem;
     margin-top: 0.9rem;
@@ -33,7 +33,7 @@
 }
 
 .dropdown-items:hover {
-    background-color: #3E5A7E;
+    background-color: #232f4f;  /* #3E5A7E */
     color: #fff;
     text-decoration: none;
 }
@@ -330,7 +330,7 @@ input {
 }
 
 .marquee__icon {
-    width: 12px;
+    width: 10px;
 }
 
 .marquee__phone {

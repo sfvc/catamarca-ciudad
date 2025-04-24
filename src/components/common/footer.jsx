@@ -1,15 +1,15 @@
 const Footer = () => {
   return (
-    <footer className="main-footer" style={{backgroundColor:"#e7e7e7"}}>
+    <footer className="main-footer" style={{ backgroundColor:"#001529", color:"#ffffff", borderTop: "3px solid #f2931a"}}>
       <div className="container">
         <div className="row">
           <div className="col-md-4 col-sm-6">
             <div className="region region-footer1">
               <section id="block-menu-menu-footer-1" className="block block-menu clearfix">
-                <img src="/images/logo-capital-sfvc.svg" alt="catamarca capital logo" width="auto" height={40}/>
+                <img src="/images/logo_CATACAPI.webp" alt="catamarca capital logo" width="auto" height={40}/>
                 <a href="/radio" style={{all: "unset", cursor: "pointer"}}>
                   <div className='footer-radio__container'>
-                      <h2 className="block-title h3 section-title">Radio Municipal</h2>
+                      <h2 className="block-title h3">Radio Municipal</h2>
                       <div className='footer-radio'>
                         <i className="icono-arg-comunicacion"></i>  
                         <small>Escucha nuestra Radio Municipal</small>
@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="col-md-4 col-sm-6">
             <div className="region region-footer2">
               <section id="block-menu-menu-footer-2" className="block block-menu clearfix">
-                <h2 className="block-title h3 section-title">DIRECCIÓN</h2>
+                <h2 className="block-title h3">Dirección</h2>
                 <ul className="menu nav">
                   <li className="first leaf">Güemes 650 P.A.</li>
                   <li className="leaf">San Fernando del Valle de Catamarca</li>
@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="col-md-4 col-sm-6">
             <div className="region region-footer3">
               <section id="block-menu-menu-footer-3" className="block block-menu clearfix">
-                <h2 className="block-title h3 section-title">Palacio Municipal</h2>
+                <h2 className="block-title h3">Palacio Municipal</h2>
                 <ul className="menu nav">
                   <li className="first leaf"> La Rioja 631
                   San Fernando del Valle de Catamarca</li>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <div className="row sub-footer">
           <div className="container">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
