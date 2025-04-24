@@ -49,10 +49,10 @@ const HomeSliderPage = () => {
         slidesPerView={1}
         pagination={{ clickable: true }}
         loop={true}
-        autoplay={{
-          delay: 2000,        // 1 segundo de delay entre cada slide
-          disableOnInteraction: false,  // No desactivar el autoplay al interactuar
-        }}
+        // autoplay={{
+        //   delay: 2000,        // 1 segundo de delay entre cada slide
+        //   disableOnInteraction: false,  // No desactivar el autoplay al interactuar
+        // }}
         modules={[Pagination, Autoplay]}
         breakpoints={{
           768: { slidesPerView: 1, spaceBetween: 40 },
@@ -94,7 +94,7 @@ const HomeSliderPage = () => {
                     </div>
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <div className="homeSlider-item-info">
                       <img src="/images/info2.svg" alt="" width={24} />
                       <small>Obtene mas información haciendo click para ver la pagina</small>
@@ -102,7 +102,7 @@ const HomeSliderPage = () => {
                   <div>
                       <img src="" alt="" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </a>
           </SwiperSlide>

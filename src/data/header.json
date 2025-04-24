@@ -68,29 +68,14 @@
             "description": "Información sobre el Intendente y su gestión actual."
           },
           {
+            "label": "Equipo de Gestion",
+            "link": "/EquipoDeGestion",
+            "description": "Información sobre el Intendente y su gestión actual."
+          },
+          {
             "label": "Radio Municipal",
             "link": "/radio",
             "description": "Escuchá en vivo la programación de la Radio Municipal."
-          },
-          {
-            "label": "Valores",
-            "link": "/perfil/3",
-            "description": "Principios y valores que guían la gestión municipal."
-          },
-          {
-            "label": "Reseña Histórica",
-            "link": "/perfil/4",
-            "description": "Breve historia de la ciudad y su evolución a lo largo del tiempo."
-          },
-          {
-            "label": "Reseña Histórica",
-            "link": "/perfil/4",
-            "description": "Breve historia de la ciudad y su evolución a lo largo del tiempo."
-          },
-          {
-            "label": "Simbología",
-            "link": "/perfil/5",
-            "description": "Significado de los símbolos oficiales del municipio."
           }
         ]
       },

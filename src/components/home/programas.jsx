@@ -30,67 +30,38 @@ const ProgramasComponent = () => {
     };
 
     fetchProgramas();
+    AOS.init({ duration: 1000, once: true });
+    AOS.refresh();
   }, []);
 
-  useEffect(() => {
-    const fetchProgramas = async () => {
-      try {
-        const response = await catamarcaApi.get("/items/planes_programas");
-        setProgramas(response.data.data);
-  
-        const apiUrl = catamarcaApi.defaults.baseURL || '';
-        
-        const nuevasImagenes = response.data.data
-          .filter(item => item.imagen)
-          .reduce((acc, item) => {
-            acc[item.imagen] = `${apiUrl}/assets/${item.imagen}`;
-            return acc;
-          }, {});
-  
-        setImagenes(nuevasImagenes);
-      } catch (error) {
-        console.error("Error obteniendo programas:", error);
-      }
-    };
-  
-    fetchProgramas();
-  
-    // Initialize AOS after data is fetched
-    AOS.init({ duration: 1000, once: true });
-  
-    // Optionally, you can use AOS.refresh() if you are dynamically updating the content
-    AOS.refresh();
-  }, []); // Empty dependency array to run only once on mount
-
-
-
   return (
-    <div className="container">
-      <h2 style={{ textAlign: "center" }}>Planes y Programas</h2>
-      <div className="row panels-row alineacion-center">
+    <div className="programas container">
+      <h2 className="programas__titulo">Planes y Programas</h2>
+      <div className="programas__lista">
         {programas.map((items, index) => (
-          <div className="col-xs-12 col-sm-6 col-md-3" key={index}>
+          <div className="programas__item" 
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={`${index * 100}`}
+          >
             <a
-              className="panel panel-default panel-icon"
+              className="programas__link"
               title={items.titulo}
               href={items.url}
-              ref={el => panelRefs.current[index] = el} // Assign reference
-              data-aos="fade-up" // Add AOS fade-up animation
-              data-aos-delay={`${index * 100}`} // Optional delay for staggered animation
+              ref={el => panelRefs.current[index] = el}
             >
               {items.imagen && imagenes[items.imagen] ? (
                 <img 
                   src={imagenes[items.imagen]} 
                   alt={items.titulo} 
-                  className="panel-icon-image"
-                  style={{ width: "100%", height: 'auto', padding: '3rem' }}
+                  className="programas__imagen"
                 />
               ) : (
-                <i className={`atajo_faIcon__3OjA_ ${items.imagen}`} />
+                <i className={`programas__icono atajo_faIcon__3OjA_ ${items.imagen}`} />
               )}
-              <div className="panel-body text-center">
-                <h3>{items.titulo}</h3>
-                <p className="text-muted" aria-hidden="true">
+              <div className="programas__contenido">
+                <h3 className="programas__titulo-item">{items.titulo}</h3>
+                <p className="programas__descripcion" aria-hidden="true">
                   {items.descripcion}
                 </p>
               </div>
@@ -100,7 +71,6 @@ const ProgramasComponent = () => {
       </div>
     </div>
   );
-  
 };
 
 export default ProgramasComponent;
