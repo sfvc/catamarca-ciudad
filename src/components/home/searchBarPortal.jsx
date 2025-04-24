@@ -204,7 +204,7 @@ const InputSearch = ({searchQuery, handleChange, className}) => {
     <input
       id="edit-keys-new-home"
       className={className || `input-search-input`}
-      placeholder="¿Necesitás hacer un trámite? Buscalo en TRAMITAR por tema o palabra clave"
+      placeholder="Buscar"
       aria-label="Buscar trámites, servicios o áreas"
       type="text"
       value={searchQuery}
