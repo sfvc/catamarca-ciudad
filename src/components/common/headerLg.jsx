@@ -51,10 +51,10 @@ const HeaderLg = () => {
                         aria-label="Argentina.gob.ar Presidencia de la Nación"
                     >
                         <img
-                            src="/images/logo_CATACAPI.png"
+                            src="/images/logo_CATACAPI.webp"
                             className='navbar-header'
                             alt="Catamarca Capital"
-                            height="50"
+                            height="40"
                             width="auto"
                         />
                     </a>
