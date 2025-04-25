@@ -23,7 +23,7 @@ const MarqueeHeader = () => {
     return (
         <div className="marquee__container container">
             <a href="" className="marquee__item">
-                <i class="fa fa-info-circle marquee__icon" aria-hidden="true"></i>
+                <i className="fa fa-info-circle marquee__icon" aria-hidden="true"></i>
                 <p className="marquee__phone">{lastText}</p>
             </a>
         </div>

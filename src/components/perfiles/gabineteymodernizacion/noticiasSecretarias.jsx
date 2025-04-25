@@ -2,7 +2,7 @@ export const NoticiasSecretaria = () => {
     return ( 
         <section>
             <div className="container">
-                <div className="row ">
+                <div className="row">
                 <div className="col-md-12">
                     <h2 className="h3 section-title">Noticias Destacadas</h2>
                 </div>

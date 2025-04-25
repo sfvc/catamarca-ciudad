@@ -11,7 +11,7 @@ const PerfilIntendente = () => {
                     </h2>
                     <q>Por una Catamarca mas Unida</q>
                     <br />
-                    <time className="PerfilIntendente__periodo" datetime="">Periodo 2024 - 2028</time>
+                    <time className="PerfilIntendente__periodo" datetime="">Periodo 2023 - actualidad</time>
                 </div>
             </div>
             <div className="PerfilIntendente__redes">
@@ -28,18 +28,31 @@ const PerfilIntendente = () => {
                 </div>
             </div>
         </div>
-        <div className="PerfilIntendente__descripcion">
-            <h3 className="PerfilIntendente__titulo-nacimiento">Nacimiento y Profesión</h3>
-            <p className="PerfilIntendente__descripcion-nacimiento">Soy Gustavo Saadi, nací en mi amada Catamarca el 2 de agosto de 1975, soy abogado de profesión y político por vocación.</p>
-            <h3 className="PerfilIntendente__titulo-nacimiento">Carrera Politica</h3>
-            <p className="PerfilIntendente__descripcion-nacimiento">Milité políticamente desde muy joven, siempre dentro del Partido Justicialista, y tuve el honor de cumplir diferentes responsabilidades en la función pública.</p>           
-            <p>
-                Fui diputado provincial, secretario de Gobierno de la Capital, Asesor General de Gobierno de la Provincia de Catamarca y ministro de Gobierno y Justicia.
-            </p>
-            <p>
-                En 2017 fui electo diputado nacional y, dos años más tarde, intendente de la ciudad de San Fernando del Valle de Catamarca, Capital provincial. Creo en la igualdad de oportunidades, en la justicia social, en el respeto y el amor al prójimo, y creo sobre todo que la política sólo sirve cuando se la utiliza para trabajar para el bienestar del pueblo.
-            </p>
-        </div>
+        <section className="PerfilIntendente__descripcion">
+        <h3 className="PerfilIntendente__titulo-nacimiento">Nacimiento y profesión</h3>
+        <p className="PerfilIntendente__descripcion-nacimiento">
+          Soy Gustavo Saadi. Nací en mi querida Catamarca el 2 de agosto de 1975. 
+          Soy abogado de profesión y político por vocación.
+        </p>
+
+        <h3 className="PerfilIntendente__titulo-nacimiento">Carrera política</h3>
+        <p className="PerfilIntendente__descripcion-nacimiento">
+          Inicié mi militancia desde muy joven en el Partido Justicialista, asumiendo con orgullo 
+          diversas responsabilidades en la función pública.
+        </p>
+
+        <p>
+          Me desempeñé como diputado provincial, secretario de Gobierno de la Capital, 
+          Asesor General de Gobierno de la Provincia y ministro de Gobierno y Justicia.
+        </p>
+
+        <p>
+          En 2017 fui electo diputado nacional y, en 2019, intendente de San Fernando del Valle 
+          de Catamarca. Creo profundamente en la igualdad de oportunidades, la justicia social, 
+          el respeto, el amor al prójimo y que la política sólo tiene sentido cuando se utiliza 
+          para mejorar la vida del pueblo.
+        </p>
+      </section>
     </main>
   );
 };
