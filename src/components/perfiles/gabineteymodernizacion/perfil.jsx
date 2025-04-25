@@ -53,6 +53,11 @@ const PerfilPage = ({ perfiles }) => {
         </div>
       </section>
 
+
+      <div data-aos="fade-up">
+        <Descripcion />
+      </div>
+      
       <div data-aos="fade-up">
         <Secretario
           urlPerfil={perfiles.link}
@@ -62,10 +67,6 @@ const PerfilPage = ({ perfiles }) => {
           breveDescripcion={perfiles.breveDescripcion}
           avatarSecretario={perfiles.avatarSecretario}
         />
-      </div>
-
-      <div data-aos="fade-up">
-        <Descripcion />
       </div>
 
       <div data-aos="fade-up">

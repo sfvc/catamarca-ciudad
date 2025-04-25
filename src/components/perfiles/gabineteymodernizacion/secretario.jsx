@@ -1,8 +1,7 @@
-const Secretario = ({urlPerfil, secretaria, nombre, cargo, breveDescripcion, avatarSecretario}) => {
+const Secretario = ({secretaria, nombre, cargo, breveDescripcion, avatarSecretario}) => {
     return (
         <>
             <section className="bg-gray modulo-mapaestado " style={{borderTop: "10px solid white"}}>
-                <a href={urlPerfil} style={{all: "unset", cursor: "pointer"}}>
                     <div className="container">
                         <div className="row">
                         <div className="col-md-12">
@@ -22,7 +21,6 @@ const Secretario = ({urlPerfil, secretaria, nombre, cargo, breveDescripcion, ava
                         <div className="page-break"></div>
                         <div className="page-break"></div>
                     </div>
-                </a>
             </section>
 
         </>
