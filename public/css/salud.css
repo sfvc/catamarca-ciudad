@@ -1,0 +1,14 @@
+.btn-salud {
+    background-color: #f2931a;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-salud:hover {
+    background-color: #eea03b;
+    color: white;
+}
+
+.list-info {
+    padding-left: 20px;
+}

@@ -1,0 +1,34 @@
+---
+import Layout from "@layout/Layout.astro";
+import InfoSalud from "@components/salud/info-salud";
+---
+
+<Layout title="Salud">
+  <section class="jumbotron video-banner">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/Nodo.mp4" type="video/mp4" />
+      Tu navegador no soporta el video en HTML5.
+    </video>
+
+    <div class="jumbotron_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <h1>Salud</h1>
+            <p>
+              Mejora los sistemas y procesos internos del Estado, capacita
+              permanentemente a sus empleados e incorpora Nuevas Tecnologías a
+              la administración pública para alcanzar una gestión eficiente,
+              inclusiva y transparente que brinde más y mejores servicios a los
+              ciudadanos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
+
+  <InfoSalud client:only="react" />
+</Layout>
