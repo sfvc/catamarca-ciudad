@@ -18,5 +18,6 @@ export default defineConfig({
     '@css': path.resolve('./src/css'),
     '@data': path.resolve('./src/data'),
     '@api': path.resolve('./src/api'),
+    '@helpers': path.resolve('./src/helpers'),
   }
 });

@@ -1,44 +1,44 @@
 import { useEffect, useState } from "react";
-import { catamarcaApi } from "@api/catamarcaApi";
-
-const BuscadorMain = () => {
-    return (
-      <main className="container buscador">
-          <section className="buscador__content">
-              <BuscadorContent />
-          </section>
-      </main>
-    );
-};
+import { getTramites } from "@helpers/getTramites";
 
 const LIMIT = 5
 
-const BuscadorContent = () => {
+const BuscadorMain = () => {
+  // const [query, setQuery] = useState(null);
+
+  // useEffect(() => {
+  //   const params = new URLSearchParams(window.location.search);
+  //   const categoria = params.get("categoria");
+  //   setQuery(categoria);
+  // }, []);
+
+  const params = new URLSearchParams(window.location.search);
+  const categoriaId = params.get("categoria");
+
+  return (
+    <main className="container buscador">
+      <section className="buscador__content">
+        <BuscadorContent category={categoriaId}/>
+      </section>
+    </main>
+  );
+};
+
+const BuscadorContent = ({ category }) => {
   const [tramites, setTramites] = useState([])
   const [totalPages, setTotalPages] = useState(0)
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [categoriaId, setCategoriaId] = useState(category);
   const [currentPage, setCurrentPage] = useState(1)
 
-  // Fetching from data
-  const fetchTramites = async (query, page = 1) => {
+  const fetchTramites = async (query, page = 1, category) => {
     setIsLoading(true)
-    let params = {
-      meta: 'total_count,filter_count',
-      sort: '-nombre',
-      fields: '*,area.*,categoria.*',
-      limit: LIMIT,
-      page
-    }
-
-    if(query) {
-      params['filter[nombre][_icontains]='] = query
-    }
     
     try {
-      const response = await catamarcaApi.get(`items/tramites`, { params })
-      const { data, meta } = response.data
+      const response = await getTramites(query, page, category)
+      const { data, meta } = response
       setTramites(data)
 
       const totalPages = calculateTotalPages(meta.filter_count)
@@ -70,6 +70,8 @@ const BuscadorContent = () => {
   }
 
   useEffect(() => {
+    if(categoriaId) setCategoriaId(null)
+
     const handler = setTimeout(() => {
       setDebouncedQuery(searchQuery)
     }, 500)
@@ -80,8 +82,10 @@ const BuscadorContent = () => {
   }, [searchQuery]);
 
   useEffect(() => {
-    fetchTramites(debouncedQuery)
-  }, [debouncedQuery]);
+    // fetchTramites(debouncedQuery)
+
+    fetchTramites(debouncedQuery, 1, categoriaId);
+  }, [debouncedQuery, category]);
 
   return (
       <>
@@ -110,12 +114,12 @@ const BuscadorContent = () => {
 
                       <div className="tramite-footer">
                         <div>
-                          <span class="ribbon"
-                            ><i class="fa fa-desktop text-arandano"></i> {tramite.modalidad}</span
+                          <span className="ribbon"
+                            ><i className="fa fa-desktop text-arandano"></i> {tramite.modalidad}</span
                           >
 
-                          <span class="ribbon"
-                            ><i class="fa fa-tag text-arandano"></i>
+                          <span className="ribbon"
+                            ><i className="fa fa-tag text-arandano"></i>
                             {tramite.categoria.nombre}</span
                           >
                         </div>

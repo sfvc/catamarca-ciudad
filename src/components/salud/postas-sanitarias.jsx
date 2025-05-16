@@ -1,4 +1,5 @@
 import LeafletMap from "@components/map/LeafletMap";
+import { postas } from "./data";
 
 export default function PostasSanitarias() {
   return (
@@ -13,7 +14,7 @@ export default function PostasSanitarias() {
           overflow: "hidden",
         }}
       >
-        <LeafletMap />
+        <LeafletMap markers={postas}/>
       </div>
     </section>
   );

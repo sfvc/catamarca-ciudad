@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ModalMobile from "../common/modalMobile";
-import { catamarcaApi } from "@api/catamarcaApi";
+import { getTramites } from "@helpers/getTramites";
 
 const SearchBarPortal = () => {
   const searchRef = useRef();
@@ -48,18 +48,20 @@ const SearchBarPortal = () => {
   };
 
   // Fetching from data
-  const fetchTramites = async (query) => {
+  const fetchTramites = async (query, page = 1) => {
     setIsLoading(true)
+    
     try {
-      const response = await catamarcaApi.get(`/items/tramites?filter[titulo][_contains]=${query}&sort=-titulo&limit=5`)
-      const { data } = response.data
+      const response = await getTramites(query, page)
+      const { data } = response
       setTramites(data)
+
     } catch (error) {
       console.log(error)
     } finally {
       setIsLoading(false)
     }
-  } 
+  }
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -127,10 +129,9 @@ const SearchModalDeskopt = ({tramites, debouncedQuery, isLoading}) => {
                     <div className="searchModalDeskopt__list-item-div">
                       <img className="searchModalDeskopt__list-item-img" src="/images/tramiteDefault.svg" alt="" style={{ width: '36px', height: '24px' }} />
                       <p className="searchModalDeskopt__list-item-p">
-                        {tramite.titulo} - {tramite.descripcion}
+                        {tramite.nombre} - {tramite.objeto}
                       </p>
                     </div>
-                    <small className="searchModalDeskopt__list-item-small">Tramite</small>
                   </a>
                 </li>
               ))
@@ -139,7 +140,6 @@ const SearchModalDeskopt = ({tramites, debouncedQuery, isLoading}) => {
                 <div className="searchModalDeskopt__list-item-div">
                   <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
                 </div>
-                <small className="searchModalDeskopt__list-item-small">Tramite</small>
               </li>
             }
             <li className="searchModalDeskopt__list-item-vermas">
@@ -168,10 +168,9 @@ const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading }) => 
                   <div className="searchModalDeskopt__list-item-div">
                     <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
                     <p className="searchModalDeskopt__list-item-p">
-                      {tramite.titulo} - {tramite.descripcion}
+                      {tramite.nombre} - {tramite.objeto}
                     </p>
                   </div>
-                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
                 </a>
               </li>
             ))
@@ -180,7 +179,6 @@ const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading }) => 
               <div className="searchModalDeskopt__list-item-div">
                 <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
               </div>
-              <small className="searchModalDeskopt__list-item-small">Tramite</small>
             </li>
           }
           <li className="searchModalDeskopt__list-item-vermas">

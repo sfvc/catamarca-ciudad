@@ -1,4 +1,5 @@
 import LeafletMap from "@components/map/LeafletMap";
+import { diagnostico_imagen } from "./data";
 
 export default function DiagnosticoImagen() {
   return (
@@ -13,7 +14,7 @@ export default function DiagnosticoImagen() {
           overflow: "hidden",
         }}
       >
-        <LeafletMap />
+        <LeafletMap markers={diagnostico_imagen}/>
       </div>
     </section>
   )
