@@ -52,6 +52,9 @@ const Home = () => {
           <PortalARG/>
           <HomeSliderPage/>
           <ProgramasComponent/>
+          <div className="home-banner">
+            ¡Bienvenido a la Municipalidad de Catamarca Ciudad!
+          </div>
           <NoticiasGnral/>
         </main>
     </>
