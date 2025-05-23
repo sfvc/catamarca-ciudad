@@ -46,9 +46,12 @@ const HeaderLg = () => {
                 <div className="navbar-header">
                     <a
                         className="navbar-brand"
+                        style={{
+                            height: 'auto !important',
+                        }}  
                         href="/"
                         id="navbar-brand"
-                        aria-label="Argentina.gob.ar Presidencia de la Nación"
+                        aria-label="Catamarca Capital"
                     >
                         <img
                             src="/images/logo_CATACAPI.webp"
@@ -115,7 +118,6 @@ const HeaderLg = () => {
                             style={{
                                 textDecoration: 'none',
                             }}
-                            target="_blank"
                         >
                             Contacto
                         </a>

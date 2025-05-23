@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { catamarcaApi } from "@api/catamarcaApi";
+import Cargando from "@components/common/Cargando";
 
 const CategoriasTramites = ({ id, url, info }) => {
   const [tramites, setTramites] = useState([]);
@@ -46,7 +47,7 @@ const CategoriasTramites = ({ id, url, info }) => {
   return (
     <>
       {tramites.length === 0 ? (
-        <p>Cargando Tramites</p>
+        <Cargando />
       ) : (
         <div className="Tramites__container">
           <div

@@ -43,7 +43,7 @@
     top: 76px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 2;
     width: 90vw;
     max-width: 1140px;
     margin-top: 1.2rem;
@@ -357,8 +357,6 @@ input {
 
 .home_titulo {
     text-align: center;
-    text-shadow: 1px 0 #001529, -1px 0 #001529, 0 1px #001529, 0 -1px #001529,
-        1px 1px #001529, -1px -1px #001529, 1px -1px #001529, -1px 1px #001529;
 }
 
 @media (max-width: 768px) {
@@ -499,10 +497,10 @@ input {
 }
 
 .input-group {
-    width: 75%;
+    width: 100%;
     border: lightgray;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -511,16 +509,16 @@ input {
 
 .searchModalDeskopt {
     position: absolute;
-    top: 100%;
+    top: 90%;
     width: 100%;
-    /* left: 50%; */
+    left: 50%;
     /* background-color: black; */
     /* height: 40dvh; */
     margin-top: 4px;
     border-radius: 10px;
     z-index: 3;
     transition: opacity 0.3s ease;
-    /* transform: translate(-50%, 0%);  */
+    transform: translate(-50%, 0%); 
 }
 
 .searchModalDeskopt--active {
@@ -570,6 +568,10 @@ input {
     font-weight: 500 !important;
 }
 
+.jumbotron .jumbotron_body p{
+    text-shadow: none !important;
+}
+
 .searchModalDeskopt__list-item-small {
     color: gray;
 }
@@ -593,15 +595,16 @@ input {
     background-color: #001529;
     padding: 16px 6px;
     font-weight: 500;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .searchModalDeskopt__list-item-vermas-a {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
 
@@ -622,6 +625,7 @@ input {
         padding: 10px;
         border-radius: 6px;
         margin-block: 10px;
+        color: gray;
     }
 
     .searchModalDeskopt__list-item-span-mobile {
@@ -682,11 +686,6 @@ input {
 
 
 /* PROGRAMAS */
-.programas {
-}
-
-.programas__titulo {
-}
 
 .programas__lista {
     display: grid;
@@ -730,23 +729,212 @@ input {
     width: 150px;
 }
 
-.programas__icono {
+.programas__ver-mas{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 1rem !important;
 }
 
-.programas__contenido {
+.home-banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
 }
 
-.programas__titulo-item {
+.home-banner__carousel,
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%; /* Asegura que el carrusel y cada slide ocupen todo el alto */
 }
 
-.programas__descripcion {
+.home-banner__slide {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Asegura que el overlay tenga espacio */
 }
 
+.home-banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Asegura que cubra toda la altura del slide */
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-banner__content {
+  text-align: center;
+  color: white;
+}
+
+.home-banner__text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0 20px;
+}
+
+.home-banner__button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #232d4f;
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none !important;  
+
+}
+
+.home-banner__button:hover {
+    background-color: #001529 !important;
+  color: white;  
+  text-decoration: none !important;
+}
+
+.home-banner-group {
+  padding: 1rem 2rem;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.home-banner-group__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 16px; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-banner-group__item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-banner-group__item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.home-banner-group__image {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.home-banner-group__content {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  color: white;
+  position: relative;
+}
+
+.home-banner-group__button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+.home-banner-group__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.home-banner-group__description {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Estilo específico por posición */
+.home-banner-group__item--1 {
+  grid-column: 1 / 3;  /* Ocupa las dos primeras columnas */
+  grid-row: 1 / 3;      /* Ocupa ambas filas */
+}
+
+.home-banner-group__item--2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.home-banner-group__item--3 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.home-banner-group__titulos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bolder;
+    padding: 1rem 0;
+}
+
+.home-banner-group__titulos h1, 
+.home-banner-group__titulos p{
+    font-weight: bold;
+}
+
+.redes-embeb__swiper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+
+}
+
+.embedded-post {
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron .jumbotron_body{
+    z-index: 15 !important;
+}
+
+.programas__titulo{
+    text-align: center !important;
+}
 
 @media (max-width: 767.98px){
     .programas__lista {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
+
+    .home-banner-group__list {
+    grid-template-columns: 1fr; /* Solo una columna */
+    grid-template-rows: auto;   /* Filas automáticas */
+  }
+
+  .home-banner-group__item--1,
+  .home-banner-group__item--2,
+  .home-banner-group__item--3,
+  .home-banner-group__item--4 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
 
     .programas__imagen{
         width: 75px;

@@ -69,6 +69,9 @@ const ProgramasComponent = () => {
           </div>
         ))}
       </div>
+      <div className="container-fluid programas__ver-mas">
+        <a href="/serviciosPlanesProgramas" className="btn btn-primary">Ver más</a>
+      </div>
     </div>
   );
 };

@@ -82,35 +82,38 @@ const SearchBarPortal = () => {
   }, [debouncedQuery]);
 
   return (
-    <div className="input-group" ref={isMobile ? searchRef : null} onClick={handleInputClick}>
-      <label className="sr-only" htmlFor="edit-keys-new-home">
-        Buscar en el sitio
-      </label>
+    <>
+      <div className="input-group" ref={isMobile ? searchRef : null} onClick={handleInputClick}>
+        <label className="sr-only" htmlFor="edit-keys-new-home">
+          Buscar en el sitio
+        </label>
 
-      <InputSearch searchQuery={searchQuery} handleChange={handleChange} />
+        <InputSearch searchQuery={searchQuery} handleChange={handleChange} />
 
-      {/* Conditionally render the search modal for desktop or mobile */}
-      {
-        (isMobile && searchMobileOpen) && 
-        <SearchModalMobile 
-          onClose={handleCloseModal} 
-          handleChange={handleChange}
-          tramites={tramites} 
-          debouncedQuery={debouncedQuery} 
-          isLoading={isLoading}
-        />
-      }
+      </div>
+        {/* Conditionally render the search modal for desktop or mobile */}
+        {
+          (isMobile && searchMobileOpen) && 
+          <SearchModalMobile 
+            onClose={handleCloseModal} 
+            handleChange={handleChange}
+            tramites={tramites} 
+            debouncedQuery={debouncedQuery} 
+            isLoading={isLoading}
+            searchQuery={searchQuery} // ✅ AÑADÍ ESTA LÍNEA
+          />
+        }
 
-      {
-        !isMobile && 
-        <SearchModalDeskopt 
-          tramites={tramites} 
-          debouncedQuery={debouncedQuery} 
-          isLoading={isLoading}
-          searchQuery={searchQuery}
-        />
-      }
-    </div>
+        {
+          !isMobile && 
+          <SearchModalDeskopt 
+            tramites={tramites} 
+            debouncedQuery={debouncedQuery} 
+            isLoading={isLoading}
+            searchQuery={searchQuery}
+          />
+        }
+    </>
   );
 };
 
@@ -119,81 +122,92 @@ const SearchModalDeskopt = ({tramites, debouncedQuery, isLoading}) => {
     <>
       {
         debouncedQuery && 
-        <div className="searchModalDeskopt">
-          <ul className="searchModalDeskopt__list">
-            {
-              tramites.length > 0
-              ? tramites.map((tramite) => (
-                <li key={tramite.id}>
-                  <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
-                    <div className="searchModalDeskopt__list-item-div">
-                      <img className="searchModalDeskopt__list-item-img" src="/images/tramiteDefault.svg" alt="" style={{ width: '36px', height: '24px' }} />
-                      <p className="searchModalDeskopt__list-item-p">
-                        {tramite.nombre} - {tramite.objeto}
-                      </p>
-                    </div>
-                  </a>
+          <div className="searchModalDeskopt">
+            <ul className="searchModalDeskopt__list">
+              {
+                tramites.length > 0
+                ? tramites.map((tramite) => (
+                  <li key={tramite.id}>
+                    <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
+                      <div className="searchModalDeskopt__list-item-div">
+                        <img className="searchModalDeskopt__list-item-img" src="/images/tramiteDefault.svg" alt="" style={{ width: '36px', height: '24px' }} />
+                        <p className="searchModalDeskopt__list-item-p">
+                          {tramite.nombe} - {tramite.objeto}
+                        </p>
+                      </div>
+                      <small className="searchModalDeskopt__list-item-small">Tramite</small>
+                    </a>
+                  </li>
+                ))
+                : 
+                <li className="searchModalDeskopt__list-item">
+                  <div className="searchModalDeskopt__list-item-div">
+                    <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
+                  </div>
+                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
                 </li>
-              ))
-              : 
-              <li className="searchModalDeskopt__list-item">
-                <div className="searchModalDeskopt__list-item-div">
-                  <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
-                </div>
+              }
+              <li className="searchModalDeskopt__list-item-vermas">
+                <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
+                  <span>Ver mas</span>
+                  <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
+                </a>
               </li>
-            }
-            <li className="searchModalDeskopt__list-item-vermas">
-              <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
-                <span>Ver mas</span>
-                <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
-              </a>
-            </li>
-          </ul>
-        </div>
+            </ul>
+          </div>
       }
     </>
   );
 };
 
-const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading }) => {
+const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading, searchQuery, handleChange }) => {
   return (
-    <ModalMobile isOpen={true} onClose={onClose}>
-      <div>
-        <ul className="searchModalDeskopt__list">
-          {
-            tramites.length > 0
-            ? tramites.map((tramite) => (
-              <li key={tramite.id}>
-                <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
+        <ModalMobile className="custom-zindex" isOpen={true} onClose={onClose}>
+          <div
+            className="searchModalDeskopt__list--mobile"
+            onClick={(e) => e.stopPropagation()} // <- Este bloquea la propagación
+          >
+            <ul className="searchModalDeskopt__list">
+              {
+                tramites.length > 0
+                ? tramites.map((tramite) => (
+                  <li key={tramite.id}>
+                    <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
+                      <div className="searchModalDeskopt__list-item-div">
+                        <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
+                        <p className="searchModalDeskopt__list-item-p">
+                          {tramite.nombe} - {tramite.objeto}
+                        </p>
+                      </div>
+                      <small className="searchModalDeskopt__list-item-small">Tramite</small>
+                    </a>
+                  </li>
+                ))
+                : 
+                <li className="searchModalDeskopt__list-item">
                   <div className="searchModalDeskopt__list-item-div">
-                    <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
-                    <p className="searchModalDeskopt__list-item-p">
-                      {tramite.nombre} - {tramite.objeto}
-                    </p>
+                    <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
                   </div>
+                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
+                </li>
+              }
+              <li className="searchModalDeskopt__list-item-vermas">
+                <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
+                  <span>Ver mas</span>
+                  <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
                 </a>
               </li>
-            ))
-            : 
-            <li className="searchModalDeskopt__list-item">
-              <div className="searchModalDeskopt__list-item-div">
-                <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
-              </div>
-            </li>
-          }
-          <li className="searchModalDeskopt__list-item-vermas">
-            <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
-              <span>Ver mas</span>
-              <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
-            </a>
-          </li>
-        </ul>
+            </ul>
+            <span className="searchModalDeskopt__list-item-span-mobile">
+              <InputSearch
+                className="searchModalDeskopt__list-item-input-mobile"
+                searchQuery={searchQuery}
+                handleChange={handleChange}
+              />
+            </span>
 
-        <span className="searchModalDeskopt__list-item-span-mobile">
-          <InputSearch className='searchModalDeskopt__list-item-input-mobile' />
-        </span>
-      </div>
-    </ModalMobile>
+          </div>
+        </ModalMobile>
   );
 };
 

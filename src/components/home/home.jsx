@@ -1,16 +1,20 @@
-import { useRef, useEffect } from 'react';
-import HomeSliderPage from './homeSlider';
-import NoticiasGnral from './noticiasGnral';
-import { PortalARG } from './portalarg';
-import ProgramasComponent from './programas';
+import { useRef, useEffect } from "react";
+import HomeSliderPage from "./homeSlider";
+import NoticiasGnral from "./noticiasGnral";
+import { PortalARG } from "./portalarg";
+import ProgramasComponent from "./programas";
+import HomeBanner from "./homeBanner";
+import HomeBannerGroup from "./homeBannerGroup";
+import RedesEmbeb from "./redesEmbeb";
 
 const Home = () => {
-    const panelRef = useRef(null); // Reference to the container of panels
+  const panelRef = useRef(null); // Reference to the container of panels
 
-    useEffect(() => {
-      // Set up IntersectionObserver
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+  useEffect(() => {
+    // Set up IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Trigger the GSAP animation when the component is in the viewport
             gsap.fromTo(
@@ -30,33 +34,37 @@ const Home = () => {
             observer.unobserve(entry.target); // Unobserve after triggering animation
           }
         });
-      }, {
+      },
+      {
         threshold: 0.5, // Trigger when at least 50% of the component is in the viewport
-      });
-  
-      if (panelRef.current) {
-        observer.observe(panelRef.current); // Start observing the panel container
       }
-  
-      // Clean up the observer on component unmount
-      return () => {
-        if (panelRef.current) {
-          observer.unobserve(panelRef.current);
-        }
-      };
-    }, []);
+    );
+
+    if (panelRef.current) {
+      observer.observe(panelRef.current); // Start observing the panel container
+    }
+
+    // Clean up the observer on component unmount
+    return () => {
+      if (panelRef.current) {
+        observer.unobserve(panelRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <>  
-        <main ref={panelRef}>
-          <PortalARG/>
-          <HomeSliderPage/>
-          <ProgramasComponent/>
-          <NoticiasGnral/>
-        </main>
+    <>
+      <main ref={panelRef}>
+        <PortalARG />
+        <HomeSliderPage />
+        <HomeBannerGroup/>
+        <ProgramasComponent />
+        <HomeBanner/>
+        <NoticiasGnral />
+        <RedesEmbeb/>
+      </main>
     </>
   );
 };
-
 
 export default Home;

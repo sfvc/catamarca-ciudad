@@ -1,0 +1,36 @@
+---
+import ServiciosPlanesProgramasComponent from "@components/serviciosPlanesProgramas/ServiciosPlanesProgramas";
+import Layout from "@layout/Layout.astro";
+---
+
+<Layout>
+  <section class="jumbotron video-banner">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/Nodo.mp4" type="video/mp4" />
+      Tu navegador no soporta el video en HTML5.
+    </video>
+
+    <div class="jumbotron_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <h1>Eventos y Deportes</h1>
+            <p>
+              Los eventos y actividades deportivas fortalecen los lazos
+              comunitarios, promueven hábitos saludables y generan espacios de
+              encuentro e inclusión. A través del deporte, se impulsa el
+              desarrollo integral de las personas y se fomenta una sociedad más
+              activa, unida y participativa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
+
+  <ServiciosPlanesProgramasComponent client:only="react" />
+
+  </div>
+</Layout>

@@ -1,0 +1,35 @@
+---
+import ServiciosPlanesProgramasComponent from "@components/serviciosPlanesProgramas/ServiciosPlanesProgramas";
+import Layout from "@layout/Layout.astro";
+---
+
+<Layout>
+  <section class="jumbotron video-banner">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/Nodo.mp4" type="video/mp4" />
+      Tu navegador no soporta el video en HTML5.
+    </video>
+
+    <div class="jumbotron_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <h1>Tramites a Distancia</h1>
+            <p>
+              Trámites a Distancia permite a los ciudadanos gestionar servicios
+              públicos de manera rápida, segura y sin necesidad de trasladarse,
+              promoviendo una administración más accesible, moderna y eficiente.
+              Esta herramienta digital fortalece la transparencia y facilita la
+              interacción entre el Estado y la sociedad, reduciendo tiempos y
+              costos administrativos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
+
+  <ServiciosPlanesProgramasComponent client:only="react" />
+</Layout>
