@@ -77,7 +77,6 @@
     justify-content: center;
     gap: 10px;
     height: 100%;
-    z-index: 3;
     flex-direction: column;
   }
   
@@ -108,4 +107,8 @@
   
   .mySwiper{
     padding: 1rem 0px !important;
+  }
+
+  .swiper-pagination{
+    z-index: 1 !important;
   }

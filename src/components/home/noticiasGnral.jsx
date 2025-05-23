@@ -82,8 +82,8 @@ const NoticiasGnral = () => {
         )}
       </div>
 
-      <div className="container-fluid m-r-0 p-r-0">
-        <a href="#" className="btn btn-primary">Ver más</a>
+      <div className="">
+        <a href="https://noticias.apps.cc.gob.ar/" className="btn btn-primary">Ver más</a>
       </div>
     </div>
   );

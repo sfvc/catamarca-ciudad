@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import HeaderMobileNav from '@components/common/headerMobileNav';
 import Modal from '@components/common/modal';
+import ModalMobile from './modalMobile';
 
 const HeaderMobile = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,15 +60,22 @@ const HeaderMobile = () => {
     }, [isModalOpen]);// Trigger this effect when isModalOpen changes
 
     return (
-        <nav className="HeaderMobile border-bottom-amarillo">
+        <nav className="HeaderMobile border-bottom-amarillo" style={{ borderBottom: "3px solid #f2931a", backgroundColor: "#001529" }}>
             <div className="navbar-headerMobile">
-                <a href="/" aria-label="Argentina.gob.ar Presidencia de la Nación">
-                    <img
-                        src="/images/logo-new-2020.png"
-                        alt="Argentina.gob.ar"
-                        height="42"
-                    />
-                </a>
+                    <a
+                        className="navbar-brand"
+                        href="/"
+                        id="navbar-brand"
+                        aria-label="Catamarca Capital"
+                    >
+                        <img
+                            src="/images/logo_CATACAPI.webp"
+                            className='navbar-header'
+                            alt="Catamarca Capital"
+                            height="25"
+                            width="auto"
+                        />
+                    </a>
                 <img
                     src="/images/menu.svg"
                     alt="Menu Icon"
@@ -75,7 +83,6 @@ const HeaderMobile = () => {
                 />
             </div>
 
-            {/* Modal component with GSAP animation */}
             <Modal clase='modal' isOpen={isModalOpen}>
                 <div className='modal' onClick={closeModal}></div>
                 <div className="modalHeaderMobile" ref={modalRef}>
