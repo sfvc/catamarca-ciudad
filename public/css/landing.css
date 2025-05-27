@@ -1,0 +1,69 @@
+/* BEM structure for landing card and photo grid */
+.landing-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.landing-card__desc {
+  font-size: large;
+  color: gray;
+  font-weight: bold;
+}
+.landing-card__btn {
+  background: #001529;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  margin-block: 1.5rem;
+  float: right;
+  text-decoration: none;  
+}
+.landing-card__btn:hover {
+  text-decoration: none;  
+  color: white;
+
+}
+.letfleet-map-section {
+  width: 100%;
+  margin: 2rem 0;
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 1.5rem 0 2rem 0;
+}
+.letfleet-map-section__title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+.letfleet-map-section__map-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+@media (max-width: 600px) {
+  .letfleet-map-section__map-container iframe {
+    height: 220px;
+  }
+}
+
+

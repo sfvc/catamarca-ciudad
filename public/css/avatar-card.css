@@ -1,0 +1,95 @@
+/* BEM structure for avatar card */
+.avatar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  max-width: 320px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.avatar-card__image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #e0e0e0;
+}
+.avatar-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.avatar-card__desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.avatar-card__btn {
+  background: #0aa9e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.avatar-card__btn:hover {
+  background: #088bb8;
+}
+.avatar-card--full {
+  width: 100%;
+  max-width: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 2rem 0;
+}
+
+.photo-grid-section {
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  padding: 0 0 2rem 0;
+  background: #f8f9fa;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.photo-grid-section__title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: #222;
+  padding-top: 2rem;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem 2rem 2rem;
+}
+.photo-grid__item {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  background: #fff;
+}
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem 1rem 0.5rem;
+  }
+  .photo-grid__item {
+    height: 120px;
+  }
+}
