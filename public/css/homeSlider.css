@@ -79,6 +79,7 @@
     flex-direction: column;
     z-index: 1;
     border: 1px solid #f2931a;
+    background: #1d2b4e;
   }
   
   .homeSlider-item-title {

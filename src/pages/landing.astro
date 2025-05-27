@@ -1,6 +1,5 @@
 ---
 import Layout from "@layout/Layout.astro";
-
 ---
 
 <Layout>
@@ -30,13 +29,131 @@ import Layout from "@layout/Layout.astro";
     <div class="overlay"></div>
   </section>
 
-  <div class="container">
-    <h1 class="text-center">Sobre Nosotros</h1>
+  <section class="bg-gray section-sm">
+    <div class="">
+      <div class="panel-pane pane-atajos">
+        <div class="pane-content">
+          <ul class="nav nav-icons nav-icons-selected">
+            <li class="">
+              <a href="#2"
+                ><i class="icono-arg-dni bg-primary"></i><span
+                  >Protección de datos personales</span
+                ></a
+              >
+            </li><li class="">
+              <a href="#3"
+                ><i class="icono-arg-tramite bg-fucsia"></i><span
+                  >Trámites y servicios</span
+                ></a
+              >
+            </li><li class="">
+              <a href="#4"
+                ><i class="fa fa-legal bg-warning"></i><span>Normativa</span></a
+              >
+            </li><li class="">
+              <a href="/aaip/consejo-federal-transparencia"
+                ><i class="icono-arg-mapa-argentina bg-uva"></i><span
+                  >Consejo Federal para la Transparencia</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" id="2">
+    <h2 class="text-center">Sobre Nosotros</h2>
     <div class="landing-card">
       <em class="landing-card__desc">
-        Este proyecto tiene como objetivo fundamental la defensa de los derechos de las mujeres y su inclusión plena en todos los ámbitos de la vida pública y privada. A través de iniciativas tecnológicas y políticas públicas con enfoque de género, buscamos construir una sociedad más justa, equitativa y libre de violencia. Promovemos la participación activa de las mujeres en la innovación, garantizamos su acceso a recursos digitales y desarrollamos plataformas que visibilicen y respondan a sus necesidades específicas. Creemos firmemente que la transformación del Estado debe ser también una transformación feminista.
+        Este proyecto tiene como objetivo fundamental la defensa de los derechos
+        de las mujeres y su inclusión plena en todos los ámbitos de la vida
+        pública y privada. A través de iniciativas tecnológicas y políticas
+        públicas con enfoque de género, buscamos construir una sociedad más
+        justa, equitativa y libre de violencia. Promovemos la participación
+        activa de las mujeres en la innovación, garantizamos su acceso a
+        recursos digitales y desarrollamos plataformas que visibilicen y
+        respondan a sus necesidades específicas. Creemos firmemente que la
+        transformación del Estado debe ser también una transformación feminista.
       </em>
     </div>
-      <a href="/contacto" class="landing-card__btn">Visita Nuestra Pagina</a>
   </div>
+
+  <div class="landing-map container" id="3">
+    <iframe
+      src="https://www.google.com/maps?q=Av.+G%C3%BCemes+650,+San+Fernando+del+Valle+de+Catamarca&output=embed"
+      class="landing-map__iframe"
+      width="100%"
+      height="350"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación en el mapa"></iframe>
+  </div>
+
+  <div class="container" id="4">
+    <h2 class="text-center">Contacto</h2>
+    <div class="landing-card landing-card--contact">
+      <ul class="contact-info">
+        <li>
+          <i class="fa fa-envelope fa-fw text-primary"></i>
+          <strong>Email:</strong>
+          <a href="mailto:contacto@catamarcaciudad.gob.ar" class="contact-link"
+            >contacto@catamarcaciudad.gob.ar</a
+          >
+        </li>
+        <li>
+          <i class="fa fa-phone fa-fw text-success"></i>
+          <strong>Teléfono:</strong>
+          <a href="tel:+543834450000" class="contact-link">(383) 445-0000</a>
+        </li>
+        <li>
+          <i class="fa fa-map-marker fa-fw text-danger"></i>
+          <strong>Dirección:</strong>
+          <span class="contact-address"
+            >Av. Güemes 650, San Fernando del Valle de Catamarca</span
+          >
+        </li>
+        <li>
+          <i class="fa fa-clock-o fa-fw text-warning"></i>
+          <strong>Horario de atención:</strong>
+          <span class="contact-hours">Lunes a Viernes de 8:00 a 13:00 hs</span>
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="text-center">Redes Sociales:</h2>
+    <div class="landing-redes">
+      <a
+        href="https://facebook.com/catamarcaciudad"
+        class="btn btn-social-icon"
+        target="_blank"
+        rel="noopener"
+        title="Facebook"
+      >
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a
+        href="https://twitter.com/catamarcaciudad"
+        class="btn btn-social-icon"
+        target="_blank"
+        rel="noopener"
+        title="Twitter"
+      >
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a
+        href="https://instagram.com/catamarcaciudad"
+        class="btn btn-social-icon"
+        target="_blank"
+        rel="noopener"
+        title="Instagram"
+      >
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+
+  <a href="/contacto" class="landing-card__btn">Visita Nuestra Pagina</a>
 </Layout>
