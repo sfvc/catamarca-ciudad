@@ -4,7 +4,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://137.184.4.18:8055',
+        target: 'https://apis.v1.cc.gob.ar/directus',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       }

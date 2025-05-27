@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ModalMobile from "@components/common/modalMobile";
-import { catamarcaApi } from "@api/catamarcaApi";
+import { getTramites } from "@helpers/getTramites";
 import { PortalARG } from "./portalarg";
 
 const SearchBarPortal = ({ jumbotronRef }) => {
@@ -85,21 +85,20 @@ const SearchBarPortal = ({ jumbotronRef }) => {
 
   // Fetch
   useEffect(() => {
-    const fetchTramites = async () => {
-      if (!debouncedQuery) return setTramites([]);
-      setIsLoading(true);
-      try {
-        const response = await catamarcaApi.get(
-          `/items/tramites?filter[titulo][_contains]=${debouncedQuery}&sort=-titulo&limit=5`
-        );
-        setTramites(response.data.data);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setIsLoading(false);
+    const fetchTramites = async (query, page = 1, category) => {
+        setIsLoading(true)
+        try {
+          const response = await getTramites(query, page, category)
+          const { data } = response
+          setTramites(data)
+
+        } catch (error) {
+          console.log(error)
+        } finally {
+          setIsLoading(false)
+        }
       }
-    };
-    fetchTramites();
+    fetchTramites(debouncedQuery);
   }, [debouncedQuery]);
 
   return (
@@ -170,12 +169,12 @@ const SearchModalDeskopt = ({
                     style={{ width: "36px", height: "24px" }}
                   />
                   <p className="searchModalDeskopt__list-item-p">
-                    {tramite.titulo} - {tramite.descripcion}
+                    {tramite.nombre} - {tramite.objeto}
                   </p>
                 </div>
-                <small className="searchModalDeskopt__list-item-small">
+                {/* <small className="searchModalDeskopt__list-item-small">
                   Tramite
-                </small>
+                </small> */}
               </a>
             </li>
           ))
@@ -186,9 +185,9 @@ const SearchModalDeskopt = ({
                 {isLoading ? "Cargando..." : "No se encontraron resultados"}
               </p>
             </div>
-            <small className="searchModalDeskopt__list-item-small">
+            {/* <small className="searchModalDeskopt__list-item-small">
               Tramite
-            </small>
+            </small> */}
           </li>
         )}
         <li className="searchModalDeskopt__list-item-vermas">
@@ -240,12 +239,12 @@ const SearchModalMobile = ({
                       style={{ width: "36px" }}
                     />
                     <p className="searchModalDeskopt__list-item-p">
-                      {tramite.titulo} - {tramite.descripcion}
+                      {tramite.nombre} - {tramite.objeto}
                     </p>
                   </div>
-                  <small className="searchModalDeskopt__list-item-small">
+                  {/* <small className="searchModalDeskopt__list-item-small">
                     Tramite
-                  </small>
+                  </small> */}
                 </a>
               </li>
             ))

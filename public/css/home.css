@@ -498,7 +498,7 @@ input {
 }
 
 .input-group {
-    width: 100%;
+    width: 80%;
     border: lightgray;
     background-color: white;
     border-radius: 0.5rem;

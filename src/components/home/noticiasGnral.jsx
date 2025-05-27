@@ -52,7 +52,7 @@ const NoticiasGnral = () => {
             return (
               <a
                 key={noticia.id}
-                href={`/news/${noticia.id}`}
+                href={`https://noticias-2.netlify.app/noticia/${noticia.id}`}
                 className={`div${index + 1} grid-item`}
               >
                 <div className="overlay">

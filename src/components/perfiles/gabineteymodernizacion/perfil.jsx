@@ -20,7 +20,7 @@ const PerfilPage = ({ perfiles }) => {
         descripcion={perfiles?.descripcion}
       />
 
-      <section className="bg-gray section-sm">
+      {/* <section className="bg-gray section-sm">
         <div data-aos="fade-up">
           <div className="panel-pane pane-atajos">
             <div className="pane-content">
@@ -51,13 +51,17 @@ const PerfilPage = ({ perfiles }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       <div data-aos="fade-up">
-        <Descripcion />
+        <Descripcion
+          seccionDescripcion={perfiles.seccionDescripcion}
+          queHacemos={perfiles.queHacemos}
+          misionVision={perfiles.misionVision}
+        />
       </div>
-      
+
       <div data-aos="fade-up">
         <Secretario
           urlPerfil={perfiles.link}
@@ -70,12 +74,12 @@ const PerfilPage = ({ perfiles }) => {
       </div>
 
       <div data-aos="fade-up">
-        <TramitesSecretarias />
+        <TramitesSecretarias tramitesDestacados={perfiles.tramitesDestacados} />
       </div>
 
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <NoticiasSecretaria />
-      </div>
+      </div> */}
     </main>
   );
 };

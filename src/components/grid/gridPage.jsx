@@ -8,7 +8,6 @@ const GridPage = ({ endpoint, titulo, href, tramite }) => {  // Recibe el endpoi
   const cargarCategoriasTramite = async () => {
     try {
       const { data } = await catamarcaApi.get(endpoint);  // Usa el endpoint pasado como prop
-      console.log(data);
       setCategorias(data.data);
       returnIcon(data.data);
     } catch (error) {
@@ -44,7 +43,7 @@ const GridPage = ({ endpoint, titulo, href, tramite }) => {  // Recibe el endpoi
         {categorias.map((card, index) => (
           <a
             key={index}
-            href={`${href}/${card.id}`}
+            href={`${href}?categoria=${card.id}`}
             style={{ all: "unset" }}
             target={card.external ? "_blank" : "_self"}
           >
@@ -59,12 +58,6 @@ const GridPage = ({ endpoint, titulo, href, tramite }) => {  // Recibe el endpoi
             </div>
           </a>
         ))}
-      </div>
-      <div className="TramistedGrid__btnContainer">
-        <a className="TramistedGrid__btnVolver gridBtn" href="/">
-          <img src="/images/arrowback.svg" alt="back" />
-          Volver
-        </a>
       </div>
     </div>
   );

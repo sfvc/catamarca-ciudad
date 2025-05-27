@@ -12,6 +12,7 @@
       "@css/*": ["css/*"],
       "@data/*": ["data/*"],
       "@api/*": ["api/*"],
+      "@helpers/*": ["helpers/*"],
     }
   }
 }

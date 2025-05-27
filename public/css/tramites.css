@@ -8,14 +8,17 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 4 columns */
   grid-template-rows: auto;    /* 4 rows */
-  padding: 0;
+  /* padding: 0; */
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .TramistedGrid__card {
   background-color: transparent; /* Card background */
   border-radius: 8px;        /* Rounded corners */
-  padding-inline: 16px;
-  padding-block: 16px;
+  border: 1px solid lightgray;
+  padding-inline: 8px;
+  padding-block: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,8 +29,10 @@
   text-align: center;
 }
 
-.TramistedGrid__card:hover {
-  transform: translateY(-2px); /* Elevate the card by 2px on hover */
+.TramistedGrid__card:hover{
+  border: 1px solid #e7ba61;
+  box-shadow: 0px 0px 4px 0px #e7ba61;
+  transform: translateY(-5px);
 }
 
 .TramistedGrid__card-title {
@@ -38,7 +43,6 @@
 .TramistedGrid__card-content {
   font-size: 1em;            /* Card content size */
 }
-
 
 .TramistedGrid__btnContainer{
   height: auto;
