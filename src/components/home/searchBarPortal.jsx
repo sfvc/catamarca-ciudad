@@ -1,215 +1,294 @@
 import { useEffect, useRef, useState } from "react";
-import ModalMobile from '@components/common/modalMobile';
+import ModalMobile from "@components/common/modalMobile";
 import { catamarcaApi } from "@api/catamarcaApi";
+import { PortalARG } from "./portalarg";
 
-const SearchBarPortal = () => {
-  const searchRef = useRef();
+const SearchBarPortal = ({ jumbotronRef }) => {
   const [searchMobileOpen, setSearchMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [isMobile, setIsMobile] = useState(false);  // Track if window is mobile-sized
-  const [tramites, setTramites] = useState([])
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023.98);
+  const [tramites, setTramites] = useState([]);
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const inputRef = useRef(null);
+  const [modalPosition, setModalPosition] = useState({
+    top: 0,
+    left: 0,
+    width: 0,
+  });
 
-  // Handle search query change
-  const handleChange = (event) => {
-    setSearchQuery(event.target.value);
+  const handleChange = (event) => setSearchQuery(event.target.value);
+  const handleInputClick = () => setSearchMobileOpen(true);
+
+  // Escuchamos el ref del input visual
+  useEffect(() => {
+    if (jumbotronRef?.current) {
+      jumbotronRef.current.addEventListener("click", handleInputClick);
+    }
+    return () => {
+      if (jumbotronRef?.current) {
+        jumbotronRef.current.removeEventListener("click", handleInputClick);
+      }
+    };
+  }, [jumbotronRef]);
+
+  useEffect(() => {
+  const updateModalPosition = () => {
+    if (jumbotronRef?.current) {
+      const rect = jumbotronRef.current.getBoundingClientRect();
+      setModalPosition({
+        top: rect.bottom + window.scrollY,
+        left: rect.left + window.scrollX,
+        width: rect.width,
+      });
+    }
   };
 
-  // Detect window resize and set mobile state accordingly
+  updateModalPosition(); // Llamalo al inicio
+
+  window.addEventListener("resize", updateModalPosition);
+  window.addEventListener("scroll", updateModalPosition); // Opcional si scrolleás la página
+
+  return () => {
+    window.removeEventListener("resize", updateModalPosition);
+    window.removeEventListener("scroll", updateModalPosition);
+  };
+}, [jumbotronRef]);
+
+  // Detecta si es mobile
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1023.98); // Set to true if window width is below 1024px
+    const resizeHandler = () => {
+      setIsMobile(window.innerWidth <= 1023.98);
     };
-
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize); // Add resize event listener
-
-    return () => {
-      window.removeEventListener("resize", handleResize); // Clean up event listener
-    };
+    window.addEventListener("resize", resizeHandler);
+    return () => window.removeEventListener("resize", resizeHandler);
   }, []);
 
-  // Handle modal open for mobile view
-  useEffect(() => {
-    if (isMobile) {
-      setSearchMobileOpen(false);  // Close modal on mobile screens when resizing
-    }
-  }, [isMobile]);
-
-  // Open the modal when the input group is clicked
-  const handleInputClick = () => {
-    setSearchMobileOpen(true);  // Open modal on input click
-  };
-
-  // Close the modal
-  const handleCloseModal = () => {
-    setSearchMobileOpen(false);  // Close the modal
-  };
-
-  // Fetching from data
-  const fetchTramites = async (query) => {
-    setIsLoading(true)
-    try {
-      const response = await catamarcaApi.get(`/items/tramites?filter[titulo][_contains]=${query}&sort=-titulo&limit=5`)
-      const { data } = response.data
-      setTramites(data)
-    } catch (error) {
-      console.log(error)
-    } finally {
-      setIsLoading(false)
-    }
-  } 
-
+  // Debounce
   useEffect(() => {
     const handler = setTimeout(() => {
-      setDebouncedQuery(searchQuery)
-    }, 500)
-
-    return () => {
-      clearTimeout(handler)
-    };
+      setDebouncedQuery(searchQuery);
+    }, 400);
+    return () => clearTimeout(handler);
   }, [searchQuery]);
 
   useEffect(() => {
-    if (debouncedQuery) {
-      fetchTramites(debouncedQuery)
-    } else {
-      setTramites([])
+    if (inputRef.current && !isMobile && debouncedQuery) {
+      const rect = inputRef.current.getBoundingClientRect();
+      setModalPosition({
+        top: rect.bottom + window.scrollY,
+        left: rect.left + window.scrollX,
+        width: rect.width,
+      });
     }
+  }, [debouncedQuery, isMobile]);
+
+  // Fetch
+  useEffect(() => {
+    const fetchTramites = async () => {
+      if (!debouncedQuery) return setTramites([]);
+      setIsLoading(true);
+      try {
+        const response = await catamarcaApi.get(
+          `/items/tramites?filter[titulo][_contains]=${debouncedQuery}&sort=-titulo&limit=5`
+        );
+        setTramites(response.data.data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchTramites();
   }, [debouncedQuery]);
 
   return (
     <>
-      <div className="input-group" ref={isMobile ? searchRef : null} onClick={handleInputClick}>
-        <label className="sr-only" htmlFor="edit-keys-new-home">
-          Buscar en el sitio
-        </label>
+      <PortalARG
+        jumbotronRef={jumbotronRef}
+        inputRef={inputRef} // 👈 nuevo ref
+        searchQuery={searchQuery}
+        handleChange={handleChange}
+      />
 
-        <InputSearch searchQuery={searchQuery} handleChange={handleChange} />
+      {isMobile && searchMobileOpen && (
+        <SearchModalMobile
+          onClose={() => setSearchMobileOpen(false)}
+          handleChange={handleChange}
+          tramites={tramites}
+          debouncedQuery={debouncedQuery}
+          isLoading={isLoading}
+          searchQuery={searchQuery}
+        />
+      )}
 
-      </div>
-        {/* Conditionally render the search modal for desktop or mobile */}
-        {
-          (isMobile && searchMobileOpen) && 
-          <SearchModalMobile 
-            onClose={handleCloseModal} 
-            handleChange={handleChange}
-            tramites={tramites} 
-            debouncedQuery={debouncedQuery} 
-            isLoading={isLoading}
-            searchQuery={searchQuery} // ✅ AÑADÍ ESTA LÍNEA
-          />
-        }
-
-        {
-          !isMobile && 
-          <SearchModalDeskopt 
-            tramites={tramites} 
-            debouncedQuery={debouncedQuery} 
-            isLoading={isLoading}
-            searchQuery={searchQuery}
-          />
-        }
+      {!isMobile && debouncedQuery && (
+        <SearchModalDeskopt
+          tramites={tramites}
+          debouncedQuery={debouncedQuery}
+          isLoading={isLoading}
+          modalPosition={modalPosition} // 👈
+        />
+      )}
     </>
   );
 };
 
-const SearchModalDeskopt = ({tramites, debouncedQuery, isLoading}) => {
-  return (
-    <>
-      {
-        debouncedQuery && 
-          <div className="searchModalDeskopt">
-            <ul className="searchModalDeskopt__list">
-              {
-                tramites.length > 0
-                ? tramites.map((tramite) => (
-                  <li key={tramite.id}>
-                    <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
-                      <div className="searchModalDeskopt__list-item-div">
-                        <img className="searchModalDeskopt__list-item-img" src="/images/tramiteDefault.svg" alt="" style={{ width: '36px', height: '24px' }} />
-                        <p className="searchModalDeskopt__list-item-p">
-                          {tramite.titulo} - {tramite.descripcion}
-                        </p>
-                      </div>
-                      <small className="searchModalDeskopt__list-item-small">Tramite</small>
-                    </a>
-                  </li>
-                ))
-                : 
-                <li className="searchModalDeskopt__list-item">
-                  <div className="searchModalDeskopt__list-item-div">
-                    <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
-                  </div>
-                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
-                </li>
-              }
-              <li className="searchModalDeskopt__list-item-vermas">
-                <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
-                  <span>Ver mas</span>
-                  <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
-                </a>
-              </li>
-            </ul>
-          </div>
-      }
-    </>
-  );
-};
+const SearchModalDeskopt = ({
+  tramites,
+  debouncedQuery,
+  isLoading,
+  modalPosition,
+}) => {
+  if (!debouncedQuery) return null;
 
-const SearchModalMobile = ({ onClose, tramites, debouncedQuery, isLoading, searchQuery, handleChange }) => {
   return (
-        <ModalMobile className="custom-zindex" isOpen={true} onClose={onClose}>
-          <div
-            className="searchModalDeskopt__list--mobile"
-            onClick={(e) => e.stopPropagation()} // <- Este bloquea la propagación
+    <div
+      className="searchModalDeskopt"
+      style={{
+        position: "absolute",
+        top: modalPosition.top,
+        left: modalPosition.left + modalPosition.width / 2, // 👈 ponelo en el centro del input
+        transform: "translateX(-50%)", // 👈 movelo hacia la izquierda la mitad del ancho
+        zIndex: 3,
+        width: modalPosition.width + 0, // opcional, si querés que el modal sea más ancho
+      }}
+    >
+      <ul className="searchModalDeskopt__list">
+        {tramites.length > 0 ? (
+          tramites.map((tramite) => (
+            <li key={tramite.id}>
+              <a
+                className="searchModalDeskopt__list-item"
+                href={`/infoTramites/${tramite.id}`}
+              >
+                <div className="searchModalDeskopt__list-item-div">
+                  <img
+                    className="searchModalDeskopt__list-item-img"
+                    src="/images/tramiteDefault.svg"
+                    alt=""
+                    style={{ width: "36px", height: "24px" }}
+                  />
+                  <p className="searchModalDeskopt__list-item-p">
+                    {tramite.titulo} - {tramite.descripcion}
+                  </p>
+                </div>
+                <small className="searchModalDeskopt__list-item-small">
+                  Tramite
+                </small>
+              </a>
+            </li>
+          ))
+        ) : (
+          <li className="searchModalDeskopt__list-item">
+            <div className="searchModalDeskopt__list-item-div">
+              <p className="searchModalDeskopt__list-item-p">
+                {isLoading ? "Cargando..." : "No se encontraron resultados"}
+              </p>
+            </div>
+            <small className="searchModalDeskopt__list-item-small">
+              Tramite
+            </small>
+          </li>
+        )}
+        <li className="searchModalDeskopt__list-item-vermas">
+          <a
+            className="searchModalDeskopt__list-item-vermas-a"
+            href="/buscadorSFVC"
           >
-            <ul className="searchModalDeskopt__list">
-              {
-                tramites.length > 0
-                ? tramites.map((tramite) => (
-                  <li key={tramite.id}>
-                    <a className="searchModalDeskopt__list-item" href={`/infoTramites/${tramite.id}`}>
-                      <div className="searchModalDeskopt__list-item-div">
-                        <img className="searchModalDeskopt__list-item-img" src="/images/menu.svg" alt="" style={{ width: '36px' }} />
-                        <p className="searchModalDeskopt__list-item-p">
-                          {tramite.titulo} - {tramite.descripcion}
-                        </p>
-                      </div>
-                      <small className="searchModalDeskopt__list-item-small">Tramite</small>
-                    </a>
-                  </li>
-                ))
-                : 
-                <li className="searchModalDeskopt__list-item">
-                  <div className="searchModalDeskopt__list-item-div">
-                    <p className="searchModalDeskopt__list-item-p">{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</p>
-                  </div>
-                  <small className="searchModalDeskopt__list-item-small">Tramite</small>
-                </li>
-              }
-              <li className="searchModalDeskopt__list-item-vermas">
-                <a className="searchModalDeskopt__list-item-vermas-a" href="/buscadorSFVC">
-                  <span>Ver mas</span>
-                  <img className="searchModalDeskopt__list-item-img" src="/images/arrownext.svg" alt="" style={{ width: '36px' }} />
-                </a>
-              </li>
-            </ul>
-            <span className="searchModalDeskopt__list-item-span-mobile">
-              <InputSearch
-                className="searchModalDeskopt__list-item-input-mobile"
-                searchQuery={searchQuery}
-                handleChange={handleChange}
-              />
-            </span>
-
-          </div>
-        </ModalMobile>
+            <span>Ver más</span>
+            <img
+              className="searchModalDeskopt__list-item-img"
+              src="/images/arrownext.svg"
+              alt=""
+              style={{ width: "36px" }}
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };
 
-const InputSearch = ({searchQuery, handleChange, className}) => {
+const SearchModalMobile = ({
+  onClose,
+  tramites,
+  debouncedQuery,
+  isLoading,
+  searchQuery,
+  handleChange,
+}) => {
+  return (
+    <ModalMobile className="custom-zindex" isOpen={true} onClose={onClose}>
+      <div
+        className="searchModalDeskopt__list--mobile"
+        onClick={(e) => e.stopPropagation()} // <- Este bloquea la propagación
+      >
+        <ul className="searchModalDeskopt__list">
+          {tramites.length > 0 ? (
+            tramites.map((tramite) => (
+              <li key={tramite.id}>
+                <a
+                  className="searchModalDeskopt__list-item"
+                  href={`/infoTramites/${tramite.id}`}
+                >
+                  <div className="searchModalDeskopt__list-item-div">
+                    <img
+                      className="searchModalDeskopt__list-item-img"
+                      src="/images/menu.svg"
+                      alt=""
+                      style={{ width: "36px" }}
+                    />
+                    <p className="searchModalDeskopt__list-item-p">
+                      {tramite.titulo} - {tramite.descripcion}
+                    </p>
+                  </div>
+                  <small className="searchModalDeskopt__list-item-small">
+                    Tramite
+                  </small>
+                </a>
+              </li>
+            ))
+          ) : (
+            <li className="searchModalDeskopt__list-item">
+              <div className="searchModalDeskopt__list-item-div">
+                <p className="searchModalDeskopt__list-item-p">
+                  {isLoading ? "Cargando..." : "No se encontraron resultados"}
+                </p>
+              </div>
+              <small className="searchModalDeskopt__list-item-small">
+                Tramite
+              </small>
+            </li>
+          )}
+          <li className="searchModalDeskopt__list-item-vermas">
+            <a
+              className="searchModalDeskopt__list-item-vermas-a"
+              href="/buscadorSFVC"
+            >
+              <span>Ver mas</span>
+              <img
+                className="searchModalDeskopt__list-item-img"
+                src="/images/arrownext.svg"
+                alt=""
+                style={{ width: "36px" }}
+              />
+            </a>
+          </li>
+        </ul>
+        <span className="searchModalDeskopt__list-item-span-mobile">
+          <InputSearch
+            className="searchModalDeskopt__list-item-input-mobile"
+            searchQuery={searchQuery}
+            handleChange={handleChange}
+          />
+        </span>
+      </div>
+    </ModalMobile>
+  );
+};
+
+const InputSearch = ({ searchQuery, handleChange, className }) => {
   return (
     <input
       id="edit-keys-new-home"
@@ -222,7 +301,7 @@ const InputSearch = ({searchQuery, handleChange, className}) => {
       name="keys"
       autoComplete="off"
     />
-  )
-}
+  );
+};
 
 export default SearchBarPortal;

@@ -39,7 +39,6 @@
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
   }
   
   .homeSlider-item-texto {
@@ -78,6 +77,8 @@
     gap: 10px;
     height: 100%;
     flex-direction: column;
+    z-index: 1;
+    border: 1px solid #f2931a;
   }
   
   .homeSlider-item-title {

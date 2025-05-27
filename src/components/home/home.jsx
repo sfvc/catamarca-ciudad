@@ -1,3 +1,4 @@
+// Home.jsx
 import { useRef, useEffect } from "react";
 import HomeSliderPage from "./homeSlider";
 import NoticiasGnral from "./noticiasGnral";
@@ -5,66 +6,86 @@ import { PortalARG } from "./portalarg";
 import ProgramasComponent from "./programas";
 import HomeBanner from "./homeBanner";
 import HomeBannerGroup from "./homeBannerGroup";
-import RedesEmbeb from "./redesEmbeb";
+import SearchBarPortal from "./searchBarPortal";
 
 const Home = () => {
-  const panelRef = useRef(null); // Reference to the container of panels
+  const panelRef = useRef(null);
+  const jumbotronRef = useRef(null); // <- se lo pasás a ambos
 
   useEffect(() => {
-    // Set up IntersectionObserver
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Trigger the GSAP animation when the component is in the viewport
             gsap.fromTo(
               ".panel",
-              {
-                opacity: 0,
-                y: 50,
-              },
+              { opacity: 0, y: 50 },
               {
                 opacity: 1,
                 y: 0,
-                stagger: 0.1, // Adds a slight stagger for each panel
+                stagger: 0.1,
                 duration: 1,
-                ease: "power2.out", // Animation easing
+                ease: "power2.out",
               }
             );
-            observer.unobserve(entry.target); // Unobserve after triggering animation
+            observer.unobserve(entry.target);
           }
         });
       },
-      {
-        threshold: 0.5, // Trigger when at least 50% of the component is in the viewport
-      }
+      { threshold: 0.5 }
     );
 
-    if (panelRef.current) {
-      observer.observe(panelRef.current); // Start observing the panel container
-    }
-
-    // Clean up the observer on component unmount
+    if (panelRef.current) observer.observe(panelRef.current);
     return () => {
-      if (panelRef.current) {
-        observer.unobserve(panelRef.current);
-      }
+      if (panelRef.current) observer.unobserve(panelRef.current);
     };
   }, []);
 
   return (
     <>
       <main ref={panelRef}>
-        <PortalARG />
+        <SearchBarPortal jumbotronRef={jumbotronRef} />
+        <section className="bg-gray section-sm">
+          <div className="">
+            <div className="panel-pane pane-atajos">
+              <div className="pane-content">
+                <ul className="nav nav-icons nav-icons-selected">
+                  <li className="">
+                    <a href="/aaip/datospersonales">
+                      <i className="icono-arg-dni bg-primary"></i>
+                      <span>Protección de datos personales</span>
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="/aaip/tramites">
+                      <i className="icono-arg-tramite bg-fucsia"></i>
+                      <span>Trámites y servicios</span>
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="/aaip/buscador-normativa">
+                      <i className="fa fa-legal bg-warning"></i>
+                      <span>Normativa</span>
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="/aaip/consejo-federal-transparencia">
+                      <i className="icono-arg-mapa-argentina bg-uva"></i>
+                      <span>Consejo Federal para la Transparencia</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
         <HomeSliderPage />
-        <HomeBannerGroup/>
+        <HomeBannerGroup />
         <ProgramasComponent />
-        <HomeBanner/>
+        <HomeBanner />
         <NoticiasGnral />
-        <RedesEmbeb/>
       </main>
     </>
   );
 };
-
 export default Home;

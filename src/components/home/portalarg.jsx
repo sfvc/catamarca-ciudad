@@ -1,6 +1,6 @@
-import SearchBarPortal from "@components/home/searchBarPortal";
+import React, { useRef } from "react";
 
-export const PortalARG = () => {
+export const PortalARG = ({ jumbotronRef, searchQuery, handleChange, inputRef }) => {
   return (
     <section className="jumbotron video-banner">
       <video autoPlay muted loop playsInline className="bg-video">
@@ -8,27 +8,35 @@ export const PortalARG = () => {
         Tu navegador no soporta el video en HTML5.
       </video>
 
-      <div className="jumbotron_body">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-md-8 col-md-offset-2 text-center">
-              <header className="home-new input__div">
-                <h1 
-                className="home_titulo"
-                >
-                  Portal oficial de la Municipalidad de Catamarca
-                </h1>
-                <br />
+      <div className="jumbatron-container">
+        <div className="jumbotron_body">
+          <div className="container">
+                <header className="home-new input__div">
+                  <h1 className="home_titulo">
+                    Portal oficial de la Municipalidad de Catamarca
+                  </h1>
 
-                <SearchBarPortal />
-                <br />
-              </header>
-            </div>
+                  <div className="input-group" ref={jumbotronRef}>
+                    <input
+                      id="edit-keys-new-home"
+                      className="input-search-input"
+                      placeholder="Buscar"
+                      aria-label="Buscar trámites, servicios o áreas"
+                      type="text"
+                      value={searchQuery}
+                      onChange={handleChange}
+                      name="keys"
+                      autoComplete="off"
+                      ref={inputRef}
+                    />
+                  </div>
+                </header>
           </div>
         </div>
       </div>
-      
+
       <div className="overlay"></div>
     </section>
   );
 };
+

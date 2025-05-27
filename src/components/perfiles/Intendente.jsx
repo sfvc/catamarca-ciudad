@@ -17,14 +17,13 @@ const PerfilIntendente = () => {
             <div className="PerfilIntendente__redes">
                 <h3 className="PerfilIntendente__titulo-redes">Redes Sociales</h3>
                 <div className="PerfilIntendente__contenedor-botones">
-                    <a href="" className="PerfilIntendente__boton-redes">
+                    <a href="https://www.instagram.com/gustavo_saadi/?hl=es" className="PerfilIntendente__boton-redes">
                         <img src="/images/iconos-btn/instagram3.svg" alt="" />
                     </a>
-                    <a href="" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/facebook3.svg" alt="" /></a>
-                    <a href="" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/tiktok3.svg" alt="" /></a>
-                    <a href="" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/twitter3.svg" alt="" /></a>
-                    <a href="" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/wsp3.svg" alt="" /></a>
-                    <a href="" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/youtube3.svg" alt="" /></a>
+                    <a href="https://www.facebook.com/saadi.gustavo/?locale=es_LA" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/facebook3.svg" alt="" /></a>
+                    <a href="https://www.tiktok.com/@gustavosaadi" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/tiktok3.svg" alt="" /></a>
+                    <a href="https://x.com/i/flow/login?redirect_after_login=%2FGustavoSaadi" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/twitter3.svg" alt="" /></a>
+                    <a href="https://www.youtube.com/@gustavosaadi9172/videos" className="PerfilIntendente__boton-redes"><img src="/images/iconos-btn/youtube3.svg" alt="" /></a>
                 </div>
             </div>
         </div>

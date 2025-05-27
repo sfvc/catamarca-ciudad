@@ -95,11 +95,10 @@ const HomeSliderPage = () => {
                     <div
                       className="homeSlider-item-image"
                       style={{
-                        backgroundImage: `url('/images/parquejumeal.webp')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                        backgroundColor:"#001529",
                         width: '100%',
                         height: '200px',
+                        zIndex: 2,
                       }}
                       title={item.titulo}
                     >

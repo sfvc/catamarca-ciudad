@@ -1,0 +1,42 @@
+---
+import Layout from "@layout/Layout.astro";
+
+---
+
+<Layout>
+  <section class="jumbotron video-banner">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/Nodo.mp4" type="video/mp4" />
+      Tu navegador no soporta el video en HTML5.
+    </video>
+
+    <div class="jumbotron_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <h1>Punto Violeta</h1>
+            <p>
+              Mejora los sistemas y procesos internos del Estado, capacita
+              permanentemente a sus empleados e incorpora Nuevas Tecnologías a
+              la administración pública para alcanzar una gestión eficiente,
+              inclusiva y transparente que brinde más y mejores servicios a los
+              ciudadanos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
+
+  <div class="container">
+    <h1 class="text-center">Sobre Nosotros</h1>
+    <div class="landing-card">
+      <em class="landing-card__desc">
+        Este proyecto tiene como objetivo fundamental la defensa de los derechos de las mujeres y su inclusión plena en todos los ámbitos de la vida pública y privada. A través de iniciativas tecnológicas y políticas públicas con enfoque de género, buscamos construir una sociedad más justa, equitativa y libre de violencia. Promovemos la participación activa de las mujeres en la innovación, garantizamos su acceso a recursos digitales y desarrollamos plataformas que visibilicen y respondan a sus necesidades específicas. Creemos firmemente que la transformación del Estado debe ser también una transformación feminista.
+      </em>
+    </div>
+      <a href="/contacto" class="landing-card__btn">Visita Nuestra Pagina</a>
+  </div>
+</Layout>
