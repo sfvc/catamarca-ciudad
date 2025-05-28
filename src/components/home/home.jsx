@@ -81,7 +81,7 @@ const Home = () => {
         </section>
         <HomeSliderPage />
         <HomeBannerGroup />
-        <ProgramasComponent />
+        <ProgramasComponent limit={4} />
         <HomeBanner />
         <NoticiasGnral />
       </main>

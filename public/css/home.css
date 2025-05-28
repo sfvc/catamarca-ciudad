@@ -540,7 +540,12 @@ input {
     color: black;
     font-size: 700;
     padding: 16px 6px;
+    text-decoration: none;
 
+}
+
+.searchModalDeskopt__list-item:hover {
+    text-decoration: none;
 }
 
 .searchModalDeskopt__list-item-div {
@@ -587,7 +592,6 @@ input {
     background-color: #001529;
     padding: 16px 6px;
     font-weight: 500;
-    border-radius: 0px 0px 8px 8px;
 }
 
 .searchModalDeskopt__list-item-vermas-a {
@@ -687,12 +691,12 @@ input {
 }
 
 .programas__contenido{
-    color: white !important;
+    color: black !important;
 }
 
 .programas__item {
-    background-color: #1d2b4e;
-    border: 1px solid #f2931a;
+    background-color: #ffff;
+    border: 1px solid lightgray;
     padding: 10px;
     border-radius: 12px;
 }
@@ -723,8 +727,10 @@ input {
 .programas__ver-mas{
     display: flex;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: end !important;
     margin-top: 1rem !important;
+    padding: 1rem 0 !important;
+    width: 100%;
 }
 
 .home-banner {
@@ -800,7 +806,7 @@ input {
 
 .home-banner-group {
   width: 100vw;  
-  padding: 2rem;
+  padding: 2rem 0px;
   background-color: #f9fafb;
 
 }
@@ -811,9 +817,8 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 16px; 
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 8px; 
+  width: 100% !important;
 }
 
 .home-banner-group__item {
@@ -885,6 +890,7 @@ input {
     flex-direction: column;
     font-weight: bolder;
     padding: 1rem 0;
+    text-align: center;
 }
 
 .home-banner-group__titulos h1, 
@@ -928,7 +934,6 @@ input {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .redes-sociales-title {

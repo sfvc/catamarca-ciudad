@@ -78,20 +78,20 @@
     height: 100%;
     flex-direction: column;
     z-index: 1;
-    border: 1px solid #f2931a;
-    background: #1d2b4e;
+    border: 1px solid lightgray;
+    background: white;
   }
   
   .homeSlider-item-title {
     font-size: 1.125rem;
     font-weight: bold;
     margin-bottom: 0.25rem;
-    color: white;
+    color: black;
   }
   
   .homeSlider-item-text {
     font-size: 0.875rem;
-    color: whitesmoke;
+    color: gray;
   }
   
   

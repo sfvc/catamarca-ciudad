@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { getTramites } from "@helpers/getTramites";
+import Cargando from "@components/common/Cargando";
+import NoEncontrado from "@components/common/NoEncontrado";
 
-const LIMIT = 5
+const LIMIT = 5;
 
 const BuscadorMain = () => {
   // const [query, setQuery] = useState(null);
@@ -18,66 +20,66 @@ const BuscadorMain = () => {
   return (
     <main className="container buscador">
       <section className="buscador__content">
-        <BuscadorContent category={categoriaId}/>
+        <BuscadorContent category={categoriaId} />
       </section>
     </main>
   );
 };
 
 const BuscadorContent = ({ category }) => {
-  const [tramites, setTramites] = useState([])
-  const [totalPages, setTotalPages] = useState(0)
+  const [tramites, setTramites] = useState([]);
+  const [totalPages, setTotalPages] = useState(0);
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [categoriaId, setCategoriaId] = useState(category);
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1);
 
   const fetchTramites = async (query, page = 1, category) => {
-    setIsLoading(true)
-    
-    try {
-      const response = await getTramites(query, page, category)
-      const { data, meta } = response
-      setTramites(data)
+    setIsLoading(true);
 
-      const totalPages = calculateTotalPages(meta.filter_count)
-      setTotalPages(totalPages)
-      setCurrentPage(page)
+    try {
+      const response = await getTramites(query, page, category);
+      const { data, meta } = response;
+      setTramites(data);
+
+      const totalPages = calculateTotalPages(meta.filter_count);
+      setTotalPages(totalPages);
+      setCurrentPage(page);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   const calculateTotalPages = (total_count) => {
-    const total = Math.ceil(total_count / LIMIT)
-    return total
-  }
+    const total = Math.ceil(total_count / LIMIT);
+    return total;
+  };
 
   const previusPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1)
-  }
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
 
   const nextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1)
-  }
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
 
   const selectPage = (value) => {
-    setCurrentPage(value)
-    fetchTramites(searchQuery, value)
-  }
+    setCurrentPage(value);
+    fetchTramites(searchQuery, value);
+  };
 
   useEffect(() => {
-    if(categoriaId) setCategoriaId(null)
+    if (categoriaId) setCategoriaId(null);
 
     const handler = setTimeout(() => {
-      setDebouncedQuery(searchQuery)
-    }, 500)
+      setDebouncedQuery(searchQuery);
+    }, 500);
 
     return () => {
-      clearTimeout(handler)
+      clearTimeout(handler);
     };
   }, [searchQuery]);
 
@@ -88,60 +90,74 @@ const BuscadorContent = ({ category }) => {
   }, [debouncedQuery, category]);
 
   return (
-      <>
-        <section className="buscador__search">
-          <div className="buscador__search__container">
-            <input
-              id="search-input"
-              className="buscador__search__input"
-              type="text"
-              placeholder="Busca en la Municipalidad Tramites"
-              aria-label="Search input"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-        </section>
-
-        <div>
-          {
-            tramites.length > 0
-            ? tramites.map((tramite) => (
-                <div className="panel panel-default panel-icon panel-secondary tramite-container" key={tramite.id} href="#">
-                    <div className="panel-body">
-                      <h3>{tramite.nombre}</h3>
-                      <p className="text-muted tramite-description">{tramite.objeto}</p>
-
-                      <div className="tramite-footer">
-                        <div>
-                          <span className="ribbon"
-                            ><i className="fa fa-desktop text-arandano"></i> {tramite.modalidad}</span
-                          >
-
-                          <span className="ribbon"
-                            ><i className="fa fa-tag text-arandano"></i>
-                            {tramite.categoria.nombre}</span
-                          >
-                        </div>
-                        <a href={`/infoTramites/${tramite.id}`} className="btn btn-primary">Ver más</a>
-                      </div>
-                    </div>
-                </div>
-              ))
-            : <span>{isLoading ? 'Cargando...' : 'No se encontraron resultados'}</span>
-          }
-        </div>
-
-        <section className="buscador__pagination">
-          <BuscadorPaginated 
-            currentPage={currentPage}
-            totalPages={totalPages}
-            previusPage={previusPage}
-            nextPage={nextPage}
-            selectPage={selectPage}
+    <>
+      <section className="buscador__search">
+        <div className="buscador__search__container">
+          <input
+            id="search-input"
+            className="buscador__search__input"
+            type="text"
+            placeholder="Busca en la Municipalidad Tramites"
+            aria-label="Search input"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-        </section>
-      </>
+        </div>
+      </section>
+
+      <div>
+        {tramites.length > 0 ? (
+          tramites.map((tramite) => (
+            <div
+              className="panel panel-default panel-icon panel-secondary tramite-container"
+              key={tramite.id}
+              href="#"
+            >
+              <div className="panel-body">
+                <h3>{tramite.nombre}</h3>
+                <p className="text-muted tramite-description">
+                  {tramite.objeto}
+                </p>
+
+                <div className="tramite-footer">
+                  <div>
+                    <span className="ribbon">
+                      <i className="fa fa-desktop text-arandano"></i>{" "}
+                      {tramite.modalidad}
+                    </span>
+
+                    <span className="ribbon">
+                      <i className="fa fa-tag text-arandano"></i>
+                      {tramite.categoria.nombre}
+                    </span>
+                  </div>
+                  <a
+                    href={`/infoTramites/${tramite.id}`}
+                    className="btn btn-primary"
+                  >
+                    Ver más
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        ) : isLoading ? (
+          <Cargando />
+        ) : (
+          <NoEncontrado />
+        )}
+      </div>
+
+      <section className="buscador__pagination">
+        <BuscadorPaginated
+          currentPage={currentPage}
+          totalPages={totalPages}
+          previusPage={previusPage}
+          nextPage={nextPage}
+          selectPage={selectPage}
+        />
+      </section>
+    </>
   );
 };
 
@@ -173,17 +189,32 @@ const generatePageNumbers = (currentPage, totalPages) => {
   return pages;
 };
 
-const BuscadorPaginated = ({ currentPage, totalPages, previusPage, nextPage, selectPage }) => {
+const BuscadorPaginated = ({
+  currentPage,
+  totalPages,
+  previusPage,
+  nextPage,
+  selectPage,
+}) => {
   return (
     <div className="buscador__pagination__controls">
-      <button className="buscador__pagination__button" aria-label="Previous page" onClick={previusPage} disabled={currentPage === 1}>
+      <button
+        className="buscador__pagination__button"
+        aria-label="Previous page"
+        onClick={previusPage}
+        disabled={currentPage === 1}
+      >
         &lt;
       </button>
 
       {generatePageNumbers(currentPage, totalPages).map((page, index) => (
         <button
           key={index}
-          className={page === currentPage ? "active buscador__pagination__button" : " buscador__pagination__button"}
+          className={
+            page === currentPage
+              ? "active buscador__pagination__button"
+              : " buscador__pagination__button"
+          }
           onClick={() => typeof page === "number" && selectPage(page)}
           disabled={page === "..."}
         >
@@ -191,7 +222,12 @@ const BuscadorPaginated = ({ currentPage, totalPages, previusPage, nextPage, sel
         </button>
       ))}
 
-      <button className="buscador__pagination__button" aria-label="Next page" onClick={nextPage} disabled={currentPage === totalPages}>
+      <button
+        className="buscador__pagination__button"
+        aria-label="Next page"
+        onClick={nextPage}
+        disabled={currentPage === totalPages}
+      >
         &gt;
       </button>
     </div>

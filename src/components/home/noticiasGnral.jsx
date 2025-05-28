@@ -37,53 +37,55 @@ const NoticiasGnral = () => {
   }, []);
 
   return (
-    <div className="container noticias-gnral">
-      <div className="panel-pane pane-titulo col-md-12 m-l-m15">
-        <div className="pane-content">
-          <h2 className="activities-sidbar" style={{ textAlign: "center" }}>
-            Noticias Destacadas
-          </h2>
+    <div className="container">
+      <div className="noticias-gnral">
+        <div className="panel-pane pane-titulo col-md-12 m-l-m15">
+          <div className="pane-content">
+            <h2 className="activities-sidbar" style={{ textAlign: "center" }}>
+              Noticias Destacadas
+            </h2>
+          </div>
         </div>
-      </div>
 
-      <div className="parent" style={{position: "relative"}}>
-        {noticias.length > 0 ? (
-          noticias.map((noticia, index) => {
-            return (
-              <a
-                key={noticia.id}
-                href={`https://noticias-2.netlify.app/noticia/${noticia.id}`}
-                className={`div${index + 1} grid-item`}
-              >
-                <div className="overlay">
-                  <img
-                    src={imagenes[noticia.imagen]}
-                    alt={noticia.titulo}
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      zIndex: -1,
-                    }}
-                    />
+        <div className="parent" style={{position: "relative"}}>
+          {noticias.length > 0 ? (
+            noticias.map((noticia, index) => {
+              return (
+                <a
+                  key={noticia.id}
+                  href={`https://noticias-2.netlify.app/noticia/${noticia.id}`}
+                  className={`div${index + 1} grid-item`}
+                >
+                  <div className="overlay">
+                    <img
+                      src={imagenes[noticia.imagen]}
+                      alt={noticia.titulo}
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        zIndex: -1,
+                      }}
+                      />
 
-                  <div className="home-page__news-title-div">
-                    <h3 className="home-page__news-title">{noticia.titulo}</h3>
+                    <div className="home-page__news-title-div">
+                      <h3 className="home-page__news-title">{noticia.titulo}</h3>
+                    </div>
                   </div>
-                </div>
-              </a>
-            );
-          })
-        ) : (
-          <p>No hay noticias disponibles.</p>
-        )}
-      </div>
+                </a>
+              );
+            })
+          ) : (
+            <p>No hay noticias disponibles.</p>
+          )}
+        </div>
 
-      <div className="">
-        <a href="https://noticias.apps.cc.gob.ar/" className="btn btn-primary">Ver más</a>
+        <div className="">
+          <a href="https://noticias.apps.cc.gob.ar/" className="btn btn-primary">Ver más</a>
+        </div>
       </div>
     </div>
   );

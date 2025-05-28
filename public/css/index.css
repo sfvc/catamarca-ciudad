@@ -242,6 +242,8 @@ z-index: 0;
 
 .searchModalDeskopt__list--mobile{
     z-index: 11 !important;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 @keyframes dotsAnim {
