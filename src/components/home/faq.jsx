@@ -15,7 +15,7 @@ const FaqCard = () => {
         setNoticias(noticiasLimitadas);
 
         const apiUrl = catamarcaApi.defaults.baseURL || '';
-        
+
         const nuevasImagenes = response.data.data
           .filter(item => item.imagen)
           .reduce((acc, item) => {
@@ -41,8 +41,8 @@ const FaqCard = () => {
             <div className="panel-pane pane-titulo col-md-12 m-l-m15">
               <div className="pane-content">
                 <h2 className="activities-sidbar" style={{ textAlign: "center" }}>
-                  Noticias Destacadas
-                </h2>
+
+                </h2>Noticias Destacadas
               </div>
             </div>
             <div className="panel-separator"></div>
@@ -58,7 +58,7 @@ const FaqCard = () => {
               <div className="pane-content">
                 <div className="row panels-row m-t-2">
                   {noticias.map(noticia => (
-                    <div key={noticia.id} 
+                    <div key={noticia.id}
                         className="col-xs-12 col-sm-6 col-md-4"
                         style={{border:'none'}}
                     >

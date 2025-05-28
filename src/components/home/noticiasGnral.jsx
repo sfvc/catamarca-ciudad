@@ -9,10 +9,7 @@ const NoticiasGnral = () => {
     const fetchNoticias = async () => {
       try {
         const response = await catamarcaApi.get("/items/noticias");
-        const noticiasDestacadas = response.data.data.filter(
-          (noticia) => noticia.destacado
-        );
-        const noticiasOrdenadas = noticiasDestacadas.sort(
+       const noticiasOrdenadas = response.data.data.sort(
           (a, b) => new Date(b.fecha) - new Date(a.fecha)
         );
         const noticiasLimitadas = noticiasOrdenadas.slice(0, 3);
@@ -52,12 +49,12 @@ const NoticiasGnral = () => {
             return (
               <a
                 key={noticia.id}
-                href={`https://noticias-2.netlify.app/noticia/${noticia.id}`}
+                href={`https://noticias.apps.cc.gob.ar/noticia/${noticia.id}`}
                 className={`div${index + 1} grid-item`}
               >
                 <div className="overlay">
                   <img
-                    src={imagenes[noticia.imagen]}
+                    src={`${catamarcaApi.defaults.baseURL}/assets/${noticia.imagen}`}
                     alt={noticia.titulo}
                     style={{
                       position: "absolute",
@@ -82,8 +79,8 @@ const NoticiasGnral = () => {
         )}
       </div>
 
-      <div className="">
-        <a href="https://noticias.apps.cc.gob.ar/" className="btn btn-primary">Ver más</a>
+      <div className="container-fluid m-r-0 p-r-0">
+        <a href="https://noticias.apps.cc.gob.ar" target="_blank" className="btn btn-primary">Ver más</a>
       </div>
     </div>
   );
