@@ -60,6 +60,58 @@
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
+
+
+.contact-info {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-info li {
+margin-bottom: 1.2rem;
+font-size: 1.1rem;
+display: flex;
+align-items: start;
+gap: 1rem;
+}
+.contact-info strong {
+color: #222;
+margin-bottom: 0.2rem;
+}
+.contact-link {
+color: #2874a6;
+text-decoration: underline;
+word-break: break-all;
+}
+.contact-link:hover {
+color: #1b4f72;
+}
+.contact-address,
+.contact-hours {
+color: #444;
+}
+
+.landing-redes{
+  display: flex; 
+  gap: 10px; 
+  align-items: center; 
+  margin-top: 5px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.landing-map{
+  margin-top: 2rem; 
+  text-align: center;
+}
+
+.landing-map__iframe{
+  border:0; 
+  margin-block: 1rem;
+  border-radius: 10px;
+}
+
 @media (max-width: 600px) {
   .letfleet-map-section__map-container iframe {
     height: 220px;

@@ -23,6 +23,10 @@
 @import url('./salud.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+*{
+  scroll-behavior: smooth;
+}
+
 body, h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea {
     font-family: 'Roboto', sans-serif !important;
     font-optical-sizing: auto !important;
@@ -238,6 +242,8 @@ z-index: 0;
 
 .searchModalDeskopt__list--mobile{
     z-index: 11 !important;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 @keyframes dotsAnim {

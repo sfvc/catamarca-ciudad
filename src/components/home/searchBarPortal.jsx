@@ -190,7 +190,10 @@ const SearchModalDeskopt = ({
             </small> */}
           </li>
         )}
-        <li className="searchModalDeskopt__list-item-vermas">
+        <li 
+        className="searchModalDeskopt__list-item-vermas" 
+        style={{ borderRadius: "0 0 8px 8px" }} // <- para que tenga bordes redondeados
+        >
           <a
             className="searchModalDeskopt__list-item-vermas-a"
             href="/buscadorSFVC"

@@ -3,20 +3,22 @@ import { catamarcaApi } from "@api/catamarcaApi";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
-const ProgramasComponent = () => {
+const ProgramasComponent = ({ limit }) => {
   const [programas, setProgramas] = useState([]);
   const [imagenes, setImagenes] = useState({});
-  const panelRefs = useRef([]); // Referencias a los paneles
+  const panelRefs = useRef([]);
 
   useEffect(() => {
     const fetchProgramas = async () => {
       try {
         const response = await catamarcaApi.get("/items/planes_programas");
-        setProgramas(response.data.data);
+        const data = response.data.data;
+
+        // Si hay un límite, aplicalo
+        setProgramas(limit ? data.slice(0, limit) : data);
 
         const apiUrl = catamarcaApi.defaults.baseURL || '';
-        
-        const nuevasImagenes = response.data.data
+        const nuevasImagenes = data
           .filter(item => item.imagen)
           .reduce((acc, item) => {
             acc[item.imagen] = `${apiUrl}/assets/${item.imagen}`;
@@ -32,14 +34,15 @@ const ProgramasComponent = () => {
     fetchProgramas();
     AOS.init({ duration: 1000, once: true });
     AOS.refresh();
-  }, []);
+  }, [limit]);
 
   return (
     <div className="programas container">
       <h2 className="programas__titulo">Planes y Programas</h2>
       <div className="programas__lista">
         {programas.map((items, index) => (
-          <div className="programas__item" 
+          <div
+            className="programas__item"
             key={index}
             data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
@@ -51,9 +54,9 @@ const ProgramasComponent = () => {
               ref={el => panelRefs.current[index] = el}
             >
               {items.imagen && imagenes[items.imagen] ? (
-                <img 
-                  src={imagenes[items.imagen]} 
-                  alt={items.titulo} 
+                <img
+                  src={imagenes[items.imagen]}
+                  alt={items.titulo}
                   className="programas__imagen"
                 />
               ) : (
@@ -69,11 +72,17 @@ const ProgramasComponent = () => {
           </div>
         ))}
       </div>
-      <div className="container-fluid programas__ver-mas">
-        <a href="/serviciosPlanesProgramas" className="btn btn-primary">Ver más</a>
-      </div>
+
+      {limit && (
+        <div className="container-fluid programas__ver-mas">
+          <a href="/serviciosPlanesProgramas" className="btn btn-primary">
+            Ver más
+          </a>
+        </div>
+      )}
     </div>
   );
 };
 
 export default ProgramasComponent;
+

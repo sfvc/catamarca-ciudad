@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { catamarcaApi } from "@api/catamarcaApi";
+import Cargando from "@components/common/Cargando";
+import NoEncontrado from "@components/common/NoEncontrado";
 
 const LIMIT = 5;
 
@@ -113,7 +115,7 @@ const BuscadorContent = () => {
 
       <div className="programas container">
         {isLoading ? (
-          <p>Cargando programas...</p>
+          <Cargando />
         ) : (
           <div className="programas__lista">
             {programas.length > 0 ? (
@@ -146,7 +148,7 @@ const BuscadorContent = () => {
                 </div>
               ))
             ) : (
-              <p>No se encontraron programas.</p>
+              <NoEncontrado />
             )}
           </div>
         )}

@@ -91,7 +91,7 @@ const Home = () => {
 
         <HomeSliderPage />
         <HomeBannerGroup />
-        <ProgramasComponent />
+        <ProgramasComponent limit={4} />
         <HomeBanner />
 
         <section className="redes-sociales-section" id="redes-sociales">

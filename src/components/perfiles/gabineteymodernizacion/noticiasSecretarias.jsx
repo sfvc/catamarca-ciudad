@@ -1,5 +1,5 @@
 export const NoticiasSecretaria = () => {
-    return ( 
+    return (
         <section>
             <div className="container">
                 <div className="row">
@@ -18,7 +18,7 @@ export const NoticiasSecretaria = () => {
                     </div>
                     </a>
                 </div>
-                
+
                 <div className="col-xs-12 col-sm-6">
                     <a className="panel panel-default panel-lg" href="#">
                     <div style={{ backgroundImage: "url('./img/01.jpg')" }}className="panel-heading img"></div>
