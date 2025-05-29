@@ -3,7 +3,7 @@ import { catamarcaApi } from "@api/catamarcaApi";
 
 const NoticiasGnral = () => {
   const [noticias, setNoticias] = useState([]);
-  const [imagenes, setImagenes] = useState({});
+  const [, setImagenes] = useState({});
 
   useEffect(() => {
     const fetchNoticias = async () => {
@@ -49,6 +49,7 @@ const NoticiasGnral = () => {
             return (
               <a
                 key={noticia.id}
+                target="_blank"
                 href={`https://noticias.apps.cc.gob.ar/noticia/${noticia.id}`}
                 className={`div${index + 1} grid-item`}
               >
@@ -66,7 +67,6 @@ const NoticiasGnral = () => {
                       zIndex: -1,
                     }}
                     />
-
                   <div className="home-page__news-title-div">
                     <h3 className="home-page__news-title">{noticia.titulo}</h3>
                   </div>

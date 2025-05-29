@@ -16,9 +16,6 @@ export function TramitesSecretarias({ tramitesDestacados }) {
                         <div key={idx} className="col-xs-12 col-sm-6 col-md-3">
                             <a className="panel panel-default panel-icon" href="#">
                                 <div>
-                                    <div className="panel-heading">
-                                        <i className={`fa ${tramite.icono}`}></i>
-                                    </div>
                                     <div className="panel-body">
                                         <p className="h4">{tramite.director}</p>
                                         <p className="text-muted">{tramite.telefono}</p>

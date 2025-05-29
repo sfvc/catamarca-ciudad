@@ -3,12 +3,25 @@ import Layout from "@layout/Layout.astro";
 import SocialEmbeds from "@components/home/SocialEmbeds.jsx";
 import { catamarcaApi } from "@api/catamarcaApi";
 
-async function getDatos() {
-  const response = await catamarcaApi.get("items/seccion");
-  return response.data.data[0];
-}
+const url = new URL(Astro.request.url);
+const id = url.searchParams.get("id");
 
-const datos = await getDatos();
+let datos = null;
+
+if (id) {
+  const response = await catamarcaApi.get(`items/seccion/${id}`);
+  datos = response.data.data;
+} else {
+  datos = {
+    nombre: "Sección no encontrada",
+    descripcion: "",
+    sobre_nosotros: "",
+    direccion: "",
+    telefono: "",
+    email: "",
+    horario: ""
+  };
+}
 ---
 
 <Layout>
@@ -41,7 +54,6 @@ const datos = await getDatos();
         {datos.sobre_nosotros}
       </em>
     </div>
-    <a href="/contacto" class="landing-card__btn">Visita Nuestra Pagina</a>
   </div>
 
 <section id="contacto" class="seccion-contacto">
@@ -98,5 +110,5 @@ const datos = await getDatos();
   </div>
 </section>
 
-  <SocialEmbeds client:only="react" />
+  <SocialEmbeds client:only="react" idSeccion={id} />
 </Layout>

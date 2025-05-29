@@ -1,10 +1,8 @@
 ---
 import Layout from "@layout/Layout.astro";
 import Home from "@components/home/home";
-import SocialEmbeds from "@components/home/SocialEmbeds.jsx";
 ---
 
 <Layout title="Inicio">
   <Home client:only="react" />
-  <SocialEmbeds client:only="react" />
 </Layout>

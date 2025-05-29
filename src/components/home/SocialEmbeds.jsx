@@ -1,11 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { catamarcaApi } from "@api/catamarcaApi";
 
-const facebook = "https://www.facebook.com/catamarcatucapital";
-const instagram = "https://www.instagram.com/catamarcacapital";
-const tiktok = "https://www.tiktok.com/@municatamarca";
-const tiktokUsername = tiktok?.split("/@")[1] ?? "";
+export default function SocialEmbeds({ idSeccion }) {
+  const [red, setRed] = useState(null);
 
-export default function SocialEmbeds() {
+  useEffect(() => {
+    if (!idSeccion) return;
+
+    async function fetchRed() {
+      const response = await catamarcaApi.get(`/items/seccion/${idSeccion}`);
+      setRed(response.data.data);
+    }
+
+    fetchRed();
+  }, [idSeccion]);
+
   useEffect(() => {
     const igScript = document.createElement("script");
     igScript.setAttribute("src", "//www.instagram.com/embed.js");
@@ -16,7 +25,16 @@ export default function SocialEmbeds() {
     tkScript.setAttribute("src", "https://www.tiktok.com/embed.js");
     tkScript.async = true;
     document.body.appendChild(tkScript);
-  }, []);
+
+    return () => {
+      document.body.removeChild(igScript);
+      document.body.removeChild(tkScript);
+    };
+  }, [red]);
+
+  if (!red || (!red.facebook && !red.instagram && !red.tiktok)) return null;
+
+  const tiktokUsername = red.tiktok?.split("/@")[1] ?? "";
 
   return (
     <section className="redes-sociales-section" id="redes-sociales">
@@ -24,49 +42,56 @@ export default function SocialEmbeds() {
         <h2 className="redes-sociales-title">Redes Sociales</h2>
 
         <div className="redes-sociales-grid">
-          {/* Facebook */}
-          <div className="redes-sociales-card">
-            <iframe
-              src={`https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(
-                facebook
-              )}&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`}
-              width="100%"
-              height="550"
-              style={{ border: "none", overflow: "hidden" }}
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            />
-          </div>
+          {red.facebook && (
+            <div className="redes-sociales-card">
+              <iframe
+                src={`https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(
+                  red.facebook
+                )}&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`}
+                width="100%"
+                height="550"
+                style={{ border: "none", overflow: "hidden" }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              />
+            </div>
+          )}
 
-          {/* Instagram */}
-          <div className="redes-sociales-card">
-            <blockquote
-              className="instagram-media"
-              data-instgrm-permalink={instagram}
-              data-instgrm-version="14"
-              style={{ width: "100%", minHeight: "550px", margin: "0 auto" }}
-            />
-          </div>
+          {red.instagram && (
+            <div className="redes-sociales-card">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink={red.instagram}
+                data-instgrm-version="14"
+                style={{
+                  width: "100%",
+                  minHeight: "550px",
+                  margin: "0 auto",
+                }}
+              />
+            </div>
+          )}
 
-          {/* TikTok */}
-          <div className="redes-sociales-card">
-            <blockquote
-              className="tiktok-embed"
-              cite={tiktok}
-              data-unique-id={tiktokUsername}
-              data-embed-type="creator"
-              style={{ maxWidth: "100%", minHeight: "550px" }}
-            >
-              <section>
-                <a target="_blank" href={tiktok}>
-                  @{tiktokUsername}
-                </a>{" "}
-                en TikTok
-              </section>
-            </blockquote>
-          </div>
+          {red.tiktok && (
+            <div className="redes-sociales-card">
+              <blockquote
+                className="tiktok-embed"
+                cite={red.tiktok}
+                data-unique-id={tiktokUsername}
+                data-embed-type="creator"
+                style={{ maxWidth: "100%", minHeight: "550px" }}
+              >
+                <section>
+                  <a target="_blank" href={red.tiktok}>
+                    @{tiktokUsername}
+                  </a>{" "}
+                  en TikTok
+                </section>
+              </blockquote>
+            </div>
+          )}
         </div>
       </div>
     </section>
