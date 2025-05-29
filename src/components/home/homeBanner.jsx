@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { catamarcaApi } from "@api/catamarcaApi"; // Asegurate de tener configurado el baseURL aquí
+import { catamarcaApi } from "@api/catamarcaApi";
 
 import "swiper/css";
 import "swiper/css/pagination";

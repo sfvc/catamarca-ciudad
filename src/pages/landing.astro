@@ -19,7 +19,7 @@ if (id) {
     direccion: "",
     telefono: "",
     email: "",
-    horario: ""
+    horario: "",
   };
 }
 ---
@@ -49,66 +49,83 @@ if (id) {
 
   <div class="container">
     <h1 class="text-center">Sobre Nosotros</h1>
-    <div class="landing-card">
-      <em class="landing-card__desc">
-        {datos.sobre_nosotros}
-      </em>
+    <div class="sobre-nosotros-grid">
+      <div class="sobre-nosotros-texto">
+        <em class="landing-card__desc">
+          {datos.sobre_nosotros}
+        </em>
+      </div>
+      <div class="sobre-nosotros-imagen">
+        {
+          datos.sobre_nosotros_imagen ? (
+            <img
+              src={`${catamarcaApi.defaults.baseURL}/assets/${datos.sobre_nosotros_imagen}`}
+              alt="Imagen sobre nosotros"
+              class="imagen-sobre-nosotros"
+            />
+          ) : (
+            <p>Sin imagen disponible</p>
+          )
+        }
+      </div>
     </div>
   </div>
 
-<section id="contacto" class="seccion-contacto">
-  <div class="contenedor-contacto">
-    <h2 class="titulo-contacto colorPrincipalTexto reveal-title">Contacto</h2>
+  <section id="contacto" class="seccion-contacto">
+    <div class="contenedor-contacto">
+      <h2 class="titulo-contacto colorPrincipalTexto reveal-title">Contacto</h2>
 
-    <div class="contacto-flex">
-      <!-- Información de contacto -->
-      <div class="info-contacto reveal-left">
-        <div class="info-caja">
-          <h3 class="info-titulo">Información de Contacto</h3>
-          <div class="info-items">
-            <div class="item-contacto">
-              <div>
-                <h4 class="subtitulo-contacto">Dirección</h4>
-                <p>{datos.direccion}</p>
+      <div class="contacto-flex">
+        <div class="info-contacto reveal-left">
+          <div class="info-caja">
+            <h3 class="info-titulo">Información de Contacto</h3>
+            <div class="info-items">
+              <div class="item-contacto">
+                <div>
+                  <h4 class="subtitulo-contacto">Dirección</h4>
+                  <p>{datos.direccion}</p>
+                </div>
               </div>
-            </div>
-            <div class="item-contacto">
-              <div>
-                <h4 class="subtitulo-contacto">Teléfono</h4>
-                <p>{datos.telefono}</p>
+
+              <div class="item-contacto">
+                <div>
+                  <h4 class="subtitulo-contacto">Teléfono</h4>
+                  <p>{datos.telefono}</p>
+                </div>
               </div>
-            </div>
-            <div class="item-contacto">
-              <div>
-                <h4 class="subtitulo-contacto">Email</h4>
-                <p>{datos.email}</p>
+
+              <div class="item-contacto">
+                <div>
+                  <h4 class="subtitulo-contacto">Email</h4>
+                  <p>{datos.email}</p>
+                </div>
               </div>
-            </div>
-            <div class="item-contacto">
-              <div>
-                <h4 class="subtitulo-contacto">Horario de Atención</h4>
-                <p>{datos.horario}</p>
+
+              <div class="item-contacto">
+                <div>
+                  <h4 class="subtitulo-contacto">Horario de Atención</h4>
+                  <p>{datos.horario}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Mapa -->
-      <div class="mapa-contacto reveal-up">
-        <div class="contenedor-mapa">
-          <iframe
-            class="iframe-mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.6900244362223!2d-65.78420912363062!3d-28.458759159571102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942429dd5d935a0f%3A0xa9fd4f8fa44375e!2sPunto%20Joven!5e0!3m2!1ses!2sar!4v1747774610491!5m2!1ses!2sar"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="mapa-contacto reveal-up">
+          <div class="contenedor-mapa">
+            <iframe
+              class="iframe-mapa"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(datos.direccion)}&output=embed`}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <SocialEmbeds client:only="react" idSeccion={id} />
 </Layout>

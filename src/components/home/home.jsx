@@ -1,12 +1,11 @@
-// Home.jsx
 import { useRef, useEffect, useState } from "react";
+import { catamarcaApi } from "@api/catamarcaApi";
 import HomeSliderPage from "./homeSlider";
 import NoticiasGnral from "./noticiasGnral";
 import ProgramasComponent from "./programas";
 import HomeBanner from "./homeBanner";
 import HomeBannerGroup from "./homeBannerGroup";
 import SearchBarPortal from "./searchBarPortal";
-import { catamarcaApi } from "@api/catamarcaApi";
 
 const Home = () => {
   const panelRef = useRef(null);
@@ -71,34 +70,29 @@ const Home = () => {
       <main ref={panelRef}>
         <SearchBarPortal jumbotronRef={jumbotronRef} />
 
-        <section className="bg-gray section-sm">
-          <div className="panel-pane pane-atajos">
-            <div className="pane-content">
-              <ul className="secciones-lista">
-                {secciones.map((seccion) => (
-                  <li key={seccion.id} className="seccion-item">
-                    <a href={`/landing?id=${seccion.id}`} className="seccion-enlace">
-                      <div className="seccion-icono">
-                        <img
-                          src={`${catamarcaApi.defaults.baseURL}/assets/${seccion.icon}`}
-                          alt={seccion.nombre}
-                          className="seccion-imagen"
-                        />
-                      </div>
-                      <span className="seccion-nombre">{seccion.nombre}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <section className="home-banner-group">
+          <ul className="secciones-lista">
+            {secciones.map((seccion) => (
+              <li key={seccion.id} className="seccion-item">
+                <a href={`/landing?id=${seccion.id}`} className="seccion-enlace">
+                  <div className="seccion-icono">
+                    <img
+                      src={`${catamarcaApi.defaults.baseURL}/assets/${seccion.icono}`}
+                      alt={seccion.nombre}
+                      className="seccion-imagen"
+                    />
+                  </div>
+                  <span className="seccion-nombre">{seccion.nombre}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <HomeSliderPage />
         <HomeBannerGroup />
         <ProgramasComponent />
         <HomeBanner />
-
 
         <section className="redes-sociales-section" id="redes-sociales">
           <div className="redes-sociales-container">

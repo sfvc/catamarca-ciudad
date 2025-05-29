@@ -16,9 +16,18 @@ export default function SocialEmbeds({ idSeccion }) {
   }, [idSeccion]);
 
   useEffect(() => {
+    if (!red) return;
+
     const igScript = document.createElement("script");
     igScript.setAttribute("src", "//www.instagram.com/embed.js");
     igScript.async = true;
+
+    igScript.onload = () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    };
+
     document.body.appendChild(igScript);
 
     const tkScript = document.createElement("script");
