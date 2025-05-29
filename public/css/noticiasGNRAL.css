@@ -11,7 +11,7 @@
   }
 
   .noticias-gnral h3, .noticias-gnral p{
-    color: white !important; 
+    color: white !important;
     text-decoration: none !important;
   }
 
@@ -51,30 +51,29 @@
     width: 100%;
     min-height: 50dvh;
   }
-  
+
   .div1 {
     grid-area: 1 / 1 / 3 / 2;  /* De fila 1 a 3, columna 1 */
-    background-image: url('/images/parquejumeal.webp');
     background-size: cover;
     background-position: center;
   }
-  
+
   .div5 {
     grid-area: 1 / 2 / 2 / 3; /* Row 1, Column 2 */
     background-image: url('/images/parquejumeal.webp');
     background-size: cover;
     background-position: center;
   }
-  
+
   .div6 {
     grid-area: 2 / 2 / 3 / 3; /* Row 2, Column 2 */
     background-image: url('/images/parquejumeal.webp');
     background-size: cover;
     background-position: center;
   }
-  
-  
-  
+
+
+
 
   @media (max-width: 1024px) {
 
@@ -86,7 +85,7 @@
       font-size:0.8rem;
       margin-bottom: 1rem;
     }
-  
+
     .home-page__news-description {
       font-size: 0.7em;
       max-width: 90%;
@@ -102,7 +101,7 @@
       grid-template-rows: repeat(2, 1fr);    /* Six equal rows */
       gap: 0.25rem;
     }
-    
+
     /* div1 spans rows 1 to 4 and both columns */
     .div1 {
       grid-area: 1 / 1 / 4 / 2; /* Row 1 to 4, only column 1 */
@@ -110,7 +109,7 @@
       background-size: cover;
       background-position: center;
     }
-    
+
     /* div5 in column 2, rows 1–3 */
     .div5 {
       grid-area: 1 / 2 / 3 / 3;
@@ -118,7 +117,7 @@
       background-size: cover;
       background-position: center;
     }
-    
+
     /* div6 in column 2, rows 3–4 */
     .div6 {
       grid-area: 3 / 2 / 4 / 3;
@@ -126,7 +125,7 @@
       background-size: cover;
       background-position: center;
     }
-    
+
     .news-item {
       width: 150px; /* Set the fixed width for each news item */
       height: 150px; /* Set the height for each news item */
@@ -134,7 +133,7 @@
       overflow: hidden; /* Hide the text overflow */
       white-space: nowrap; /* Prevent text from wrapping to the next line */
     }
-    
+
     .news-container{
       gap: 0;
     }
@@ -147,7 +146,7 @@
       text-overflow: ellipsis;
       max-width: 100px;
     }
-    
+
     .news-item p {
       font-size: 6px; /* Adjust based on available space */
       line-height: 1.2; /* Maintain line spacing */
@@ -172,15 +171,14 @@
       grid-template-columns: 1fr; /* One single column */
       grid-template-rows: auto;   /* Let content define height */
     }
-  
+
     .div1,
     .div5,
     .div6 {
       grid-area: unset; /* Remove manual grid placement */
     }
-  
+
     .home-page__news-title{
       font-size: 1.25rem;
     }
   }
-  
