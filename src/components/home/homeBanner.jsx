@@ -6,19 +6,16 @@ import "swiper/css/pagination";
 
 const images = [
   {
-    src: "https://static.wixstatic.com/media/a28145_4f60f10a07f64548b60accdcb730bf67~mv2.png/v1/fill/w_1905,h_636,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a28145_4f60f10a07f64548b60accdcb730bf67~mv2.png",
-    text: "Bienvenido a la Municipalidad de Catamarca Ciudad",
-    btn: "Más Información",
+    src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTbFOxVqPgfUAr98gw3VTAvJ17EU9XSCfkfGKBYabjWAykahvh0l3gjdhnsotMd462Edi6IWfoZ-4wf2fbn9c4D3DNq8vNt0TC6sGVByH2j57Ul67Fw2UFHbeAMVS8QC_EOxyzdeMSwTg/s1600/catedral+catamarca+plaza+25+de+mayo+%25281%2529.JPG",
+    titulo: "Bienvenido a la Municipalidad de Catamarca Ciudad",
   },
   {
-    src: "https://static.wixstatic.com/media/a28145_95d82c2da04f4dee83926034a4fbe252~mv2.jpg/v1/fill/w_1905,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a28145_95d82c2da04f4dee83926034a4fbe252~mv2.jpg",
-    text: "Comprometidos con el desarrollo sostenible",
-    btn: "Más qwe",
+    src: "https://inforama.com.ar/wp-content/uploads/2024/04/Catamarca-Capital-centro-clima-tiempo-plaza-25-de-mayo-catedral-4-752x423-1.jpeg",
+    titulo: "Comprometidos con el desarrollo sostenible",
   },
   {
-    src: "https://static.wixstatic.com/media/a28145_9525b734c482418696ecfde0943fa549~mv2.jpg/v1/fill/w_1905,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a28145_9525b734c482418696ecfde0943fa549~mv2.jpg",
-    text: "Juntos construimos una mejor ciudad",
-    btn: "wqeewqe Información",
+    src: "https://www.catamarcaciudad.gob.ar/wp-content/uploads/2017/08/palacioMunicipal.jpg",
+    titulo: "Juntos construimos una mejor ciudad",
   },
 ];
 
@@ -43,12 +40,12 @@ const HomeBanner = () => {
                 />
                 <div className="home-banner__overlay">
                   <div className="home-banner__content">
-                    <div className="home-banner__text">{item.text}</div>
+                    <div className="home-banner__text">{item.titulo}</div>
                     <a
                       href="https://sfvc.tur.ar/"
                       className="home-banner__button"
                     >
-                      {item.btn}
+                      Ver más
                     </a>
                   </div>
                 </div>

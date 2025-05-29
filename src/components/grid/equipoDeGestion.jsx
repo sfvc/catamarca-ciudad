@@ -40,7 +40,7 @@ const EquipoDeGestion = ({ titulo, equipo, href }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="/aaip/tramites">
+                  <a href="/valores">
                     <i className="icono-arg-tramite bg-fucsia"></i>
                     <span>Valores</span>
                   </a>

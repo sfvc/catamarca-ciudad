@@ -24,18 +24,6 @@ export default function RadioPlayer() {
         <source src="https://uk6freenew.listen2myradio.com/live.mp3?typeportmount=s1_37124_stream_744360990" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-
-      <div className="btn-seguinos-container">
-          {socialButtons.map((button, index) => (
-              <button 
-                  key={index} 
-                  className={`${button.color}`} 
-              >
-                  {button.name}
-                  <img src={button.image} alt={button.name} />
-              </button>
-          ))}
-      </div>
     </div>
   );
 }

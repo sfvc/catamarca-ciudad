@@ -9,7 +9,7 @@ const NoEncontrado = () => {
         alt="Lo buscado no fue encontrado"
         className="loading-image"
       />
-      <p className="cargando-text">Lo buscado no fue encontrado<span className="dots"></span></p>
+      <p className="cargando-text">Lo buscado no fue encontrado</p>
     </div>
   );
 };

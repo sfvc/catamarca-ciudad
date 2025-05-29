@@ -68,12 +68,13 @@
     background-color: #f9f9f9;
     border-left: 4px solid transparent;
     transition: all 0.3s ease;
+    text-decoration: none !important;
 }
 
 .menu-link:hover {
     background-color: #e6f0ff;
     color: #000000;
-    text-decoration: none;
+    text-decoration: none !important;
     border-left: 4px solid #232D4F;
 }
 
@@ -509,7 +510,6 @@ input {
 }
 
 .searchModalDeskopt {
-
     margin-top: 4px;
 }
 
@@ -526,6 +526,8 @@ input {
     /* Removes default list styling */
     list-style-position: outside;
     padding: 0;
+    max-height: 75vh;
+    overflow-y: scroll;
 }
 
 /* Style for each list item */
@@ -975,6 +977,12 @@ input {
   margin: 0 auto;
 }
 
+.home-page__news-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
 @media (max-width: 767.98px){
     .programas__lista {

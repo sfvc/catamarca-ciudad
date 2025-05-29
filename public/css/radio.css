@@ -4,8 +4,9 @@
     justify-content: space-evenly;
     padding: 10px 0px;
     flex-direction: column;
-    min-height: 60dvh;
+    min-height: 75dvh;
     gap: 2rem;
+    text-align: center;
 }
 
 .radio-player__audio{

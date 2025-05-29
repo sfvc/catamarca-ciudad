@@ -27,7 +27,7 @@
 }
 
 .buscador__content{
-    min-height: 60dvh;
+    min-height: 75dvh;
 }
 
 .buscador__filter{
@@ -67,7 +67,18 @@
     padding: 3px 9px;
     border: 1px solid lightgray;
     border-radius: 4px;
+    text-decoration: none !important;
+    color: black !important;
 
+}
+
+.buscador__pagination__button:hover,
+.buscador__pagination__button:active,
+.buscador__pagination__button:focus{
+    background-color: lightgray;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .buscador__footer__info {

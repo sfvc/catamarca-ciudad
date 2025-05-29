@@ -16,7 +16,6 @@
 .TramistedGrid__card {
   background-color: transparent; /* Card background */
   border-radius: 8px;        /* Rounded corners */
-  border: 1px solid lightgray;
   padding-inline: 8px;
   padding-block: 8px;
   display: flex;
@@ -30,8 +29,6 @@
 }
 
 .TramistedGrid__card:hover{
-  border: 1px solid #e7ba61;
-  box-shadow: 0px 0px 4px 0px #e7ba61;
   transform: translateY(-5px);
 }
 
