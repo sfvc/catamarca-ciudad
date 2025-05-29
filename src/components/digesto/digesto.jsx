@@ -7,7 +7,7 @@ const DigestoContainer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <> 
+    <>
 
       {/* <main className="main container">
         <DigestoContenido />
