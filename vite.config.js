@@ -4,7 +4,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://apis.v1.cc.gob.ar/directus',
+        target: `${import.meta.env.VITE_API_URL}`,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       }

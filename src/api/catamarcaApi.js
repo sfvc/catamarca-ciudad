@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const catamarcaApi = axios.create({
-  baseURL: 'https://apis.v1.cc.gob.ar/directus'
+  baseURL: `${import.meta.env.VITE_API_URL}`
 })
 
 catamarcaApi.interceptors.request.use(config => {

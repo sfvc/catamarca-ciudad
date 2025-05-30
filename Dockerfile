@@ -21,9 +21,6 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia los archivos generados por Astro
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Copia una configuración personalizada si hace falta
-# COPY nginx.conf /etc/nginx/nginx.conf
-
 # Puerto en el que sirve Nginx
 EXPOSE 80
 

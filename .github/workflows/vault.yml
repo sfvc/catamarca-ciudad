@@ -71,7 +71,7 @@ jobs:
               docker stop catamarca_ciudad || true
               docker rm catamarca_ciudad || true 
               docker rmi catamarca_ciudad:latest || true       
-              docker build --build-arg VITE_API_URL='${{ secrets.VITE_API_URL }}' -t catamarca_ciudad:latest .
+              docker build --build-arg VITE_API_URL=https://apis.v1.cc.gob.ar/directus  -t catamarca_ciudad:latest .
               docker run --restart=always -d -p 0.0.0.0:7047:80 --name catamarca_ciudad  catamarca_ciudad:latest
               docker logs catamarca_ciudad
               exit   
