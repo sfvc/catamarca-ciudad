@@ -237,7 +237,7 @@ const SearchModalMobile = ({
                   <div className="searchModalDeskopt__list-item-div">
                     <img
                       className="searchModalDeskopt__list-item-img"
-                      src="/images/menu.svg"
+                      src="/images/tramiteDefault.svg"
                       alt=""
                       style={{ width: "36px" }}
                     />

@@ -2,11 +2,26 @@ import { useEffect, useState, useRef } from "react";
 import { catamarcaApi } from "@api/catamarcaApi";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Autoplay } from "swiper/modules";
+
 
 const ProgramasComponent = ({ limit }) => {
   const [programas, setProgramas] = useState([]);
   const [imagenes, setImagenes] = useState({});
+  const [secciones, setSecciones] = useState([]);
   const panelRefs = useRef([]);
+
+  useEffect(() => {
+    async function fetchDatos() {
+      const response = await catamarcaApi.get("items/seccion");
+      setSecciones(response.data.data);
+    }
+    fetchDatos();
+  }, []);
 
   useEffect(() => {
     const fetchProgramas = async () => {
@@ -39,6 +54,37 @@ const ProgramasComponent = ({ limit }) => {
   return (
     <div className="programas container">
       <h2 className="programas__titulo">Planes y Programas</h2>
+              <div className="secciones-slider container">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination]} // ❌ sin Navigation
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            className="seccionesSwiper"
+            breakpoints={{
+              0: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 5 },
+            }}
+          >
+            {secciones.map((seccion) => (
+              <SwiperSlide key={seccion.id}>
+                <a href={`/landing?id=${seccion.id}`} className="seccion-enlace">
+                  <div className="seccion-icono">
+                    <img
+                      src={`${catamarcaApi.defaults.baseURL}/assets/${seccion.icono}`}
+                      alt={seccion.nombre}
+                      className="seccion-imagen"
+                    />
+                  </div>
+                  <span className="seccion-nombre">{seccion.nombre}</span>
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       <div className="programas__lista">
         {programas.map((items, index) => (
           <div

@@ -911,6 +911,7 @@ input {
 
 .programas__titulo{
     text-align: center !important;
+    padding-block: 1rem !important;
 }
 
 .jumbatron-container{
@@ -1128,8 +1129,9 @@ input {
   gap: 24px;
 }
 
+
+
 .seccion-item {
-  width: 200px;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
@@ -1143,27 +1145,33 @@ input {
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
+.secciones-slider{
+}
+
 .seccion-enlace {
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
+  width: 125px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  color: lightblue;
+  cursor: pointer;
+  margin: 0 auto;
   height: 100%;
 }
 
 .seccion-icono {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #f3f4f6;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  height: 150px;
 }
 
 .seccion-imagen {
-  width: 100%;
-  height: 100%;
+  width: 125px;
   object-fit: cover;
 }
 
@@ -1172,7 +1180,14 @@ input {
   font-size: 1rem;
   font-weight: 600;
   color: #111827;
-  background-color: #f9fafb;
+  text-align: center;
+  text-decoration: none;
+}
+
+.seccion-nombre:hover {
+  color: lightblue; /* Cambia el color al pasar el mouse */
+  cursor: pointer;
+  text-decoration: none !important;
 }
 
 .presentacion-contenido {

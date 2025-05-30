@@ -11,17 +11,7 @@ import RedesSociales from "./redesSociales";
 const Home = () => {
   const panelRef = useRef(null);
   const jumbotronRef = useRef(null);
-  const [secciones, setSecciones] = useState([]);
-
-
-  useEffect(() => {
-    async function fetchDatos() {
-      const response = await catamarcaApi.get("items/seccion");
-      setSecciones(response.data.data);
-    }
-    fetchDatos();
-  }, []);
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -58,26 +48,6 @@ const Home = () => {
         <HomeSliderPage />
         <HomeBannerGroup />
         <ProgramasComponent limit={4} />
-
-        <section className="home-banner-group">
-          <ul className="secciones-lista container">
-            {secciones.map((seccion) => (
-              <li key={seccion.id} className="seccion-item">
-                <a href={`/landing?id=${seccion.id}`} className="seccion-enlace">
-                  <div className="seccion-icono">
-                    <img
-                      src={`${catamarcaApi.defaults.baseURL}/assets/${seccion.icono}`}
-                      alt={seccion.nombre}
-                      className="seccion-imagen"
-                    />
-                  </div>
-                  <span className="seccion-nombre">{seccion.nombre}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         <HomeBanner />
         <RedesSociales />
         <NoticiasGnral />
