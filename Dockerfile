@@ -1,27 +1,33 @@
 # Etapa de construcción
-FROM node:22.14.0-slim AS builder
-
-ARG VITE_API_URL
-ENV VITE_API_URL=$VITE_API_URL
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
+# Copiar dependencias e instalar
+COPY package*.json ./
 RUN npm install
 
+# Copiar el resto de los archivos del proyecto
 COPY . .
+
+# Build del sitio en modo server
 RUN npm run build
 
-# Etapa de producción con Nginx
-FROM nginx:alpine AS runner
+# Etapa de ejecución
+FROM node:20-alpine AS runner
 
-# Elimina la configuración por defecto
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
 
-# Copia los archivos generados por Astro
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Solo copiar los archivos necesarios para ejecutar
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/astro.config.* ./
+COPY --from=builder /app/public ./public
 
-# Puerto en el que sirve Nginx
-EXPOSE 80
+# Exponer el puerto (Astro usa 3000 por defecto)
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+# Comando para correr el servidor
+CMD ["node", "./dist/server/entry.mjs"]
+

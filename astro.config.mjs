@@ -1,12 +1,10 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import netlify from '@astrojs/netlify';
 import path from 'path';
 
 export default defineConfig({
   integrations: [react()],
-  output: "server", // Cambiado a "static"
-  adapter: netlify(),
+  output: "server", // Servidor Node.js
   devToolbar: {
     enabled: false
   },
