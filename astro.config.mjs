@@ -5,7 +5,7 @@ import path from 'path';
 
 export default defineConfig({
   integrations: [react()],
-  output: "static", // Cambiado a "static"
+  output: "server", // Cambiado a "static"
   adapter: netlify(),
   devToolbar: {
     enabled: false
