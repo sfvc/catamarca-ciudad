@@ -7,7 +7,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test_prod": "cross-env HOST=0.0.0.0 PORT=8080 node ./dist/server/entry.mjs",
+    "test_prod1": "set PORT=8080 && node ./dist/server/entry.mjs"
+
   },
   "dependencies": {
     "@astrojs/netlify": "^6.3.0",

@@ -1,12 +1,12 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import node from '@astrojs/node'; // 👈 este es el adaptador correcto
+import node from '@astrojs/node'; 
 import path from 'path';
 
 export default defineConfig({
   integrations: [react()],
   output: "server",
-  adapter: node({ mode: "standalone" }), // 👈 para que funcione en Docker
+  adapter: node({ mode: "standalone" }),
   devToolbar: {
     enabled: false
   },
