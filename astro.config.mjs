@@ -3,14 +3,13 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 import path from 'path';
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  output: "server",
+  output: "server", // Cambiado a "static"
+  adapter: netlify(),
   devToolbar: {
     enabled: false
   },
-  adapter: netlify(),
   alias: {
     '@components': path.resolve('./src/components'),
     '@layout': path.resolve('./src/layout'),
