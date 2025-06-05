@@ -16,7 +16,7 @@ import Layout from "@layout/Layout.astro";
         }
         .ribbon {
             display: inline-block;
-            padding: 0.25em 0.75em;
+            padding: 12px 24px !important;
             font-size: 0.85em;
             font-weight: 700;
             line-height: 1;
@@ -32,7 +32,8 @@ import Layout from "@layout/Layout.astro";
         .ribbon .fa {
             margin-right: 5px;
         }
-        .ribbon-date { background-color: #f2931a; /* Naranja de acento */ }
+
+        .ribbon-date { background-color: #f2931a; }
         .ribbon-place { background-color: #5cb85c; /* Verde para lugar */ }
         .ribbon-category { background-color: #337ab7; /* Azul estándar de Bootstrap */ }
 
@@ -236,7 +237,7 @@ import Layout from "@layout/Layout.astro";
                             <div class="col-md-12 event-detail-header m-b-2">
                                 <h1>Festival de la Ciudad</h1>
                                 <p class="lead">Celebración anual con música en vivo, puestos de comida y actividades culturales para toda la familia en el corazón de San Fernando del Valle de Catamarca.</p>
-                                <div>
+                                <div class="ribbon-container">
                                     <span class="ribbon ribbon-date"><i class="fa fa-calendar"></i> 25 de Abril de 2024</span>
                                     <span class="ribbon ribbon-place"><i class="fa fa-map-marker"></i> Plaza 25 de Mayo</span>
                                     <span class="ribbon ribbon-category"><i class="fa fa-tags"></i> Cultural</span>
@@ -269,26 +270,32 @@ import Layout from "@layout/Layout.astro";
                                         </ul>
                                     </section>
 
-                                    <section class="event-section" id="event-gallery">
+                                    <!-- <section class="event-section" id="event-gallery">
                                         <h2 class="event-section__title"><i class="fa fa-image"></i>Galería de Imágenes</h2>
                                         <div class="event-gallery">
                                             <div class="event-gallery__item">
-                                                <a href="https://via.placeholder.com/800x600.png?text=Evento+Imagen+1" data-toggle="lightbox" data-gallery="event-gallery">
-                                                    <img src="https://via.placeholder.com/400x300.png?text=Evento+Imagen+1" alt="Imagen 1 del Evento">
+                                                <a href="https://images.unsplash.com/photo-1573164574572-cb89e39749f4?auto=format&fit=crop&w=800&h=600&q=80">
+                                                    <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749f4?auto=format&fit=crop&w=400&h=300&q=80" alt="Conferencia de negocios">
+                                                </a>
+                                            </div>
+                                                                                        <div class="event-gallery__item">
+                                                <a href="https://images.unsplash.com/photo-1573164574572-cb89e39749f4?auto=format&fit=crop&w=800&h=600&q=80">
+                                                    <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749f4?auto=format&fit=crop&w=400&h=300&q=80" alt="Conferencia de negocios">
                                                 </a>
                                             </div>
                                             <div class="event-gallery__item">
-                                                <a href="https://via.placeholder.com/800x600.png?text=Evento+Imagen+2" data-toggle="lightbox" data-gallery="event-gallery">
-                                                    <img src="https://via.placeholder.com/400x300.png?text=Evento+Imagen+2" alt="Imagen 2 del Evento">
+                                                <a href="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&h=600&q=80">
+                                                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=400&h=300&q=80" alt="Público en un evento">
                                                 </a>
                                             </div>
                                             <div class="event-gallery__item">
-                                                <a href="https://via.placeholder.com/800x600.png?text=Evento+Imagen+3" data-toggle="lightbox" data-gallery="event-gallery">
-                                                    <img src="https://via.placeholder.com/400x300.png?text=Evento+Imagen+3" alt="Imagen 3 del Evento">
+                                                <a href="https://images.unsplash.com/photo-1561488119-9c7b0e3f5ff5?auto=format&fit=crop&w=800&h=600&q=80">
+                                                    <img src="https://images.unsplash.com/photo-1561488119-9c7b0e3f5ff5?auto=format&fit=crop&w=400&h=300&q=80" alt="Escenario de evento con luces">
                                                 </a>
                                             </div>
                                         </div>
-                                    </section>
+
+                                    </section> -->
 
                                     <section class="event-section" id="event-location">
                                         <h2 class="event-section__title"><i class="fa fa-map"></i>Ubicación</h2>
