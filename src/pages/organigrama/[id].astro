@@ -1,0 +1,38 @@
+---
+import organigramaData from "@data/organigrama.json";
+import Layout from "@layout/Layout.astro";
+
+// Exporta paths para generación estática
+export async function getStaticPaths() {
+  return organigramaData.map((item) => ({
+    params: { id: item.id },
+  }));
+}
+
+// Obtener parámetro de ruta
+const { id } = Astro.params;
+
+// Buscar item
+const item = organigramaData.find((i) => i.id === id);
+
+// Si no se encuentra, puede renderizarse una página 404 opcional
+if (!item) {
+  throw new Error(`No se encontró contenido con id: ${id}`);
+}
+
+const { titulo, url } = item;
+---
+
+<Layout>
+  <h1>{titulo}</h1>
+  <div class="organigrama-iframe__container">
+
+    <iframe class="organigrama-iframe" src={url} width="100%" height="900" frameborder="0"></iframe>
+  </div>
+  <div class="container">
+    <div class="botonflujo">
+      <a href="/" class="btn btn-primary">Volver a Página de Inicio</a>
+      <a href="/EquipoDeGestion" class="btn btn-success">Ver Equipo de Gestion</a>
+    </div>
+  </div>
+</Layout>

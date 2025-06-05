@@ -35,6 +35,7 @@ const PerfilSecretario = ({ perfiles }) => {
           ))}
         </div>
       </div>
+      
     </main>
   );
 };

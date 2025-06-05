@@ -1,0 +1,145 @@
+---
+import organigramaData from "@data/organigramaPerfil.json";
+import Layout from "@layout/Layout.astro";
+
+// Exporta paths para generación estática
+export async function getStaticPaths() {
+  return organigramaData.map((item) => ({
+    params: { id: item.id },
+  }));
+}
+
+// Obtener parámetro de ruta
+const { id } = Astro.params;
+
+// Buscar item
+const item = organigramaData.find((i) => i.id === id);
+
+// Si no se encuentra, puede renderizarse una página 404 opcional
+if (!item) {
+  throw new Error(`No se encontró contenido con id: ${id}`);
+}
+
+const { titulo } = item;
+---
+
+<Layout>
+  <section class="jumbotron video-banner">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/Nodo.mp4" type="video/mp4" />
+      Tu navegador no soporta el video en HTML5.
+    </video>
+
+    <div class="jumbotron_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <h1>{titulo}</h1>
+            <p>
+              La historia de nuestra Municipalidad es reflejo del crecimiento y
+              evolución de nuestra comunidad. Desde sus orígenes, ha sido el
+              punto de encuentro donde vecinos y autoridades se unen para
+              trabajar por el bien común, guiados por el compromiso de construir
+              un futuro mejor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
+
+  <!-- El resto del contenido no cambia -->
+  <div class="container">
+    <div class="organigramaPerfil">
+
+    <section class="organigramaPerfil__responsable">
+        <img src="" alt="Foto del jefe del área" class="organigramaPerfil__foto" />
+        <div class="organigramaPerfil__info">
+        <h2 class="organigramaPerfil__nombre">Laura Martínez</h2>
+        <p class="organigramaPerfil__cargo">Jefa de Recursos Humanos</p>
+        <p class="organigramaPerfil__bio">Psicóloga con 12 años de experiencia en gestión de talento y desarrollo organizacional.</p>
+        </div>
+    </section>
+
+    <section class="organigramaPerfil__mision-vision">
+        <div class="organigramaPerfil__mision">
+        <h3>Misión</h3>
+        <p>Gestionar el talento humano para potenciar el desempeño y el bienestar de los colaboradores.</p>
+        </div>
+        <div class="organigramaPerfil__vision">
+        <h3>Visión</h3>
+        <p>Ser un área estratégica reconocida por su impacto en la cultura y productividad organizacional.</p>
+        </div>
+    </section>
+
+    <section class="organigramaPerfil__funciones">
+        <h3>Funciones Principales</h3>
+        <ul>
+        <li>Reclutamiento y selección de personal</li>
+        <li>Capacitación y desarrollo</li>
+        <li>Gestión de nómina y beneficios</li>
+        <li>Clima laboral y bienestar</li>
+        </ul>
+    </section>
+
+    <section class="organigramaPerfil__organigrama">
+        <h3>Ubicación en el Organigrama</h3>
+        <img src="" alt="Organigrama con área resaltada" class="organigramaPerfil__organigrama-imagen" />
+    </section>
+
+    <section class="organigramaPerfil__interacciones">
+        <h3>Interacciones con Otros Departamentos</h3>
+        <p>Colabora estrechamente con Finanzas (para nómina), Legal (para cumplimiento laboral) y Dirección General (para alineación estratégica).</p>
+    </section>
+
+    <section class="organigramaPerfil__estructura">
+        <h3>Estructura Interna</h3>
+        <ul>
+        <li>Selección y Reclutamiento</li>
+        <li>Formación y Desarrollo</li>
+        <li>Relaciones Laborales</li>
+        </ul>
+    </section>
+
+    <section class="organigramaPerfil__kpis">
+        <h3>Indicadores Clave</h3>
+        <ul>
+        <li>Índice de rotación anual: 8%</li>
+        <li>Tiempo promedio de contratación: 22 días</li>
+        <li>Satisfacción interna: 89%</li>
+        </ul>
+    </section>
+
+    <section class="organigramaPerfil__proyectos">
+        <h3>Proyectos Destacados</h3>
+        <p>Implementación de un nuevo sistema de onboarding digital para mejorar la integración del personal nuevo.</p>
+    </section>
+
+    <section class="organigramaPerfil__herramientas">
+        <h3>Herramientas que Utiliza</h3>
+        <ul>
+        <li>Workday</li>
+        <li>Microsoft Teams</li>
+        <li>Power BI</li>
+        </ul>
+    </section>
+
+    <section class="organigramaPerfil__contacto">
+        <h3>Contacto</h3>
+        <p>Correo: rrhh@empresa.com</p>
+        <p>Extensión: 102</p>
+    </section>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="botonflujo">
+      <a href="/" class="btn btn-primary">Volver a Página de Inicio</a>
+      <a href="/valores" class="btn btn-success">Ver Valores</a>
+      <a href="/simbologia" class="btn btn-success">Ver Simbología</a>
+    </div>
+  </div>
+</Layout>

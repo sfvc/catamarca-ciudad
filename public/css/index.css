@@ -1,4 +1,5 @@
 @import url('./landing.css');
+@import url('./organigramaPerfil.css');
 @import url('./noticias.css');
 @import url('./blog.css');
 @import url('./buscador.css');
@@ -19,6 +20,7 @@
 @import url('./contacto.css');
 @import url('./noticiasGNRAL.css');
 @import url('./info.css');
+@import url('./organigrama.css');
 @import url('./estructuraOrganica.css');
 @import url('./salud.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
@@ -245,6 +247,16 @@ z-index: 0;
     display: flex;
     flex-direction: column-reverse;
 }
+
+.botonflujo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 
 @keyframes dotsAnim {
   0%   { content: ''; }

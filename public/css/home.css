@@ -527,7 +527,7 @@ input {
     list-style-position: outside;
     padding: 0;
     max-height: 75vh;
-    overflow-y: scroll;
+    overflow-y: none;
 }
 
 /* Style for each list item */
@@ -952,6 +952,20 @@ input {
   .redes-sociales-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .info-contacto {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .contacto-flex {
+    flex-direction: row;
+  }
+  
+  .mapa-contacto {
+    width: 50%;
+    height: auto;
+  }
 }
 
 .redes-sociales-card {
@@ -999,22 +1013,10 @@ input {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .contacto-flex {
-    flex-direction: row;
-  }
-}
 
 .info-contacto {
   width: 100%;
   margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .info-contacto {
-    width: 50%;
-    margin-bottom: 0;
-  }
 }
 
 .info-caja {
@@ -1057,13 +1059,6 @@ input {
 .mapa-contacto {
   width: 100%;
   height: 24rem; /* h-96 */
-}
-
-@media (min-width: 768px) {
-  .mapa-contacto {
-    width: 50%;
-    height: auto;
-  }
 }
 
 .contenedor-mapa {
@@ -1118,6 +1113,32 @@ input {
     .programas__descripcion {
         font-size: 12px;
     }
+
+      .presentacion-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .presentacion-texto h1 {
+    font-size: 2rem;
+  }
+
+  .presentacion-texto p {
+    font-size: 1rem;
+  }
+
+    .sobre-nosotros-grid {
+    flex-direction: column;
+  }
+
+  .sobre-nosotros-texto,
+  .sobre-nosotros-imagen {
+    flex: 1 1 100%;
+  }
+
+  .searchModalDeskopt__list {
+    overflow-y: scroll;
+  }
 }
 
 .secciones-lista {
@@ -1235,22 +1256,6 @@ input {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .presentacion-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .presentacion-texto h1 {
-    font-size: 2rem;
-  }
-
-  .presentacion-texto p {
-    font-size: 1rem;
-  }
-}
-
 .sobre-nosotros-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1277,14 +1282,171 @@ input {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .sobre-nosotros-grid {
-    flex-direction: column;
-  }
 
-  .sobre-nosotros-texto,
-  .sobre-nosotros-imagen {
-    flex: 1 1 100%;
-  }
+/* AGENDA */
+.card-custom {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente a elementos hijos */
+    display: flex; /* Para que el contenido se estire si es necesario y para mejor alineación interna */
+    flex-direction: column; /* Apila los elementos hijos verticalmente */
+    height: 100%; /* Asegura que todas las tarjetas en una fila tengan la misma altura si Bootstrap las iguala */
+}
+
+.card-custom:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.agenda-section {
+    padding: 50px 0; /* Espaciado vertical para la sección */
+    background-color: #ffffff; /* Fondo blanco para la sección, o el que prefieras */
+}
+
+.agenda-section .section-title {
+    text-align: center;
+    margin-bottom: 40px; /* Espacio debajo del título de la sección */
+    /* font-size: 2.5em;  */
+    color: #001529;   /* Color oscuro, consistente con otros títulos */
+    font-weight: bold;
+}
+
+.agenda-item { /* Esta clase se combina con .card-custom en el HTML */
+    margin-bottom: 30px; /* Espacio entre las tarjetas de agenda */
+    /* Las propiedades de tarjeta (fondo, sombra, borde) vienen de .card-custom */
+}
+
+.agenda-item__date-wrapper {
+    background-color: #f2931a; /* Naranja de acento, consistente */
+    color: #fff;               /* Texto blanco sobre el fondo naranja */
+    padding: 20px 15px;       /* Espaciado interno */
+    text-align: center;
+    /* Si .card-custom no tuviera overflow:hidden y quisiera redondear solo arriba:
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    */
+    /* Con overflow:hidden en .card-custom, no es estrictamente necesario redondear aquí
+       si .card-custom ya tiene border-radius. Pero no hace daño. */
+}
+
+.agenda-item__date-day {
+    font-size: 2.8em;   /* Tamaño grande para el día */
+    font-weight: bold;
+    display: block;     /* Para que ocupe su propia línea */
+    line-height: 1;     /* Ajuste de interlineado */
+}
+
+.agenda-item__date-month {
+    font-size: 1.2em;   /* Tamaño para el mes */
+    display: block;     /* Para que ocupe su propia línea */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Ligero espaciado entre letras */
+    margin-top: 5px;    /* Pequeño espacio sobre el mes */
+}
+
+.agenda-item__content {
+    padding: 20px; /* Espaciado interno para el contenido textual */
+    flex-grow: 1; /* Permite que esta sección crezca para llenar el espacio en la tarjeta flexible */
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-item__title {
+    font-size: 1.4em;   /* Tamaño del título del evento */
+    color: #001529;     /* Color oscuro para el título */
+    margin-top: 0;      /* Remover margen superior por defecto del h3 */
+    margin-bottom: 10px;/* Espacio debajo del título del evento */
+    font-weight: 600;   /* Semi-bold */
+}
+
+.agenda-item__description {
+    font-size: 0.95em;  /* Tamaño del texto de descripción */
+    color: #555;        /* Color gris oscuro para el texto */
+    line-height: 1.6;   /* Interlineado para mejor legibilidad */
+    margin-bottom: 15px;/* Espacio debajo de la descripción */
+    flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible antes del link */
+}
+
+.agenda-item__meta {
+    font-size: 0.9em;   /* Tamaño para la información de hora y lugar */
+    color: #777;        /* Color gris más claro */
+    margin-bottom: 5px; /* Pequeño espacio entre líneas de metadatos */
+}
+
+.agenda-item__meta .fa { /* Estilo para los iconos de FontAwesome en los metadatos */
+    margin-right: 8px;     /* Espacio a la derecha del icono */
+    color: #f2931a;        /* Color naranja de acento para los iconos */
+    width: 16px;           /* Ancho fijo para alinear iconos */
+    text-align: center;    /* Centrar el icono dentro de su espacio */
+}
+
+.agenda-item__link {
+    display: inline-block; /* Para que respete el margen superior y no ocupe toda la línea */
+    margin-top: auto; /* Empuja el link hacia abajo si hay espacio, gracias a flex en .agenda-item__content */
+    padding-top: 10px; /* Espacio sobre el link */
+    color: #02a5cd;       /* Color azul, consistente con otros links/iconos */
+    font-weight: bold;
+    text-decoration: none;
+    align-self: flex-start; /* Alinea el botón a la izquierda si es inline-block */
+}
+
+.agenda-item__link .fa { /* Icono dentro del link */
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.agenda-item__link:hover {
+    text-decoration: underline;
+    color: #017c9e; /* Un azul un poco más oscuro al pasar el mouse */
+}
+.agenda-item__link:hover .fa {
+    transform: translateX(3px); /* Pequeño movimiento del icono al pasar el mouse */
+}
+
+/* Estilos para el botón "Ver Agenda Completa"
+   Asume que .btn y .btn-primary ya están definidos por Bootstrap o tus estilos globales.
+   Si no, necesitarías definirlos. Aquí solo ajustamos el margen superior. */
+.agenda-section .text-center { /* Contenedor del botón */
+    margin-top: 20px; /* Espacio sobre el botón "Ver Agenda Completa" */
+}
+
+/* Si quieres asegurar que tu btn-primary personalizado se aplique (ejemplo): */
+.agenda-section .btn-primary {
+    background-color: #f2931a;
+    border-color: #e0800d;
+    color: #fff; /* Asegurar color de texto si no lo hereda bien */
+    padding: 10px 25px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.agenda-section .btn-primary:hover,
+.agenda-section .btn-primary:focus {
+    background-color: #e0800d;
+    border-color: #c7710b;
+    color: #fff;
+}
+
+
+/* Mejoras responsivas para las columnas de Bootstrap si es necesario */
+@media (max-width: 991px) { /* Para tablets (col-sm-6) */
+    .agenda-item {
+        /* Puedes agregar estilos específicos si las tarjetas se ven muy apretadas */
+    }
+}
+
+@media (max-width: 767px) { /* Para móviles (Bootstrap apila las columnas automáticamente) */
+    .agenda-section .section-title {
+        /* font-size: 2em; */
+    }
+    .agenda-item__date-day {
+        font-size: 2.2em;
+    }
+    .agenda-item__title {
+        font-size: 1.2em;
+    }
 }

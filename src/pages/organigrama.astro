@@ -1,61 +1,8 @@
 ---
+import OrganigramaChart from "@components/organigrama/organigrama";
 import Layout from "@layout/Layout.astro";
 ---
 
 <Layout title="Organigrama">
-  <section class="coming-soon">
-    <div class="coming-soon__box">
-      <h1>Organigrama</h1>
-      <p>Esta sección estará disponible muy pronto.</p>
-      <span class="tag">Próximamente</span>
-    </div>
-  </section>
-
-  <style>
-    .coming-soon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 60vh;
-      padding: 2rem;
-    }
-
-    .coming-soon__box {
-      padding: 2.5rem 2rem;
-      border-radius: 1rem;
-      max-width: 500px;
-      text-align: center;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .coming-soon__box h1 {
-      font-size: 4rem;
-      color: #1a202c;
-      margin-bottom: 0.75rem;
-    }
-
-    .coming-soon__box p {
-      color: #4a5568;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .tag {
-      color: lightgreen;
-      padding: 0.5rem 1rem;
-      font-weight: 600;
-      font-size: 2rem;
-      display: inline-block;
-    }
-
-    @media (max-width: 480px) {
-      .coming-soon__box {
-        padding: 2rem 1.25rem;
-      }
-
-      .coming-soon__box h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <OrganigramaChart client:only="react" />
 </Layout>

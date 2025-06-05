@@ -19,7 +19,8 @@ const EquipoDeGestion = ({ titulo, equipo, href }) => {
               <div className="col-xs-12 col-md-8 col-md-offset-2 text-center">
                 <h1 data-aos="fade-up">Equipo de Gestión</h1>
                 <p data-aos="fade-up" data-aos-delay="200">
-                  Este equipo trabaja de manera articulada para garantizar una administración moderna...
+                  Este equipo trabaja de manera articulada para garantizar una
+                  administración moderna...
                 </p>
               </div>
             </div>
@@ -32,7 +33,10 @@ const EquipoDeGestion = ({ titulo, equipo, href }) => {
         <div>
           <div className="panel-pane pane-atajos">
             <div className="pane-content">
-              <ul className="nav nav-icons nav-icons-selected" data-aos="fade-up">
+              <ul
+                className="nav nav-icons nav-icons-selected"
+                data-aos="fade-up"
+              >
                 <li className="active">
                   <a href="/organigrama">
                     <i className="icono-arg-casa-rosada bg-success"></i>
@@ -61,7 +65,10 @@ const EquipoDeGestion = ({ titulo, equipo, href }) => {
         </div>
       </section>
 
-      <div className="container" style={{ textAlign: "center", maxWidth: "750px" }}>
+      <div
+        className="container"
+        style={{ textAlign: "center", maxWidth: "750px" }}
+      >
         <h1 data-aos="fade-up">{titulo}</h1>
       </div>
 
@@ -79,29 +86,30 @@ const EquipoDeGestion = ({ titulo, equipo, href }) => {
               data-aos-delay={index * 100}
             >
               <img
-                className={`TramistedGrid__cardimg ${card.padding0 ? "padding-0" : ""}`}
+                className={`TramistedGrid__cardimg ${
+                  card.padding0 ? "padding-0" : ""
+                }`}
                 src={card.img}
                 alt={card.title}
               />
               <h3 className="TramistedGrid__card-title">{card.title}</h3>
-              <small className="TramistedGrid__card-small">{card.descripcion}</small>
+              <small className="TramistedGrid__card-small">
+                {card.descripcion}
+              </small>
             </div>
           </a>
         ))}
       </div>
-
-      <div
-        className="TramistedGrid__btnContainer"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <a className="TramistedGrid__btnVolver gridBtn" href="/">
-          <img src="/images/arrowback.svg" alt="back" />
-          Volver
-        </a>
+      <div className="container">
+        <div className="botonflujo" >
+          <a href="/" className="btn btn-primary">
+            Volver a Pagina de Inicio
+          </a>
+          <a href="/organigrama" className="btn btn-success">
+            Ver Organigrama
+          </a>
+        </div>
       </div>
-
-      <br />
     </div>
   );
 };

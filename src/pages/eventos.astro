@@ -1,4 +1,5 @@
 ---
+
 import ServiciosPlanesProgramasComponent from "@components/serviciosPlanesProgramas/ServiciosPlanesProgramas";
 import Layout from "@layout/Layout.astro";
 ---
@@ -14,14 +15,13 @@ import Layout from "@layout/Layout.astro";
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-            <h1>Tramites a Distancia</h1>
+            <h1>Eventos y Deportes</h1>
             <p>
-              Trámites a Distancia permite a los ciudadanos gestionar servicios
-              públicos de manera rápida, segura y sin necesidad de trasladarse,
-              promoviendo una administración más accesible, moderna y eficiente.
-              Esta herramienta digital fortalece la transparencia y facilita la
-              interacción entre el Estado y la sociedad, reduciendo tiempos y
-              costos administrativos.
+              Los eventos y actividades deportivas fortalecen los lazos
+              comunitarios, promueven hábitos saludables y generan espacios de
+              encuentro e inclusión. A través del deporte, se impulsa el
+              desarrollo integral de las personas y se fomenta una sociedad más
+              activa, unida y participativa.
             </p>
           </div>
         </div>
@@ -32,11 +32,14 @@ import Layout from "@layout/Layout.astro";
   </section>
 
   <ServiciosPlanesProgramasComponent client:only="react" />
+
+  </div>
+
   <div class="container">
     <div class="botonflujo">
       <a href="/" class="btn btn-primary"> Volver a Pagina de Inicio </a>
-      <a href="/reseñaHistorica" class="btn btn-success">Ir a Tramites Generales</a>
+      <a href="/deporte" class="btn btn-success"> Ver Deportes </a>
+      <a href="/acciones" class="btn btn-success"> Ver Acciones </a>
     </div>
   </div>
-
 </Layout>

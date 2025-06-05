@@ -53,7 +53,6 @@ const PerfilPage = ({ perfiles }) => {
         </div>
       </section> */}
 
-
       <div data-aos="fade-up">
         <Descripcion
           seccionDescripcion={perfiles.seccionDescripcion}
@@ -77,9 +76,51 @@ const PerfilPage = ({ perfiles }) => {
         <TramitesSecretarias tramitesDestacados={perfiles.tramitesDestacados} />
       </div>
 
+
+      {/* <div className="container">
+        <section className="organigramaPerfil__proyectos">
+          <h3>Proyectos Destacados</h3>
+          
+          <section className="organigramaPerfil__kpis">
+            <ul>
+            <li>Índice de rotación anual: 8%</li>
+            <li>Tiempo promedio de contratación: 22 días</li>
+            <li>Satisfacción interna: 89%</li>
+            </ul>
+        </section>
+      </section>
+        <section className="organigramaPerfil__kpis">
+          <h3>Indicadores Clave</h3>
+          <ul>
+          <li>Índice de rotación anual: 8%</li>
+          <li>Tiempo promedio de contratación: 22 días</li>
+          <li>Satisfacción interna: 89%</li>
+          </ul>
+      </section>
+
+      <section className="organigramaPerfil__herramientas">
+          <h3>Herramientas que Utiliza</h3>
+          <ul>
+          <li>Workday</li>
+          <li>Microsoft Teams</li>
+          <li>Power BI</li>
+          </ul>
+      </section>
+    </div> */}
+
       {/* <div data-aos="fade-up">
         <NoticiasSecretaria />
       </div> */}
+      <div className="container">
+        <div className="botonflujo">
+          <a href="/" className="btn btn-primary">
+            Volver a Pagina de Inicio
+          </a>
+          <a href="/EquipoDeGestion" className="btn btn-success">
+            Ver Equipo de Gestión
+          </a>
+        </div>
+      </div>
     </main>
   );
 };

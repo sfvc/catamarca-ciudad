@@ -62,21 +62,26 @@
       {
         "name": "Municipalidad",
         "options": [
-          {
-            "label": "Intendente",
-            "link": "/Intendente",
-            "description": "Información sobre el Intendente y su gestión actual."
-          },
-          {
-            "label": "Equipo de Gestion",
-            "link": "/EquipoDeGestion",
-            "description": "Información sobre el Intendente y su gestión actual."
-          },
-          {
-            "label": "Radio Municipal",
-            "link": "/radio",
-            "description": "Escuchá en vivo la programación de la Radio Municipal."
-          }
+            {
+              "label": "Intendente",
+              "link": "/Intendente",
+              "description": "Conocé al Intendente municipal, su trayectoria, funciones y los principales ejes de su gestión actual."
+            },
+            {
+              "label": "Equipo de Gestión",
+              "link": "/EquipoDeGestion",
+              "description": "Información detallada sobre los funcionarios que integran el gabinete municipal y sus responsabilidades."
+            },
+            {
+              "label": "Organigrama",
+              "link": "/organigrama",
+              "description": "Visualizá la estructura organizativa del municipio y cómo se interrelacionan las distintas áreas y secretarías."
+            },
+            {
+              "label": "Radio Municipal",
+              "link": "/radio",
+              "description": "Sintonizá la Radio Municipal en vivo y accedé a su programación, noticias locales y contenidos comunitarios."
+            }
         ]
       },
       {

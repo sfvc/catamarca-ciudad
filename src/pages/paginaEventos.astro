@@ -1,0 +1,420 @@
+---
+import Layout from "@layout/Layout.astro";
+---
+<Layout title="Detalle del Evento"> 
+    <style>
+        body {
+            background-color: #f4f7f6;
+        }
+        .m-b-2 { margin-bottom: 2rem !important; }
+        .m-t-2 { margin-top: 2rem !important; }
+
+        /* Breadcrumbs */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 8px 0px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .breadcrumb > li + li:before {
+            color: #ccc;
+            content: "/\00a0";
+            padding: 0 5px;
+        }
+        .breadcrumb a { color: #02a5cd; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb > .active { color: #777; }
+
+        .page-header-agenda {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .page-header-agenda h1 {
+            font-size: 3em;
+            color: #001529;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .page-header-agenda p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Filtros */
+        .agenda-filters {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .agenda-filters .form-group {
+            margin-bottom: 10px; /* Bootstrap 3 tiene 15px, ajustamos si es necesario */
+        }
+        .agenda-filters .form-control {
+            border-radius: 4px; /* Para que coincida con Bootstrap 3 */
+        }
+        .agenda-filters label {
+            font-weight: 600;
+            color: #333;
+        }
+        .agenda-filters .btn-primary {
+            background-color: #f2931a;
+            border-color: #e0800d;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+        .agenda-filters .btn-primary:hover {
+            background-color: #e0800d;
+            border-color: #c7710b;
+        }
+
+
+        /* Estilos para las tarjetas de evento (reutilizados de la home y/o mejorados) */
+        .card-custom { /* Asegúrate que esta clase esté definida o cópiala aquí si no lo está globalmente */
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Para igualar altura de tarjetas en la misma fila con Bootstrap */
+        }
+        .card-custom:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .agenda-item { /* Ya definido en la home, pero lo incluimos por completitud */
+            margin-bottom: 30px;
+        }
+        .agenda-item__date-wrapper {
+            background-color: #f2931a;
+            color: #fff;
+            padding: 20px 15px;
+            text-align: center;
+        }
+        .agenda-item__date-day {
+            font-size: 2.8em;
+            font-weight: bold;
+            display: block;
+            line-height: 1;
+        }
+        .agenda-item__date-month {
+            font-size: 1.2em;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        .agenda-item__content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .agenda-item__title {
+            font-size: 1.4em;
+            color: #001529;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .agenda-item__description {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .agenda-item__meta {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        .agenda-item__meta .fa {
+            margin-right: 8px;
+            color: #f2931a;
+            width: 16px;
+            text-align: center;
+        }
+        .agenda-item__link {
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 10px;
+            color: #02a5cd;
+            font-weight: bold;
+            text-decoration: none;
+            align-self: flex-start;
+        }
+        .agenda-item__link .fa {
+            margin-left: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .agenda-item__link:hover {
+            text-decoration: underline;
+            color: #017c9e;
+        }
+        .agenda-item__link:hover .fa {
+            transform: translateX(3px);
+        }
+
+        /* Paginación */
+        .pagination-wrapper {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .pagination > li > a, .pagination > li > span {
+            color: #02a5cd; /* Color de los links de paginación */
+            border-radius: 4px !important; /* Bootstrap 3 redondea, aseguramos */
+            margin: 0 3px;
+        }
+        .pagination > .active > a,
+        .pagination > .active > span,
+        .pagination > .active > a:hover,
+        .pagination > .active > span:hover,
+        .pagination > .active > a:focus,
+        .pagination > .active > span:focus {
+            background-color: #f2931a; /* Naranja para el activo */
+            border-color: #e0800d;
+            color: white;
+        }
+        .pagination > li > a:hover, .pagination > li > span:hover {
+            color: #017c9e;
+            background-color: #eee;
+        }
+
+        /* Mensaje de no eventos */
+        .no-events-message {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            color: #777;
+        }
+        .no-events-message .fa {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        .no-events-message h3 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+            <main role="main" style="padding-top: 20px; padding-bottom: 40px;">
+                <div class="container">
+                    <div class="page-header-agenda">
+                        <h1>Agenda Municipal</h1>
+                        <p>Encuentra todos los eventos culturales, deportivos, talleres y actividades programadas por la Municipalidad de San Fernando del Valle de Catamarca.</p>
+                    </div>
+
+                    <!-- Filtros -->
+                    <div class="agenda-filters">
+                        <form class="form-inline">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="filter-month">Mes:</label>
+                                        <select id="filter-month" class="form-control" style="width: 100%;">
+                                            <option value="">Todos</option>
+                                            <option value="1">Enero</option>
+                                            <option value="2">Febrero</option>
+                                            <option value="3">Marzo</option>
+                                            <option value="4" selected>Abril</option> <!-- Ejemplo: seleccionado -->
+                                            <option value="5">Mayo</option>
+                                            <option value="6">Junio</option>
+                                            <option value="7">Julio</option>
+                                            <option value="8">Agosto</option>
+                                            <option value="9">Septiembre</option>
+                                            <option value="10">Octubre</option>
+                                            <option value="11">Noviembre</option>
+                                            <option value="12">Diciembre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="filter-year">Año:</label>
+                                        <select id="filter-year" class="form-control" style="width: 100%;">
+                                            <option value="2024" selected>2024</option>
+                                            <option value="2025">2025</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-8">
+                                    <div class="form-group">
+                                        <label for="filter-category">Categoría:</label>
+                                        <select id="filter-category" class="form-control" style="width: 100%;">
+                                            <option value="">Todas</option>
+                                            <option value="cultural">Cultural</option>
+                                            <option value="deportivo">Deportivo</option>
+                                            <option value="taller">Taller / Capacitación</option>
+                                            <option value="social">Social / Comunitario</option>
+                                            <option value="oficial">Acto Oficial</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                     <div class="form-group" style="padding-top:24px;"> <!-- Ajuste para alinear botón -->
+                                        <button type="submit" class="btn btn-primary btn-block">Filtrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Listado de Eventos -->
+                    <div class="row event-list">
+                        <!-- Evento 1 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="agenda-item card-custom">
+                                <div class="agenda-item__date-wrapper">
+                                    <span class="agenda-item__date-day">25</span>
+                                    <span class="agenda-item__date-month">ABR</span>
+                                </div>
+                                <div class="agenda-item__content">
+                                    <h3 class="agenda-item__title">Festival de la Ciudad</h3>
+                                    <p class="agenda-item__description">Celebración anual con música en vivo, puestos de comida y actividades culturales para toda la familia.</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-clock-o"></i> 18:00 - 23:00 hs</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-map-marker"></i> Plaza 25 de Mayo</p>
+                                    <a href="detalle-evento.html" class="agenda-item__link">Ver Detalles <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Evento 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="agenda-item card-custom">
+                                <div class="agenda-item__date-wrapper">
+                                    <span class="agenda-item__date-day">02</span>
+                                    <span class="agenda-item__date-month">MAY</span>
+                                </div>
+                                <div class="agenda-item__content">
+                                    <h3 class="agenda-item__title">Taller de Reciclaje Creativo</h3>
+                                    <p class="agenda-item__description">Aprende a transformar residuos en objetos útiles y decorativos. ¡Inscripciones abiertas!</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-clock-o"></i> 10:00 - 12:00 hs</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-map-marker"></i> Centro Cultural Municipal</p>
+                                    <a href="detalle-evento.html" class="agenda-item__link">Ver Detalles <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Evento 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="agenda-item card-custom">
+                                <div class="agenda-item__date-wrapper">
+                                    <span class="agenda-item__date-day">10</span>
+                                    <span class="agenda-item__date-month">MAY</span>
+                                </div>
+                                <div class="agenda-item__content">
+                                    <h3 class="agenda-item__title">Concierto de Primavera</h3>
+                                    <p class="agenda-item__description">Disfruta de una noche mágica con la Orquesta Sinfónica Juvenil interpretando clásicos de la estación.</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-clock-o"></i> 20:30 hs</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-map-marker"></i> Teatro del Sur</p>
+                                    <a href="detalle-evento.html" class="agenda-item__link">Ver Detalles <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Evento 4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="agenda-item card-custom">
+                                <div class="agenda-item__date-wrapper">
+                                    <span class="agenda-item__date-day">15</span>
+                                    <span class="agenda-item__date-month">MAY</span>
+                                </div>
+                                <div class="agenda-item__content">
+                                    <h3 class="agenda-item__title">Campaña de Vacunación Antirrábica</h3>
+                                    <p class="agenda-item__description">Trae a tu mascota para su vacunación anual gratuita. Protege a tu familia y comunidad.</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-clock-o"></i> 09:00 - 13:00 hs</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-map-marker"></i> Diferentes puntos barriales</p>
+                                    <a href="detalle-evento.html" class="agenda-item__link">Ver Detalles <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Evento 5 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="agenda-item card-custom">
+                                <div class="agenda-item__date-wrapper">
+                                    <span class="agenda-item__date-day">22</span>
+                                    <span class="agenda-item__date-month">MAY</span>
+                                </div>
+                                <div class="agenda-item__content">
+                                    <h3 class="agenda-item__title">Charla: Emprendedurismo Joven</h3>
+                                    <p class="agenda-item__description">Herramientas y consejos para jóvenes que quieran iniciar su propio proyecto. Cupos limitados.</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-clock-o"></i> 17:00 hs</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-map-marker"></i> Punto Joven (Av. Acosta Villafañe)</p>
+                                    <a href="detalle-evento.html" class="agenda-item__link">Ver Detalles <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Evento 6 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="agenda-item card-custom">
+                                <div class="agenda-item__date-wrapper">
+                                    <span class="agenda-item__date-day">28</span>
+                                    <span class="agenda-item__date-month">MAY</span>
+                                </div>
+                                <div class="agenda-item__content">
+                                    <h3 class="agenda-item__title">Torneo de Ajedrez Abierto</h3>
+                                    <p class="agenda-item__description">Participa en el torneo de ajedrez para todas las edades y niveles. Premios para los ganadores.</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-clock-o"></i> 14:00 hs</p>
+                                    <p class="agenda-item__meta"><i class="fa fa-map-marker"></i> Salón de Usos Múltiples (Polideportivo)</p>
+                                    <a href="detalle-evento.html" class="agenda-item__link">Ver Detalles <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Si no hay eventos (ejemplo, descomentar si se necesita) -->
+                    <!--
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="no-events-message">
+                                <i class="fa fa-calendar-times-o"></i>
+                                <h3>No hay eventos programados</h3>
+                                <p>Actualmente no hay eventos que coincidan con los filtros seleccionados o no hay eventos cargados para las próximas fechas. Por favor, intente con otros filtros o vuelva a consultar más tarde.</p>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                    <!-- Paginación -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pagination-wrapper">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- /.container -->
+            </main>
+        </astro-slot>
+    </astro-island>
+</Layout>

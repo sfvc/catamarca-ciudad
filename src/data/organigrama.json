@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sfvc",
+    "url": "https://organigrama-prime.netlify.app/organigrama"
+  },
+  {
+    "id": "w3",
+    "titulo": "Historia de la Municipalidad de San Fernando del Valle",
+    "url": "https://www.w3schools.com/html/html_iframe.asp"    
+  },
+  {
+    "id": "codepen",
+    "titulo": "Organización del Gobierno Municipal",
+    "url": "https://codepen.io/team/codepen/embed/preview/PNaGbb"
+  }
+]
