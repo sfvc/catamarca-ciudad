@@ -6,4 +6,13 @@ const { id } = Astro.params;
 
 <Layout title="Tramite">
   <Info id={id} url="items/tramites/" />
+
+  <div class="container">
+    <div class="botonflujo">
+      <a href="/" class="btn btn-primary"> Volver a Pagina de Inicio </a>
+      <a href="/buscadorSFVC?categoria=2" class="btn btn-success">
+        Volver a Buscador de Tramites
+      </a>
+    </div>
+  </div>
 </Layout>

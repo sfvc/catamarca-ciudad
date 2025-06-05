@@ -1,0 +1,207 @@
+---
+import Layout from "@layout/Layout.astro";
+---
+
+<Layout title="Transparencia Municipal">
+
+    <style>
+        .m-b-2 { margin-bottom: 2rem !important; }
+        .m-t-2 { margin-top: 2rem !important; }
+
+        /* Breadcrumbs */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 8px 0px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .breadcrumb > li + li:before {
+            color: #ccc;
+            content: "/\00a0";
+            padding: 0 5px;
+        }
+        .breadcrumb a { color: #02a5cd; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb > .active { color: #777; }
+
+        .page-header-transparency {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        .page-header-transparency h1 {
+            font-size: 3em;
+            color: #001529;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .page-header-transparency .lead {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        .page-header-transparency .icon-header {
+            font-size: 4em;
+            color: #001529; /* Naranja de acento */
+            margin-bottom: 15px;
+        }
+
+
+        /* Tarjetas de Transparencia */
+        .transparency-card-section {
+            padding-bottom: 30px;
+        }
+
+        .transparency-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            padding: 25px 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; /* Para igualar altura en la misma fila */
+        }
+        .transparency-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-left: 5px solid #001529; /* Borde de acento al hacer hover */
+        }
+        .transparency-card__icon {
+            font-size: 3.5em; /* Tamaño del ícono */
+            color: #02a5cd; /* Azul de accesibilidad o color principal */
+            margin-bottom: 20px;
+            line-height: 1; /* Para asegurar que no agregue espacio extra */
+        }
+        /* Colores específicos para algunos íconos si se desea */
+        .transparency-card__icon.fa-balance-scale { color: #001529; } /* Verde para fiscal */
+        .transparency-card__icon.fa-database { color: #001529; } /* Azul para datos */
+        .transparency-card__icon.fa-users { color: #001529; } /* Amarillo para participativo */
+        .transparency-card__icon.fa-map-o { color: #001529; } /* Rojo para geo */
+
+
+        .transparency-card__title {
+            font-size: 1.5em;
+            color: #001529; /* Azul oscuro */
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            min-height: 50px; /* Para asegurar consistencia en títulos de 1 o 2 líneas */
+        }
+        .transparency-card__description {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Empuja el botón hacia abajo */
+            min-height: 60px; /* Espacio para una breve descripción */
+        }
+        .transparency-card__button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #001529; /* Naranja de acento */
+            color: #fff !important; /* Importante para sobreescribir color de <a> */
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none !important;
+            transition: background-color 0.3s ease;
+        }
+        .transparency-card__button:hover {
+            background-color: #001529; /* Naranja más oscuro */
+            color: #fff !important;
+        }
+        .transparency-card__button .fa {
+            margin-left: 8px;
+        }
+
+    </style>
+        <astro-slot>
+            <main role="main" style="padding-top: 20px; padding-bottom: 40px;">
+                <div class="container">
+
+                    <div class="page-header-transparency">
+                        <h1>Transparencia Municipal</h1>
+                        <p class="lead">La Municipalidad de San Fernando del Valle de Catamarca se compromete con la apertura y el acceso a la información pública como pilares fundamentales de una gestión moderna y participativa. Explore nuestras plataformas para conocer más sobre cómo trabajamos.</p>
+                    </div>
+
+                    <section class="transparency-card-section">
+                        <div class="row">
+                            <!-- Transparencia Fiscal -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">Transparencia Fiscal</h3>
+                                    <p class="transparency-card__description">Información detallada sobre la gestión de los recursos públicos, presupuestos y ejecución presupuestaria.</p>
+                                    <a href="https://www.catamarcaciudad.gob.ar/transparencia/transparencia.php" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Acceder <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Datos Abiertos -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">Datos Abiertos</h3>
+                                    <p class="transparency-card__description">Conjuntos de datos públicos en formatos abiertos para su reutilización y análisis por parte de la ciudadanía.</p>
+                                    <a href="http://datos.catamarcaciudad.gob.ar/" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Explorar Datos <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Portal de Gobierno Abierto -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">Gobierno Abierto</h3>
+                                    <p class="transparency-card__description">Plataforma central que integra diversas iniciativas de apertura gubernamental, participación y colaboración.</p>
+                                    <a href="https://empez.ar/capitaldatos/" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Visitar Portal <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-2">
+                            <!-- Presupuesto Participativo -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">Presupuesto Participativo</h3>
+                                    <p class="transparency-card__description">Involúcrate en la toma de decisiones sobre una parte del presupuesto municipal. ¡Tu opinión cuenta!</p>
+                                    <a href="https://tudecision.catamarcacapital.gob.ar/" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Participar <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- IDE (Infraestructura de Datos Espaciales) -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">IDE Catamarca Capital</h3>
+                                    <p class="transparency-card__description">Accede a información geoespacial de la ciudad, mapas temáticos y herramientas de visualización geográfica.</p>
+                                    <a href="https://idecapital.cc.gob.ar/" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Ver Mapas <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Muni 3D -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">Muni 3D</h3>
+                                    <p class="transparency-card__description">Explora un modelo tridimensional de la ciudad y sus principales puntos de interés.</p>
+                                    <a href="https://empez.ar/muni3d" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Explorar 3D <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-2">
+                             <!-- Metas de Gobierno -->
+                             <div class="col-md-4 col-sm-6 col-md-offset-4"> <!-- offset para centrar si solo hay una -->
+                                <div class="transparency-card">
+                                    <h3 class="transparency-card__title">Metas de Gobierno</h3>
+                                    <p class="transparency-card__description">Conoce los objetivos y el progreso de las metas propuestas por la gestión municipal.</p>
+                                    <a href="https://metas.catamarcacapital.gob.ar/" target="_blank" rel="noopener noreferrer" class="transparency-card__button">Ver Metas <i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div> <!-- /.container -->
+            </main>
+        </astro-slot>
+</Layout>

@@ -1,276 +1,330 @@
 ---
 import Layout from "@layout/Layout.astro";
 ---
+
 <Layout title="Detalle del Evento">
+  <style>
+    .m-b-2 {
+      margin-bottom: 2rem !important;
+    }
+    .m-y-0 {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .p-x-0 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .text-arandano {
+      color: #001529; /* Azul oscuro de tu tema */
+    }
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+    .ribbon {
+      display: inline-block;
+      padding: 12px 24px !important;
+      font-size: 0.85em;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 0.25rem;
+      background-color: #001529; /* Azul de accesibilidad como ejemplo */
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .ribbon .fa {
+      margin-right: 5px;
+    }
 
-    <style>
-        .m-b-2 { margin-bottom: 2rem !important; }
-        .m-y-0 { margin-top: 0 !important; margin-bottom: 0 !important; }
-        .p-x-0 { padding-left: 0 !important; padding-right: 0 !important; }
-        .text-arandano { color: #001529; /* Azul oscuro de tu tema */ }
-        hr {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
-        .ribbon {
-            display: inline-block;
-            padding: 12px 24px !important;
-            font-size: 0.85em;
-            font-weight: 700;
-            line-height: 1;
-            color: #fff;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: baseline;
-            border-radius: 0.25rem;
-            background-color: #02a5cd; /* Azul de accesibilidad como ejemplo */
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-        .ribbon .fa {
-            margin-right: 5px;
-        }
+    .ribbon-date {
+      background-color: #001529;
+    }
+    .ribbon-place {
+      background-color: #001529; /* Verde para lugar */
+    }
+    .ribbon-category {
+      background-color: #001529; /* Azul estándar de Bootstrap */
+    }
 
-        .ribbon-date { background-color: #f2931a; }
-        .ribbon-place { background-color: #5cb85c; /* Verde para lugar */ }
-        .ribbon-category { background-color: #337ab7; /* Azul estándar de Bootstrap */ }
+    /* Estilos específicos para la página de detalle del evento */
+    .event-detail-header h1 {
+      font-size: 2.8em;
+      color: #001529;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+    .event-detail-header .lead {
+      /* Subtítulo o descripción corta */
+      font-size: 1.25em;
+      color: #555;
+      margin-bottom: 1.5em;
+    }
 
+    .event-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .event-section__title {
+      font-size: 1.8em;
+      color: #001529;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #001529; /* Naranja de acento */
+      display: flex;
+      align-items: center;
+    }
+    .event-section__title .fa {
+      margin-right: 10px;
+      color: #001529; /* Naranja de acento */
+      font-size: 1.2em; /* Hacer el ícono un poco más grande que el texto del título */
+    }
+    .event-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .event-section ul li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      font-size: 1.05em;
+    }
+    .event-section ul li:last-child {
+      border-bottom: none;
+    }
+    .event-section ul li strong {
+      color: #333;
+      min-width: 120px; /* Para alinear un poco los : */
+      display: inline-block;
+    }
+    .event-section p {
+      line-height: 1.7;
+      color: #454545;
+    }
 
-        /* Estilos específicos para la página de detalle del evento */
-        .event-detail-header h1 {
-            font-size: 2.8em;
-            color: #001529;
-            margin-bottom: 0.5em;
-            font-weight: bold;
-        }
-        .event-detail-header .lead { /* Subtítulo o descripción corta */
-            font-size: 1.25em;
-            color: #555;
-            margin-bottom: 1.5em;
-        }
+    /* Galería de imágenes */
+    .event-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Espacio entre imágenes */
+    }
+    .event-gallery__item {
+      flex: 1 1 calc(33.333% - 10px); /* 3 imágenes por fila, ajustando por el gap */
+      max-width: calc(33.333% - 10px);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .event-gallery__item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 4/3; /* Para mantener proporción, o ajustar a un alto fijo */
+      object-fit: cover;
+    }
+    @media (max-width: 767px) {
+      .event-gallery__item {
+        flex: 1 1 calc(50% - 10px); /* 2 imágenes por fila en móviles */
+        max-width: calc(50% - 10px);
+      }
+    }
 
-        .event-section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-        }
-        .event-section__title {
-            font-size: 1.8em;
-            color: #001529;
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f2931a; /* Naranja de acento */
-            display: flex;
-            align-items: center;
-        }
-        .event-section__title .fa {
-            margin-right: 10px;
-            color: #f2931a; /* Naranja de acento */
-            font-size: 1.2em; /* Hacer el ícono un poco más grande que el texto del título */
-        }
-        .event-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .event-section ul li {
-            padding: 8px 0;
-            border-bottom: 1px dashed #eee;
-            font-size: 1.05em;
-        }
-        .event-section ul li:last-child {
-            border-bottom: none;
-        }
-        .event-section ul li strong {
-            color: #333;
-            min-width: 120px; /* Para alinear un poco los : */
-            display: inline-block;
-        }
-        .event-section p {
-            line-height: 1.7;
-            color: #454545;
-        }
+    /* Mapa */
+    .event-map iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 6px;
+    }
 
-        /* Galería de imágenes */
-        .event-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px; /* Espacio entre imágenes */
-        }
-        .event-gallery__item {
-            flex: 1 1 calc(33.333% - 10px); /* 3 imágenes por fila, ajustando por el gap */
-            max-width: calc(33.333% - 10px);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .event-gallery__item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            aspect-ratio: 4/3; /* Para mantener proporción, o ajustar a un alto fijo */
-            object-fit: cover;
-        }
-        @media (max-width: 767px) {
-            .event-gallery__item {
-                flex: 1 1 calc(50% - 10px); /* 2 imágenes por fila en móviles */
-                max-width: calc(50% - 10px);
-            }
-        }
+    /* Sidebar (columna derecha) */
+    .event-sidebar .panel {
+      border-radius: 8px;
+      border-color: #e0e0e0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .event-sidebar .panel-default > .panel-heading {
+      background-color: #f8f8f8;
+      color: #001529;
+      font-weight: bold;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .event-sidebar .btn-primary,
+    .event-sidebar .btn-info {
+      /* Usar colores del tema */
+      background-color: #001529;
+      border-color: #001529;
+      color: white;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      font-size: 1.05em;
+      border-radius: 25px;
+    }
+    .event-sidebar .btn-primary:hover,
+    .event-sidebar .btn-info:hover {
+      background-color: #001529;
+      border-color: #001529;
+    }
+    .event-sidebar .btn-info {
+      /* Botón secundario, ej. compartir */
+      background-color: #001529;
+      border-color: #001529;
+    }
+    .event-sidebar .btn-info:hover {
+      background-color: #001529;
+      border-color: #001529;
+    }
 
-        /* Mapa */
-        .event-map iframe {
-            width: 100%;
-            height: 350px;
-            border: 0;
-            border-radius: 6px;
-        }
+    .event-sidebar h3.h5 a {
+      color: #001529;
+      font-weight: 600;
+    }
+    .event-sidebar h3.h5 a:hover {
+      color: #001529;
+      text-decoration: none;
+    }
+    .event-sidebar p {
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.5;
+    }
+    .event-sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .event-sidebar ul li {
+      margin-bottom: 8px;
+    }
+    .event-sidebar ul li a {
+      color: #001529;
+    }
+    .event-sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+    .event-sidebar ul li img {
+      margin-left: 5px;
+      vertical-align: middle;
+    }
 
-        /* Sidebar (columna derecha) */
-        .event-sidebar .panel {
-            border-radius: 8px;
-            border-color: #e0e0e0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-        }
-        .event-sidebar .panel-default > .panel-heading {
-            background-color: #f8f8f8;
-            color: #001529;
-            font-weight: bold;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-        .event-sidebar .btn-primary, .event-sidebar .btn-info { /* Usar colores del tema */
-            background-color: #f2931a;
-            border-color: #e0800d;
-            color: white;
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 10px 15px;
-            font-size: 1.05em;
-            border-radius: 25px;
-        }
-        .event-sidebar .btn-primary:hover, .event-sidebar .btn-info:hover {
-            background-color: #e0800d;
-            border-color: #c7710b;
-        }
-         .event-sidebar .btn-info { /* Botón secundario, ej. compartir */
-            background-color: #02a5cd;
-            border-color: #017c9e;
-        }
-        .event-sidebar .btn-info:hover {
-            background-color: #017c9e;
-            border-color: #01607a;
-        }
+    /* Breadcrumbs (migas de pan) */
+    .breadcrumb {
+      background-color: transparent;
+      padding: 8px 0px; /* Menos padding que el default de Bootstrap */
+      margin-bottom: 15px;
+      font-size: 0.9em;
+    }
+    .breadcrumb > li + li:before {
+      color: #ccc;
+      content: "/\00a0"; /* Cambiar el separador si se desea */
+      padding: 0 5px;
+    }
+    .breadcrumb a {
+      color: #001529;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumb > .active {
+      color: #777;
+    }
+  </style>
 
-        .event-sidebar h3.h5 a {
-            color: #001529;
-            font-weight: 600;
-        }
-        .event-sidebar h3.h5 a:hover {
-            color: #f2931a;
-            text-decoration: none;
-        }
-        .event-sidebar p {
-            font-size: 0.9em;
-            color: #555;
-            line-height: 1.5;
-        }
-        .event-sidebar ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .event-sidebar ul li {
-            margin-bottom: 8px;
-        }
-        .event-sidebar ul li a {
-            color: #02a5cd;
-        }
-        .event-sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-        .event-sidebar ul li img {
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-
-        /* Breadcrumbs (migas de pan) */
-        .breadcrumb {
-            background-color: transparent;
-            padding: 8px 0px; /* Menos padding que el default de Bootstrap */
-            margin-bottom: 15px;
-            font-size: 0.9em;
-        }
-        .breadcrumb > li + li:before {
-            color: #ccc;
-            content: "/\00a0"; /* Cambiar el separador si se desea */
-            padding: 0 5px;
-        }
-        .breadcrumb a {
-            color: #02a5cd;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        .breadcrumb > .active {
-            color: #777;
-        }
-
-
-    </style>
-
-
-            <main role="main" style="padding-top: 20px; padding-bottom: 40px;"> <!-- Añadido padding a main -->
-                <div class="container">
-                    <!-- <ol class="breadcrumb">
+  <main role="main" style="padding-top: 20px; padding-bottom: 40px;">
+    <!-- Añadido padding a main -->
+    <div class="container">
+      <!-- <ol class="breadcrumb">
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/agenda-completa">Agenda Municipal</a></li>
                         <li class="active">Festival de la Ciudad</li>
                     </ol> -->
 
-                    <section class="event-detail-page">
-                        <div class="row">
-                            <div class="col-md-12 event-detail-header m-b-2">
-                                <h1>Festival de la Ciudad</h1>
-                                <p class="lead">Celebración anual con música en vivo, puestos de comida y actividades culturales para toda la familia en el corazón de San Fernando del Valle de Catamarca.</p>
-                                <div class="ribbon-container">
-                                    <span class="ribbon ribbon-date"><i class="fa fa-calendar"></i> 25 de Abril de 2024</span>
-                                    <span class="ribbon ribbon-place"><i class="fa fa-map-marker"></i> Plaza 25 de Mayo</span>
-                                    <span class="ribbon ribbon-category"><i class="fa fa-tags"></i> Cultural</span>
-                                    <span class="ribbon"><i class="fa fa-clock-o"></i> 18:00 - 23:00 hs</span>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
+      <section class="event-detail-page">
+        <div class="row">
+          <div class="col-md-12 event-detail-header m-b-2">
+            <h1>Festival de la Ciudad</h1>
+            <p class="lead">
+              Celebración anual con música en vivo, puestos de comida y
+              actividades culturales para toda la familia en el corazón de San
+              Fernando del Valle de Catamarca.
+            </p>
+            <div class="ribbon-container">
+              <span class="ribbon ribbon-date"
+                ><i class="fa fa-calendar"></i> 25 de Abril de 2024</span
+              >
+              <span class="ribbon ribbon-place"
+                ><i class="fa fa-map-marker"></i> Plaza 25 de Mayo</span
+              >
+              <span class="ribbon ribbon-category"
+                ><i class="fa fa-tags"></i> Cultural</span
+              >
+              <span class="ribbon"
+                ><i class="fa fa-clock-o"></i> 18:00 - 23:00 hs</span
+              >
+            </div>
+            <hr />
+          </div>
+        </div>
 
-                        <div class="row">
-                            <!-- Columna izquierda: Contenido principal del evento -->
-                            <div class="col-md-8">
-                                <article>
-                                    <section class="event-section" id="event-description">
-                                        <h2 class="event-section__title"><i class="fa fa-info-circle"></i>Descripción del Evento</h2>
-                                        <p>El Festival de la Ciudad es un evento emblemático que reúne a la comunidad para celebrar nuestra identidad y cultura. Durante una noche llena de color y alegría, los asistentes podrán disfrutar de una variada grilla de artistas locales y nacionales, degustar la gastronomía regional en los food trucks y puestos de artesanos, y participar en talleres y actividades recreativas para todas las edades.</p>
-                                        <p>Este año, el festival contará con un escenario principal donde se presentarán bandas de folklore, rock y cumbia, además de un espacio dedicado a las danzas tradicionales. Los más pequeños tendrán su rincón con juegos inflables, pintacaritas y espectáculos de magia. ¡No te lo pierdas!</p>
-                                    </section>
+        <div class="row">
+          <!-- Columna izquierda: Contenido principal del evento -->
+          <div class="col-md-8">
+            <article>
+              <section class="event-section" id="event-description">
+                <h2 class="event-section__title">
+                  <i class="fa fa-info-circle"></i>Descripción del Evento
+                </h2>
+                <p>
+                  El Festival de la Ciudad es un evento emblemático que reúne a
+                  la comunidad para celebrar nuestra identidad y cultura.
+                  Durante una noche llena de color y alegría, los asistentes
+                  podrán disfrutar de una variada grilla de artistas locales y
+                  nacionales, degustar la gastronomía regional en los food
+                  trucks y puestos de artesanos, y participar en talleres y
+                  actividades recreativas para todas las edades.
+                </p>
+                <p>
+                  Este año, el festival contará con un escenario principal donde
+                  se presentarán bandas de folklore, rock y cumbia, además de un
+                  espacio dedicado a las danzas tradicionales. Los más pequeños
+                  tendrán su rincón con juegos inflables, pintacaritas y
+                  espectáculos de magia. ¡No te lo pierdas!
+                </p>
+              </section>
 
-                                    <section class="event-section" id="event-details">
-                                        <h2 class="event-section__title"><i class="fa fa-list-alt"></i>Detalles</h2>
-                                        <ul>
-                                            <li><strong>Fecha:</strong> Jueves, 25 de Abril de 2024</li>
-                                            <li><strong>Horario:</strong> De 18:00 a 23:00 hs</li>
-                                            <li><strong>Lugar:</strong> Plaza 25 de Mayo (Centro)</li>
-                                            <li><strong>Dirección:</strong> Sarmiento esquina San Martín, SFVC</li>
-                                            <li><strong>Entrada:</strong> Libre y gratuita</li>
-                                            <li><strong>Organiza:</strong> Secretaría de Cultura Municipal</li>
-                                            <li><strong>Contacto:</strong> (0383) 444-1234 | cultura@catamarcaciudad.gob.ar</li>
-                                        </ul>
-                                    </section>
+              <section class="event-section" id="event-details">
+                <h2 class="event-section__title">
+                  <i class="fa fa-list-alt"></i>Detalles
+                </h2>
+                <ul>
+                  <li><strong>Fecha:</strong> Jueves, 25 de Abril de 2024</li>
+                  <li><strong>Horario:</strong> De 18:00 a 23:00 hs</li>
+                  <li><strong>Lugar:</strong> Plaza 25 de Mayo (Centro)</li>
+                  <li>
+                    <strong>Dirección:</strong> Sarmiento esquina San Martín, SFVC
+                  </li>
+                  <li><strong>Entrada:</strong> Libre y gratuita</li>
+                  <li>
+                    <strong>Organiza:</strong> Secretaría de Cultura Municipal
+                  </li>
+                  <li>
+                    <strong>Contacto:</strong> (0383) 444-1234 | cultura@catamarcaciudad.gob.ar
+                  </li>
+                </ul>
+              </section>
 
-                                    <!-- <section class="event-section" id="event-gallery">
+              <!-- <section class="event-section" id="event-gallery">
                                         <h2 class="event-section__title"><i class="fa fa-image"></i>Galería de Imágenes</h2>
                                         <div class="event-gallery">
                                             <div class="event-gallery__item">
@@ -297,50 +351,86 @@ import Layout from "@layout/Layout.astro";
 
                                     </section> -->
 
-                                    <section class="event-section" id="event-location">
-                                        <h2 class="event-section__title"><i class="fa fa-map"></i>Ubicación</h2>
-                                        <div class="event-map">
-                                            <!-- Reemplazar con el iframe de Google Maps real -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.077707707095!2d-65.77928908490668!3d-28.46791998240828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942428c027263c0b%3A0x34a5f3f6288746c8!2sPlaza%2025%20de%20Mayo!5e0!3m2!1ses-419!2sar!4v1678886000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        </div>
-                                    </section>
-                                </article>
-                            </div>
-
-                            <!-- Columna derecha: Acciones y Relacionados -->
-                            <div class="col-md-4 event-sidebar">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">Acciones Rápidas</div>
-                                    <div class="panel-body">
-                                        <p><a class="btn btn-primary" href="#"><i class="fa fa-calendar-plus-o"></i> Agregar a mi Calendario</a></p>
-                                        <p><a class="btn btn-info" href="#"><i class="fa fa-share-alt"></i> Compartir Evento</a></p>
-                                        <!-- Si hay inscripción -->
-                                        <!-- <p><a class="btn btn-success btn-block" href="#">Inscribirme Ahora</a></p> -->
-                                    </div>
-                                </div>
-
-                                <hr>
-                                <h3 class="h4">Eventos Relacionados</h3>
-                                <div class="related-event-item">
-                                    <h4 class="h5"><a href="#">Concierto de Rock Sinfónico</a></h4>
-                                    <p>Una fusión única de rock clásico con arreglos orquestales. Próximo Sábado en el Teatro.</p>
-                                </div>
-                                <div class="related-event-item">
-                                    <h4 class="h5"><a href="#">Feria de Artesanos Locales</a></h4>
-                                    <p>Descubre el talento catamarqueño. Todos los domingos en el Parque Adán Quiroga.</p>
-                                </div>
-
-                                <hr>
-                                <h3 class="h4">Descargas</h3>
-                                <ul>
-                                    <li><a href="#">Programa completo del Festival (PDF) <img src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=20&height=20" alt="PDF"></a></li>
-                                    <li><a href="#">Plano de accesos y servicios (JPG) <img src="https://via.placeholder.com/20x20.png?text=JPG" alt="JPG"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
+              <section class="event-section" id="event-location">
+                <h2 class="event-section__title">
+                  <i class="fa fa-map"></i>Ubicación
+                </h2>
+                <div class="event-map">
+                  <!-- Reemplazar con el iframe de Google Maps real -->
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.077707707095!2d-65.77928908490668!3d-28.46791998240828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942428c027263c0b%3A0x34a5f3f6288746c8!2sPlaza%2025%20de%20Mayo!5e0!3m2!1ses-419!2sar!4v1678886000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </main>
-        </astro-slot>
-    </astro-island>
+              </section>
+            </article>
+          </div>
+
+          <!-- Columna derecha: Acciones y Relacionados -->
+          <div class="col-md-4 event-sidebar">
+            <div class="panel panel-default">
+              <div class="panel-heading">Acciones Rápidas</div>
+              <div class="panel-body">
+                <p>
+                  <a class="btn btn-primary" href="#"
+                    ><i class="fa fa-calendar-plus-o"></i> Agregar a mi Calendario</a>
+                </p>
+                <p>
+                  <a class="btn btn-info" href="#"
+                    ><i class="fa fa-share-alt"></i> Compartir Evento</a>
+                </p>
+                <!-- Si hay inscripción -->
+                <!-- <p><a class="btn btn-success btn-block" href="#">Inscribirme Ahora</a></p> -->
+              </div>
+            </div>
+
+            <hr />
+            <h3 class="h4">Eventos Relacionados</h3>
+            <div class="related-event-item">
+              <h4 class="h5"><a href="#">Concierto de Rock Sinfónico</a></h4>
+              <p>
+                Una fusión única de rock clásico con arreglos orquestales.
+                Próximo Sábado en el Teatro.
+              </p>
+            </div>
+            <div class="related-event-item">
+              <h4 class="h5"><a href="#">Feria de Artesanos Locales</a></h4>
+              <p>
+                Descubre el talento catamarqueño. Todos los domingos en el
+                Parque Adán Quiroga.
+              </p>
+            </div>
+
+            <hr />
+            <h3 class="h4">Descargas</h3>
+            <ul>
+              <li>
+                <a href="#"
+                  >Programa completo del Festival (PDF) <img
+                    src="http://137.184.4.18:8055/assets/5ed2a809-137a-4df1-b571-2bb33c85dad8.png?width=20&height=20"
+                    alt="PDF"
+                  /></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Plano de accesos y servicios (JPG) <img
+                    src="https://via.placeholder.com/20x20.png?text=JPG"
+                    alt="JPG"
+                  /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <div class="botonflujo">
+        <a href="/" class="btn btn-primary"> Volver a Pagina de Inicio </a>
+        <a href="/agendaMunicipal" class="btn btn-success">
+          Volver a Agenda Municipal
+        </a>
+      </div>
+    </div>
+  </main>
 </Layout>

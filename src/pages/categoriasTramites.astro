@@ -32,60 +32,21 @@ const { id } = Astro.params;
     <div class="overlay"></div>
   </section>
 
-  <section class="bg-gray section-sm">
-    <div class="">
-      <div class="panel-pane pane-atajos">
-        <div class="pane-content">
-          <ul class="nav nav-icons nav-icons-selected">
-            <li class="active">
-              <a href="/aaip/accesoalainformacion">
-                <i class="icono-arg-anticorrupcion bg-success"></i><span
-                  >Acceso a la Información Pública</span
-                >
-              </a>
-            </li>
-            <li class="">
-              <a href="/aaip/datospersonales">
-                <i class="icono-arg-dni bg-primary"></i><span
-                  >Protección de datos personales</span
-                >
-              </a>
-            </li>
-            <li class="">
-              <a href="/aaip/tramites">
-                <i class="icono-arg-tramite bg-fucsia"></i><span
-                  >Trámites y servicios</span
-                ></a>
-            </li>
-            <li class="">
-              <a href="/aaip/buscador-normativa">
-                <i class="fa fa-legal bg-warning"></i><span>Normativa</span>
-              </a>
-            </li>
-            <li class="">
-              <a href="/aaip/consejo-federal-transparencia">
-                <i class="icono-arg-mapa-argentina bg-uva"></i><span
-                  >Consejo Federal para la Transparencia</span
-                >
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <GridPage
     tramite="TramistedGrid__card-tramites"
     client:only="react"
     href="/buscadorSFVC"
     endpoint="items/categoria_tramites"
     titulo=""
+    mostrarFiltro={true} 
   />
 
-    <div class="container">
+  <div class="container">
     <div class="botonflujo">
       <a href="/" class="btn btn-primary"> Volver a Pagina de Inicio </a>
+      <a href="/buscadorSFVC?categoria=2" class="btn btn-success">
+        Ir a Buscador de Tramite
+      </a>
     </div>
   </div>
 </Layout>

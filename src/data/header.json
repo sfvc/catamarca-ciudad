@@ -1,13 +1,13 @@
 {
     "dropdowns": [
       {
-        "name": "Municipio Abierto",
+        "name": "Municipio",
         "options": [
           {
-            "label": "Sistema de Fiscalizacion de Obras",
-            "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
+            "label": "Tu Decision",
+            "link": "https://tudecision.catamarcacapital.gob.ar/",
             "external": true,
-            "description": "Accedé al sistema para verificar y fiscalizar obras en ejecución."
+            "description": "Es un proceso mediante el cual la ciudadanía decide en qué se invierte parte del presupuesto municipal."
           },
           {
             "label": "Turnos Online",
@@ -53,7 +53,7 @@
           },
           {
             "label": "Cerca",
-            "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&hl=es_AR",
+            "link": "https://cerca-app.netlify.app/",
             "external": true,
             "description": "App oficial para trámites y reclamos municipales."
           }
@@ -74,13 +74,23 @@
             },
             {
               "label": "Organigrama",
-              "link": "/organigrama",
+              "link": "/organigrama/sfvc",
               "description": "Visualizá la estructura organizativa del municipio y cómo se interrelacionan las distintas áreas y secretarías."
             },
             {
               "label": "Radio Municipal",
               "link": "/radio",
               "description": "Sintonizá la Radio Municipal en vivo y accedé a su programación, noticias locales y contenidos comunitarios."
+            },
+            {
+              "label": "Punto Violeta",
+              "link": "https://puntovioleta.netlify.app/",
+              "description": "Programa municipal de la Secretaría de Mujeres, Género y Diversidad de San Fernando del Valle de Catamarca que brinda acompañamiento, asesoramiento y asistencia integral a mujeres y personas LGTBIQ+ en situación de violencia de género."
+            },
+            {
+              "label": "Punto Joven",
+              "link": "https://landingpage-puntojoven.netlify.app/#novedadeshttps://puntovioleta.netlify.app/",
+              "description": "Más de 710 jóvenes disfrutaron de juegos al aire libre, actividades de concientización ambiental, ESI y prevención del bullying, organizado por Punto Joven junto a Ambiente y Juventud."
             }
         ]
       },

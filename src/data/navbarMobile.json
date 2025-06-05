@@ -6,17 +6,16 @@
           "items": [
             {
               "id": 2,
-              "titulo": "Municipalidad",
+              "titulo": "Municipio",
               "description": "Trámites y Servicios"
             },
             {
               "id": 3,
-              "titulo": "Municipio Abierto"
+              "titulo": "Municipalidad"
             },
             {
-              "titulo": "Equipo de Gestion",
-              "icon": "",
-              "link": "/EquipoDeGestion"
+              "id": 4,
+              "titulo": "Descubre Catamarca"
             },
             {
               "titulo": "Tramites",
@@ -33,78 +32,126 @@
         }
       ],
       "navSecond": [
+          {
+            "titulo": "Tu Decision",
+            "link": "https://tudecision.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Es un proceso mediante el cual la ciudadanía decide en qué se invierte parte del presupuesto municipal."
+          },
+          {
+            "titulo": "Turnos Online",
+            "link": "https://turnos.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Solicitá turnos para trámites municipales de forma sencilla."
+          },
+          {
+            "titulo": "Metas",
+            "link": "https://metas.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Conocé las metas de gestión del municipio y su progreso."
+          },
+          {
+            "titulo": "Punto Giro",
+            "link": "https://giro.catamarcacapital.gob.ar/",
+            "external": true,
+            "description": "Plataforma de economía circular y gestión de residuos."
+          },
+          {
+            "titulo": "Nodo Tecnologico",
+            "link": "https://nodotecnologico.com.ar/",
+            "external": true,
+            "description": "Ecosistema de innovación, tecnología y formación profesional."
+          },
+          {
+            "titulo": "Sfvc Turismo",
+            "link": "https://sfvc.tur.ar/",
+            "external": true,
+            "description": "Descubrí los atractivos turísticos de San Fernando del Valle."
+          },
+          {
+            "titulo": "Vamos en Bici",
+            "link": "https://vamosenbici.smod.io/",
+            "external": true,
+            "description": "Sistema de bicicletas públicas para una ciudad más verde."
+          },
+          {
+            "titulo": "QxM - QuienxMi",
+            "link": "https://catamarca.qxm.com.ar/",
+            "external": true,
+            "description": "Plataforma de participación ciudadana y votación digital."
+          },
+          {
+            "titulo": "Cerca",
+            "link": "https://cerca-app.netlify.app/",
+            "external": true,
+            "description": "App oficial para trámites y reclamos municipales."
+          }
+      ],
+      "navThird": [
         {
           "titulo": "Intendente",
-          "link": "/Intendente"
+          "link": "/Intendente",
+          "description": "Conocé al Intendente municipal, su trayectoria, funciones y los principales ejes de su gestión actual."
+        },
+        {
+          "titulo": "Equipo de Gestión",
+          "link": "/EquipoDeGestion",
+          "description": "Información detallada sobre los funcionarios que integran el gabinete municipal y sus responsabilidades."
+        },
+        {
+          "titulo": "Organigrama",
+          "link": "/organigrama/sfvc",
+          "description": "Visualizá la estructura organizativa del municipio y cómo se interrelacionan las distintas áreas y secretarías."
         },
         {
           "titulo": "Radio Municipal",
-          "link": "/radio"
+          "link": "/radio",
+          "description": "Sintonizá la Radio Municipal en vivo y accedé a su programación, noticias locales y contenidos comunitarios."
         },
         {
-          "titulo": "Valores",
-          "link": "/perfil/3"
+          "titulo": "Punto Violeta",
+          "link": "https://puntovioleta.netlify.app/",
+          "description": "Programa municipal de la Secretaría de Mujeres, Género y Diversidad de San Fernando del Valle de Catamarca que brinda acompañamiento, asesoramiento y asistencia integral a mujeres y personas LGTBIQ+ en situación de violencia de género."
         },
         {
-          "titulo": "Reseña Histórica",
-          "link": "/perfil/4"
+          "titulo": "Punto Joven",
+          "link": "https://landingpage-puntojoven.netlify.app/#novedadeshttps://puntovioleta.netlify.app/",
+          "description": "Más de 710 jóvenes disfrutaron de juegos al aire libre, actividades de concientización ambiental, ESI y prevención del bullying, organizado por Punto Joven junto a Ambiente y Juventud."
         },
-        {
-          "titulo": "Simbología",
-          "link": "/perfil/5"
-        },
+      
         {
           "volver": 1,
           "titulo": "Volver",
           "icon": "/images/volver.svg"
         }
       ],
-      "navThird": [
-        {
-            "titulo": "Sistema de Fiscalizacion de Obras",
-            "link": "http://190.228.16.215:90/fiscalizacion/form_login.php",
-            "external": true
-        },
-        {
-            "titulo": "Turnos Online",
-            "link": "https://turnos.catamarcacapital.gob.ar/",
-            "external": true
-        },
-        {
-            "titulo": "Metas",
-            "link": "https://metas.catamarcacapital.gob.ar/",
-            "external": true
-        },
-        {
-            "titulo": "Punto Giro",
-            "link": "https://giro.catamarcacapital.gob.ar/",
-            "external": true
-        },
-        {
-            "titulo": "Nodo Tecnologico",
-            "link": "https://nodotecnologico.com.ar/",
-            "external": true
-        },
-        {
-            "titulo": "Sfvc Turismo",
+
+      "navFourth": [
+          {
+            "titulo": "Valores",
+            "link": "/valores",
+            "description": "Principios fundamentales que guían la gestión del gobierno municipal y la convivencia ciudadana en SFVC."
+          },
+          {
+            "titulo": "Simbología",
+            "link": "/simbologia",
+            "description": "Significado, historia y elementos que componen el escudo oficial de la ciudad de San Fernando del Valle de Catamarca."
+          },
+          {
+            "titulo": "Reseña Histórica",
+            "link": "/reseñaHistorica",
+            "description": "Relato de la fundación de la ciudad, los acontecimientos clave y su transformación a lo largo de los siglos."
+          },
+          {
+            "titulo": "Turismo",
             "link": "https://sfvc.tur.ar/",
-            "external": true
-        },
-        {
-            "titulo": "Vamos en Bici",
-            "link": "https://vamosenbici.smod.io/",
-            "external": true
-        },
-        {
-            "titulo": "Qmx - QuienxMi",
-            "link": "https://catamarca.qxm.com.ar/",
-            "external": true
-        },
-        {
-            "titulo": "Cerca",
-            "link": "https://play.google.com/store/apps/details?id=com.munidigital.catamarca&hl=es_AR",
-            "external": true
-        },
+            "description": "Información turística sobre SFVC: lugares destacados, cultura, actividades y atractivos naturales."
+          },
+          {
+            "titulo": "Museos",
+            "link": "https://sfvc.tur.ar/category/museos/",
+            "description": "Conocé los museos más importantes de SFVC: su patrimonio artístico, arqueológico e histórico."
+          },
       
         {
           "volver": 1,

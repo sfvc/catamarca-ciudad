@@ -367,8 +367,10 @@ input {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        width: auto;
+        max-width: 150px;
     }
+
 
     .navbar .container .navbar-header .navbar-brand {
         width: 100% !important;
@@ -968,13 +970,17 @@ input {
   }
 }
 
+.instagram-media instagram-media-rendered{
+  width: 90% !important;
+}
+
 .redes-sociales-card {
   background-color: #ffffff;
   border-radius: 1rem; /* 2xl equivalente */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
   min-height: 600px;
   height: 100%;
+  margin: 0 auto !important;
 
   display: flex;
   align-items: center;
@@ -1302,7 +1308,6 @@ input {
 }
 
 .agenda-section {
-    padding: 50px 0; /* Espaciado vertical para la sección */
     background-color: #ffffff; /* Fondo blanco para la sección, o el que prefieras */
 }
 
@@ -1320,7 +1325,7 @@ input {
 }
 
 .agenda-item__date-wrapper {
-    background-color: #f2931a; /* Naranja de acento, consistente */
+    background-color: #001529; /* Naranja de acento, consistente */
     color: #fff;               /* Texto blanco sobre el fondo naranja */
     padding: 20px 15px;       /* Espaciado interno */
     text-align: center;
@@ -1378,7 +1383,7 @@ input {
 
 .agenda-item__meta .fa { /* Estilo para los iconos de FontAwesome en los metadatos */
     margin-right: 8px;     /* Espacio a la derecha del icono */
-    color: #f2931a;        /* Color naranja de acento para los iconos */
+    color: #001529;        /* Color naranja de acento para los iconos */
     width: 16px;           /* Ancho fijo para alinear iconos */
     text-align: center;    /* Centrar el icono dentro de su espacio */
 }
@@ -1415,8 +1420,8 @@ input {
 
 /* Si quieres asegurar que tu btn-primary personalizado se aplique (ejemplo): */
 .agenda-section .btn-primary {
-    background-color: #f2931a;
-    border-color: #e0800d;
+    background-color: #001529;
+    border-color: #001529;
     color: #fff; /* Asegurar color de texto si no lo hereda bien */
     padding: 10px 25px;
     font-size: 1.1em;
@@ -1426,8 +1431,8 @@ input {
 
 .agenda-section .btn-primary:hover,
 .agenda-section .btn-primary:focus {
-    background-color: #e0800d;
-    border-color: #c7710b;
+    background-color: #001529;
+    border-color: #001529;
     color: #fff;
 }
 

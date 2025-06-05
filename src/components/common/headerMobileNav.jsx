@@ -5,12 +5,13 @@ import { navMobile } from '@data/navbarMobile.json';
 const HeaderMobileNav = () => {
     const [selectedId, setSelectedId] = useState(null); // Track selected ID
 
-    // Function to render modals based on the selected ID
     const renderModal = () => {
         if (selectedId === 2) {
             return <SecondModalMobile setSelectedId={setSelectedId} />;
         } else if (selectedId === 3) {
             return <ThirdModalMobile setSelectedId={setSelectedId} />;
+        } else if (selectedId === 4) {
+            return <FourthModalMobile setSelectedId={setSelectedId} />;
         }
         return <FirstModalMobile setSelectedId={setSelectedId} />;
     };
@@ -93,6 +94,32 @@ const ThirdModalMobile = ({ setSelectedId }) => {
                             className="header-mobile-nav__link"
                             href={item.link}
                             onClick={item.volver ? handleVolverClick : null} // Handle "Volver"
+                        >
+                            <small>{item.titulo}</small>
+                            {item.icon && <img src={item.icon} alt="" width={16} />}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+
+const FourthModalMobile = ({ setSelectedId }) => {
+    const handleVolverClick = () => {
+        setSelectedId(null); // Volver al primer modal
+    };
+
+    return (
+        <div className="header-mobile-nav__content">
+            <ul className="header-mobile-nav__list">
+                {navMobile.navFourth.map((item, index) => (
+                    <li className="header-mobile-nav__item" key={index}>
+                        <a
+                            className="header-mobile-nav__link"
+                            href={item.link}
+                            onClick={item.volver ? handleVolverClick : null}
                         >
                             <small>{item.titulo}</small>
                             {item.icon && <img src={item.icon} alt="" width={16} />}
