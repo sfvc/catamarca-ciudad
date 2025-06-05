@@ -163,6 +163,12 @@ const BuscadorContent = () => {
           selectPage={selectPage}
         />
       </section>
+
+          <div class="container">
+    <div class="botonflujo">
+      <a href="/" class="btn btn-primary"> Volver a Pagina de Inicio </a>
+    </div>
+  </div>
     </>
   );
 };

@@ -75,14 +75,6 @@ const { id } = Astro.params;
     </div>
   </section>
 
-  <!-- <GridPage
-    tramite="TramistedGrid__card-tramites"
-    client:only="react"
-    href="/tramites"
-    endpoint="items/categoria_tramites"
-    titulo=""
-  /> -->
-
   <GridPage
     tramite="TramistedGrid__card-tramites"
     client:only="react"
@@ -90,4 +82,10 @@ const { id } = Astro.params;
     endpoint="items/categoria_tramites"
     titulo=""
   />
+
+    <div class="container">
+    <div class="botonflujo">
+      <a href="/" class="btn btn-primary"> Volver a Pagina de Inicio </a>
+    </div>
+  </div>
 </Layout>
