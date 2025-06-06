@@ -125,6 +125,7 @@ const BuscadorContent = () => {
                     className="programas__link"
                     title={item.titulo}
                     href={item.url}
+                    target="_blank"
                     ref={(el) => (panelRefs.current[index] = el)}
                   >
                     {item.imagen && imagenes[item.imagen] ? (

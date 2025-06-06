@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-import { catamarcaApi } from "@api/catamarcaApi";
 import HomeSliderPage from "./homeSlider";
 import NoticiasGnral from "./noticiasGnral";
 import ProgramasComponent from "./programas";
@@ -11,7 +10,7 @@ import RedesSociales from "./redesSociales";
 const Home = () => {
   const panelRef = useRef(null);
   const jumbotronRef = useRef(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
