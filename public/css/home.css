@@ -725,7 +725,7 @@ input {
 }
 
 .programas__imagen {
-    width: 150px;
+    width: 78px !important;
 }
 
 .programas__ver-mas{

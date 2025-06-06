@@ -25,8 +25,7 @@
             {
               "titulo": "Contacto",
               "icon": "/images/mail.svg",
-              "link": "https://mail.google.com/mail/?view=cm&fs=1&to=info@catamarcaciudad.gob.ar",
-              "external":true
+              "link": "/contacto"
             }
           ]
         }
@@ -85,7 +84,13 @@
             "link": "https://cerca-app.netlify.app/",
             "external": true,
             "description": "App oficial para trámites y reclamos municipales."
-          }
+          },
+          {
+          "volver": 1,
+          "titulo": "Volver",
+          "icon": "/images/volver.svg"
+        }
+
       ],
       "navThird": [
         {
