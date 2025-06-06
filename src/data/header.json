@@ -90,11 +90,13 @@
             {
               "label": "Punto Violeta",
               "link": "https://puntovioleta.netlify.app/",
+              "external": true,
               "description": "Programa municipal de la Secretaría de Mujeres, Género y Diversidad de San Fernando del Valle de Catamarca que brinda acompañamiento, asesoramiento y asistencia integral a mujeres y personas LGTBIQ+ en situación de violencia de género."
             },
             {
               "label": "Punto Joven",
               "link": "https://landingpage-puntojoven.netlify.app/#novedadeshttps://puntovioleta.netlify.app/",
+              "external": true,
               "description": "Más de 710 jóvenes disfrutaron de juegos al aire libre, actividades de concientización ambiental, ESI y prevención del bullying, organizado por Punto Joven junto a Ambiente y Juventud."
             }
         ]
@@ -120,15 +122,16 @@
           {
             "label": "Turismo",
             "link": "https://sfvc.tur.ar/",
+            "external": true,
             "description": "Información turística sobre SFVC: lugares destacados, cultura, actividades y atractivos naturales."
           },
           {
             "label": "Museos",
             "link": "https://sfvc.tur.ar/category/museos/",
+            "external": true,
             "description": "Conocé los museos más importantes de SFVC: su patrimonio artístico, arqueológico e histórico."
           }
         ]
       }
     ]
   }
-  
