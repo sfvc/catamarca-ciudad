@@ -114,6 +114,11 @@
           "description": "Sintonizá la Radio Municipal en vivo y accedé a su programación, noticias locales y contenidos comunitarios."
         },
         {
+          "titulo": "Salud",
+          "link": "/salud",
+          "description": "Área dedicada a la promoción, prevención y atención integral de la salud de la comunidad, a través de programas municipales que buscan mejorar la calidad de vida de la población mediante servicios médicos, campañas sanitarias y acompañamiento profesional."
+        },
+        {
           "titulo": "Punto Violeta",
           "link": "https://puntovioleta.netlify.app/",
           "description": "Programa municipal de la Secretaría de Mujeres, Género y Diversidad de San Fernando del Valle de Catamarca que brinda acompañamiento, asesoramiento y asistencia integral a mujeres y personas LGTBIQ+ en situación de violencia de género."
